@@ -4,8 +4,8 @@
   "description": "",
   "main": "src/app.js",
   "scripts": {
-    "startOnce": "node index.js",
-    "start": "nodemon index.js",
+    "startOnce": "node server.js",
+    "start": "nodemon ./start.js",
     "buildOnce": "webpack ",
     "build": "webpack -w",
     "buildMinify": "webpack -p",
