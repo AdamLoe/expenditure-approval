@@ -1,3 +1,6 @@
+/**
+ * Created by Adam on 7/11/2017.
+ */
 var express = require('express');
 var app = express();
 var path = require('path');
@@ -5,6 +8,11 @@ var helpers = require('./helpers');
 var routes = require('./routes');
 
 app.get('/', function (req,res) {
+    console.log('Someone was here');
+    console.log('req..................................................................................................');
+    console.log(req);
+    console.log('res..................................................................................................');
+    console.log(res);
     res.send( 'HiYa');
 });
 console.log('Now Serving /');
@@ -55,4 +63,6 @@ app.use( function(err, req, res, next) {
 app.use(express.static(path.join(__dirname, 'public')));
 console.log('Now serving /public');
 
-module.exports = app;
+app.listen( process.env.PORT || 7777 );
+
+console.log('Now Serving', process.env.PORT || 7777 );

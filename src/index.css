@@ -1,0 +1,19 @@
+.ul nav {
+    color: red;
+}
+
+.ul nav active {
+    color: green;
+}
+
+body {
+    background-color: black;
+}
+
+h1 {
+    color: red;
+}
+
+.h1 {
+    color: red;
+}
