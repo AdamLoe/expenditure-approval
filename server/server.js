@@ -9,7 +9,7 @@ var routes = require('./routes');
 
 app.get('/', function (req,res) {
     console.log('Hey i did a thing.');
-    res.send( 'HiYa there3');
+    res.send( 'HiYa there4');
 });
 console.log('Now Serving /');
 
