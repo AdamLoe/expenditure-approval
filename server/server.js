@@ -8,6 +8,7 @@ var helpers = require('./helpers');
 var routes = require('./routes');
 
 app.get('/', function (req,res) {
+    console.log('Hey i did a thing.');
     res.send( 'HiYa');
 });
 console.log('Now Serving /');
