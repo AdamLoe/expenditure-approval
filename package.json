@@ -16,6 +16,7 @@
   "dependencies": {
     "axios": "^0.16.1",
     "babel-polyfill": "^6.23.0",
+    "cors": "^2.8.4",
     "es6-promise": "^4.1.1",
     "express": "^4.15.2",
     "fs": "0.0.1-security",
