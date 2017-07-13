@@ -3,9 +3,14 @@
  */
 var express = require('express');
 var app = express();
+
 var path = require('path');
+
 var helpers = require('./helpers');
 var routes = require('./routes');
+
+var cors = require('cors');
+app.use(cors());
 
 app.get('/', function (req,res) {
     console.log('Hey i did a thing.');
