@@ -5,7 +5,7 @@ var axios = require('axios');
 
 module.exports = function requestFeed () {
     return (
-        axios.get('http://127.0.0.1:7777/')
+        axios.get('http://192.241.128.166:7778/')
             .then(function (response) {
                 console.log(response);
             })
