@@ -3,7 +3,8 @@
  */
 var React = require('react');
 var ReactRouter = require('react-router-dom');
-var browserHistory = ReactRouter.browserHistory
+
+var browserHistory = ReactRouter.browserHistory;
 var Router = ReactRouter.BrowserRouter;
 var Route = ReactRouter.Route;
 var Switch = ReactRouter.Switch;
