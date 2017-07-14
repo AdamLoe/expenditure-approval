@@ -5,8 +5,7 @@ var axios = require('axios');
 
 module.exports = function requestFeed () {
     return (
-        axios.get('http://localhost:7778/api/puppies')
-        //axios.get('http://192.241.128.166:7778/')
+        axios.get('http://192.241.128.166:7778/')
             .then(function (response) {
                 console.log(response);
             })
