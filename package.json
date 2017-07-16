@@ -4,6 +4,7 @@
   "description": "",
   "main": "src/app.js",
   "scripts": {
+    "test": "node ./server/server.js --trace-warnings",
     "startOnce": "node ./server/server.js",
     "start": "nodemon ./server/server.js",
     "buildOnce": "webpack ",
