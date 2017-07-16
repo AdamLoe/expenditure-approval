@@ -5,12 +5,11 @@ var pg = require('knex')({
     client: 'pg',
     searchPath: 'knex,public',
     debug: true,
-    test bug hahahahah 
     connection: {
         host: '127.0.0.1',
         user: 'postgres',
         password: 'postgres',
-        database: 'adam'
+        database: 'postgres'
     }
 });
 
@@ -23,11 +22,14 @@ var path = require('path');
 var helpers = require('./helpers');
 var routes = require('./routes');
 
+
 var cors = require('cors');
+
 app.use(cors());
 
 app.get('/', function (req,res) {
     console.log('Hey i did a thing.');
+    knex.select().from('adam').timeout(1000);
     res.send( 'HiYa there8');
 });
 console.log('Now Serving /');
