@@ -5,6 +5,7 @@ var pg = require('knex')({
     client: 'pg',
     searchPath: 'knex,public',
     debug: true,
+    test bug hahahahah 
     connection: {
         host: '127.0.0.1',
         user: 'postgres',
