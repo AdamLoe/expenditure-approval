@@ -1,6 +1,19 @@
 /**
  * Created by Adam on 7/11/2017.
  */
+var pg = require('knex')({
+    client: 'pg',
+    searchPath: 'knex,public',
+    debug: true,
+    connection: {
+        host: '127.0.0.1',
+        user: 'postgres',
+        password: 'postgres',
+        database: 'adam'
+    }
+});
+
+
 var express = require('express');
 var app = express();
 
