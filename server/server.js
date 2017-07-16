@@ -29,7 +29,7 @@ app.use(cors());
 
 app.get('/', function (req,res) {
     console.log('Hey i did a thing.');
-    knex.select().from('adam').timeout(1000);
+    pg.select().from('adam').timeout(1000);
     res.send( 'HiYa there8');
 });
 console.log('Now Serving /');
