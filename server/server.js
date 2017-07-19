@@ -40,8 +40,6 @@ console.log('Now serving /public');
 app.listen( process.env.PORT || 80 );
 console.log('Now Serving', process.env.PORT || 80 );
 
-
-
 /*
 
  var passport = require('passport');
