@@ -23,6 +23,7 @@ class App extends React.Component {
         this.state = {date: new Date()};
         axios();
     }
+
     render() {
         return (
             <Router history={browserHistory}>

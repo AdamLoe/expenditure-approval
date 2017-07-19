@@ -10,24 +10,7 @@ var login   = require('./routes/login');
 var cors = require('cors');
 app.use(cors());
 
-
-var isLoggedIn = false;
-/*
-app.use(function(req, res, next) {
-
-    next();
-});
-*/
-if (isLoggedIn === true) {
-    console.log('A logged in user just requested site');
-    app.use('/home*', home);
-    app.use('/admin*', admin);
-    app.use('/profile*', profile);
-}
-else {
-    console.log('A non logged in user accessed site');
-    app.use('/login', login);
-}
+app.use('/', home);
 
 // If that above routes didnt work, we 404 them and forward to error handler
 app.use( function(req, res, next) {
@@ -47,6 +30,62 @@ app.use( function(err, req, res, next) {
     res.redirect('back');
 });
 
-app.listen( process.env.PORT || 7778 );
-console.log('Now Serving', process.env.PORT || 7777 );
 
+//Serve All Files in /public
+var path = require('path');
+app.use(express.static(path.join(__dirname, 'public')));
+console.log('Now serving /public');
+
+
+app.listen( process.env.PORT || 80 );
+console.log('Now Serving', process.env.PORT || 80 );
+
+
+
+/*
+
+ var passport = require('passport');
+ var LocalStrategy = require('passport-local').Strategy;
+
+ passport.use(new LocalStrategy(
+ function(username, password, done) {
+ User.findOne({ username: username }, function (err, user) {
+ if (err) { return done(err); }
+ if (!user) {
+ return done(null, false, { message: 'Incorrect username.' });
+ }
+ if (!user.validPassword(password)) {
+ return done(null, false, { message: 'Incorrect password.' });
+ }
+ return done(null, user);
+ });
+ }
+ ));
+
+ app.post('/login',
+ passport.authenticate('local', { successRedirect: '/',
+ failureRedirect: '/login',
+ failureFlash: true })
+ );
+
+
+
+var isLoggedIn = false;
+ app.use(function(req, res, next) {
+
+ next();
+ });
+
+if (isLoggedIn === true) {
+    console.log('A logged in user just requested site');
+    app.use('/home*', home);
+    app.use('/admin*', admin);
+    app.use('/profile*', profile);
+}
+else {
+    console.log('A non logged in user accessed site');
+    app.use('/login', login);
+}
+
+
+ */
