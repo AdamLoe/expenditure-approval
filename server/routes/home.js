@@ -4,7 +4,6 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
     console.log('Home Hit');
     res.send('home page');
-    next();
 });
 
 module.exports = router;
