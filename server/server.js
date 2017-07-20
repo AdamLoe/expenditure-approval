@@ -34,7 +34,7 @@ app.use( function(err, req, res, next) {
 //Serve All Files in /public
 var path = require('path');
 app.use(express.static(path.join(__dirname, 'public')));
-console.log('Now serving /public');
+console.log('Now serving' + __dirname + 'public');
 
 
 app.listen( process.env.PORT || 80 );
