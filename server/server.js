@@ -1,16 +1,21 @@
+var fs = require('fs');
+var http = require('http');
+var https = require('https');
+
+var privateKey  = fs.readFileSync('sslcert/server.key', 'utf8');
+var certificate = fs.readFileSync('sslcert/server.crt', 'utf8');
+var credentials = {key: privateKey, cert: certificate};
+
 var express = require('express');
 var app = express();
 
-var home    = require('./routes/home');
-var admin   = require('./routes/admin');
-var profile = require('./routes/profile');
-var login   = require('./routes/login');
+var routes = require('./routes/index.js');
+app.use('/', routes);
 
-//Since we're serving app on cdn (github pages)
-var cors = require('cors');
-app.use(cors());
-
-app.use('/', home);
+//Serve All Files in /public
+var path = require('path');
+app.use(express.static(path.join(__dirname, '/public')));
+console.log('Now serving' + __dirname + '/public');
 
 // If that above routes didnt work, we 404 them and forward to error handler
 app.use( function(req, res, next) {
@@ -31,14 +36,16 @@ app.use( function(err, req, res, next) {
 });
 
 
-//Serve All Files in /public
-var path = require('path');
-app.use(express.static(path.join(__dirname, '/public')));
-console.log('Now serving' + __dirname + '/public');
+var cors = require('cors');
+app.use(cors());
 
+var httpServer = http.createServer(app);
+var httpsServer = https.createServer(credentials, app);
 
-app.listen( process.env.PORT || 80 );
-console.log('Now Serving', process.env.PORT || 80 );
+httpServer.listen(80);
+httpsServer.listen(443);
+
+//Since we're serving app on cdn (github pages)
 
 /*
 
