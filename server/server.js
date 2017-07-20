@@ -12,7 +12,9 @@ var express = require('express');
 var app = express();
 
 var routes = require('./routes/index.js');
-app.use('/', routes);
+app.use('/', function(req,res) {
+    res.send('Hey it worked!');
+});
 
 //Serve All Files in /public
 var path = require('path');
