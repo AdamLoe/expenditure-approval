@@ -11,7 +11,6 @@ var credentials = {key: privateKey, cert: certificate};
 var express = require('express');
 var app = express();
 
-var routes = require('./routes/index.js');
 app.use('/', function(req,res) {
     res.send('Hey it worked!');
 });
