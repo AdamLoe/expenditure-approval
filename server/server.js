@@ -1,24 +1,19 @@
-var fs = require('fs');
-var http = require('http');
-var https = require('https');
-
-/*
-var privateKey  = fs.readFileSync('sslcert/server.key', 'utf8');
-var certificate = fs.readFileSync('sslcert/server.crt', 'utf8');
-var credentials = {key: privateKey, cert: certificate};
-*/
-
 var express = require('express');
 var app = express();
 
-app.use('/', function(req,res) {
-    res.send('Hey it worked!');
-});
+var cors = require('cors');
+app.use(cors());
 
-//Serve All Files in /public
 var path = require('path');
-app.use(express.static(path.join(__dirname, '/public')));
-console.log('Now serving' + __dirname + '/public');
+app.use(express.static(path.resolve(__dirname )));
+
+app.use(function(req,res,next){
+    console.log(req);
+    next();
+});
+/*
+var routes = require('./routes');
+app.use(routes);
 
 // If that above routes didnt work, we 404 them and forward to error handler
 app.use( function(req, res, next) {
@@ -39,60 +34,38 @@ app.use( function(err, req, res, next) {
 });
 
 
-var cors = require('cors');
-app.use(cors());
+ */
 
 app.listen(80);
-
 /*
-var httpServer = http.createServer(app);
-var httpsServer = https.createServer(credentials, app);
+var fs = require('fs');
+var privateKey  = fs.readFileSync('sslcert/server.key', 'utf8');
+var certificate = fs.readFileSync('sslcert/server.crt', 'utf8');
+var options = {key: privateKey, cert: certificate};
+var https = require('https');
+https.createServer(options, app).listen(443, callback);
 
-httpServer.listen(80);
-httpsServer.listen(443);
+ var bodyParser = require('body-parser');
+ //Serve All Files in /public
+ var path = require('path');
+ app.use(express.static(path.join(__dirname, '/public')));
+ console.log('Now serving' + __dirname + '/public');
+
+
+ var cookieParser = require('cookie-parser')
+ app.use(cookieParser())
+
+ app.use(express.cookieParser('secret'));
+ app.use(express.cookieSession());
+
+ var session = require('express-session');
+ app.use(session({
+ secret: process.env.SECRET_KEY,
+ resave: false,
+ saveUninitialized: true
+ }));
 
  var passport = require('passport');
- var LocalStrategy = require('passport-local').Strategy;
-
- passport.use(new LocalStrategy(
- function(username, password, done) {
- User.findOne({ username: username }, function (err, user) {
- if (err) { return done(err); }
- if (!user) {
- return done(null, false, { message: 'Incorrect username.' });
- }
- if (!user.validPassword(password)) {
- return done(null, false, { message: 'Incorrect password.' });
- }
- return done(null, user);
- });
- }
- ));
-
- app.post('/login',
- passport.authenticate('local', { successRedirect: '/',
- failureRedirect: '/login',
- failureFlash: true })
- );
-
-
-
-var isLoggedIn = false;
- app.use(function(req, res, next) {
-
- next();
- });
-
-if (isLoggedIn === true) {
-    console.log('A logged in user just requested site');
-    app.use('/home*', home);
-    app.use('/admin*', admin);
-    app.use('/profile*', profile);
-}
-else {
-    console.log('A non logged in user accessed site');
-    app.use('/login', login);
-}
-
-
+ app.use(passport.initialize());
+ app.use(passport.session());
  */

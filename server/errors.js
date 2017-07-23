@@ -1,7 +1,3 @@
-/**
- * Created by Adam on 7/11/2017.
- */
-
 exports.catchErrors = (fn) => {
     console.log('ran catch Errors');
     return function(req, res, next) {

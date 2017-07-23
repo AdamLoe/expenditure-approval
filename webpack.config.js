@@ -3,10 +3,10 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 
 module.exports = {
-    entry: ["babel-polyfill", './src/index.js'],
+    entry: ["babel-polyfill", './public/src/index.js'],
 
     output: {
-        path: __dirname + '/public',
+        path: __dirname + '/public/dist',
         filename: "index.js"
     },
 
@@ -25,6 +25,6 @@ module.exports = {
 
     plugins: [
         new webpack.optimize.UglifyJsPlugin(),
-        new HtmlWebpackPlugin({template: './src/index.html' })
+        new HtmlWebpackPlugin({template: './public/src/index.html' })
     ]
 };
