@@ -3,7 +3,6 @@
  */
 /*
     "path": "^0.12.7",
-    "pg": "^6.4.1",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-redux": "^5.0.4",
@@ -18,7 +17,6 @@
     "babel-polyfill": "^6.23.0",
     "es6-promise": "^4.1.1",
     "babel-core": "^6.24.0",
-    "express-session": "^1.15.4",
     "http": "0.0.0",
     "babel-loader": "^6.4.1",
     "babel-plugin-transform-react-jsx": "^6.24.1",

@@ -1,6 +1,14 @@
 var express = require('express');
 var app = express();
 
+
+var session = require('express-session');
+
+var passport = require('passport');
+app.use(passport.initialize());
+app.use(passport.session());
+
+
 var routes = require('./routes');
 app.use(routes);
 
@@ -29,6 +37,7 @@ var certificate = fs.readFileSync('/etc/letsencrypt/live/standardrequests.com/ce
 var options = {key: privateKey, cert: certificate};
 var https = require('https');
 https.createServer(options, app).listen(443);
+
 /*
  var bodyParser = require('body-parser');
  var cookieParser = require('cookie-parser')
