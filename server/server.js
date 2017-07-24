@@ -4,16 +4,10 @@ var app = express();
 var cors = require('cors');
 app.use(cors());
 
-var path = require('path');
-app.use(express.static(path.resolve(__dirname )));
-
-app.use(function(req,res,next){
-    console.log(req);
-    next();
-});
-/*
 var routes = require('./routes');
 app.use(routes);
+
+app.use(express.static('public', {dotfiles:'allow'}));
 
 // If that above routes didnt work, we 404 them and forward to error handler
 app.use( function(req, res, next) {
@@ -33,28 +27,21 @@ app.use( function(err, req, res, next) {
     res.redirect('back');
 });
 
+app.listen(8000);
 
- */
 
-app.listen(80);
 /*
-var fs = require('fs');
-var privateKey  = fs.readFileSync('sslcert/server.key', 'utf8');
-var certificate = fs.readFileSync('sslcert/server.crt', 'utf8');
-var options = {key: privateKey, cert: certificate};
-var https = require('https');
-https.createServer(options, app).listen(443, callback);
+
+ var fs = require('fs');
+ var privateKey  = fs.readFileSync('sslcert/server.key', 'utf8');
+ var certificate = fs.readFileSync('sslcert/server.crt', 'utf8');
+ var options = {key: privateKey, cert: certificate};
+ var https = require('https');
+ https.createServer(options, app).listen(443, callback);
 
  var bodyParser = require('body-parser');
- //Serve All Files in /public
- var path = require('path');
- app.use(express.static(path.join(__dirname, '/public')));
- console.log('Now serving' + __dirname + '/public');
-
-
  var cookieParser = require('cookie-parser')
  app.use(cookieParser())
-
  app.use(express.cookieParser('secret'));
  app.use(express.cookieSession());
 
