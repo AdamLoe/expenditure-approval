@@ -21,6 +21,8 @@ passport.use(new LocalStrategy(options, (username, password,done) => {
         .catch((err) => {return done(err);});
 }));
 
+
+
 exports.login = passport.authenticate('local', {
     failureRedirect: '/login',
     failureFlash: 'Failed Login!',
