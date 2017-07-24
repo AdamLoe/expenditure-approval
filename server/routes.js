@@ -38,7 +38,7 @@ router.get('/login/:username/:password/:token', function(req,res,next) {
 });
 
 router.get('/', function(req, res) {
-    res.send('HiYa');
+    res.send('../public/src/index.js');
 });
 
 router.get('/home', function(req,res) {

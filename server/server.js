@@ -1,9 +1,6 @@
 var express = require('express');
 var app = express();
 
-var cors = require('cors');
-app.use(cors());
-
 var routes = require('./routes');
 app.use(routes);
 
@@ -16,7 +13,6 @@ app.use( function(req, res, next) {
     err.status = 404;
     next(err);
 });
-
 //Chekcing database valdiation errors
 app.use( function(err, req, res, next) {
     console.log('Database Check!');
@@ -27,18 +23,16 @@ app.use( function(err, req, res, next) {
     res.redirect('back');
 });
 
-app.listen(8000);
+var cors = require('cors');
+app.use(cors());
 
-
+var fs = require('fs');
+var privateKey  = fs.readFileSync('/etc/letsencrypt/live/standardrequests.com/privkey.pem', 'utf8');
+var certificate = fs.readFileSync('/etc/letsencrypt/live/standardrequests.com/cert.pem', 'utf8');
+var options = {key: privateKey, cert: certificate};
+var https = require('https');
+https.createServer(options, app).listen(443);
 /*
-
- var fs = require('fs');
- var privateKey  = fs.readFileSync('sslcert/server.key', 'utf8');
- var certificate = fs.readFileSync('sslcert/server.crt', 'utf8');
- var options = {key: privateKey, cert: certificate};
- var https = require('https');
- https.createServer(options, app).listen(443, callback);
-
  var bodyParser = require('body-parser');
  var cookieParser = require('cookie-parser')
  app.use(cookieParser())

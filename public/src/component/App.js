@@ -1,6 +1,3 @@
-/**
- * Created by Adam on 7/11/2017.
- */
 var React = require('react');
 var ReactRouter = require('react-router-dom');
 
