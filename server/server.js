@@ -23,9 +23,6 @@ app.use( function(err, req, res, next) {
     res.redirect('back');
 });
 
-var cors = require('cors');
-app.use(cors());
-
 var fs = require('fs');
 var privateKey  = fs.readFileSync('/etc/letsencrypt/live/standardrequests.com/privkey.pem', 'utf8');
 var certificate = fs.readFileSync('/etc/letsencrypt/live/standardrequests.com/cert.pem', 'utf8');
