@@ -2,8 +2,6 @@ var express = require('express');
 var router = express.Router();
 
 var knex = require('./knexfile.js');
-var _ = require('underscore');
-var Promise = require('bluebird');
 
 var home    = require('./routes/home');
 var admin   = require('./routes/admin');
