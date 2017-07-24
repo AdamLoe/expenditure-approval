@@ -1,17 +1,20 @@
 var express = require('express');
 var app = express();
 
+var cors = require('cors');
+app.use(cors());
 
 var session = require('express-session');
-
 var passport = require('passport');
 app.use(passport.initialize());
 app.use(passport.session());
+
 
 var routes = require('./routes');
 app.use(routes);
 
 app.use(express.static('public', {dotfiles:'allow'}));
+
 
 // If that above routes didnt work, we 404 them and forward to error handler
 app.use( function(req, res, next) {
