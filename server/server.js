@@ -31,7 +31,8 @@ app.use('*', function(req,res){
 var fs = require('fs');
 var privateKey  = fs.readFileSync('/etc/letsencrypt/live/standardrequests.com/privkey.pem', 'utf8');
 var certificate = fs.readFileSync('/etc/letsencrypt/live/standardrequests.com/cert.pem', 'utf8');
-var options = {key: privateKey, cert: certificate};
+var ca          = fs.readFileSync('/etc/letsencrypt/live/standardrequests.com/chain.pem', 'utf8');
+var options = {key: privateKey, cert: certificate, ca: ca};
 var http  = require('http');
 var https = require('https');
 http.createServer(app).listen(80);
