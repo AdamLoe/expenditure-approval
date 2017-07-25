@@ -6,12 +6,9 @@ var Router = ReactRouter.BrowserRouter;
 var Route = ReactRouter.Route;
 var Switch = ReactRouter.Switch;
 
-var axios = require('./Axios');
 var NavBar = require('./NavBar');
 var Home = require('./Home');
-var MyProfile = require('./MyProfile');
-var Profile = require('./Profile');
-var Request = require('./Request');
+var Login = require('./Login');
 var Admin = require('./Admin');
 
 class App extends React.Component {
@@ -26,12 +23,10 @@ class App extends React.Component {
             <Router history={browserHistory}>
                 <div className='App'>
                     <NavBar />
-                    <axios />
                     <Switch>
                         <Route exact path='/'        component={Home}       />
-                        <Route exact path='/profile' component={MyProfile}  />
-                        <Route path='/profile/*'     component={Profile}    />
-                        <Route path='/request/*'     component={Request}    />
+                        <Route path='/home'          component={Home}  />
+                        <Route path='/login'         component={Login}  />
                         <Route path='/admin'         component={Admin}      />
                         <Route render={function() {return<p>Not Found</p>}} />
                     </Switch>
