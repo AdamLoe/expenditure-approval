@@ -5,7 +5,6 @@ var Router = ReactRouter.BrowserRouter;
 var Route = ReactRouter.Route;
 var Switch = ReactRouter.Switch;
 
-var NavBar = require('./NavBar');
 var Home = require('./Home');
 var Login = require('./Login');
 var Admin = require('./Admin');

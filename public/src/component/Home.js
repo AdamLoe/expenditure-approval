@@ -5,52 +5,6 @@ class Home extends React.Component {
         return (
             <div className='Content'>
                 <h1> Home </h1>
-                <h1> Home 2 </h1>
-                <span> Apples </span>
-                <span> Oranges </span>
-                <h1> Home </h1>
-                <h1> Home 2 </h1>
-                <span> Apples </span>
-                <span> Oranges </span>
-                <h1> Home </h1>
-                <h1> Home 2 </h1>
-                <span> Apples </span>
-                <span> Oranges </span>
-                <h1> Home </h1>
-                <h1> Home 2 </h1>
-                <span> Apples </span>
-                <span> Oranges </span>
-                <h1> Home </h1>
-                <h1> Home 2 </h1>
-                <span> Apples </span>
-                <span> Oranges </span>
-                <h1> Home </h1>
-                <h1> Home 2 </h1>
-                <span> Apples </span>
-                <span> Oranges </span>
-                <h1> Home </h1>
-                <h1> Home 2 </h1>
-                <span> Apples </span>
-                <span> Oranges </span>
-                <h1> Home </h1>
-                <h1> Home 2 </h1>
-                <span> Apples </span>
-                <span> Oranges </span>
-                <h1> Home </h1>
-                <h1> Home 2 </h1>
-                <span> Apples </span>
-                <span> Oranges </span>
-                <h1> Home </h1>
-                <h1> Home 2 </h1>
-                <span> Apples </span>
-                <span> Oranges </span>
-                <h1> Home </h1>
-                <h1> Home 2 </h1>
-                <span> Apples </span>
-                <span> Oranges </span>
-                <h1> Home </h1>
-                <h1> Home 2 </h1>
-                <span> Apples </span>
                 <span> Oranges </span>
             </div>
         )
@@ -59,7 +13,3 @@ class Home extends React.Component {
 
 module.exports = Home;
 
-
-
-
-//var Link = require('react-router-dom').Link;
