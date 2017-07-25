@@ -1,7 +1,6 @@
 var React = require('react');
 var ReactRouter = require('react-router-dom');
 
-var browserHistory = ReactRouter.browserHistory;
 var Router = ReactRouter.BrowserRouter;
 var Route = ReactRouter.Route;
 var Switch = ReactRouter.Switch;
@@ -15,14 +14,12 @@ class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {date: new Date()};
-        axios();
     }
 
     render() {
         return (
-            <Router history={browserHistory}>
+            <Router>
                 <div className='App'>
-                    <NavBar />
                     <Switch>
                         <Route exact path='/'        component={Home}       />
                         <Route path='/home'          component={Home}  />

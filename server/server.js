@@ -2,6 +2,13 @@
 var express = require('express');
 var app = express();
 
+app.use((req, res, next) => {
+    if (req.secure) {
+        next();
+    } else {
+        res.redirect('https://' + req.hostname + req.url);
+}});
+
 //MiddleWare
 var cors = require('cors');
 app.use(cors());
@@ -25,7 +32,9 @@ var fs = require('fs');
 var privateKey  = fs.readFileSync('/etc/letsencrypt/live/standardrequests.com/privkey.pem', 'utf8');
 var certificate = fs.readFileSync('/etc/letsencrypt/live/standardrequests.com/cert.pem', 'utf8');
 var options = {key: privateKey, cert: certificate};
+var http  = require('http');
 var https = require('https');
+http.createServer(app).listen(80);
 https.createServer(options, app).listen(443);
 
 /*
