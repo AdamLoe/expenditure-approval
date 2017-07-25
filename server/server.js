@@ -3,11 +3,13 @@ var express = require('express');
 var app = express();
 
 app.use((req, res, next) => {
+    console.log(req.url);
     if (req.secure) {
         next();
     } else {
         res.redirect('https://standardrequests.com' + req.url);
-}});
+    }
+});
 
 //MiddleWare
 var cors = require('cors');
