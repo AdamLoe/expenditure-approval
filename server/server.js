@@ -6,7 +6,7 @@ app.use((req, res, next) => {
     if (req.secure) {
         next();
     } else {
-        res.redirect('https://' + req.hostname + req.url);
+        res.redirect('https://standardrequests.com/' + req.url);
 }});
 
 //MiddleWare
