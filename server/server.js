@@ -11,8 +11,7 @@ app.use(passport.session());
 
 
 var routes = require('./routes');
-app.use(routes);
-
+app.use('/api/*', routes);
 app.use(express.static('public', {dotfiles:'allow'}));
 
 
