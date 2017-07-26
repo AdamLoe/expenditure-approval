@@ -15,7 +15,7 @@ router.get('/params/:username/:password', function(req, res) {
     res.send('/ page');
 });
 
-router.post('/login/:username/:password', function(req,res) {
+router.post('/login', function(req,res) {
     var username = req.params.username;
     var password = req.params.password;
     console.log('Login Hit', req.params);
@@ -23,6 +23,7 @@ router.post('/login/:username/:password', function(req,res) {
     knex('users').where('username',username)
         .then(function(data) {
             console.log(data);
+            res.send(data);
         })
         .catch(function(err){
             console.log('Login Error');
