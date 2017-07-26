@@ -24,7 +24,7 @@ class App extends React.Component {
                         <Route path='/home'          component={Home}  />
                         <Route path='/login'         component={Login}  />
                         <Route path='/admin'         component={Admin}      />
-                        <Route render={function() {return<p>Not Found</p>}} />
+                        <Route component={Login}/>
                     </Switch>
                 </div>
             </Router>
