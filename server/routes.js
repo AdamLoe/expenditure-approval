@@ -21,7 +21,6 @@ router.post('/login', function(req,res) {
     knex('users').where('username', 'adamloe')
         .then(function(data) {
             console.log(data);
-            res.send(data);
         })
         .catch(function(err){
             console.log('Login Error');
