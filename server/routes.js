@@ -14,8 +14,8 @@ router.use( function(req, res) {
                 console.log('Null User?');
             } else if (user.password == password) {
                 console.log('finished query');
-                console.log(data);
-                res.send(data);
+                console.log(user);
+                res.send(user);
             }
             else {
                 console.log('Wrong Pass');
