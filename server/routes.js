@@ -19,8 +19,6 @@ router.post('/login', function(req,res) {
     var username = req.params.username;
     var password = req.params.password;
     console.log('Login Hit', req.params, username, password);
-    console.log('Login', req.data.username, req.data.password);
-    console.log(req.data);
     knex('users').where('username',username)
         .then(function(data) {
             console.log(data);
