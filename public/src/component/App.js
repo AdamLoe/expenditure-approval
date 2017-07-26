@@ -35,10 +35,14 @@ class App extends React.Component {
                 username: this.state.usr,
                 password: this.state.pas
             }
-        }).then(function(res){
+        })
+        .then(function(res){
+            console.log('it worked!');
             console.log(response);
-        }).catch(function(err){
-            console.log(err);
+        })
+         .catch(function(err){
+             console.log('its fucked!');
+             console.log(err);
         })
     }
 
