@@ -37,8 +37,7 @@ class App extends React.Component {
                 password: 'adam'
         })
         .then(function(res){
-            console.log('it worked!');
-            console.log(response);
+            console.log('it worked!', res);
         })
          .catch(function(err){
              console.log('its fucked!');
