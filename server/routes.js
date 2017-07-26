@@ -1,30 +1,28 @@
 var express = require('express');
 var router = express.Router();
-
+var bcrypt = require('bcrypt');
 var knex = require('./knexfile.js');
 
-var home    = require('./routes/home');
-var admin   = require('./routes/admin');
-var profile = require('./routes/profile');
-var login   = require('./routes/login');
-
-router.get('/params', function(req, res) {
-    console.log(req.params);
-    console.log('/ Hit');
-    res.send('/ page');
-});
-
-router.post('/login', function(req,res) {
+router.use( function(req, res) {
     var username = req.params.username;
     var password = req.params.password;
-    console.log('Login Hit', req.params, username, password);
-    knex('users').where('username', 'adamloe')
-        .then(function(data) {
-            console.log(data);
-            res.send(data);
+    var username = 'adamloe';
+    var password = 'booty';
+    knex('users').where( {username}).first()
+        .then(function(user) {
+            if (!user) {
+                console.log('Null User?');
+            } else if (user.password == password) {
+                console.log('finished query');
+                console.log(data);
+                res.send(data);
+            }
+            else {
+                console.log('Wrong Pass');
+            }
         })
         .catch(function(err){
-            console.log('Login Error');
+            console.log('Username does not exist or Database isnt working');
             res.status(500).json({
                 error: true,
                 data: {
@@ -32,44 +30,6 @@ router.post('/login', function(req,res) {
                 }
             })
         })
-});
-
-
-router.get('/', function(req, res) {
-    res.send('/');
-});
-
-
-router.get('/a', function(req, res) {
-    res.send('a');
-});
-
-router.get('/home', function(req,res) {
-    knex.select().table('users')
-        .then(function(collection){
-            console.log('Home Hit');
-            /*
-            res.json({
-                error: false,
-                data: collection
-            })
-            */
-        })
-        .catch(function(err){
-            console.log('Home Error');
-            res.status(500).json({
-                error: true,
-                data: {
-                    message: err.message
-                }
-            })
-        })
-});
-
-router.get('/profile*', function(req,res,next) {
-
-});
-router.get('/admin*', function(req,res,next) {
 
 });
 
