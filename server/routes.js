@@ -9,7 +9,7 @@ var profile = require('./routes/profile');
 var login   = require('./routes/login');
 
 
-router.get('/params/:username/:password', function(req, res) {
+router.get('/params', function(req, res) {
     console.log(req.params);
     console.log('/ Hit');
     res.send('/ page');
@@ -19,7 +19,7 @@ router.post('/login', function(req,res) {
     var username = req.params.username;
     var password = req.params.password;
     console.log('Login Hit', req.params, username, password);
-    knex('users').where('username',username)
+    knex('users').where('adamloe',username)
         .then(function(data) {
             console.log(data);
             res.send(data);
