@@ -2,6 +2,7 @@ var React = require('react');
 
 class Admin extends React.Component {
     render() {
+        console.log(this.props);
         return (
             <div className='Content'>
                 <h1> Admin </h1>

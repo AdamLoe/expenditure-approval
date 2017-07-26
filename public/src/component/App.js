@@ -1,34 +1,69 @@
 var React = require('react');
-var ReactRouter = require('react-router-dom');
+var axios = require('axios');
 
-var Router = ReactRouter.BrowserRouter;
-var Route = ReactRouter.Route;
-var Switch = ReactRouter.Switch;
-
-var Home = require('./Home');
-var Login = require('./Login');
-var Admin = require('./Admin');
+var Home = require('./routes/Home');
+var Admin = require('./routes/Admin');
 
 class App extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {date: new Date()};
+        this.state = {usr: '', pas: '', type: ''};
+        this.handleUserChange = this.handleUserChange.bind(this);
+        this.handlePassChange = this.handlePassChange.bind(this);
+        this.onLoginSubmit = this.onLoginSubmit.bind(this);
+    }
+
+    handleUserChange(evt) {
+        this.setState({
+            usr: evt.target.value
+        });
+        console.log(this.state);
+    }
+
+    handlePassChange(evt) {
+        this.setState({
+            pas: evt.target.value
+        });
+        console.log(this.state);
+    }
+
+    onLoginSubmit(e) {
+        console.log('LOGIN PRESSED');
+        e.preventDefault();
+        axios.post('https://standardenterprises.com/api/login', {
+            username: this.state.usr,
+            password: this.state.pas
+        }).then(function(res){
+            console.log(response);
+        }).catch(function(err){
+            console.log(err);
+        })
     }
 
     render() {
-        return (
-            <Router>
+        if (!this.state.type) {
+            return (
                 <div className='App'>
-                    <Switch>
-                        <Route exact path='/'        component={Home}       />
-                        <Route path='/home'          component={Home}  />
-                        <Route path='/login'         component={Login}  />
-                        <Route path='/admin'         component={Admin}      />
-                        <Route component={Login}/>
-                    </Switch>
+                    <form className="Login Form" onSubmit={this.onLoginSubmit}>
+                        <h1> Login </h1>
+                        <input type="text" id="username" placeholder="username" onChange={this.handleUserChange}/>
+                        <input type="text" id="password" placeholder="password" onChange={this.handlePassChange}/>
+                        <input type="button expanded" type="submit" value="Login" />
+                    </form>
                 </div>
-            </Router>
-        )
+            )
+        } else if (this.state.type == 'manager') {
+
+        } else if (this.state.type == 'admin') {
+
+
+        } else if (this.state.type == 'property') {
+
+        } else {
+            return (
+                <h1> HiYa </h1>
+            )
+        }
     }
 }
 

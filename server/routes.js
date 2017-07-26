@@ -14,7 +14,7 @@ router.get('/params/:username/:password', function(req, res, next) {
     res.send('/ page');
 });
 
-router.get('/login/:username/:password/:token', function(req,res,next) {
+router.post('/login/:username/:password/:token', function(req,res,next) {
     var username = req.params.username;
     var password = req.params.password;
     var token = req.params.token;
