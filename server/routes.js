@@ -9,6 +9,15 @@ var profile = require('./routes/profile');
 var login   = require('./routes/login');
 
 
+knex('users').where('adamloe',username)
+    .then(function(data) {
+        console.log(data);
+        res.send(data);
+    })
+    .catch(function(err){
+        console.log('failed');
+    });
+
 router.get('/params', function(req, res) {
     console.log(req.params);
     console.log('/ Hit');
