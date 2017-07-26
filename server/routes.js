@@ -8,18 +8,18 @@ var admin   = require('./routes/admin');
 var profile = require('./routes/profile');
 var login   = require('./routes/login');
 
-router.get('/params/:username/:password', function(req, res, next) {
+
+router.get('/params/:username/:password', function(req, res) {
     console.log(req.params);
     console.log('/ Hit');
     res.send('/ page');
 });
 
-router.post('/login/:username/:password/:token', function(req,res,next) {
+router.post('/login/:username/:password', function(req,res) {
     var username = req.params.username;
     var password = req.params.password;
-    var token = req.params.token;
     console.log('Login Hit', req.params);
-    res.send('Login page'+ username + password + token);
+
     knex('users').where('username',username)
         .then(function(data) {
             console.log(data);
@@ -35,8 +35,14 @@ router.post('/login/:username/:password/:token', function(req,res,next) {
         })
 });
 
+
 router.get('/', function(req, res) {
-    res.send('../public/src/index.js');
+    res.send('/');
+});
+
+
+router.get('/a', function(req, res) {
+    res.send('a');
 });
 
 router.get('/home', function(req,res) {

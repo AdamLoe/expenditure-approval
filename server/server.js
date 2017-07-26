@@ -2,10 +2,13 @@
 var express = require('express');
 var app = express();
 
+
 var cors = require('cors');
 app.use(cors());
 
 app.use(express.static('public', {dotfiles:'allow'}));
+
+/*
 
 app.use((req, res, next) => {
     console.log(req.url);
@@ -16,22 +19,26 @@ app.use((req, res, next) => {
     }
 });
 
+
+ var session = require('express-session');
+ var passport = require('passport');
+ app.use(passport.initialize());
+ app.use(passport.session());
+*/
+
 //MiddleWare
-var session = require('express-session');
-var passport = require('passport');
-app.use(passport.initialize());
-app.use(passport.session());
 
 //Do they want static file?
 //Are they pinging requests server?
 var routes = require('./routes');
-app.use('/api/*', routes);
+app.use('/api/', routes);
 //Otherwise, just give them the client webApp
 app.use('*', function(req,res){
     res.sendFile('/home/adam/standard-requests/public/dist/index.html');
 });
 
 
+/*
 var fs = require('fs');
 var privateKey  = fs.readFileSync('/etc/letsencrypt/live/standardrequests.com/privkey.pem', 'utf8');
 var certificate = fs.readFileSync('/etc/letsencrypt/live/standardrequests.com/cert.pem', 'utf8');
@@ -39,7 +46,7 @@ var ca          = fs.readFileSync('/etc/letsencrypt/live/standardrequests.com/ch
 var options = {key: privateKey, cert: certificate, ca: ca};
  var https = require('https');
  https.createServer(options, app).listen(443);
-
+*/
 var http  = require('http');
 http.createServer(app).listen(80);
 
