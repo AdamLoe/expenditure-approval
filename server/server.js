@@ -31,16 +31,17 @@ app.use('*', function(req,res){
     res.sendFile('/home/adam/standard-requests/public/dist/index.html');
 });
 
-
+/*
 var fs = require('fs');
 var privateKey  = fs.readFileSync('/etc/letsencrypt/live/standardrequests.com/privkey.pem', 'utf8');
 var certificate = fs.readFileSync('/etc/letsencrypt/live/standardrequests.com/cert.pem', 'utf8');
 var ca          = fs.readFileSync('/etc/letsencrypt/live/standardrequests.com/chain.pem', 'utf8');
 var options = {key: privateKey, cert: certificate, ca: ca};
+ var https = require('https');
+ https.createServer(options, app).listen(443);
+*/
 var http  = require('http');
-var https = require('https');
 http.createServer(app).listen(80);
-https.createServer(options, app).listen(443);
 
 /*
 

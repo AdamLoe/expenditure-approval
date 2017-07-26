@@ -1,15 +1,17 @@
 html {
-    background-color: yellow;
+    background-color: black
 }
 
 body {
-    margin: 1%;
     background-color: blue;
     width: 98%;
     height: 96%;
 }
 
-#App {
+#app {
+    position: fixed;
+    width: 98%;
+    height: 98%;
     border-radius: 10px;
     background-color: red;
 }
@@ -22,7 +24,7 @@ body {
 .Content {
     padding-left: 10%;
     padding-right: 10%;
-    background-color: blue;
+    background-color: lightblue;
 }
 
 .navLink {
