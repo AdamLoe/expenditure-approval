@@ -30,7 +30,7 @@ class App extends React.Component {
     onLoginSubmit(e) {
         console.log('LOGIN PRESSED');
         e.preventDefault();
-        axios.post('http://standardrequests.com/api/login/', {
+        axios.post('http://standardrequests.com/api/login', {
             params : {
                 username: this.state.usr,
                 password: this.state.pas
