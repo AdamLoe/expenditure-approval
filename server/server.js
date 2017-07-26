@@ -31,7 +31,7 @@ app.use('*', function(req,res){
     res.sendFile('/home/adam/standard-requests/public/dist/index.html');
 });
 
-/
+
 var fs = require('fs');
 var privateKey  = fs.readFileSync('/etc/letsencrypt/live/standardrequests.com/privkey.pem', 'utf8');
 var certificate = fs.readFileSync('/etc/letsencrypt/live/standardrequests.com/cert.pem', 'utf8');
