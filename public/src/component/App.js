@@ -10,7 +10,7 @@ class App extends React.Component {
         this.state = {usr: '', pas: '', type: ''};
         this.handleUserChange = this.handleUserChange.bind(this);
         this.handlePassChange = this.handlePassChange.bind(this);
-        this.onLoginSubmit = this.onLoginSubmit.bind(this);
+        this.onLoginSubmit    = this.onLoginSubmit.bind(this);
     }
 
     handleUserChange(evt) {
@@ -24,20 +24,20 @@ class App extends React.Component {
         this.setState({
             pas: evt.target.value
         });
-        console.log(this.state);
     }
 
     onLoginSubmit(e) {
         e.preventDefault();
         var username = this.state.usr;
         var password = this.state.pas;
-        console.log('LOGIN PRESSED', username, password);
         axios.post('http://standardrequests.com/api/login', {
-                username: 'adamloe',
-                password: 'adam'
+                username: username,
+                password: password
         })
         .then(function(res){
-            console.log('it worked!', res);
+            console.log(res);
+            console.log(res.request.response);
+            console.log(res.request.response)
         })
          .catch(function(err){
              console.log('its fucked!');
