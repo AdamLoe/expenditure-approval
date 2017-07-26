@@ -2,6 +2,11 @@
 var express = require('express');
 var app = express();
 
+var cors = require('cors');
+app.use(cors());
+
+app.use(express.static('public', {dotfiles:'allow'}));
+
 app.use((req, res, next) => {
     console.log(req.url);
     if (req.secure) {
@@ -12,15 +17,12 @@ app.use((req, res, next) => {
 });
 
 //MiddleWare
-var cors = require('cors');
-app.use(cors());
 var session = require('express-session');
 var passport = require('passport');
 app.use(passport.initialize());
 app.use(passport.session());
 
 //Do they want static file?
-app.use(express.static('public', {dotfiles:'allow'}));
 //Are they pinging requests server?
 var routes = require('./routes');
 app.use('/api/*', routes);
