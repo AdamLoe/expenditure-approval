@@ -35,7 +35,7 @@ class App extends React.Component {
                 password: password
         })
         .then(function(res){
-            var {username, type } = JSON.parse(res.request.response)[0];
+            var {username, password } = JSON.parse(res.request.response);
             console.log(username, password);
         })
          .catch(function(err){

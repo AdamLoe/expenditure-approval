@@ -20,6 +20,7 @@ app.use((req, res, next) => {
 app.use(express.static('public', {dotfiles:'allow'}));
 var routes = require('./routes');
 
+//If the webApp is using the api
 app.use('/api/', routes);
 
 //Otherwise, just give them the client webApp
