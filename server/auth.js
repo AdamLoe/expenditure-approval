@@ -19,6 +19,7 @@ exports.authenticate = function(req,res,next) {
             }
             else {
                 console.log('Wrong Password.');
+                res.send('Wrong Password');
             }
         })
         .catch(function(err){
