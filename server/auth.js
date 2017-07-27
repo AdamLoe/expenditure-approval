@@ -1,12 +1,11 @@
 var knex = require('./knexfile.js');
 var bcrypt = require('bcrypt');
+var basicAuth = require('basic-auth');
 
 exports.authenticate = function(req,res,next) {
-    console.log('Authenticate hit');
-    var username = req.body.username;
-    var password = req.body.password;
-    console.log(username, password);
-    knex('users').where( {username}).first()
+    var {name , pass} = basicAuth.parse(req.headers.authorization);
+    console.log(name, pass);
+    knex('users').where( {name}).first()
         .then(function(user) {
             if (!user) {
                 console.log('Username: ', user.username, ' not Found.');

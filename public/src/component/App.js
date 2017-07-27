@@ -32,18 +32,18 @@ class App extends React.Component {
 
     onLoginSubmit(e) {
         e.preventDefault();
-        axios.post('http://127.0.0.1/api/', {
-            headers: {
-                'Authorization': password,
-                'Username': username
+        axios.get('http://localhost/api/', {
+            auth: {
+                username: this.state.usr,
+                password: this.state.pas
             }
-        })
-        .then(function(res){
+        }).then(function(res){
             console.log('axios request worked');
+            /*
             var {username, name, type, nextapprover, approvelimit} = JSON.parse(res.request.response);
             console.log(username, name, type, nextapprover, approvelimit);
-        })
-         .catch(function(err){
+            */
+        }).catch(function(err){
              console.log('its fucked!');
              console.log(err);
         })

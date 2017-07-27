@@ -13,10 +13,7 @@ app.use( function (req, res, next) {
     if (req.secure) {
         next();
     } else {
-        next();
-        /*
         res.redirect('https://standardrequests.com' + req.url);
-        */
     }
 });
 
@@ -29,7 +26,10 @@ app.use('/api/', routes);
 
 //Otherwise, just give them the client webApp
 app.use('*', function(req,res){
+    res.sendFile('D:/Github/Standard-Requests/public/dist/index.html');
+    /*
     res.sendFile('/home/adam/standard-requests/public/dist/index.html');
+    */
 });
 
 
