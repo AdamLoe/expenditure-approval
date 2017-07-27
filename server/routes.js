@@ -7,7 +7,7 @@ router.use( function(req, res) {
     var username = req.params.username;
     var password = req.params.password;
     var username = 'adam';
-    var password = 'booty';
+    var password = 'boooty';
     knex('users').where( {username}).first()
         .then(function(user) {
             if (!user) {
