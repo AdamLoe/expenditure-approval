@@ -10,21 +10,16 @@ exports.authenticate = function(req,res,next) {
         .then(function(user) {
             if (!user) {
                 console.log('Username not Found.');
-                res.status(404).json({
-                    data: {
-                        message: 'Username not Found'
-                    }
-                })
+                res.status(404);
             } else if (user.password == pass) {
                 console.log(user.type, ' ' , user.username, ' successfully logged in.');
                 user.password = '';
                 req.user = user;
-                res.send(user);
                 next();
             }
             else {
-                res.send('Wrong Password');
                 console.log('Wrong Password.');
+                res.status(404);
             }
         })
         .catch(function(err){
