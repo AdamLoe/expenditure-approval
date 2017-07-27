@@ -9,8 +9,12 @@ exports.authenticate = function(req,res,next) {
     knex('users').where( {username} ).first()
         .then(function(user) {
             if (!user) {
-                res.send('Username not Found');
                 console.log('Username not Found.');
+                res.status(404).json({
+                    data: {
+                        message: 'Username not Found'
+                    }
+                })
             } else if (user.password == pass) {
                 console.log(user.type, ' ' , user.username, ' successfully logged in.');
                 user.password = '';
