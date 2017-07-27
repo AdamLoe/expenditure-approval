@@ -7,21 +7,18 @@ router.use( function(req, res, next) {
     var username = req.params.username;
     var password = req.params.password;
     var username = 'steve';
-    var password = 'bettyy';
+    var password = 'betty';
     knex('users').where( {username}).first()
         .then(function(user) {
             if (!user) {
-                res.send('Username Not Found.');
-                console.log('Username Not Found.');
+                console.log('Username: ', user.username, ' not Found.');
             } else if (user.password == password) {
-                console.log('User successfully logged in.');
+                console.log('Username: ', user.username, ' successfully logged in.');
                 user.password = '';
                 req.user = user;
-                console.log(req.user);
                 next();
             }
             else {
-                res.send('Wrong Password.');
                 console.log('Wrong Password.');
             }
         })
