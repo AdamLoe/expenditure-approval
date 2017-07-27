@@ -32,7 +32,7 @@ class App extends React.Component {
 
     onLoginSubmit(e) {
         e.preventDefault();
-        axios.get('http://localhost/api/', {
+        axios.get('https://standardrequests.com/api/', {
             auth: {
                 username: this.state.usr,
                 password: this.state.pas
