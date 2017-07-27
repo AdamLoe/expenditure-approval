@@ -4,6 +4,7 @@ var { authenticate, authenticateAdmin } = require('./auth.js');
 var { query, comment, request } = require('./requestController');
 var { userList, editUser, makeUser, removeUser } = require('./userController');
 
+
 router.use(authenticate);
 router.get('/requests/', query);
 router.post('/requests/:id', comment);

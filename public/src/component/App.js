@@ -32,15 +32,7 @@ class App extends React.Component {
 
     onLoginSubmit(e) {
         e.preventDefault();
-        var data = {
-            username: this.state.usr,
-            password: this.state.pas
-        };
-        var headers = {
-            'Content-Type': 'application/json',
-            'Authorization': 'JWT fefege...'
-        };
-        axios.post('http://standardrequests.com/api/', {
+        axios.post('http://127.0.0.1/api/', {
             headers: {
                 'Authorization': password,
                 'Username': username

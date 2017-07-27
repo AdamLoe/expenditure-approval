@@ -2,13 +2,14 @@
 var express = require('express');
 var app = express();
 
+console.log('App started');
+
 //DELETE THIS
 var cors = require('cors');
 app.use(cors());
 
 //HTTPS REDIRECT
-app.use((req, res, next) => {
-    console.log(req.url);
+app.use( function (req, res, next) {
     if (req.secure) {
         next();
     } else {
