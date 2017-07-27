@@ -41,3 +41,9 @@ exports.authenticate = function(req,res,next) {
             })
         })
 };
+
+exports.authenticateAdmin = function(req,res,next) {
+    if (req.user.type == 'admin') {
+        next();
+    }
+};

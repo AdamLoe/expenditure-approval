@@ -1,14 +1,15 @@
 var express = require('express');
 var router = express.Router();
-var { authenticate } = require('./auth.js');
+var { authenticate, authenticateAdmin } = require('./auth.js');
 var { query, comment, request } = require('./requestController');
 var { userList, editUser, makeUser, removeUser } = require('./userController');
-router.use(authenticate);
 
+router.use(authenticate);
 router.get('/requests/', query);
 router.post('/requests/:id', comment);
 router.create('/requests/',  request);
 
+router.use(authenticateAdmin);
 router.get('/users',       userList);
 router.post('/users/:id',  editUser);
 router.create('/users',    makeUser);
