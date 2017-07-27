@@ -1,18 +1,18 @@
 var express = require('express');
 var router = express.Router();
-var { authenticate, isType } = require('./auth.js');
+var { authenticate } = require('./auth.js');
 var { query, comment, request } = require('./requestController');
 var { userList, editUser, makeUser, removeUser } = require('./userController');
 router.use(authenticate);
 
 router.get('/requests/', query);
-router.post('/requests/:id', isType('approver'), comment);
-router.create('/requests/',  isType('requester'), request);
+router.post('/requests/:id', comment);
+router.create('/requests/',  request);
 
-router.get('/users',       isType('admin'), userList);
-router.post('/users/:id',  isType('admin'), editUser);
-router.create('/users',    isType('admin'), makeUser);
-router.delete('/users/id', isType('admin'), removeUser);
+router.get('/users',       userList);
+router.post('/users/:id',  editUser);
+router.create('/users',    makeUser);
+router.delete('/users/id', removeUser);
 
 module.exports = router;
 

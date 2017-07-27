@@ -1,4 +1,4 @@
-var knex = require('knex')({
+var knex = require('knex')( {
     client: 'postgresql',
     connection: {
         host: '127.0.0.1',
@@ -10,7 +10,7 @@ var knex = require('knex')({
         min: 2,
         max: 10
     }
-});
+} );
 
 exports.authenticate = function(req,res,next) {
     var username = req.params.username;
@@ -41,5 +41,3 @@ exports.authenticate = function(req,res,next) {
             })
         })
 };
-
-exports.isType = function ()
