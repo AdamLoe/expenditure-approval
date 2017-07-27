@@ -7,12 +7,12 @@ var { userList, editUser, makeUser, removeUser } = require('./userController');
 router.use(authenticate);
 router.get('/requests/', query);
 router.post('/requests/:id', comment);
-router.create('/requests/',  request);
+router.post('/requests/',    request);
 
 router.use(authenticateAdmin);
 router.get('/users',       userList);
 router.post('/users/:id',  editUser);
-router.create('/users',    makeUser);
+router.post('/users',      makeUser);
 router.delete('/users/id', removeUser);
 
 module.exports = router;

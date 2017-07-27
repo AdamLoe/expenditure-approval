@@ -12,7 +12,10 @@ app.use((req, res, next) => {
     if (req.secure) {
         next();
     } else {
+        next();
+        /*
         res.redirect('https://standardrequests.com' + req.url);
+        */
     }
 });
 
@@ -32,6 +35,7 @@ app.use('*', function(req,res){
 var http  = require('http');
 http.createServer(app).listen(80);
 
+/*
 var fs = require('fs');
 var privateKey  = fs.readFileSync('/etc/letsencrypt/live/standardrequests.com/privkey.pem', 'utf8');
 var certificate = fs.readFileSync('/etc/letsencrypt/live/standardrequests.com/cert.pem', 'utf8');
@@ -39,4 +43,4 @@ var ca          = fs.readFileSync('/etc/letsencrypt/live/standardrequests.com/ch
 var options = {key: privateKey, cert: certificate, ca: ca};
 var https = require('https');
 https.createServer(options, app).listen(443);
-
+*/
