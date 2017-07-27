@@ -4,7 +4,6 @@ var bcrypt = require('bcrypt');
 var knex = require('./knexfile.js');
 
 router.use( function(req, res) {
-    console.log(req);
     var username = req.params.username;
     var password = req.params.password;
     var username = 'adamloe';
