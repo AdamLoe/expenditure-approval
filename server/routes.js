@@ -19,7 +19,7 @@ router.use( function(req, res) {
                     username:     user.username,
                     name:         user.name,
                     type:         user.type,
-                    nextapprover: user.nextapprover,
+                    nextApprover: user.nextApprover,
                     approveLimit: user.approveLimit
                     }
                 );
