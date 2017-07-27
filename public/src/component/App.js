@@ -35,6 +35,7 @@ class App extends React.Component {
                 password: password
         })
         .then(function(res){
+            console.log('axios request worked');
             var {username, name, type, nextapprover, approvelimit} = JSON.parse(res.request.response);
             console.log(username, name, type, nextapprover, approvelimit);
         })
