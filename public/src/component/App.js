@@ -7,7 +7,11 @@ var Admin = require('./routes/Admin');
 class App extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {usr: '', pas: '', type: ''};
+        this.state = {
+            usr: '',     pas: '',
+            type: '',    nam: '',
+            nextAprv: '',apprLimt: '',
+        };
         this.handleUserChange = this.handleUserChange.bind(this);
         this.handlePassChange = this.handlePassChange.bind(this);
         this.onLoginSubmit    = this.onLoginSubmit.bind(this);

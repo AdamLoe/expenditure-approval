@@ -13,8 +13,7 @@ router.use( function(req, res) {
             if (!user) {
                 console.log('Username Not Found.');
             } else if (user.password == password) {
-                console.log('finished query');
-                console.log(user);
+                console.log('User successfully logged in.');
                 res.send( {
                     username:     user.username,
                     name:         user.name,
