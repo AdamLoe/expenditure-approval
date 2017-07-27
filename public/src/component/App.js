@@ -34,7 +34,7 @@ class App extends React.Component {
         e.preventDefault();
         var username = this.state.usr;
         var password = this.state.pas;
-        axios.post('https://standardrequests.com/api/login', {
+        axios.post('http://standardrequests.com/api/login', {
                 username: username,
                 password: password
         })

@@ -2,10 +2,9 @@ var knex = require('./knexfile.js');
 var bcrypt = require('bcrypt');
 
 exports.authenticate = function(req,res,next) {
-    var username = req.params.username;
-    var password = req.params.password;
-    var username = 'steve';
-    var password = 'betty';
+    var username = req.query.username;
+    var password = req.query.password;
+    console.log(username, password);
     knex('users').where( {username}).first()
         .then(function(user) {
             if (!user) {
