@@ -6,23 +6,23 @@ var knex = require('./knexfile.js');
 router.use( function(req, res) {
     var username = req.params.username;
     var password = req.params.password;
-    var username = 'adamloe';
+    var username = 'adam';
     var password = 'booty';
     knex('users').where( {username}).first()
         .then(function(user) {
             if (!user) {
-                console.log('Null User?');
+                console.log('Username Not Found.');
             } else if (user.password == password) {
                 console.log('finished query');
                 console.log(user);
-                res.send(user);
+                res.send(user.type);
             }
             else {
-                console.log('Wrong Pass');
+                console.log('Wrong Password.');
             }
         })
         .catch(function(err){
-            console.log('Username does not exist or Database isnt working');
+            console.log('Database query failed.');
             res.status(500).json({
                 error: true,
                 data: {
