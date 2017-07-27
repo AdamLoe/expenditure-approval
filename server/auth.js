@@ -10,8 +10,7 @@ exports.authenticate = function(req,res,next) {
         .then(function(user) {
             console.log('then reached');
             if (!user) {
-                res.send('Username: ', user.username, ' not Found.');
-                console.log('Username: ', user.username, ' not Found.');
+                console.log('Username not Found.');
             } else if (user.password == pass) {
                 console.log('Username: ', user.username, ' successfully logged in.');
                 user.password = '';
