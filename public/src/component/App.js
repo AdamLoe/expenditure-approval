@@ -35,8 +35,10 @@ class App extends React.Component {
         var username = this.state.usr;
         var password = this.state.pas;
         axios.post('http://standardrequests.com/api/login', {
-                username: username,
-                password: password
+                body: {
+                    username: username,
+                    password: password
+                }
         })
         .then(function(res){
             console.log('axios request worked');
