@@ -2,8 +2,7 @@ var knex = require('./knexfile.js');
 var bcrypt = require('bcrypt');
 
 exports.authenticate = function(req,res,next) {
-    console.log(req);
-    console.log(req.body);
+    console.log('Authenticate hit');
     var username = req.body.username;
     var password = req.body.password;
     console.log(username, password);

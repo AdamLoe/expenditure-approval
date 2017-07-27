@@ -32,13 +32,19 @@ class App extends React.Component {
 
     onLoginSubmit(e) {
         e.preventDefault();
-        var username = this.state.usr;
-        var password = this.state.pas;
-        axios.post('http://standardrequests.com/api/login', {
-                body: {
-                    username: username,
-                    password: password
-                }
+        var data = {
+            username: this.state.usr,
+            password: this.state.pas
+        };
+        var headers = {
+            'Content-Type': 'application/json',
+            'Authorization': 'JWT fefege...'
+        };
+        axios.post('http://standardrequests.com/api/', {
+            headers: {
+                'Authorization': password,
+                'Username': username
+            }
         })
         .then(function(res){
             console.log('axios request worked');
