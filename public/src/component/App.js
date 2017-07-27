@@ -35,8 +35,8 @@ class App extends React.Component {
                 password: password
         })
         .then(function(res){
-            var {username, name, type, nextApprover, approveLimit} = JSON.parse(res.request.response);
-            console.log(username, name, type, nextApprover, approveLimit);
+            var {username, name, type, nextapprover, approvelimit} = JSON.parse(res.request.response);
+            console.log(username, name, type, nextapprover, approvelimit);
         })
          .catch(function(err){
              console.log('its fucked!');

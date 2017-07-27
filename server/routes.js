@@ -6,8 +6,8 @@ var knex = require('./knexfile.js');
 router.use( function(req, res) {
     var username = req.params.username;
     var password = req.params.password;
-    var username = 'adam';
-    var password = 'boooty';
+    var username = 'steve';
+    var password = 'betty';
     knex('users').where( {username}).first()
         .then(function(user) {
             if (!user) {
@@ -19,8 +19,8 @@ router.use( function(req, res) {
                     username:     user.username,
                     name:         user.name,
                     type:         user.type,
-                    nextApprover: user.nextApprover,
-                    approveLimit: user.approveLimit
+                    nextapprover: user.nextapprover,
+                    approvelimit: user.approvelimit
                     }
                 );
             }
