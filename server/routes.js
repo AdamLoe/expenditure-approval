@@ -15,7 +15,14 @@ router.use( function(req, res) {
             } else if (user.password == password) {
                 console.log('finished query');
                 console.log(user);
-                res.send(user.type);
+                res.send( {
+                    username:     user.username,
+                    name:         user.name,
+                    type:         user.type,
+                    nextapprover: user.nextapprover,
+                    approveLimit: user.approveLimit
+                    }
+                );
             }
             else {
                 console.log('Wrong Password.');
