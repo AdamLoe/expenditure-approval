@@ -1,7 +1,7 @@
 var React = require('react');
-var axios = require('axios');
 
-var Home = require('./routes/Home');
+var Login = require('./routes/Login')
+var Home  = require('./routes/Home');
 var Admin = require('./routes/Admin');
 
 class App extends React.Component {
@@ -10,67 +10,32 @@ class App extends React.Component {
         this.state = {
             usr: '',     pas: '',
             type: '',    nam: '',
-            nextAprv: '',apprLimt: '',
+            nextAprv: '',apprLimt: ''
         };
-        this.handleUserChange = this.handleUserChange.bind(this);
-        this.handlePassChange = this.handlePassChange.bind(this);
-        this.onLoginSubmit    = this.onLoginSubmit.bind(this);
     }
 
-    handleUserChange(evt) {
-        this.setState({
-            usr: evt.target.value
-        });
-        console.log(this.state);
-    }
 
-    handlePassChange(evt) {
-        this.setState({
-            pas: evt.target.value
-        });
-    }
-
-    onLoginSubmit(e) {
-        e.preventDefault();
-        axios.get('https://standardrequests.com/api/login', {
-            auth: {
-                username: this.state.usr,
-                password: this.state.pas
-            }
-        }).then(function(res){
-            console.log('axios request worked');
-            var { user, filters } = JSON.parse(res.request.response);
-
-            var {username, name, type, nextapprover, approvelimit} = user;
-            console.log(username, name, type, nextapprover, approvelimit);
-        }).catch(function(err){
-             console.log('its fucked!');
-             console.log(err);
-        })
-    }
 
     render() {
         if (!this.state.type) {
             return (
-                <div className='App'>
-                    <form className="Login Form" onSubmit={this.onLoginSubmit}>
-                        <h1> Login </h1>
-                        <input type="text" id="username" placeholder="username" onChange={this.handleUserChange}/>
-                        <input type="text" id="password" placeholder="password" onChange={this.handlePassChange}/>
-                        <input type="button expanded" type="submit" value="Login" />
-                    </form>
-                </div>
+                <Login />
             )
-        } else if (this.state.type == 'manager') {
-
-        } else if (this.state.type == 'admin') {
-
-
-        } else if (this.state.type == 'property') {
-
+        } else if (this.state.type === 'Requester') {
+            return (
+                <Requester />
+            )
+        } else if (this.state.type === 'Admin') {
+            return (
+                <Admin />
+            )
+        } else if (this.state.type === 'Approver') {
+            return (
+                <Approver />
+        )
         } else {
             return (
-                <h1> HiYa </h1>
+                <h1> User is unknown type? </h1>
             )
         }
     }
