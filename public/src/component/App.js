@@ -11,7 +11,7 @@ class App extends React.Component {
         this.state = {
             user: {
                 usr: '',     pas: '',
-                type: '',    nam: '',
+                type: 'Approver',    nam: '',
                 nextAprv: '',apprLimt: ''
             },
             filters: {
