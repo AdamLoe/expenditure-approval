@@ -1,5 +1,5 @@
 var React = require('react');
-
+var axios = require('axios');
 
 class Login extends React.Component {
     constructor(props) {
@@ -28,7 +28,7 @@ class Login extends React.Component {
 
     onLoginAccept (user) {
         this.setState({
-            type: user.type
+            type: user.type,
             name: user.name
 
         });

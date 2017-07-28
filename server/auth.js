@@ -13,7 +13,7 @@ exports.authenticate = function(req,res,next) {
                 res.status(404);
                 res.send('404');
             } else if (user.password == pass) {
-                console.log(user.type, ' ' , user.username, ' successfully logged in.');
+                console.log(user.type, ' ' , user.username, ' successfully authenticated.');
                 user.password = '';
                 req.user = user;
                 next();
@@ -44,6 +44,7 @@ exports.login = function(req,res) {
         }
     };
     res.send(loginJson);
+    console.log(user.type, ' ' , user.username, ' successfully logged in.');
 }
 
 exports.authenticateAdmin = function(req,res,next) {
