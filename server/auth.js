@@ -44,7 +44,7 @@ exports.login = function(req,res) {
         }
     };
     res.send(loginJson);
-    console.log(user.type, ' ' , user.username, ' successfully logged in.');
+    console.log(req.user.type, ' ' , req.user.username, ' successfully logged in.');
 }
 
 exports.authenticateAdmin = function(req,res,next) {
