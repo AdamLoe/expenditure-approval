@@ -36,6 +36,16 @@ exports.authenticate = function(req,res,next) {
         })
 };
 
+exports.login = function(req,res) {
+    var loginJson = {
+        user: req.user,
+        filters: {
+            color: 'red'
+        }
+    };
+    res.send(loginJson);
+}
+
 exports.authenticateAdmin = function(req,res,next) {
     if (req.user.type == 'admin') {
         next();
