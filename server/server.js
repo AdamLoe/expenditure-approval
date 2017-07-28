@@ -13,7 +13,13 @@ app.use( function (req, res, next) {
     if (req.secure) {
         next();
     } else {
-        res.redirect('https://standardrequests.com' + req.url);
+        if (NODE_ENV === 'production') {
+            res.redirect('https://standardrequests.com' + req.url);
+        } else {
+            next();
+        }
+        /*
+        */
     }
 });
 
@@ -26,21 +32,19 @@ app.use('/api/', routes);
 
 //Otherwise, just give them the client webApp
 app.use('*', function(req,res){
-    res.sendFile('D:/Github/Standard-Requests/public/dist/index.html');
-    /*
     res.sendFile('/home/adam/standard-requests/public/dist/index.html');
-    */
 });
 
 
 var http  = require('http');
 http.createServer(app).listen(80);
 
-
-var fs = require('fs');
-var privateKey  = fs.readFileSync('/etc/letsencrypt/live/standardrequests.com/privkey.pem', 'utf8');
-var certificate = fs.readFileSync('/etc/letsencrypt/live/standardrequests.com/cert.pem', 'utf8');
-var ca          = fs.readFileSync('/etc/letsencrypt/live/standardrequests.com/chain.pem', 'utf8');
-var options = {key: privateKey, cert: certificate, ca: ca};
-var https = require('https');
-https.createServer(options, app).listen(443);
+if (NODE_ENV === 'production') {
+    var fs = require('fs');
+    var privateKey = fs.readFileSync('/etc/letsencrypt/live/standardrequests.com/privkey.pem', 'utf8');
+    var certificate = fs.readFileSync('/etc/letsencrypt/live/standardrequests.com/cert.pem', 'utf8');
+    var ca = fs.readFileSync('/etc/letsencrypt/live/standardrequests.com/chain.pem', 'utf8');
+    var options = {key: privateKey, cert: certificate, ca: ca};
+    var https = require('https');
+    https.createServer(options, app).listen(443);
+}

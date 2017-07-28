@@ -11,7 +11,6 @@ class Login extends React.Component {
         this.handleUserChange = this.handleUserChange.bind(this);
         this.handlePassChange = this.handlePassChange.bind(this);
         this.onLoginSubmit    = this.onLoginSubmit.bind(this);
-        this.onLoginAccept    = this.onLoginAccept.bind(this);
     }
 
     handleUserChange(evt) {
@@ -26,14 +25,6 @@ class Login extends React.Component {
         });
     }
 
-    onLoginAccept (user) {
-        this.setState({
-            type: user.type,
-            name: user.name
-
-        });
-    }
-
     onLoginSubmit(e) {
         var that = this;
         e.preventDefault();
@@ -45,10 +36,11 @@ class Login extends React.Component {
         }).then(function(res){
             console.log('axios request worked');
             const { user, filters } = JSON.parse(res.request.response);
-            const {username, name, type } = user;
-            that.onLoginAccept(user);
-            console.log(username, name, type);
-
+            user.password = that.state.pas;
+            that.setState({
+                usr: 'null', pas: 'null'
+            });
+            that.props.loginSetState(user, filters)
         }).catch(function(err){
             console.log('its fucked!');
             console.log(err);

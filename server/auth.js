@@ -49,6 +49,7 @@ exports.login = function(req,res) {
 
 exports.authenticateAdmin = function(req,res,next) {
     if (req.user.type == 'admin') {
+        console.log(req.user.type, ' ' , req.user.username, ' successfully admin authenticated.');
         next();
     }
 };
