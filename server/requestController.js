@@ -1,5 +1,6 @@
 var knex = require('./knexfile.js');
 
+//Searches Database with filters, returns requests objects
 exports.query = function (req, res) {
     knex('requests').where(   )
         .then(function(data) {
@@ -17,10 +18,14 @@ exports.query = function (req, res) {
         })
 };
 
+//Add comment to history, change lastEditDate
+//Does user have power to finalize request? Move to Approved/Rejected. Change Status
+//If not, change nextApprover to user's next Approver.
 exports.comment  = function (req, res) {
     console.log('Comment function Hit');
 };
 
+//Pipe all props to knex to create a object
 exports.request = function (req, res) {
     knex
     console.log('Request function Hit');

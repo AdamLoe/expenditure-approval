@@ -4,7 +4,7 @@
 var React = require('react');
 var Request = require('../request/Request.js');
 
-class Admin extends React.Component {
+class Approver extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -25,15 +25,20 @@ class Admin extends React.Component {
             },
             requests: [
                 {
-                    requestId: 1107,
-                    details: {
-                        requestName: 'HVAC', status: 'In Process',
-                        amount: 1900.00, property: 'Signature Place',
-                        unitName: '81-081',  itemType: 'Financial'
-                    },
-                    attributes: {
-
-                    }
+                    requestId: 1107, requestName:'HVAC',
+                    requesterName: 'John Liberty', requesterId: 17,
+                    nextApproverName: 'Hannah Valentine', nextApproverId: 13,
+                    status: 'In Process',  amount: 1900.00,
+                    propertyName: 'Signature Place', propertyId: 103,
+                    unitName: '81-081',  itemType: 'Financial',
+                    requestorComment: '', createDate: '', lastEditDate: '',
+                    attributes: [
+                        ['Price', '2524'],['Shipping', '0'],
+                        ['Tax', '0'], ['OtherCost', '0']
+                    ],
+                    comments: [
+                        ['Date, text, user']
+                    ]
                 },
                 {
                     requestId: 1108,
@@ -75,4 +80,4 @@ class Admin extends React.Component {
     }
 }
 
-module.exports = Admin;
+module.exports = Approver;
