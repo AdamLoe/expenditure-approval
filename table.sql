@@ -11,6 +11,6 @@ CREATE TABLE requests (
     propertyId int, propertyName text,
     unitName text, itemType text,
     requestorComment text, createDate timestamp, lastEditDate timestamp,
-    attributes text[][] -- {{Price, 2524},{Shipping, 0},{Tax, 0}, {OtherCost, 0}}
+    attributes text[][], -- {{Price, 2524},{Shipping, 0},{Tax, 0}, {OtherCost, 0}}
     comments text[][]   -- {{Date, Comment, Name}}
 );
