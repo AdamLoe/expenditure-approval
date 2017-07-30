@@ -6,9 +6,6 @@ class Admin extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            usr: 'eddyG',
-            pas: 'earl',
-            user: this.props.state.user,
             filters: {
                 current: 'Requester',
                 options: [
@@ -28,8 +25,8 @@ class Admin extends React.Component {
         console.log('Requesting:  ', 'https://standardrequests.com/api/users/' + this.state.filters.current);
         axios.get('https://standardrequests.com/api/users/' + this.state.filters.current, {
             auth: {
-                username: this.state.usr,
-                password: this.state.pas
+                username: this.props.state.user.usr,
+                password: this.props.state.user.pas
             }
         }).then(function(res){
             console.log('axios request worked', res);

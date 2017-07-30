@@ -10,8 +10,8 @@ class App extends React.Component {
         super(props);
         this.state = {
             user: {
-                usr: '',     pas: '',
-                type: 'Admin',    nam: ''
+                usr: 'terryB',  pas: 'terry',
+                type: 'Admin',  nam: ''
             },
             filters: {
                 status: {

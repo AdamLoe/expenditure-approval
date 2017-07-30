@@ -1,4 +1,12 @@
 INSERT INTO users VALUES (
+  -- username  |  password
+     'terryB'  ,   'terry',
+  --   name    |    type
+ 'Terry Bobbachoni' ,  'admin',
+  --  nextAprv |  aprvLimit
+       -1  ,   -1
+ );
+INSERT INTO users VALUES (
  -- username  |  password
     'eddyG'   ,   'eddy',
  --   name    |    type
@@ -70,6 +78,9 @@ INSERT INTO users VALUES (
   --  nextAprv |  aprvLimit
        'gerryL'  ,   0
  );
+
+
+
 
 
 INSERT INTO requests VALUES (
