@@ -7,9 +7,9 @@ exports.query = function (req, res) {
     console.log(req.params);
     knex('requests').where({
         approver: filters.approver,
-        status: ,
-        createDate: ,
-        propertyName: ,
+        status: '*',
+        createDate: '*',
+        propertyName: "*"
     }).select({
 
     })
