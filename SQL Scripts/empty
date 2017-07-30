@@ -1,0 +1,15 @@
+
+INSERT INTO requests VALUES (
+--   id        |      name
+       1       ,   'Hand Dryer'  ,
+-- status      |   amount
+  'In Process' ,     85
+--   unit    |    type
+   'AC45'      ,    'Personal'
+-- requestor  | requestorId
+   'Clankus Tamperskin',
+-- approver   | approverId
+
+--  property  | propertyId |
+--  requestorComment | createDate
+);
