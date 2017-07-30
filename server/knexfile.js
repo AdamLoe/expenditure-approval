@@ -2,7 +2,7 @@ var config = {
     client: 'postgresql',
     connection: {
         host: '127.0.0.1',
-        database: 'users',
+        database: 'development',
         user:     'postgres',
         password: 'postgres'
     },
