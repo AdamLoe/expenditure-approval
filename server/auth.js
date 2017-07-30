@@ -10,9 +10,6 @@ exports.authenticate = function(req,res,next) {
         .where({
             username
         })
-        .select(
-            'username', 'type', 'name'
-        )
         .first()
         .then(function(user) {
             if (!user) {
