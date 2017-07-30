@@ -1,72 +1,72 @@
 INSERT INTO users VALUES (
  -- username  |  password
-    'eddyG'   ,   'earl'
+    'eddyG'   ,   'earl',
  --   name    |    type
-'Eddy Gorreat',  'approver'
+'Eddy Gorreat',  'approver',
  --  nextAprv |  aprvLimit
       -1      ,    -1
 );
 INSERT INTO users VALUES (
  -- username  |  password
-    'sarahP'  ,   'sarah'
+    'sarahP'  ,   'sarah',
  --   name    |    type
-'Sarah Parantino',  'approver'
+'Sarah Parantino',  'approver',
  --  nextAprv |  aprvLimit
       'eddyG' ,    5000
 );
 INSERT INTO users VALUES (
  -- username  |  password
-    'sandraT'  ,   'sandra'
+    'sandraT'  ,   'sandra',
  --   name    |    type
-'Sandra Tornapotarainyapolis' ,  'approver'
+'Sandra Tornapotarainyapolis' ,  'approver',
  --  nextAprv |  aprvLimit
       'eddyG'  ,    4000
 );
 INSERT INTO users VALUES (
   -- username  |  password
-     'tonyaB'  ,   'tonya'
+     'tonyaB'  ,   'tonya',
   --   name    |    type
- 'Tonya Baker' ,  'approver'
+ 'Tonya Baker' ,  'approver',
   --  nextAprv |  aprvLimit
        'sarahP'  ,    3000
  );
  INSERT INTO users VALUES (
   -- username  |  password
-     'gerryL'  ,   'gerry'
+     'gerryL'  ,   'gerry',
   --   name    |    type
- 'Gerry Lawnrence' ,  'approver'
+ 'Gerry Lawnrence' ,  'approver',
   --  nextAprv |  aprvLimit
        'sandraT'  ,   1000
  );
 INSERT INTO users VALUES (
   -- username  |  password
-     'crawfordPlace'  ,   'crawford'
+     'crawfordPlace'  ,   'crawford',
   --   name    |    type
- 'Crawford Place' ,  'requester'
+ 'Crawford Place' ,  'requester',
   --  nextAprv |  aprvLimit
        'tonyaB'  ,   0
  );
  INSERT INTO users VALUES (
    -- username  |  password
-      'corneliusVilla'  ,   'cornelius'
+      'corneliusVilla'  ,   'cornelius',
    --   name    |    type
-  'Cornelius Villa Apartments' ,  'requester'
+  'Cornelius Villa Apartments' ,  'requester',
    --  nextAprv |  aprvLimit
         'tonyaB'  ,   0
   );
 INSERT INTO users VALUES (
   -- username  |  password
-     'debianHomes'  ,   'debian'
+     'debianHomes'  ,   'debian',
   --   name    |    type
- 'Debian Homes' ,  'requester'
+ 'Debian Homes' ,  'requester',
   --  nextAprv |  aprvLimit
        'sandraT'  ,   0
  );
 INSERT INTO users VALUES (
   -- username  |  password
-     'marklandApts'  ,   'markland'
+     'marklandApts'  ,   'markland',
   --   name    |    type
- 'Markland Apts' ,  'requester'
+ 'Markland Apts' ,  'requester',
   --  nextAprv |  aprvLimit
        'gerryL'  ,   0
  );
