@@ -5,7 +5,7 @@ INSERT INTO users VALUES (
 'Eddy Gorreat',  'approver'
  --  nextAprv |  aprvLimit
       -1      ,    -1
-)
+);
 INSERT INTO users VALUES (
  -- username  |  password
     'sarahP'  ,   'sarah'
@@ -13,7 +13,7 @@ INSERT INTO users VALUES (
 'Sarah Parantino',  'approver'
  --  nextAprv |  aprvLimit
       'eddyG' ,    5000
-)
+);
 INSERT INTO users VALUES (
  -- username  |  password
     'sandraT'  ,   'sandra'
@@ -21,7 +21,7 @@ INSERT INTO users VALUES (
 'Sandra Tornapotarainyapolis' ,  'approver'
  --  nextAprv |  aprvLimit
       'eddyG'  ,    4000
-)
+);
 INSERT INTO users VALUES (
   -- username  |  password
      'tonyaB'  ,   'tonya'
@@ -29,7 +29,7 @@ INSERT INTO users VALUES (
  'Tonya Baker' ,  'approver'
   --  nextAprv |  aprvLimit
        'sarahP'  ,    3000
- )
+ );
  INSERT INTO users VALUES (
   -- username  |  password
      'gerryL'  ,   'gerry'
@@ -37,7 +37,7 @@ INSERT INTO users VALUES (
  'Gerry Lawnrence' ,  'approver'
   --  nextAprv |  aprvLimit
        'sandraT'  ,   1000
- )
+ );
 INSERT INTO users VALUES (
   -- username  |  password
      'crawfordPlace'  ,   'crawford'
@@ -45,7 +45,7 @@ INSERT INTO users VALUES (
  'Crawford Place' ,  'requester'
   --  nextAprv |  aprvLimit
        'tonyaB'  ,   0
- )
+ );
  INSERT INTO users VALUES (
    -- username  |  password
       'corneliusVilla'  ,   'cornelius'
@@ -53,7 +53,7 @@ INSERT INTO users VALUES (
   'Cornelius Villa Apartments' ,  'requester'
    --  nextAprv |  aprvLimit
         'tonyaB'  ,   0
-  )
+  );
 INSERT INTO users VALUES (
   -- username  |  password
      'debianHomes'  ,   'debian'
@@ -61,7 +61,7 @@ INSERT INTO users VALUES (
  'Debian Homes' ,  'requester'
   --  nextAprv |  aprvLimit
        'sandraT'  ,   0
- )
+ );
 INSERT INTO users VALUES (
   -- username  |  password
      'marklandApts'  ,   'markland'
@@ -69,7 +69,7 @@ INSERT INTO users VALUES (
  'Markland Apts' ,  'requester'
   --  nextAprv |  aprvLimit
        'gerryL'  ,   0
- )
+ );
 
 
 
