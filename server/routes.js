@@ -16,10 +16,10 @@ router.post('/requests/', request);
 //Only Admins Past Here
 router.use(authenticateAdmin);
 //Our 3 User Routes
-router.get('/users/:param1/:param2/:param3/:param4/:param5', userList);
-router.post('/users/:id', editUser);
+router.get('/users/:type', userList);
+router.post('/users/:usr', editUser);
 router.post('/users/', makeUser);
-router.delete('/users/id', removeUser);
+router.delete('/users/:usr', removeUser);
 
 module.exports = router;
 

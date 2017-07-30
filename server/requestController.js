@@ -2,7 +2,7 @@ var knex = require('./knexfile.js');
 
 //Searches Database with filters, returns requests objects
 exports.query = function (req, res) {
-    console.log('Query Function Called');
+    console.log('Query Requests Called');
     var filters = req.params;
     console.log(req.params);
     knex('requests').where({
@@ -30,6 +30,7 @@ exports.query = function (req, res) {
 //Does user have power to finalize request? Move to Approved/Rejected. Change Status
 //If not, change nextApprover to user's next Approver.
 exports.comment  = function (req, res) {
+
     console.log('Comment function Hit');
 };
 

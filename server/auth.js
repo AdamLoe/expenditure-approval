@@ -4,13 +4,8 @@ var basicAuth = require('basic-auth');
 
 exports.authenticate = function(req,res,next) {
     var {name , pass} = basicAuth.parse(req.headers.authorization);
-    var username = name;
     console.log(name, pass);
-    knex('users')
-        .where({
-            username: username
-        })
-        .first()
+    knex('users').where({ username: name }).first()
         .then(function(user) {
             if (!user) {
                 console.log('Username not Found.');

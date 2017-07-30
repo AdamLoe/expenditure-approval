@@ -9,6 +9,7 @@ class Approver extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            usr: 'eddyG', pas: 'earl',
             user:      this.props.state.user,
             filters:   this.props.state.filters,
             requests: [
