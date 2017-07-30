@@ -8,7 +8,7 @@ exports.authenticate = function(req,res,next) {
     console.log(name, pass);
     knex('users')
         .where({
-            username
+            username: username
         })
         .first()
         .then(function(user) {
