@@ -11,7 +11,10 @@ class Admin extends React.Component {
                 options: [
                     'admin', 'requester', 'approver', 'deleted'
                 ]
-            }
+            },
+            users: [
+
+            ]
         };
         this.loadUsers = this.loadUsers.bind(this);
     }
@@ -21,20 +24,23 @@ class Admin extends React.Component {
     }
 
     loadUsers() {
+        var that = this;
         console.log('Load Users started');
         console.log('Requesting:  ', 'https://standardrequests.com/api/users/' + this.state.filters.current);
         axios.get('https://standardrequests.com/api/users/' + this.state.filters.current, {
             auth: {
-                username: this.props.state.user.usr,
-                password: this.props.state.user.pas
+                username: this.props.state.user.username,
+                password: this.props.state.user.password
             }
         }).then(function(res){
-            console.log('axios request worked', res);
-            console.log(res);
+            console.log('axios request worked', res.data);
+            that.setState({
+                users: res.data
+            })
         }).catch(function(err){
             console.log('Getting Requests Went Wrong');
             console.log(err);
-        })
+        });
         console.log('Load Request Ended');
     }
 
@@ -49,8 +55,14 @@ class Admin extends React.Component {
                         </button>
                     )}
                 </div>
-
-
+                <div className='UsersContainer'>
+                    {this.state.users.map( user =>
+                        <User
+                            state={user}
+                            key={user.username}
+                        />
+                    )}
+                </div>
             </div>
         )
     }

@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Requests extends React.Component {
+class Request extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -79,4 +79,4 @@ class Requests extends React.Component {
     }
 }
 
-module.exports = Requests;
+module.exports = Request;

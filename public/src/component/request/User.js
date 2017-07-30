@@ -1,7 +1,8 @@
 import React from 'react';
 
-class Requests extends React.Component {
+class User extends React.Component {
     constructor(props) {
+        console.log('User Constructed');
         super(props);
         this.state = {
             render: 'small',
@@ -63,11 +64,12 @@ class Requests extends React.Component {
             return (
                 <div className="smallRequest">
                     <button className="smallRequestInfo" onClick={this.onClick}>
-                        <h1> {this.props.state.requestName} </h1>
-                        <h1> {this.props.state.amount} </h1>
+                        <h1> {this.props.state.username} </h1>
+                        <h1> {this.props.state.name} </h1>
+                        <h1> {this.props.state.type} </h1>
+                        <h1> {this.props.state.nextapprover} </h1>
+                        <h1> {this.props.state.approvelimit} </h1>
                     </button>
-                    <button className="smallAccept" onClick={this.onAccept}> Accept </button>
-                    <button className="smallReject" onClick={this.onReject}> Reject </button>
                 </div>
 
             )
@@ -79,4 +81,4 @@ class Requests extends React.Component {
     }
 }
 
-module.exports = Requests;
+module.exports = User;

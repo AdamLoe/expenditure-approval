@@ -10,8 +10,8 @@ class App extends React.Component {
         super(props);
         this.state = {
             user: {
-                usr: 'terryB',  pas: 'terry',
-                type: 'Admin',  nam: ''
+                username: '',  password: '',
+                type: '',  name: ''
             },
             filters: {
                 status: {
@@ -50,15 +50,15 @@ class App extends React.Component {
             return (
                 <Login loginSetState={this.loginSetState}/>
             )
-        } else if (this.state.user.type === 'Requester') {
+        } else if (this.state.user.type === 'requester') {
             return (
                 <Requester state={this.state}/>
             )
-        } else if (this.state.user.type === 'Admin') {
+        } else if (this.state.user.type === 'admin') {
             return (
                 <Admin state={this.state}/>
             )
-        } else if (this.state.user.type === 'Approver') {
+        } else if (this.state.user.type === 'approver') {
             return (
                 <Approver state={this.state}/>
         )
