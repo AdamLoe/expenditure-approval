@@ -46,6 +46,7 @@ exports.login = function(req,res) {
 }
 
 exports.authenticateAdmin = function(req,res,next) {
+    console.log('Somebody is trying to be admin', req.user);
     if (req.user.type == 'admin') {
         console.log(req.user.type, ' ' , req.user.username, ' successfully admin authenticated.');
         next();

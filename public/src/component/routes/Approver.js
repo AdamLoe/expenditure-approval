@@ -1,6 +1,3 @@
-/**
- * Created by Adam on 7/28/2017.
- */
 var React = require('react');
 var Request = require('../request/Request.js');
 var axios = require('axios');
