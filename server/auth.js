@@ -3,7 +3,7 @@ var bcrypt = require('bcrypt');
 var basicAuth = require('basic-auth');
 
 exports.authenticate = function(req,res,next) {
-    {name , pass} = basicAuth.parse(req.headers.authorization);
+    var {name , pass} = basicAuth.parse(req.headers.authorization);
     var username = name;
     console.log(name, pass);
     knex('users').where( {username} ).first()
