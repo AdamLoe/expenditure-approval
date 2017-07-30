@@ -7,9 +7,9 @@ class Admin extends React.Component {
         super(props);
         this.state = {
             filters: {
-                current: 'Requester',
+                current: 'requester',
                 options: [
-                    'Admin', 'Requester', 'Approver', 'Deleted'
+                    'admin', 'requester', 'approver', 'deleted'
                 ]
             }
         };
