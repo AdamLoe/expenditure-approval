@@ -57,10 +57,11 @@ class Approver extends React.Component {
     loadRequests() {
         console.log('Load Request started');
         var paramString = '';
-        paramString +=  this.props.state.filters.status.current;
-        paramString +=  this.props.state.filters.property.current;
-        paramString +=  this.props.state.filters.approvers.current;
+        paramString +=  this.props.state.filters.status.current + '/';
+        paramString +=  this.props.state.filters.property.current+ '/';
+        paramString +=  this.props.state.filters.approvers.current+ '/';
         paramString +=  this.props.state.filters.period.current;
+        console.log('Requesting:  ', 'https://standardrequests.com/api/requests/' + paramString);
         axios.get('https://standardrequests.com/api/requests/' + paramString, {
             auth: {
                 username: this.state.usr,
@@ -68,6 +69,7 @@ class Approver extends React.Component {
             }
         }).then(function(res){
             console.log('axios request worked', res);
+            console.log(res);
         }).catch(function(err){
             console.log('Getting Requests Went Wrong');
             console.log(err);
