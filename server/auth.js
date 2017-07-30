@@ -46,7 +46,7 @@ exports.login = function(req,res) {
     var loginJson = {
         user: req.user,
         filters: {
-            color: 'red'1
+            color: 'red'
         }
     };
     res.send(loginJson);
