@@ -10,8 +10,6 @@ exports.query = function (req, res) {
         status: '*',
         createDate: '*',
         propertyName: "*"
-    }).select({
-
     })
         .then(function(data) {
             console.log(data);

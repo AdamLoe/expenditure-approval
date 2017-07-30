@@ -1,3 +1,13 @@
+CREATE TABLE requests (
+    requestId int, requestName text,
+    status text, amount int,
+    unitName text, itemType text,
+    requestorName text, requestorId int,
+    approverName  text, approverId  int,
+    propertyName text,   propertyId int,
+    requestorComment text, createDate timestamp,
+    attributes text[][], comments text[][]
+);
 
 INSERT INTO requests VALUES (
 --   id        |      name

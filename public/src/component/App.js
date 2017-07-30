@@ -23,7 +23,7 @@ class App extends React.Component {
                     options: []
                 },
                 approvers: {
-                    current: 'ALL2',
+                    current: 'eddyG',
                     options: []
                 },
                 period: {

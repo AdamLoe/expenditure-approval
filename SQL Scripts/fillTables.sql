@@ -1,6 +1,6 @@
 INSERT INTO users VALUES (
  -- username  |  password
-    'eddyG'   ,   'earl',
+    'eddyG'   ,   'eddy',
  --   name    |    type
 'Eddy Gorreat',  'approver',
  --  nextAprv |  aprvLimit
@@ -71,5 +71,20 @@ INSERT INTO users VALUES (
        'gerryL'  ,   0
  );
 
+
+INSERT INTO requests VALUES (
+--   id        |      name
+       1       ,   'Hand Dryer'  ,
+-- status      |   amount
+  'In Process' ,     85
+--   unit    |    type
+   'AC45'      ,    'Personal'
+-- requestor  | requestorId
+   'Clankus Tamperskin',
+-- approver   | approverId
+
+--  property  | propertyId |
+--  requestorComment | createDate
+);
 
 
