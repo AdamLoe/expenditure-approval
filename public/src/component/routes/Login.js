@@ -42,7 +42,7 @@ class Login extends React.Component {
             });
             that.props.loginSetState(user, filters)
         }).catch(function(err){
-            console.log('its fucked!');
+            console.log('Login Went Wrong');
             console.log(err);
         })
     }

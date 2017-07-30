@@ -9,53 +9,38 @@ class Approver extends React.Component {
         super(props);
         this.state = {
             user:      this.props.state.user,
-            filters: {
-                status: { value: 'In Process', options: [
-
-                ]},
-                property: { value: 'ALL', options: [
-
-                ]},
-                nextApprover: { value: this.props.state.user.name, options: [
-
-                ]},
-                period: { value: '1 Month', options: [
-
-                ]}
-            },
-            requests: [
-                {
-                    requestId: 1107,
-                    details: {
-                        requestName: 'HVAC', status: 'In Process',
-                        amount: 3100.00, property: 'Hells Avenue',
-                        unitName: '81-01-32', itemType: 'Financial'
-                    },
-                    attributes: {
-
-                    }
-                },
-                {
-                    requestId: 1108,
-                    details: {
-                        requestName: 'Washing Machine', status: 'In Process',
-                        amount: 5100.00, property: 'Charleston Square',
-                        unitName: '8675309', itemType: 'Sexy'
-                    },
-                    attributes: {
-
-                    }
-                }
-            ]
+            filters:   this.props.state.filters,
+            requests:  this.props.state.requests
         }
+        this.loadRequests = this.loadRequests.bind(this)
     }
 
     componentDidMount() {
+        this.loadRequests();
+    }
 
+    loadRequests() {
+        axios.get('https://standardrequests.com/api/login', {
+            auth: {
+                username: this.state.usr,
+                password: this.state.pas
+            }
+        }).then(function(res){
+            console.log('axios request worked');
+            const { user, filters } = JSON.parse(res.request.response);
+            user.password = that.state.pas;
+            that.setState({
+                usr: 'null', pas: 'null'
+            });
+            that.props.loginSetState(user, filters)
+        }).catch(function(err){
+            console.log('Getting Requests Went Wrong');
+            console.log(err);
+        })
     }
 
     render() {
-        console.log('rendereing approver', this.props);
+        console.log('Rendering Approver', this.state);
         return (
             <div className='ApproverContainer'>
                 <div className='FilterContainer'>

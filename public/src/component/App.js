@@ -15,7 +15,10 @@ class App extends React.Component {
                 nextAprv: '',apprLimt: ''
             },
             filters: {
-                color: 'blue'
+                status: {},
+                property: {},
+                approvers: {},
+                period: {}
             }
         };
 

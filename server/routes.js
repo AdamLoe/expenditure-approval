@@ -9,7 +9,7 @@ router.use(authenticate);
 //If we are just logging in, send our users info & filters
 router.get('/login', login);
 //Our 3 Request Routes
-router.get('/requests/:param1/:param2/:param3/:param4/:param5', query);
+router.get('/requests/:status/:property/:approver/:period', query);
 router.post('/requests/:id/:responseBool/:response', comment);
 router.post('/requests/', request);
 
