@@ -6,7 +6,14 @@ exports.authenticate = function(req,res,next) {
     var {name , pass} = basicAuth.parse(req.headers.authorization);
     var username = name;
     console.log(name, pass);
-    knex('users').where( {username} ).first()
+    knex('users')
+        .where({
+            username
+        })
+        .select(
+            'username', 'type', 'name'
+        )
+        .first()
         .then(function(user) {
             if (!user) {
                 console.log('Username not Found.');
@@ -14,7 +21,6 @@ exports.authenticate = function(req,res,next) {
                 res.send('404');
             } else if (user.password == pass) {
                 console.log(user.type, ' ' , user.username, ' successfully authenticated.');
-                user.password = '';
                 req.user = user;
                 next();
             }
@@ -40,7 +46,7 @@ exports.login = function(req,res) {
     var loginJson = {
         user: req.user,
         filters: {
-            color: 'red'
+            color: 'red'1
         }
     };
     res.send(loginJson);

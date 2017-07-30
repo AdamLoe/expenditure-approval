@@ -38,7 +38,7 @@ class Login extends React.Component {
             const { user, filters } = JSON.parse(res.request.response);
             user.password = that.state.pas;
             that.setState({
-                usr: 'null', pas: 'null'
+                usr: null, pas: null
             });
             that.props.loginSetState(user, filters)
         }).catch(function(err){

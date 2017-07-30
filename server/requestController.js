@@ -5,7 +5,14 @@ exports.query = function (req, res) {
     console.log('Query Function Called');
     var filters = req.params;
     console.log(req.params);
-    knex('requests')
+    knex('requests').where({
+        approver: filters.approver,
+        status: ,
+        createDate: ,
+        propertyName: ,
+    }).select({
+
+    })
         .then(function(data) {
             console.log(data);
             res.send(data);
