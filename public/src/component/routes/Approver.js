@@ -3,40 +3,76 @@
  */
 var React = require('react');
 var Request = require('../request/Request.js');
+var axios = require('axios');
 
 class Approver extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            usr: 'steve', pas: 'betty',
             user:      this.props.state.user,
             filters:   this.props.state.filters,
-            requests:  this.props.state.requests
-        }
-        this.loadRequests = this.loadRequests.bind(this)
+            requests: [
+                {
+                    requestId: 1107, requestName: 'HVAC',
+                    requesterName: 'John Liberty', requesterId: 17,
+                    nextApproverName: 'Hannah Valentine', nextApproverId: 13,
+                    status: 'In Process', amount: 1900.00,
+                    propertyName: 'Signature Place', propertyId: 103,
+                    unitName: '81-081', itemType: 'Financial',
+                    requestorComment: '', createDate: '', lastEditDate: '',
+                    attributes: [
+                        ['Price', '2524'], ['Shipping', '0'],
+                        ['Tax', '0'], ['OtherCost', '0']
+                    ],
+                    comments: [
+                        ['Date, text, user']
+                    ]
+                },
+                {
+                    requestId: 1108, requestName: 'Washing Machine',
+                    requesterName: 'Maverick Jones', requesterId: 6,
+                    nextApproverName: 'Donna Tijuana', nextApproverId: 3,
+                    status: 'Approved', amount: 700.00,
+                    propertyName: 'A Rundown Trailer', propertyId: 111703,
+                    unitName: 'A3', itemType: 'Residential',
+                    requestorComment: '', createDate: '', lastEditDate: '',
+                    attributes: [
+                        ['Price', '2524'], ['Shipping', '0'],
+                        ['Tax', '0'], ['OtherCost', '0']
+                    ],
+                    comments: [
+                        ['Date, text, user']
+                    ]
+                }
+            ]
+        };
+        this.loadRequests = this.loadRequests.bind(this);
     }
 
-    componentDidMount() {
+    componentWillMount() {
         this.loadRequests();
     }
 
     loadRequests() {
-        axios.get('https://standardrequests.com/api/login', {
+        console.log('Load Request started');
+        var paramString = '';
+        paramString +=  this.props.state.filters.status.current;
+        paramString +=  this.props.state.filters.property.current;
+        paramString +=  this.props.state.filters.approvers.current;
+        paramString +=  this.props.state.filters.period.current;
+        axios.get('https://standardrequests.com/api/requests/' + paramString, {
             auth: {
                 username: this.state.usr,
                 password: this.state.pas
             }
         }).then(function(res){
-            console.log('axios request worked');
-            const { user, filters } = JSON.parse(res.request.response);
-            user.password = that.state.pas;
-            that.setState({
-                usr: 'null', pas: 'null'
-            });
-            that.props.loginSetState(user, filters)
+            console.log('axios request worked', res);
         }).catch(function(err){
             console.log('Getting Requests Went Wrong');
             console.log(err);
         })
+        console.log('Load Request Ended');
     }
 
     render() {

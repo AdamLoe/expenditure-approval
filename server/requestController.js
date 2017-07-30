@@ -2,6 +2,7 @@ var knex = require('./knexfile.js');
 
 //Searches Database with filters, returns requests objects
 exports.query = function (req, res) {
+    console.log('Query Function Called');
     var filters = req.params;
     console.log(req.params);
     knex('requests').where(    )
