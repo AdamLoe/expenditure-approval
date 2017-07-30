@@ -22,7 +22,7 @@ class App extends React.Component {
                     current: 'ALL1',
                     options: []
                 },
-                approvers: {
+                approver: {
                     current: 'eddyG',
                     options: []
                 },
@@ -40,8 +40,7 @@ class App extends React.Component {
         console.log('got user', user);
         console.log('got filters', filters);
         this.setState({
-            user: user,
-            filters: filters
+            user: user
         })
     }
 
