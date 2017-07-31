@@ -23,6 +23,7 @@
     "basic-auth": "^1.1.0",
     "basic-auth-connect": "^1.0.0",
     "bcrypt": "^1.0.2",
+    "body-parser": "^1.17.2",
     "cors": "^2.8.4",
     "express": "^4.15.2",
     "fs": "0.0.1-security",

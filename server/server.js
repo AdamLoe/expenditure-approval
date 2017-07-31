@@ -2,6 +2,9 @@
 var express = require('express');
 var app = express();
 
+var bodyParser = require("body-parser");
+app.use(bodyParser.urlencoded({extended:false}));
+app.use(bodyParser.json());
 console.log('App started');
 
 //DELETE THIS
@@ -32,7 +35,6 @@ app.use('*', function(req,res){
 
 var http  = require('http');
 http.createServer(app).listen(80);
-
 var fs = require('fs');
 var privateKey = fs.readFileSync('/etc/letsencrypt/live/standardrequests.com/privkey.pem', 'utf8');
 var certificate = fs.readFileSync('/etc/letsencrypt/live/standardrequests.com/cert.pem', 'utf8');
