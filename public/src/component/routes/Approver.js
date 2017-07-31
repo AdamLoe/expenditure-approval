@@ -8,7 +8,24 @@ class Approver extends React.Component {
         this.state = {
             usr: 'eddyG', pas: 'earl',
             user:      this.props.state.user,
-            filters:   this.props.state.filters,
+            filters:  {
+                status: {
+                    current: 'ALL0',
+                        options: []
+                },
+                property: {
+                    current: 'ALL1',
+                        options: []
+                },
+                approver: {
+                    current: 'eddyG',
+                        options: []
+                },
+                period: {
+                    current: 'ALL3',
+                        options: []
+                }
+            },
             requests: [
                 {
                     requestId: 1107, requestName: 'HVAC',
