@@ -17,6 +17,9 @@ class Admin extends React.Component {
             ]
         };
         this.loadUsers = this.loadUsers.bind(this);
+        this.updateUser = this.updateUser.bind(this);
+        this.createUser = this.createUser.bind(this);
+        this.deleteUser = this.deleteUser.bind(this);
     }
 
     componentWillMount() {
@@ -25,30 +28,78 @@ class Admin extends React.Component {
 
     loadUsers() {
         var that = this;
-        console.log('Load Users started',this.props.state.user.username,this.props.state.user.password);
+        console.log('Load Users started',this.props.user.username,this.props.user.password);
         axios({
-            method: 'post',
+            method: 'get',
             url: 'https://standardrequests.com/api/users/',
             auth: {
-                username: this.props.state.user.username,
-                password: this.props.state.user.password
-            },
-            data: {
-                apples: 'green'
+                username: this.props.user.username,
+                password: this.props.user.password
             }
         }).then(function(res){
-            console.log(res);
-            /*
-            console.log('axios users worked', res.data);
+            console.log('axios users worked', res);
             that.setState({
                 users: res.data
-            })
-            */
+            });
         }).catch(function(err){
             console.log('Getting Users Went Wrong');
             console.log(err);
         });
         console.log('Load Users Ended');
+    }
+
+    updateUser(user) {
+        console.log('Update user called');
+        axios({
+            method: 'post',
+            url: 'https://standardrequests.com/api/users/' + user.username,
+            auth: {
+                username: this.props.user.username,
+                password: this.props.user.password
+            },
+            data: user
+        }).then(function(res){
+            console.log('axios update user worked', res);
+        }).catch(function(err){
+            console.log('Updatiing User Went Wrong');
+            console.log(err);
+        });
+    }
+
+    createUser(user) {
+        console.log('Create user called');
+        axios({
+            method: 'post',
+            url: 'https://standardrequests.com/api/users/',
+            auth: {
+                username: this.props.user.username,
+                password: this.props.user.password
+            },
+            data: user
+        }).then(function(res){
+            console.log('axios create user worked', res);
+        }).catch(function(err){
+            console.log('Creating User Went Wrong');
+            console.log(err);
+        });
+    }
+
+    deleteUser(user) {
+        console.log('Delete user called');
+        axios({
+            method: 'delete',
+            url: 'https://standardrequests.com/api/users/' + user.username,
+            auth: {
+                username: this.props.user.username,
+                password: this.props.user.password
+            },
+            data: user
+        }).then(function(res){
+            console.log('axios delete user worked', res);
+        }).catch(function(err){
+            console.log('Deleting User Went Wrong');
+            console.log(err);
+        });
     }
 
     render() {
@@ -65,8 +116,11 @@ class Admin extends React.Component {
                 <div className='UsersContainer'>
                     {this.state.users.map( user =>
                         <User
-                            state={user}
+                            user={user}
                             key={user.username}
+                            updateUser={this.updateUser}
+                            createUser={this.createUser}
+                            deleteUser={this.deleteUser}
                         />
                     )}
                 </div>

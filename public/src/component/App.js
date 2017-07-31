@@ -33,15 +33,15 @@ class App extends React.Component {
             )
         } else if (this.state.user.type === 'requester') {
             return (
-                <Requester state={this.state}/>
+                <Requester user={this.state.user}/>
             )
         } else if (this.state.user.type === 'admin') {
             return (
-                <Admin state={this.state}/>
+                <Admin user={this.state.user}/>
             )
         } else if (this.state.user.type === 'approver') {
             return (
-                <Approver state={this.state}/>
+                <Approver user={this.state.user}/>
         )
         } else {
             return (
