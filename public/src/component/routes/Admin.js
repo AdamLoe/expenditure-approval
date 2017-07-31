@@ -33,15 +33,15 @@ class Admin extends React.Component {
                 password: this.props.state.user.password
             }
         }).then(function(res){
-            console.log('axios request worked', res.data);
+            console.log('axios users worked', res.data);
             that.setState({
                 users: res.data
             })
         }).catch(function(err){
-            console.log('Getting Requests Went Wrong');
+            console.log('Getting Users Went Wrong');
             console.log(err);
         });
-        console.log('Load Request Ended');
+        console.log('Load Users Ended');
     }
 
     render() {
