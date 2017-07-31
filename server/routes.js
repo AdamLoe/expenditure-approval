@@ -16,7 +16,7 @@ router.post('/requests/', request);
 //Only Admins Past Here
 router.use(authenticateAdmin);
 //Our 3 User Routes
-router.get('/users/:type', userList);
+router.get('/users/', userList);
 router.post('/users/:usr', editUser);
 router.post('/users/', makeUser);
 router.delete('/users/:usr', removeUser);

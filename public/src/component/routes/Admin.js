@@ -26,7 +26,7 @@ class Admin extends React.Component {
     loadUsers() {
         var that = this;
         console.log('Load Users started',this.props.state.user.username,this.props.state.user.password);
-        axios.post('https://standardrequests.com/api/users/', {
+        axios.get('https://standardrequests.com/api/users/', {
             auth: {
                 username: this.props.state.user.username,
                 password: this.props.state.user.password
