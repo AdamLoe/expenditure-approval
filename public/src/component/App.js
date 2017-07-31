@@ -11,7 +11,7 @@ class App extends React.Component {
         this.state = {
             user: {
                 username: 'terryB',  password: 'terry',
-                type: 'admin',  name: ''
+                type: '',  name: ''
             },
             filters: {
                 status: {
