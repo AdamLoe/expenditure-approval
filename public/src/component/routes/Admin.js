@@ -32,6 +32,9 @@ class Admin extends React.Component {
             auth: {
                 username: this.props.state.user.username,
                 password: this.props.state.user.password
+            },
+            data: {
+                apples: 'green'
             }
         }).then(function(res){
             console.log(res);

@@ -44,10 +44,6 @@ exports.editUser  = function (req, res) {
 exports.makeUser = function (req, res) {
     console.log('MakeUser function Hit');
     knex('users')
-
-
-
-
         .then(function(data) {
             res.send(data);
         })
