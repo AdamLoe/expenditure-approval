@@ -9,7 +9,6 @@ exports.userList = function (req, res) {
         'username', 'name', 'type', 'nextapprover', 'approvelimit'
     )
         .then(function(data) {
-            console.log(data);
             res.send(data);
         })
         .catch(function(err){
@@ -27,10 +26,7 @@ exports.userList = function (req, res) {
 exports.editUser  = function (req, res) {
     console.log('EditUser function Hit');
     knex('users')
-
-
         .then(function(data) {
-            console.log(data);
             res.send(data);
         })
         .catch(function(err){
@@ -53,7 +49,6 @@ exports.makeUser = function (req, res) {
 
 
         .then(function(data) {
-            console.log(data);
             res.send(data);
         })
         .catch(function(err){
