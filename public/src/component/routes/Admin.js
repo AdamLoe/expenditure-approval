@@ -48,7 +48,7 @@ class Admin extends React.Component {
         console.log('Load Users Ended');
     }
 
-    updateUser(user) {
+    updateUser(key, value, callback) {
         console.log('Update user called');
         axios({
             method: 'post',
@@ -57,7 +57,10 @@ class Admin extends React.Component {
                 username: this.props.user.username,
                 password: this.props.user.password
             },
-            data: user
+            data: {
+                key: key,
+                value: value
+            }
         }).then(function(res){
             console.log('axios update user worked', res);
         }).catch(function(err){
