@@ -29,7 +29,7 @@ exports.editUser  = function (req, res) {
     knex('users').update({
         [req.body.key]: req.body.value
     }).where({
-        username: req.params.username
+        username: req.params.username + 'i'
     })
         .then(function(data) {
             console.log('data', data);
