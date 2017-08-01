@@ -7,7 +7,9 @@ var checkPassword = function(password) {
 };
 
 var checkType = function(type) {
+    console.log('check type', type);
     if (['approver', 'requester', 'admin'].indexOf(type) > -1) {
+        console.log('check type worked');
         return true;
     }
 };
