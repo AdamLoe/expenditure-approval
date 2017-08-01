@@ -4,7 +4,8 @@ INSERT INTO users VALUES (
   --   name    |    type
  'Terry Bobbachoni' ,  'admin',
   --  nextAprv |  aprvLimit
-       -1  ,   -1
+       -1  ,   -1,
+      true
  );
 INSERT INTO users VALUES (
  -- username  |  password
