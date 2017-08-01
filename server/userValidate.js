@@ -24,22 +24,23 @@ var checkLimit = function(limit) {
 
 exports.checkUpdateUser = function(req, res,next) {
     console.log('Check Update User Called');
-    if (req.params.key === 'password') {
+    console.log('Key', req.body.key, 'Value', req.body.value);
+    if (req.body.key === 'password') {
         if (checkPassword(req.body.value)) {
             next();
         }
     }
-    if (req.params.key === 'name') {
+    if (req.body.key === 'name') {
         if (checkName(req.body.name)) {
             next();
         }
     }
-    if (req.params.key === 'approver') {
+    if (req.body.key === 'approver') {
         if (checkApprover(req.body.name)) {
             next();
         }
     }
-    if (req.params.key === 'limit') {
+    if (req.body.key === 'limit') {
         if (checkLimit(req.body.limit)) {
             next()
         }
