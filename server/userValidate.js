@@ -70,7 +70,11 @@ exports.checkMakeUser = function(req, res, next) {
 exports.checkUserListParams = function(req, res, next) {
     console.log('Check User Params', req.params.type, req.params.status);
     if (checkType(req.params.type)){
-        if ((req.params.status === true) || (req.params.status===false)) {
+        if (req.params.status === 'true') {
+            req.params.status = true;
+            next()
+        } else if (req.params.status==='false') {
+            req.params.status = false;
             next();
         }
     }
