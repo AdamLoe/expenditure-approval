@@ -32,6 +32,7 @@ exports.editUser  = function (req, res) {
         username: req.params.username
     })
         .then(function(data) {
+            console.log(data);
             res.status(200);
         })
         .catch(function(err){
