@@ -71,7 +71,7 @@ exports.removeUser = function (req, res) {
     knex('users')
         .then(function(data) {
             console.log(data);
-            res.send(data);
+            res.status(200).send(data);
         })
         .catch(function(err){
             console.log('Database query failed.');
