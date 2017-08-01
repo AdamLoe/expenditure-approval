@@ -78,7 +78,7 @@ exports.removeUser = function (req, res) {
     })
         .then(function(data) {
             console.log(data);
-            res.status(200).send(data);
+            res.status(200);
         })
         .catch(function(err){
             console.log('Database query failed.');

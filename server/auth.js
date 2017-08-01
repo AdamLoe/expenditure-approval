@@ -69,6 +69,9 @@ exports.authActive = function(req, res, next) {
     }
     else {
         console.log(req.user.username, 'is not active');
+        res.status('404').json({
+            err: 'You are not active'
+        })
     }
 };
 

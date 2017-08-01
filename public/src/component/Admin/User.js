@@ -8,6 +8,8 @@ class User extends React.Component {
             show: true,
             buttonBool: false,
 
+            status: this.props.user.status,
+
             username: this.props.user.username,
 
             password: this.props.user.password,
@@ -51,12 +53,12 @@ class User extends React.Component {
     }
 
     deleteUser(e) {
-        console.log('Delete user started');
+        console.log('Delete/Activate user started');
         this.props.deleteUser(this.state.username, this.callbackDeleteUser);
     }
 
     callbackDeleteUser(response) {
-        console.log('Delete User worked', res.data.data);
+        console.log('Delete/Activate User worked', res.data.data);
         if (response.data.data === 1) {
             this.setState({
                 show: false
@@ -134,7 +136,9 @@ class User extends React.Component {
                     { this.state.buttonBool &&
                     <div className="inputRow">
                         <div className="inputColumn">
-                            <button className="delete" onClick={this.deleteUser}> Delete</button>
+                            <button className="delete" onClick={this.deleteUser}>
+                                { this.state.status ? 'Dalete' : 'Activate'}
+                            </button>
                         </div>
                         <div className="inputColumn">
                             <input onChange={this.handlePassChange}></input>
