@@ -71,7 +71,11 @@ exports.makeUser = function (req, res) {
 //Otherwise, move to deleted pile
 exports.removeUser = function (req, res) {
     console.log('RemoveUser function Hit');
-    knex('users')
+    knex('users').update({
+        status: false
+    }).where({
+        username: req.params.username
+    })
         .then(function(data) {
             console.log(data);
             res.status(200).send(data);

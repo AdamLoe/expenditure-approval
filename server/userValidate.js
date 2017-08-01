@@ -1,5 +1,5 @@
 var checkUsername = function(username) {
-    return true;
+
 };
 
 var checkPassword = function(password) {

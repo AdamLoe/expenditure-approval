@@ -89,16 +89,15 @@ class Admin extends React.Component {
         });
     }
 
-    deleteUser(user) {
+    deleteUser(username) {
         console.log('Delete user called');
         axios({
             method: 'delete',
-            url: 'https://standardrequests.com/api/users/' + user.username,
+            url: 'https://standardrequests.com/api/users/' + username,
             auth: {
                 username: this.props.user.username,
                 password: this.props.user.password
-            },
-            data: user
+            }
         }).then(function(res){
             console.log('axios delete user worked', res);
         }).catch(function(err){

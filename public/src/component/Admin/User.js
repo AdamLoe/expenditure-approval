@@ -5,6 +5,7 @@ class User extends React.Component {
         console.log('User Constructed');
         super(props);
         this.state = {
+            show: true,
             buttonBool: false,
 
             username: this.props.user.username,
@@ -26,6 +27,8 @@ class User extends React.Component {
         this.expandUser = this.expandUser.bind(this);
 
         this.deleteUser = this.deleteUser.bind(this);
+        this.callbackDeleteUser = this.callbackDeleteUser.bind(this);
+
         this.updateUser = this.updateUser.bind(this);
 
         this.handlePassChange = this.handlePassChange.bind(this);
@@ -48,12 +51,21 @@ class User extends React.Component {
     }
 
     deleteUser(e) {
-        console.log('tried to delete', this.state.username);
-        alert('Delete does not work yet');
+        console.log('Delete user started');
+        this.props.deleteUser(this.state.username, this.callbackDeleteUser);
+    }
+
+    callbackDeleteUser(response) {
+        console.log('Delete User worked', res.data.data);
+        if (response.data.data === 1) {
+            this.setState({
+                show: false
+            });
+        }
     }
 
     updateUser(res, key, value) {
-        console.log(res.data.data, key, value);
+        console.log('Updating user', res.data.data, key, value);
         if (res.data.data === 1) {
             this.setState({
                 [key]: value
@@ -98,27 +110,28 @@ class User extends React.Component {
     }
 
     render() {
-        return (
-            <div className="user" >
-                <button className="valueRow" onClick={this.expandUser}>
-                    <div className="valueColumn">
-                        <h1> {this.state.username} </h1>
-                    </div>
-                    <div className="valueColumn">
-                        <h1> {this.state.password} </h1>
-                    </div>
-                    <div className="valueColumn">
-                        <h1> {this.state.name} </h1>
-                    </div>
-                    <div className="valueColumn">
-                        <h1> {this.state.approver} </h1>
-                    </div>
-                    <div className="valueColumn">
-                        <h1> {this.state.approvelimit} </h1>
-                    </div>
+        if (this.state.show === true) {
+            return (
+                <div className="user" >
+                    <button className="valueRow" onClick={this.expandUser}>
+                        <div className="valueColumn">
+                            <h1> {this.state.username} </h1>
+                        </div>
+                        <div className="valueColumn">
+                            <h1> {this.state.password} </h1>
+                        </div>
+                        <div className="valueColumn">
+                            <h1> {this.state.name} </h1>
+                        </div>
+                        <div className="valueColumn">
+                            <h1> {this.state.approver} </h1>
+                        </div>
+                        <div className="valueColumn">
+                            <h1> {this.state.approvelimit} </h1>
+                        </div>
 
-                </button>
-                { this.state.buttonBool &&
+                    </button>
+                    { this.state.buttonBool &&
                     <div className="inputRow">
                         <div className="inputColumn">
                             <button className="delete" onClick={this.deleteUser}> Delete</button>
@@ -140,9 +153,15 @@ class User extends React.Component {
                             <button className="normal" onClick={this.handleLimitSubmit}></button>
                         </div>
                     </div>
-                }
-            </div>
-        )
+                    }
+                </div>
+            )
+        }
+        else {
+            return (
+                <div className="emptyUser"></div>
+            )
+        }
     }
 }
 
