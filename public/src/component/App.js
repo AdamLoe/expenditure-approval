@@ -10,8 +10,8 @@ class App extends React.Component {
         super(props);
         this.state = {
             user: {
-                username: 'terryB',  password: 'terr',
-                type: 'admin',  name: ''
+                username: '',  password: '',
+                type: '',  name: ''
             }
         };
 

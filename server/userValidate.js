@@ -41,7 +41,7 @@ exports.checkUpdateUser = function(req, res,next) {
         }
     }
     if (req.body.key === 'approvelimit') {
-        if (checkLimit(req.body.value)) {
+        if (checkApproveLimit(req.body.value)) {
             next()
         }
 
