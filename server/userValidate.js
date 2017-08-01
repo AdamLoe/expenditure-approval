@@ -31,17 +31,17 @@ exports.checkUpdateUser = function(req, res,next) {
         }
     }
     if (req.body.key === 'name') {
-        if (checkName(req.body.name)) {
+        if (checkName(req.body.value)) {
             next();
         }
     }
     if (req.body.key === 'approver') {
-        if (checkApprover(req.body.name)) {
+        if (checkApprover(req.body.value)) {
             next();
         }
     }
     if (req.body.key === 'limit') {
-        if (checkLimit(req.body.limit)) {
+        if (checkLimit(req.body.value)) {
             next()
         }
 

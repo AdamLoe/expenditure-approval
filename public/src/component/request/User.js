@@ -11,9 +11,9 @@ class User extends React.Component {
             name: this.props.user.name,
             newName: '',
             type: this.props.user.type,
-            approver: this.props.user.nextapprover,
+            approver: this.props.user.approver,
             newApprover: '',
-            limit: this.props.user.approvelimit,
+            limit: this.props.user.limit,
             newLimit: 0
         };
 
