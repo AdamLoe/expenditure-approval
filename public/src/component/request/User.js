@@ -13,7 +13,7 @@ class User extends React.Component {
             type: this.props.user.type,
             approver: this.props.user.approver,
             newApprover: '',
-            limit: this.props.user.limit,
+            approvelimit: this.props.user.approvelimit,
             newLimit: 0
         };
 
@@ -75,7 +75,7 @@ class User extends React.Component {
         this.props.updateUser(this.state.username,'approver', this.state.newApprover, this.updateUser);
     }
     handleLimitSubmit(e) {
-        this.props.updateUser(this.state.username, 'limit', this.state.newLimit, this.updateUser);
+        this.props.updateUser(this.state.username, 'approvelimit', this.state.newLimit, this.updateUser);
     }
 
     render() {
@@ -96,7 +96,7 @@ class User extends React.Component {
                 <input onChange={this.handleApproverChange}></input>
                 <button onClick={this.handleApproverSubmit}> approverSubmit</button>
 
-                <h1> {this.state.limit} </h1>
+                <h1> {this.state.approvelimit} </h1>
                 <input onChange={this.handleLimitChange}></input>
                 <button onClick={this.handleLimitSubmit}> limitSubmit</button>
 

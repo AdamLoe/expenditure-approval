@@ -18,7 +18,7 @@ var checkApprover = function(approver) {
     return true;
 };
 
-var checkLimit = function(limit) {
+var checkApproveLimit = function(limit) {
     return true;
 };
 
@@ -54,7 +54,7 @@ exports.checkMakeUser = function(req, res, next) {
         if (checkPassword(req.body.password)) {
             if (checkType(req.body.type)) {
                 if (checkApprover(req.body.approver)) {
-                    if (checkLimit(req.body.limit)) {
+                    if (checkApproveLimit(req.body.approvelimit)) {
                         next();
                     }
                 }

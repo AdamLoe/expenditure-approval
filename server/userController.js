@@ -6,7 +6,7 @@ exports.userList = function (req, res) {
     knex('users')
         /*
         .select(
-        'username', 'name', 'type', 'approver', 'limit'
+        'username', 'name', 'type', 'approver', 'approvelimit'
     )
     */
         .then(function(data) {
