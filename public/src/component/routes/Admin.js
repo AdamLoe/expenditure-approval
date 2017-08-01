@@ -65,7 +65,7 @@ class Admin extends React.Component {
         }).then(function(res){
             console.log('axios update user worked', res);
         }).catch(function(err){
-            console.log('Updatiing User Went Wrong');
+            console.log('Updating User Went Wrong');
             console.log(err);
         });
     }
