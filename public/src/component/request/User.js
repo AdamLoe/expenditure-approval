@@ -6,13 +6,18 @@ class User extends React.Component {
         super(props);
         this.state = {
             username: this.props.user.username,
+
             password: this.props.user.password,
             newPassword: '',
+
             name: this.props.user.name,
             newName: '',
+
             type: this.props.user.type,
+
             approver: this.props.user.approver,
             newApprover: '',
+
             approvelimit: this.props.user.approvelimit,
             newLimit: 0
         };
@@ -45,6 +50,7 @@ class User extends React.Component {
             console.log('Database returned 0 for update');
         }
     }
+
     handlePassChange(e) {
         this.setState({
            newPassword: e.target.value

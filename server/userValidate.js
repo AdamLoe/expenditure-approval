@@ -40,7 +40,7 @@ exports.checkUpdateUser = function(req, res,next) {
             next();
         }
     }
-    if (req.body.key === 'limit') {
+    if (req.body.key === 'approvelimit') {
         if (checkLimit(req.body.value)) {
             next()
         }
