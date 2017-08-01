@@ -5,6 +5,8 @@ class User extends React.Component {
         console.log('User Constructed');
         super(props);
         this.state = {
+            buttonBool: false,
+
             username: this.props.user.username,
 
             password: this.props.user.password,
@@ -21,6 +23,8 @@ class User extends React.Component {
             approvelimit: this.props.user.approvelimit,
             newLimit: 0
         };
+        this.expandUser = this.expandUser.bind(this);
+
         this.deleteUser = this.deleteUser.bind(this);
         this.updateUser = this.updateUser.bind(this);
 
@@ -35,6 +39,12 @@ class User extends React.Component {
 
         this.handleLimitChange = this.handleLimitChange.bind(this);
         this.handleLimitSubmit = this.handleLimitSubmit.bind(this);
+    }
+
+    expandUser(e) {
+        this.setState({
+            buttonBool: !this.state.buttonBool
+        })
     }
 
     deleteUser(e) {
@@ -90,7 +100,7 @@ class User extends React.Component {
     render() {
         return (
             <div className="user" >
-                <button className="valueRow">
+                <button className="valueRow" onClick={this.expandUser}>
                     <div className="valueColumn">
                         <h1> {this.state.username} </h1>
                     </div>
@@ -108,39 +118,29 @@ class User extends React.Component {
                     </div>
 
                 </button>
-                <div className="inputRow">
-                    <div className="inputColumn">
-                        <button className="delete" onClick={this.deleteUser}> Delete</button>
+                { this.state.buttonBool &&
+                    <div className="inputRow">
+                        <div className="inputColumn">
+                            <button className="delete" onClick={this.deleteUser}> Delete</button>
+                        </div>
+                        <div className="inputColumn">
+                            <input onChange={this.handlePassChange}></input>
+                            <button className="normal" onClick={this.handlePassSubmit}></button>
+                        </div>
+                        <div className="inputColumn">
+                            <input onChange={this.handleNameChange}></input>
+                            <button className="normal" onClick={this.handleNameSubmit}></button>
+                        </div>
+                        <div className="inputColumn">
+                            <input onChange={this.handleApproverChange}></input>
+                            <button className="normal" onClick={this.handleApproverSubmit}></button>
+                        </div>
+                        <div className="inputColumn">
+                            <input onChange={this.handleLimitChange}></input>
+                            <button className="normal" onClick={this.handleLimitSubmit}></button>
+                        </div>
                     </div>
-                    <div className="inputColumn">
-                        <input onChange={this.handlePassChange}></input>
-                        <button className="normal" onClick={this.handlePassSubmit}> </button>
-                    </div>
-                    <div className="inputColumn">
-                        <input onChange={this.handleNameChange}></input>
-                        <button className="normal" onClick={this.handleNameSubmit}> </button>
-                    </div>
-                    <div className="inputColumn">
-                        <input onChange={this.handleApproverChange}></input>
-                        <button className="normal" onClick={this.handleApproverSubmit}> </button>
-                    </div>
-                    <div className="inputColumn">
-                        <input onChange={this.handleLimitChange}></input>
-                        <button className="normal" onClick={this.handleLimitSubmit}> </button>
-                    </div>
-                </div>
-
-
-
-
-
-
-
-
-
-
-
-
+                }
             </div>
         )
     }
