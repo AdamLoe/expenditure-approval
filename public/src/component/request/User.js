@@ -5,11 +5,15 @@ class User extends React.Component {
         console.log('User Constructed');
         super(props);
         this.state = {
-            serverCopy: this.props.user,
+            username: this.props.user.username,
+            password: this.props.user.password,
             newPassword: '',
+            name: this.props.user.name,
             newName: '',
-            newType: '',
+            type: this.props.user.type,
+            approver: this.props.user.nextapprover,
             newApprover: '',
+            limit: this.props.user.approvelimit,
             newLimit: 0
         };
 
@@ -31,7 +35,8 @@ class User extends React.Component {
 
 
     updateUser(res, key, value) {
-        if (res === 1) {
+        console.log(res.data.data, key, value);
+        if (res.data.data === 1) {
             this.setState({
                 [key]: value
             });
@@ -61,39 +66,37 @@ class User extends React.Component {
         });
     }
     handlePassSubmit(e) {
-        this.props.updateUser(this.state.serverCopy.username,'password', this.state.newPassword, this.updateUser);
+        this.props.updateUser(this.state.username,'password', this.state.newPassword, this.updateUser);
     }
     handleNameSubmit(e) {
-        this.props.updateUser(this.state.serverCopy.username,'name', this.state.newName, this.updateUser);
+        this.props.updateUser(this.state.username,'name', this.state.newName, this.updateUser);
     }
     handleApproverSubmit(e) {
-        this.props.updateUser(this.state.serverCopy.username,'approver', this.state.newApprover, this.updateUser);
+        this.props.updateUser(this.state.username,'approver', this.state.newApprover, this.updateUser);
     }
     handleLimitSubmit(e) {
-        this.props.updateUser(this.state.serverCopy.username, 'limit', this.state.newLimit, this.updateUser);
+        this.props.updateUser(this.state.username, 'limit', this.state.newLimit, this.updateUser);
     }
 
     render() {
         return (
             <div className="user" >
-                <h1> {this.state.serverCopy.username} </h1>
-                <h1> {this.state.serverCopy.type} </h1>
+                <h1> {this.state.username} </h1>
 
-
-                <h1> {this.state.serverCopy.password} </h1>
+                <h1> {this.state.password} </h1>
                 <input onChange={this.handlePassChange}></input>
                 <button onClick={this.handlePassSubmit}> passwordSubmit</button>
 
-                <h1> {this.state.serverCopy.name} </h1>
+                <h1> {this.state.name} </h1>
                 <input onChange={this.handleNameChange}></input>
                 <button onClick={this.handleNameSubmit}> nameSubmit</button>
 
 
-                <h1> {this.state.serverCopy.nextapprover} </h1>
+                <h1> {this.state.approver} </h1>
                 <input onChange={this.handleApproverChange}></input>
                 <button onClick={this.handleApproverSubmit}> approverSubmit</button>
 
-                <h1> {this.state.serverCopy.approvelimit} </h1>
+                <h1> {this.state.limit} </h1>
                 <input onChange={this.handleLimitChange}></input>
                 <button onClick={this.handleLimitSubmit}> limitSubmit</button>
 

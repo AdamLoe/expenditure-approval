@@ -1,5 +1,5 @@
 var checkUsername = function(username) {
-
+    return true;
 };
 
 var checkPassword = function(password) {
@@ -7,19 +7,19 @@ var checkPassword = function(password) {
 };
 
 var checkType = function(password) {
-
+    return true;
 };
 
 var checkName = function(name) {
-
+    return true;
 };
 
 var checkApprover = function(approver) {
-
+    return true;
 };
 
 var checkLimit = function(limit) {
-
+    return true;
 };
 
 exports.checkUpdateUser = function(req, res,next) {
