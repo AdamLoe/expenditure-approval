@@ -3,7 +3,7 @@ var checkUsername = function(username) {
 };
 
 var checkPassword = function(password) {
-
+    return true;
 };
 
 var checkType = function(password) {
