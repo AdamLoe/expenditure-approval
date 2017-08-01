@@ -3,12 +3,10 @@ var knex = require('./knexfile.js');
 //Search database for users of type
 exports.userList = function (req, res) {
     console.log('Query Users Called');
-    knex('users')
-        /*
-        .select(
-        'username', 'name', 'type', 'approver', 'approvelimit'
-    )
-    */
+    knex('users').where({
+        type: req.params.type,
+        status: req.params.status
+    })
         .then(function(data) {
             res.status(200).send(data);
         })
