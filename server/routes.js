@@ -3,6 +3,7 @@ var router = express.Router();
 var { authenticate, login, authenticateAdmin } = require('./auth.js');
 var { query, comment, request } = require('./requestController');
 var { userList, editUser, makeUser, removeUser } = require('./userController');
+var { checkUpdateUser, checkMakeUser, checkRemoveUser } = require('./userValidate');
 
 //Only normal accounts past here
 router.use(authenticate);
@@ -17,9 +18,9 @@ router.post('/requests/', request);
 router.use(authenticateAdmin);
 //Our 3 User Routes
 router.get('/users/', userList);
-router.post('/users/:username', editUser);
-router.post('/users/', makeUser);
-router.delete('/users/:username', removeUser);
+router.post('/users/:username', checkUpdateUser, editUser);
+router.post('/users/', checkMakeUser, makeUser);
+router.delete('/users/:username', checkRemoveUser, removeUser);
 
 module.exports = router;
 

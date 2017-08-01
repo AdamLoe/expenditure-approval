@@ -21,9 +21,6 @@ class User extends React.Component {
         this.handleNameChange = this.handleNameChange.bind(this);
         this.handleNameSubmit = this.handleNameSubmit.bind(this);
 
-        this.handleTypeChange = this.handleTypeChange.bind(this);
-        this.handleTypeSubmit = this.handleTypeSubmit.bind(this);
-
         this.handleApproverChange = this.handleApproverChange.bind(this);
         this.handleApproverSubmit = this.handleApproverSubmit.bind(this);
 
@@ -46,11 +43,6 @@ class User extends React.Component {
             newName: e.target.value
         });
     }
-    handleTypeChange(e) {
-        this.setState({
-            newType: e.target.value
-        });
-    }
     handleApproverChange(e) {
         this.setState({
             newApprover: e.target.value
@@ -67,9 +59,6 @@ class User extends React.Component {
     handleNameSubmit(e) {
         this.props.updateUser(this.state.serverCopy.username,'name', this.state.newName, this.updateUser);
     }
-    handleTypeSubmit(e) {
-        this.props.updateUser(this.state.serverCopy.username,'type', this.state.newType, this.updateUser);
-    }
     handleApproverSubmit(e) {
         this.props.updateUser(this.state.serverCopy.username,'approver', this.state.newApprover, this.updateUser);
     }
@@ -81,6 +70,7 @@ class User extends React.Component {
         return (
             <div className="user" >
                 <h1> {this.state.serverCopy.username} </h1>
+                <h1> {this.state.serverCopy.type} </h1>
 
                 <input onChange={this.handlePassChange}></input>
                 <button onClick={this.handlePassSubmit}> passwordSubmit</button>
@@ -89,9 +79,6 @@ class User extends React.Component {
                 <input onChange={this.handleNameChange}></input>
                 <button onClick={this.handleNameSubmit}> nameSubmit</button>
 
-                <h1> {this.state.serverCopy.type} </h1>
-                <input onChange={this.handleTypeChange}></input>
-                <button onClick={this.handleTypeSubmit}> typeSubmit</button>
 
                 <h1> {this.state.serverCopy.nextapprover} </h1>
                 <input onChange={this.handleApproverChange}></input>

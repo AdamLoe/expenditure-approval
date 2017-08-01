@@ -19,16 +19,15 @@ exports.userList = function (req, res) {
             })
         })
 };
-var checkUpdateUserValid = function(req, res) {
-    console.log('Admin:', req.user.username, ' is trying to change', req.params.username + "'s", req.body.key, ' to ', req.body.value);
-
-};
 
 //Updates user account settings
 exports.editUser  = function (req, res) {
     console.log('EditUser function Hit');
-    checkUpdateUserValid(req, res);
-    knex('users')
+    knex('users').update({
+        [req.body.key]: req.body.value
+    }).where({
+        username: req.params.username
+    })
         .then(function(data) {
             res.send(data);
         })
