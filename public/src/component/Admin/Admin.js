@@ -2,6 +2,7 @@ var React = require('react');
 var User = require('./User.js');
 var axios = require('axios');
 var AdminFilters = require('./AdminFilters');
+var CreateUser = require('./CreateUser');
 
 class Admin extends React.Component {
     constructor(props) {
@@ -65,7 +66,7 @@ class Admin extends React.Component {
     }
 
     createUser(user) {
-        console.log('Create user called');
+        console.log('Create user called', user);
         axios({
             method: 'post',
             url: 'https://standardrequests.com/api/users/',
@@ -106,6 +107,7 @@ class Admin extends React.Component {
         return (
             <div className='AdminContainer'>
                 <AdminFilters loadUsers={this.loadUsers} />
+                <CreateUser createUser={this.createUser} />
                 <div className="UserHeaders">
                     <div className="headerColumn">
                         <h1> Username </h1>

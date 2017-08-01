@@ -76,6 +76,54 @@ h1 {
 .Submit {
 }
 /*
+  ##################  Admin Create User ############################
+ */
+.CreateUser {
+    margin: auto;
+    width: 1000px;
+    max-width: 100%;
+    height: auto;
+    background-color: darkred;
+}
+.CreateUserRow {
+    display: inline-block;
+    height: 4em;
+    width: 90%;
+
+}
+.CreateUserColumn {
+    width: 333px;
+    max-width: 33%;
+    display: inline-block;
+    text-align: center;
+    margin: 10px 0px 10px 0px;
+    background-color: #560f0f;
+}
+
+.CreateUserColumn h1{
+    width: 31%;
+    display: inline-block;
+}
+
+.CreateUserColumn input{
+    width: 66%;
+    display: inline-block;
+}
+
+.CreateUserSubmit {
+    width: 100px;
+    max-width: 10%;
+    height: 2em;
+    display: inline-block;
+    background-color: #d66666;
+}
+.CreateUserSubmit h1{
+    margin: 0;
+}
+
+
+
+/*
   ##################  Admin Headers ############################
  */
 .UserHeaders {
@@ -115,6 +163,7 @@ h1 {
     max-width: 20%;
     display: inline-block;
     text-align: center;
+    margin: 10px 0px 10px 0px;
 }
 
 .inputRow {
@@ -125,6 +174,7 @@ h1 {
     max-width: 20%;
     display: inline-block;
     text-align: center;
+    margin: 10px 0px 10px 0px;
 }
 .inputColumn input {
     height: 1em;
