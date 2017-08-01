@@ -10,16 +10,16 @@ router.use(authenticate);
 router.get('/login', login);
 //Our 3 Request Routes
 router.get('/requests/:status/:property/:approver/:period', query);
-router.post('/requests/:id/:responseBool/:response', comment);
+router.post('/requests/:id', comment);
 router.post('/requests/', request);
 
 //Only Admins Past Here
 router.use(authenticateAdmin);
 //Our 3 User Routes
 router.get('/users/', userList);
-router.post('/users/:usr', editUser);
+router.post('/users/:username', editUser);
 router.post('/users/', makeUser);
-router.delete('/users/:usr', removeUser);
+router.delete('/users/:username', removeUser);
 
 module.exports = router;
 

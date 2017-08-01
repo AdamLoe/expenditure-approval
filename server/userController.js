@@ -3,8 +3,6 @@ var knex = require('./knexfile.js');
 //Search database for users of type
 exports.userList = function (req, res) {
     console.log('Query Users Called');
-    var filters = req.params;
-    console.log(req.params);
     knex('users').select(
         'username', 'name', 'type', 'nextapprover', 'approvelimit'
     )
@@ -21,11 +19,15 @@ exports.userList = function (req, res) {
             })
         })
 };
+var checkUpdateUserValid = function(req, res) {
+    console.log('User:', req.params.username,' is trying to change their', req.body.key, ' to ', req.body.value);
+
+};
 
 //Updates user account settings
 exports.editUser  = function (req, res) {
     console.log('EditUser function Hit');
-    console.log('User:', req.params.username,' is trying to change their', req.body.key, ' to ', req.body.value);
+    checkUpdateUserValid();
     knex('users')
         .then(function(data) {
             res.send(data);
