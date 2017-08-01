@@ -6,8 +6,10 @@ var checkPassword = function(password) {
     return true;
 };
 
-var checkType = function(password) {
-    return true;
+var checkType = function(type) {
+    if (['approver', 'requester', 'admin'].indexOf(type) > -1) {
+        return true;
+    }
 };
 
 var checkName = function(name) {
@@ -63,6 +65,11 @@ exports.checkMakeUser = function(req, res, next) {
     }
 };
 
-exports.checkRemoveUser = function(req, res, next) {
+exports.checkUserListParams = function(req, res, next) {
     console.log('Check Remove User Called');
+    if (checkType(req.params.type)){
+        if ((req.params.status === true) || (req.params.status===false)) {
+            next();
+        }
+    }
 };

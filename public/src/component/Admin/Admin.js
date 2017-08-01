@@ -31,7 +31,7 @@ class Admin extends React.Component {
         console.log('Load Users started',this.props.user.username,this.props.user.password);
         axios({
             method: 'get',
-            url: 'https://standardrequests.com/api/users/',
+            url: 'https://standardrequests.com/api/users/approver/true',
             auth: {
                 username: this.props.user.username,
                 password: this.props.user.password
