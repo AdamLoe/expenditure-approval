@@ -34,9 +34,7 @@ class User extends React.Component {
 
 
     updateUser(user) {
-        this.setState({
-            serverCopy: user
-        })
+        console.log('updated user to', user);
     }
     handlePassChange(e) {
         this.setState({
@@ -64,19 +62,19 @@ class User extends React.Component {
         });
     }
     handlePassSubmit(e) {
-        this.props.updateUser('password', this.state.newPassword, this.updateUser);
+        this.props.updateUser(this.state.serverCopy.username,'password', this.state.newPassword, this.updateUser);
     }
     handleNameSubmit(e) {
-        this.props.updateUser('name', this.state.newName, this.updateUser);
+        this.props.updateUser(this.state.serverCopy.username,'name', this.state.newName, this.updateUser);
     }
     handleTypeSubmit(e) {
-        this.props.updateUser('type', this.state.newType, this.updateUser);
+        this.props.updateUser(this.state.serverCopy.username,'type', this.state.newType, this.updateUser);
     }
     handleApproverSubmit(e) {
-        this.props.updateUser('approver', this.state.newApprover, this.updateUser);
+        this.props.updateUser(this.state.serverCopy.username,'approver', this.state.newApprover, this.updateUser);
     }
     handleLimitSubmit(e) {
-        this.props.updateUser('limit', this.state.newLimit, this.updateUser);
+        this.props.updateUser(this.state.serverCopy.username, 'limit', this.state.newLimit, this.updateUser);
     }
 
     render() {

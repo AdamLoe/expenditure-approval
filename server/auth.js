@@ -5,8 +5,6 @@ var basicAuth = require('basic-auth');
 exports.authenticate = function(req,res,next) {
     var {name , pass} = basicAuth.parse(req.headers.authorization);
     console.log('reqbody', req.body);
-    console.log('reqdata', req.data);
-    console.log(name, pass);
     knex('users').where({ username: name }).first()
         .then(function(user) {
             if (!user) {
@@ -48,9 +46,7 @@ exports.login = function(req,res) {
 }
 
 exports.authenticateAdmin = function(req,res,next) {
-    console.log('Somebody is trying to be admin', req.user);
     if (req.user.type == 'admin') {
-        console.log(req.user.type, ' ' , req.user.username, ' successfully admin authenticated.');
         next();
     }
 };

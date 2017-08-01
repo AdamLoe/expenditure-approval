@@ -48,11 +48,12 @@ class Admin extends React.Component {
         console.log('Load Users Ended');
     }
 
-    updateUser(key, value, callback) {
+    updateUser(username, key, value, callback) {
         console.log('Update user called');
+        console.log('key', key, 'value', value);
         axios({
             method: 'post',
-            url: 'https://standardrequests.com/api/users/' + user.username,
+            url: 'https://standardrequests.com/api/users/' + username ,
             auth: {
                 username: this.props.user.username,
                 password: this.props.user.password
