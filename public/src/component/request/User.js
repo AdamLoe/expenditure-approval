@@ -21,7 +21,7 @@ class User extends React.Component {
             approvelimit: this.props.user.approvelimit,
             newLimit: 0
         };
-
+        this.deleteUser = this.deleteUser.bind(this);
         this.updateUser = this.updateUser.bind(this);
 
         this.handlePassChange = this.handlePassChange.bind(this);
@@ -37,7 +37,10 @@ class User extends React.Component {
         this.handleLimitSubmit = this.handleLimitSubmit.bind(this);
     }
 
-
+    deleteUser(e) {
+        console.log('tried to delete', this.state.username);
+        alert('Delete does not work yet');
+    }
 
     updateUser(res, key, value) {
         console.log(res.data.data, key, value);
@@ -87,24 +90,54 @@ class User extends React.Component {
     render() {
         return (
             <div className="user" >
-                <h1> {this.state.username} </h1>
+                <div className="userColumn username">
+                    <div className="userValue">
+                        <h1> {this.state.username} </h1>
+                    </div>
+                    <div className="userInput">
+                        <button onClick={this.deleteUser}> Delete</button>
+                    </div>
+                </div>
 
-                <h1> {this.state.password} </h1>
-                <input onChange={this.handlePassChange}></input>
-                <button onClick={this.handlePassSubmit}> passwordSubmit</button>
+                <div className="userColumn password">
+                    <div className="userValue">
+                        <h1> {this.state.password} </h1>
+                    </div>
+                    <div className="userInput">
+                        <input onChange={this.handlePassChange}></input>
+                        <button onClick={this.handlePassSubmit}> Submit</button>
+                    </div>
+                </div>
 
-                <h1> {this.state.name} </h1>
-                <input onChange={this.handleNameChange}></input>
-                <button onClick={this.handleNameSubmit}> nameSubmit</button>
+                <div className="userColumn name">
+                    <div className="userValue">
+                        <h1> {this.state.name} </h1>
+                    </div>
+                    <div className="userInput">
+                        <input onChange={this.handleNameChange}></input>
+                        <button onClick={this.handleNameSubmit}> Submit</button>
+                    </div>
+                </div>
 
+                <div className="userColumn approver">
+                    <div className="userValue">
+                        <h1> {this.state.approver} </h1>
+                    </div>
+                    <div className="userInput">
+                        <input onChange={this.handleApproverChange}></input>
+                        <button onClick={this.handleApproverSubmit}> Submit</button>
+                    </div>
+                </div>
 
-                <h1> {this.state.approver} </h1>
-                <input onChange={this.handleApproverChange}></input>
-                <button onClick={this.handleApproverSubmit}> approverSubmit</button>
-
-                <h1> {this.state.approvelimit} </h1>
-                <input onChange={this.handleLimitChange}></input>
-                <button onClick={this.handleLimitSubmit}> limitSubmit</button>
+                <div className="userColumn limit">
+                    <div className="userValue">
+                        <h1> {this.state.approvelimit} </h1>
+                    </div>
+                    <div className="userInput">
+                        <input onChange={this.handleLimitChange}></input>
+                        <button onClick={this.handleLimitSubmit}> Submit</button>
+                    </div>
+                </div>
 
             </div>
         )
