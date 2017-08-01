@@ -32,7 +32,7 @@ exports.editUser  = function (req, res) {
         username: req.params.username
     })
         .then(function(data) {
-            res.send(data);
+            res.status(200).send(data);
         })
         .catch(function(err){
             console.log('Database update failed.');
@@ -50,7 +50,7 @@ exports.makeUser = function (req, res) {
     console.log('MakeUser function Hit');
     knex('users')
         .then(function(data) {
-            res.send(data);
+            res.status(200).send(data);
         })
         .catch(function(err){
             console.log('Database query failed.');
