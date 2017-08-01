@@ -27,7 +27,7 @@ var checkUpdateUserValid = function(req, res) {
 //Updates user account settings
 exports.editUser  = function (req, res) {
     console.log('EditUser function Hit');
-    checkUpdateUserValid();
+    checkUpdateUserValid(req, res);
     knex('users')
         .then(function(data) {
             res.send(data);
