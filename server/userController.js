@@ -32,7 +32,7 @@ exports.editUser  = function (req, res) {
         username: req.params.username
     })
         .then(function(data) {
-            res.status(200).send(data);
+            res.status(200);
         })
         .catch(function(err){
             console.log('Database update failed.');
