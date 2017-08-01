@@ -72,6 +72,8 @@ class User extends React.Component {
                 <h1> {this.state.serverCopy.username} </h1>
                 <h1> {this.state.serverCopy.type} </h1>
 
+
+                <h1> {this.state.serverCopy.password} </h1>
                 <input onChange={this.handlePassChange}></input>
                 <button onClick={this.handlePassSubmit}> passwordSubmit</button>
 
