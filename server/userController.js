@@ -10,7 +10,7 @@ exports.userList = function (req, res) {
     )
     */
         .then(function(data) {
-            res.send(data);
+            res.status(200).send(data);
         })
         .catch(function(err){
             console.log('Database query failed.');
@@ -35,7 +35,7 @@ exports.editUser  = function (req, res) {
             res.send(data);
         })
         .catch(function(err){
-            console.log('Database query failed.');
+            console.log('Database update failed.');
             res.status(500).json({
                 error: true,
                 data: {
