@@ -1,5 +1,5 @@
 var React = require('react');
-var User = require('../request/User.js');
+var User = require('./User.js');
 var axios = require('axios');
 
 class Admin extends React.Component {
@@ -117,6 +117,23 @@ class Admin extends React.Component {
                             <h1> {option} </h1>
                         </button>
                     )}
+                </div>
+                <div className="UserHeaders">
+                    <div className="headerColumn">
+                        <h1> Username </h1>
+                    </div>
+                    <div className="headerColumn">
+                        <h1> Password </h1>
+                    </div>
+                    <div className="headerColumn">
+                        <h1> Name </h1>
+                    </div>
+                    <div className="headerColumn">
+                        <h1> Next Approver </h1>
+                    </div>
+                    <div className="headerColumn">
+                        <h1> Approve Limit </h1>
+                    </div>
                 </div>
                 <div className='UsersContainer'>
                     {this.state.users.map( user =>

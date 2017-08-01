@@ -90,54 +90,56 @@ class User extends React.Component {
     render() {
         return (
             <div className="user" >
-                <div className="userColumn username">
-                    <div className="userValue">
+                <button className="valueRow">
+                    <div className="valueColumn">
                         <h1> {this.state.username} </h1>
                     </div>
-                    <div className="userInput">
-                        <button onClick={this.deleteUser}> Delete</button>
-                    </div>
-                </div>
-
-                <div className="userColumn password">
-                    <div className="userValue">
+                    <div className="valueColumn">
                         <h1> {this.state.password} </h1>
                     </div>
-                    <div className="userInput">
-                        <input onChange={this.handlePassChange}></input>
-                        <button onClick={this.handlePassSubmit}> Submit</button>
-                    </div>
-                </div>
-
-                <div className="userColumn name">
-                    <div className="userValue">
+                    <div className="valueColumn">
                         <h1> {this.state.name} </h1>
                     </div>
-                    <div className="userInput">
-                        <input onChange={this.handleNameChange}></input>
-                        <button onClick={this.handleNameSubmit}> Submit</button>
-                    </div>
-                </div>
-
-                <div className="userColumn approver">
-                    <div className="userValue">
+                    <div className="valueColumn">
                         <h1> {this.state.approver} </h1>
                     </div>
-                    <div className="userInput">
+                    <div className="valueColumn">
+                        <h1> {this.state.approvelimit} </h1>
+                    </div>
+
+                </button>
+                <div className="inputRow">
+                    <div className="inputColumn">
+                        <button className="delete" onClick={this.deleteUser}> Delete</button>
+                    </div>
+                    <div className="inputColumn">
+                        <input onChange={this.handlePassChange}></input>
+                        <button className="normal" onClick={this.handlePassSubmit}> </button>
+                    </div>
+                    <div className="inputColumn">
+                        <input onChange={this.handleNameChange}></input>
+                        <button className="normal" onClick={this.handleNameSubmit}> </button>
+                    </div>
+                    <div className="inputColumn">
                         <input onChange={this.handleApproverChange}></input>
-                        <button onClick={this.handleApproverSubmit}> Submit</button>
+                        <button className="normal" onClick={this.handleApproverSubmit}> </button>
+                    </div>
+                    <div className="inputColumn">
+                        <input onChange={this.handleLimitChange}></input>
+                        <button className="normal" onClick={this.handleLimitSubmit}> </button>
                     </div>
                 </div>
 
-                <div className="userColumn limit">
-                    <div className="userValue">
-                        <h1> {this.state.approvelimit} </h1>
-                    </div>
-                    <div className="userInput">
-                        <input onChange={this.handleLimitChange}></input>
-                        <button onClick={this.handleLimitSubmit}> Submit</button>
-                    </div>
-                </div>
+
+
+
+
+
+
+
+
+
+
 
             </div>
         )

@@ -3,7 +3,7 @@ var React = require('react');
 var Login     = require('./routes/Login')
 var Approver  = require('./routes/Approver')
 var Requester = require('./routes/Requester');
-var Admin     = require('./routes/Admin');
+var Admin     = require('./Admin/Admin');
 
 class App extends React.Component {
     constructor(props) {
