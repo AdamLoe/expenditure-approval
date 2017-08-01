@@ -30,8 +30,15 @@ class User extends React.Component {
 
 
 
-    updateUser(user) {
-        console.log('updated user to', user);
+    updateUser(res, key, value) {
+        if (res === 1) {
+            this.setState({
+                [key]: value
+            });
+        }
+        else {
+            console.log('Database returned 0 for update');
+        }
     }
     handlePassChange(e) {
         this.setState({

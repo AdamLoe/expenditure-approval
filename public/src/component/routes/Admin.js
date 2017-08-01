@@ -37,7 +37,7 @@ class Admin extends React.Component {
                 password: this.props.user.password
             }
         }).then(function(res){
-            console.log('axios users worked', res);
+            console.log('axios get users worked', res);
             that.setState({
                 users: res.data
             });
@@ -64,6 +64,7 @@ class Admin extends React.Component {
             }
         }).then(function(res){
             console.log('axios update user worked', res);
+            callback(res, key, value);
         }).catch(function(err){
             console.log('Updating User Went Wrong');
             console.log(err);
