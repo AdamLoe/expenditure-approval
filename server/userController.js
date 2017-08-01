@@ -49,7 +49,15 @@ exports.updateUser  = function (req, res) {
 //Create new row in database with values
 exports.makeUser = function (req, res) {
     console.log('MakeUser function Hit');
-    knex('users')
+    knex('users').insert({
+        username: req.body.username,
+        password: req.body.password,
+        name: req.body.name,
+        type: req.body.type,
+        approver: req.body.approver,
+        approvelimit: req.body.approvelimit,
+        status: true
+    })
         .then(function(data) {
             res.status(200).send(data);
         })
