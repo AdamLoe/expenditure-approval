@@ -25,6 +25,7 @@ exports.userList = function (req, res) {
 //Updates user account settings
 exports.editUser  = function (req, res) {
     console.log('EditUser function Hit');
+    console.log('User:', req.params.username,' is trying to change their', req.body.key, ' to ', req.body.value);
     knex('users')
         .then(function(data) {
             res.send(data);
