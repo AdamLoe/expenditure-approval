@@ -137,7 +137,7 @@ class User extends React.Component {
                     <div className="inputRow">
                         <div className="inputColumn">
                             <button className="delete" onClick={this.deleteUser}>
-                                { this.state.status ? 'Dalete' : 'Activate'}
+                                { this.state.status ? 'Deactivate' : 'Activate'}
                             </button>
                         </div>
                         <div className="inputColumn">

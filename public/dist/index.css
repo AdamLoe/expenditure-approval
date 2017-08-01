@@ -36,7 +36,7 @@ h1 {
 
 
 /*
-    Admin CSS
+  ##################  Admin CSS ############################
  */
 .AdminContainer {
     position: absolute;
@@ -44,6 +44,40 @@ h1 {
     height: 100%;
     background-color: #08591E;
 }
+/*
+  ##################  Admin Filters ############################
+ */
+.UserFilters {
+    margin: auto;
+    width: 1000px;
+    max-width: 100%;
+    height: auto;
+    background-color: darkblue;
+}
+
+.UserFilters div {
+    width: 200px;
+    max-width: 20%;
+    display: inline-block;
+    text-align: center;
+    margin: 10px 0px 10px 0px;
+}
+.inactive {
+}
+.active {
+    background-color: black;
+}
+.true {
+    background-color: green;
+}
+.false {
+    background-color: red;
+}
+.Submit {
+}
+/*
+  ##################  Admin Headers ############################
+ */
 .UserHeaders {
      margin: auto;
      width: 1000px;
@@ -58,6 +92,9 @@ h1 {
     text-align: center;
     margin: 10px 0px 10px 0px;
 }
+/*
+  ##################  Admin User List ############################
+ */
 .UsersContainer {
     margin: auto;
     width: 1000px;

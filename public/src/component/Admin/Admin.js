@@ -1,19 +1,13 @@
 var React = require('react');
 var User = require('./User.js');
 var axios = require('axios');
+var AdminFilters = require('./AdminFilters');
 
 class Admin extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            filters: {
-                current: 'requester',
-                options: [
-                    'admin', 'requester', 'approver', 'deleted'
-                ]
-            },
             users: [
-
             ]
         };
         this.loadUsers = this.loadUsers.bind(this);
@@ -21,8 +15,7 @@ class Admin extends React.Component {
         this.createUser = this.createUser.bind(this);
         this.deleteUser = this.deleteUser.bind(this);
 
-
-        this.loadUsers('approver', 'false');
+        this.loadUsers('approver', 'true');
     }
 
 
@@ -89,11 +82,11 @@ class Admin extends React.Component {
         });
     }
 
-    deleteUser(username, status, callback) {
+    deleteUser(username, currStatus, callback) {
         console.log('Delete user called');
         axios({
             method: 'delete',
-            url: 'https://standardrequests.com/api/users/' + username + '/' + status,
+            url: 'https://standardrequests.com/api/users/' + username + '/' + currStatus,
             auth: {
                 username: this.props.user.username,
                 password: this.props.user.password
@@ -107,17 +100,12 @@ class Admin extends React.Component {
         });
     }
 
+
     render() {
         console.log('Rendering Admin', this.state);
         return (
             <div className='AdminContainer'>
-                <div className='TypeContainer'>
-                    {this.state.filters.options.map(option =>
-                        <button className="TypeButton" key={option}>
-                            <h1> {option} </h1>
-                        </button>
-                    )}
-                </div>
+                <AdminFilters loadUsers={this.loadUsers} />
                 <div className="UserHeaders">
                     <div className="headerColumn">
                         <h1> Username </h1>
