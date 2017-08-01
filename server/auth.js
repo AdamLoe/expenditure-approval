@@ -45,8 +45,27 @@ exports.login = function(req,res) {
     console.log(req.user.type, ' ' , req.user.username, ' successfully logged in.');
 }
 
-exports.authenticateAdmin = function(req,res,next) {
-    if (req.user.type == 'admin') {
+exports.authAdmin = function(req,res,next) {
+    if (req.user.type === 'admin') {
         next();
     }
 };
+
+exports.authRequester = function(req, res, next) {
+    if (req.user.type === 'requester') {
+        next();
+    }
+};
+
+exports.authApprover = function(req, res, next) {
+    if (req.user.type === 'approver') {
+        next();
+    }
+};
+
+exports.authActive = function(req, res, next) {
+    if (req.user.status) {
+        next()
+    }
+};
+

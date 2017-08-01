@@ -1,7 +1,8 @@
 CREATE TABLE users (
     username text, password text,
     name     text, type     text,
-    approver text, approvelimit int
+    approver text, approvelimit int,
+    status bool
 );
 
 CREATE TABLE requests (

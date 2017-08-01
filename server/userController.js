@@ -24,8 +24,8 @@ exports.userList = function (req, res) {
 };
 
 //Updates user account settings
-exports.editUser  = function (req, res) {
-    console.log('EditUser function Hit');
+exports.updateUser  = function (req, res) {
+    console.log('Update User function Hit');
     knex('users').update({
         [req.body.key]: req.body.value
     }).where({

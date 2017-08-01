@@ -12,7 +12,8 @@ INSERT INTO users VALUES (
  --   name    |    type
 'Eddy Gorreat',  'approver',
  --  nextAprv |  aprvLimit
-      -1      ,    -1
+      -1      ,    -1,
+      true
 );
 INSERT INTO users VALUES (
  -- username  |  password
@@ -20,7 +21,8 @@ INSERT INTO users VALUES (
  --   name    |    type
 'Sarah Parantino',  'approver',
  --  nextAprv |  aprvLimit
-      'eddyG' ,    5000
+      'eddyG' ,    5000,
+      true
 );
 INSERT INTO users VALUES (
  -- username  |  password
@@ -28,7 +30,8 @@ INSERT INTO users VALUES (
  --   name    |    type
 'Sandra Tornapotarainyapolis' ,  'approver',
  --  nextAprv |  aprvLimit
-      'eddyG'  ,    4000
+      'eddyG'  ,    4000,
+      true
 );
 INSERT INTO users VALUES (
   -- username  |  password
@@ -36,7 +39,8 @@ INSERT INTO users VALUES (
   --   name    |    type
  'Tonya Baker' ,  'approver',
   --  nextAprv |  aprvLimit
-       'sarahP'  ,    3000
+       'sarahP'  ,    3000,
+      true
  );
  INSERT INTO users VALUES (
   -- username  |  password
@@ -44,7 +48,8 @@ INSERT INTO users VALUES (
   --   name    |    type
  'Gerry Lawnrence' ,  'approver',
   --  nextAprv |  aprvLimit
-       'sandraT'  ,   1000
+       'sandraT'  ,   1000,
+      true
  );
 INSERT INTO users VALUES (
   -- username  |  password
@@ -52,7 +57,8 @@ INSERT INTO users VALUES (
   --   name    |    type
  'Crawford Place' ,  'requester',
   --  nextAprv |  aprvLimit
-       'tonyaB'  ,   0
+       'tonyaB'  ,   0,
+      true
  );
  INSERT INTO users VALUES (
    -- username  |  password
@@ -60,7 +66,8 @@ INSERT INTO users VALUES (
    --   name    |    type
   'Cornelius Villa Apartments' ,  'requester',
    --  nextAprv |  aprvLimit
-        'tonyaB'  ,   0
+        'tonyaB'  ,   0,
+      true
   );
 INSERT INTO users VALUES (
   -- username  |  password
@@ -68,7 +75,8 @@ INSERT INTO users VALUES (
   --   name    |    type
  'Debian Homes' ,  'requester',
   --  nextAprv |  aprvLimit
-       'sandraT'  ,   0
+       'sandraT'  ,   0,
+      true
  );
 INSERT INTO users VALUES (
   -- username  |  password
@@ -76,7 +84,8 @@ INSERT INTO users VALUES (
   --   name    |    type
  'Markland Apts' ,  'requester',
   --  nextAprv |  aprvLimit
-       'gerryL'  ,   0
+       'gerryL'  ,   0,
+      true
  );
 
 
