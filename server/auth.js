@@ -68,7 +68,7 @@ exports.authActive = function(req, res, next) {
         next()
     }
     else {
-        console.log(req.user.username 'is not active');
+        console.log(req.user.username, 'is not active');
     }
 };
 
