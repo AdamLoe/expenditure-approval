@@ -20,18 +20,18 @@ class Admin extends React.Component {
         this.updateUser = this.updateUser.bind(this);
         this.createUser = this.createUser.bind(this);
         this.deleteUser = this.deleteUser.bind(this);
+
+
+        this.loadUsers('approver', 'false');
     }
 
-    componentWillMount() {
-        this.loadUsers();
-    }
 
-    loadUsers() {
+    loadUsers(type, status) {
         var that = this;
         console.log('Load Users started',this.props.user.username,this.props.user.password);
         axios({
             method: 'get',
-            url: 'https://standardrequests.com/api/users/approver/true',
+            url: 'https://standardrequests.com/api/users/' + type + '/' + status,
             auth: {
                 username: this.props.user.username,
                 password: this.props.user.password
@@ -89,17 +89,18 @@ class Admin extends React.Component {
         });
     }
 
-    deleteUser(username) {
+    deleteUser(username, status, callback) {
         console.log('Delete user called');
         axios({
             method: 'delete',
-            url: 'https://standardrequests.com/api/users/' + username,
+            url: 'https://standardrequests.com/api/users/' + username + '/' + status,
             auth: {
                 username: this.props.user.username,
                 password: this.props.user.password
             }
         }).then(function(res){
             console.log('axios delete user worked', res);
+            callback(res);
         }).catch(function(err){
             console.log('Deleting User Went Wrong');
             console.log(err);

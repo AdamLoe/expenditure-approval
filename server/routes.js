@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var { authenticate, login, authAdmin, authRequester, authApprover, authActive } = require('./auth.js');
 var { query, comment, request } = require('./requestController');
-var { userList, updateUser, makeUser, removeUser } = require('./userController');
+var { userList, updateUser, makeUser, deactivateUser, activateUser } = require('./userController');
 var { checkUserListParams, checkUpdateUser, checkMakeUser } = require('./userValidate');
 
 //User has to be logged in
@@ -26,6 +26,7 @@ router.get('/users/:type/:status', checkUserListParams, userList);
 //Check if parameters are valid, then make changes on database
 router.post('/users/:username', checkUpdateUser, updateUser);
 router.post('/users/', checkMakeUser, makeUser);
-router.delete('/users/:username',removeUser);
+router.delete('/users/:username/true', deactivateUser);
+router.delete('/users/:username/false', activateUser);
 
 module.exports = router;

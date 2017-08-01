@@ -54,12 +54,12 @@ class User extends React.Component {
 
     deleteUser(e) {
         console.log('Delete/Activate user started');
-        this.props.deleteUser(this.state.username, this.callbackDeleteUser);
+        this.props.deleteUser(this.state.username, this.state.status, this.callbackDeleteUser);
     }
 
-    callbackDeleteUser(response) {
+    callbackDeleteUser(res) {
         console.log('Delete/Activate User worked', res.data.data);
-        if (response.data.data === 1) {
+        if (res.data.data === 1) {
             this.setState({
                 show: false
             });
