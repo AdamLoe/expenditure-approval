@@ -20,7 +20,7 @@ exports.userList = function (req, res) {
         })
 };
 var checkUpdateUserValid = function(req, res) {
-    console.log('User:', req.params.username,' is trying to change their', req.body.key, ' to ', req.body.value);
+    console.log('Admin:', req.user.username, ' is trying to change', req.params.username + "'s", req.body.key, ' to ', req.body.value);
 
 };
 
