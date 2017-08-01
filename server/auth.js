@@ -4,7 +4,7 @@ var basicAuth = require('basic-auth');
 
 exports.authenticate = function(req,res,next) {
     var {name , pass} = basicAuth.parse(req.headers.authorization);
-    console.log('reqbody', req.body);
+    console.log('---------New Request------------');
     knex('users').where({ username: name }).first()
         .then(function(user) {
             if (!user) {
