@@ -46,8 +46,7 @@ exports.createRequest = function (req, res) {
         requestor: req.user.username,
         requestorname: req.user.name,
         approver: req.user.approver,
-        reqcomment: req.body.reqComment,
-        attributes: req.body.attributes
+        reqcomment: req.body.reqComment
     })
         .then(function(data) {
             res.status(200).send(data);
