@@ -42,7 +42,7 @@ exports.createRequest = function (req, res) {
         status: 'In Process',
         amount: req.body.amount,
         unitnnme: req.body.unitName,
-        itemnype: req.body.itemType,
+        itemtype: req.body.itemType,
         requestor: req.user.username,
         requestorname: req.user.name,
         approver: req.user.approver,
