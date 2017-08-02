@@ -52,7 +52,7 @@ exports.checkUpdateUser = function(req, res,next) {
             next()
         }
     }
-    res.status(400).json({
+    res.status(404).json({
         data: 0
     });
 };
@@ -66,6 +66,9 @@ exports.checkMakeUser = function(req, res, next) {
         checkApproveLimit(req.body.approvelimit)) {
                         next();
     }
+    res.status(404).json({
+        data: 0
+    })
 };
 
 exports.checkUserListParams = function(req, res, next) {
