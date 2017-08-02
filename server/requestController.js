@@ -41,7 +41,7 @@ exports.createRequest = function (req, res) {
         requestname: req.body.requestName,
         status: 'In Process',
         amount: req.body.amount,
-        unitnnme: req.body.unitName,
+        unitname: req.body.unitName,
         itemtype: req.body.itemType,
         requestor: req.user.username,
         requestorname: req.user.name,
