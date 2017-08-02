@@ -66,6 +66,7 @@ class Admin extends React.Component {
     }
 
     createUser(user) {
+        that = this;
         console.log('Create user called', user);
         axios({
             method: 'post',
@@ -77,6 +78,7 @@ class Admin extends React.Component {
             data: user
         }).then(function(res){
             console.log('axios create user worked', res);
+            if (res.da)
         }).catch(function(err){
             console.log('Creating User Went Wrong');
             console.log(err);

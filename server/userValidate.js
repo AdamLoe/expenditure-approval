@@ -12,6 +12,9 @@ var checkType = function(type) {
         console.log('check type worked');
         return true;
     }
+    else {
+        return false;
+    }
 };
 
 var checkName = function(name) {
@@ -48,8 +51,10 @@ exports.checkUpdateUser = function(req, res,next) {
         if (checkApproveLimit(req.body.value)) {
             next()
         }
-
     }
+    res.status(400).json({
+        data: 0
+    });
 };
 
 exports.checkMakeUser = function(req, res, next) {

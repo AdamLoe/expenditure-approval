@@ -42,8 +42,6 @@ class AdminFilters extends React.Component {
         });
     }
 
-
-
     render() {
         console.log('Rendering Filters');
         return (
