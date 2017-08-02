@@ -38,15 +38,15 @@ exports.comment  = function (req, res) {
 exports.createRequest = function (req, res) {
     console.log('Create Request function Hit');
     knex('requests').insert({
-        requestName: req.body.requestName,
+        requestname: req.body.requestName,
         status: 'In Process',
         amount: req.body.amount,
-        unitName: req.body.unitName,
-        itemType: req.body.itemType,
+        unitnnme: req.body.unitName,
+        itemnype: req.body.itemType,
         requestor: req.user.username,
-        requestorName: req.user.name,
+        requestorname: req.user.name,
         approver: req.user.approver,
-        reqComment: req.body.reqComment,
+        reqcomment: req.body.reqComment,
         attributes: req.body.attributes
     })
         .then(function(data) {
