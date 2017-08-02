@@ -121,7 +121,7 @@ class Admin extends React.Component {
                 <AdminFilters loadUsers={this.loadUsers} type={this.state.type} />
                 <CreateUser createUser={this.createUser} />
                 <div className="UserHeaders">
-                    <div className="headerColumn">
+                    <div className="head1erColumn">
                         <h1> Username </h1>
                     </div>
                     <div className="headerColumn">

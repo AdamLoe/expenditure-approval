@@ -35,12 +35,12 @@ class Login extends React.Component {
             }
         }).then(function(res){
             console.log('axios request worked');
-            const { user, filters } = JSON.parse(res.request.response);
+            const { user } = JSON.parse(res.request.response);
             user.password = that.state.pas;
             that.setState({
                 usr: null, pas: null
             });
-            that.props.loginSetState(user, filters)
+            that.props.loginSetState(user)
         }).catch(function(err){
             console.log('Login Went Wrong');
             console.log(err);

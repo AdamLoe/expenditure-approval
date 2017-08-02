@@ -1,7 +1,7 @@
 var React = require('react');
 var axios = require('axios');
-var Request = require('../Requests/Request.js');
-var RequestFilters = require('../Requests/RequestFilters');
+var Request = require('../Approver/Request.js');
+var RequestFilters = require('../Approver/RequestFilters');
 
 class Approver extends React.Component {
     constructor(props) {

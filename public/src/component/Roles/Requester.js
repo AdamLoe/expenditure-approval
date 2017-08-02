@@ -1,6 +1,6 @@
 var React = require('react');
-var CreateRequest = require('../Requests/CreateRequest');
-var MyRequests = require('../Requests/MyRequests.js');
+var CreateRequest = require('../Requester/CreateRequest');
+var MyRequests = require('../Requester/MyRequests.js');
 
 class Requester extends React.Component {
     constructor(props) {
@@ -13,10 +13,7 @@ class Requester extends React.Component {
     render() {
         return (
             <div className="RequesterContainer">
-                <div className={this.state.createBool? 'show' : 'hidden'}>
-                    <CreateRequest user={this.props.user}/>
-                </div>
-                <h1> Requester </h1>
+                <CreateRequest user={this.props.user}/>
                 <MyRequests user={this.props.user} />
             </div>
         )

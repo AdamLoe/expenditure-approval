@@ -36,5 +36,20 @@ exports.comment  = function (req, res) {
 
 //Pipe all props to knex to create a object
 exports.createRequest = function (req, res) {
-    console.log('Request function Hit');
+    console.log('Create Request function Hit');
+    knex('requests').insert({
+
+    })
+        .then(function(data) {
+            res.status(200).send(data);
+        })
+        .catch(function(err){
+            console.log('Database query failed.');
+            res.status(500).json({
+                error: true,
+                data: {
+                    message: err.message
+                }
+            })
+        })
 };

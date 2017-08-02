@@ -10,17 +10,21 @@ class App extends React.Component {
         super(props);
         this.state = {
             user: {
-                username: '',  password: '',
-                type: '',  name: ''
-            }
+                username: 'crawfordPlace',  password: 'crawford',
+                type: 'requester',  name: ''
+            },
+            approvers: [
+
+            ], requesters: [
+
+            ]
         };
 
         this.loginSetState = this.loginSetState.bind(this);
     }
 
-    loginSetState(user, filters) {
+    loginSetState(user) {
         console.log('got user', user);
-        console.log('got filters', filters);
         this.setState({
             user: user
         })
