@@ -1,8 +1,8 @@
 var React = require('react');
-var User = require('./User.js');
+var User = require('../Admin/User.js');
 var axios = require('axios');
-var AdminFilters = require('./AdminFilters');
-var CreateUser = require('./CreateUser');
+var AdminFilters = require('../Admin/AdminFilters');
+var CreateUser = require('../Admin/CreateUser');
 
 class Admin extends React.Component {
     constructor(props) {

@@ -30,12 +30,11 @@ exports.query = function (req, res) {
 //Does user have power to finalize request? Move to Approved/Rejected. Change Status
 //If not, change nextApprover to user's next Approver.
 exports.comment  = function (req, res) {
-
     console.log('Comment function Hit');
 };
 
+
 //Pipe all props to knex to create a object
-exports.request = function (req, res) {
-    knex
+exports.createRequest = function (req, res) {
     console.log('Request function Hit');
 };

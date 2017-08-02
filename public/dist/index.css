@@ -20,6 +20,12 @@ h1 {
     color: white;
     font-size: 1em;
 }
+.show {
+    display: inline-block;
+}
+.hidden {
+    display: none;
+}
 /*
     LOGIN CSS
  */
