@@ -9,11 +9,10 @@ exports.query = function (req, res) {
         approver: filters.approver
     })
         .then(function(data) {
-            console.log(data);
             res.send(data);
         })
         .catch(function(err){
-            console.log('Database query failed.', err);
+            console.log('Database query requests failed.');
             res.status(500).json({
                 error: true,
                 data: {
@@ -49,7 +48,7 @@ exports.createRequest = function (req, res) {
             res.status(200).send(data);
         })
         .catch(function(err){
-            console.log('Database query failed.', err);
+            console.log('Database create request failed.');
             res.status(500).json({
                 error: true,
                 data: {

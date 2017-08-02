@@ -1,17 +1,17 @@
 var React = require('react');
 
 var Login     = require('./Login')
-var Approver  = require('./Roles/Approver')
-var Requester = require('./Roles/Requester');
-var Admin     = require('./Roles/Admin');
+var Approver  = require('./Approver/Approver')
+var Requester = require('./Requester/Requester');
+var Admin     = require('./Admin/Admin');
 
 class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             user: {
-                username: '',  password: '',
-                type: '',  name: ''
+                username: 'tonyaB',  password: 'tonya',
+                type: 'approver',  name: ''
             },
             approvers: [
 

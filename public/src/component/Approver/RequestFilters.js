@@ -28,27 +28,19 @@ class Approver extends React.Component {
         this.loadRequests = this.loadRequests.bind(this);
     }
 
-    componentWillMount() {
-        this.loadRequests();
-    }
-
-    loadRequests(parameterString) {
+    loadRequests() {
         console.log('Load Request started');
-        var paramString = '';
-        console.log('Load Request started');
-        paramString += this.props.state.filters.status.current + '/';
-        console.log('Load Request started');
-        paramString += this.props.state.filters.property.current + '/';
-        console.log('Load Request started');
-        paramString += this.props.state.filters.approver.current + '/';
-        console.log('Load Request started');
-        paramString += this.props.state.filters.period.current;
+        var parameterString =   this.props.state.filters.status.current + '/' +
+                                this.props.state.filters.property.current + '/' +
+                                this.props.state.filters.approver.current + '/' +
+                                this.props.state.filters.period.current;
+        this.props.loadRequests(parameterString);
     }
 
     render() {
         return(
-            <div>
-
+            <div className="requestFilters">
+                <h1> Request Filters </h1>
             </div>
         )
     }

@@ -1,6 +1,6 @@
 var React = require('react');
-var CreateRequest = require('../Requester/CreateRequest');
-var MyRequests = require('../Requester/MyRequests.js');
+var CreateRequest = require('./CreateRequest');
+var MyRequests = require('./MyRequests.js');
 
 class Requester extends React.Component {
     constructor(props) {

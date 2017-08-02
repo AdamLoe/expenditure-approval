@@ -21,9 +21,8 @@ class Request extends React.Component {
     }
     onSubmit(e, bool) {
         console.log('bool:', bool, '  comment:', this.state.comment);
-        this.setState({
-            render: 'none'
-        });
+        this.props.commentRequest(this.props.info.requestId,
+                     this.state.comment, bool, this.callback);
     }
     onAccept(e) {
         this.onSubmit(e, true);
@@ -50,8 +49,8 @@ class Request extends React.Component {
             return (
                 <div className="largeRequest">
                     <button className="largeRequestInfo" onClick={this.onClick}>
-                        <h1> Name: {this.props.state.requestName} </h1>
-                        <h1> Amount: {this.props.state.amount} </h1>
+                        <h1> Name:   {this.props.info.requestname} </h1>
+                        <h1> Amount: {this.props.info.amount} </h1>
                     </button>
                     <input type="text" onChange={this.onCommentChange}/>
                     <button className="largeAccept" onClick={this.onAccept}> Accept </button>
@@ -63,8 +62,8 @@ class Request extends React.Component {
             return (
                 <div className="smallRequest">
                     <button className="smallRequestInfo" onClick={this.onClick}>
-                        <h1> {this.props.state.requestName} </h1>
-                        <h1> {this.props.state.amount} </h1>
+                        <h1> {this.props.info.requestName} </h1>
+                        <h1> {this.props.info.amount} </h1>
                     </button>
                     <button className="smallAccept" onClick={this.onAccept}> Accept </button>
                     <button className="smallReject" onClick={this.onReject}> Reject </button>
