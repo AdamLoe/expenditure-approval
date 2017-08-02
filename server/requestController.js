@@ -53,7 +53,7 @@ exports.createRequest = function (req, res) {
             res.status(200).send(data);
         })
         .catch(function(err){
-            console.log('Database query failed.');
+            console.log('Database query failed.', err);
             res.status(500).json({
                 error: true,
                 data: {
