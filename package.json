@@ -23,6 +23,7 @@
     "fs": "0.0.1-security",
     "https": "^1.0.0",
     "knex": "^0.13.0",
+    "nodemon": "^1.11.0",
     "pg": "^6.4.1"
   },
   "devDependencies": {}
