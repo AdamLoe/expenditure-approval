@@ -66,7 +66,7 @@ class Admin extends React.Component {
     }
 
     createUser(user) {
-        that = this;
+        var that = this;
         console.log('Create user called', user);
         axios({
             method: 'post',
@@ -78,7 +78,15 @@ class Admin extends React.Component {
             data: user
         }).then(function(res){
             console.log('axios create user worked', res);
-            if (res.da)
+            if (res.data.data > 0) {
+                var users = that.state.users.slice();
+                users.push(user);
+                that.setState({
+                    users: users
+                })
+            } else {
+                alert('Cannot Add User, maybe try to using right type, approver, requester, or admin');
+            }
         }).catch(function(err){
             console.log('Creating User Went Wrong');
             console.log(err);

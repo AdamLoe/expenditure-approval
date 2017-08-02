@@ -32,29 +32,24 @@ var checkApproveLimit = function(limit) {
 exports.checkUpdateUser = function(req, res,next) {
     console.log('Check Update User Called');
     console.log('Key', req.body.key, 'Value', req.body.value);
-    if (req.body.key === 'password') {
-        if (checkPassword(req.body.value)) {
-            next();
-        }
+    if ((req.body.key === 'password') && checkPassword(req.body.value)) {
+        next();
     }
-    if (req.body.key === 'name') {
-        if (checkName(req.body.value)) {
-            next();
-        }
+    else if ((req.body.key === 'name') && checkName(req.body.value)) {
+        next();
     }
-    if (req.body.key === 'approver') {
-        if (checkApprover(req.body.value)) {
-            next();
-        }
+    else if ((req.body.key === 'approver') && checkApprover(req.body.value)) {
+        next();
     }
-    if (req.body.key === 'approvelimit') {
-        if (checkApproveLimit(req.body.value)) {
-            next()
-        }
+    else if ((req.body.key === 'approvelimit') && checkApproveLimit(req.body.value)) {
+        next();
     }
-    res.status(200).json({
-        data: 0
-    });
+    else {
+        res.status(200).json({
+            data: 0,
+            string: 'failed to pass specific key, value requirements'
+        });
+    }
 };
 
 exports.checkMakeUser = function(req, res, next) {
@@ -65,10 +60,12 @@ exports.checkMakeUser = function(req, res, next) {
         checkApprover(req.body.approver)  &&
         checkApproveLimit(req.body.approvelimit)) {
                         next();
+    } else {
+        res.status(200).json({
+            data: 0,
+            string: 'failed to pass user requirements'
+        })
     }
-    res.status(200).json({
-        data: 0
-    })
 };
 
 exports.checkUserListParams = function(req, res, next) {
