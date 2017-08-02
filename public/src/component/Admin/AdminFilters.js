@@ -4,7 +4,7 @@ class AdminFilters extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            type: 'approver',
+            type: this.props.type,
             status: 'true'
         };
         this.changeToApprover  = this.changeToApprover.bind(this);
@@ -68,17 +68,3 @@ class AdminFilters extends React.Component {
 }
 
 module.exports = AdminFilters;
-
-/*
-
- <div className='UsersContainer'>
- {this.state.requests.map( request =>
- <Request
- state={request}
- key={request.requestId}
- />
- )}
- </div>
-
-
- */
