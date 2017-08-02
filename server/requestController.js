@@ -6,17 +6,14 @@ exports.query = function (req, res) {
     var filters = req.params;
     console.log(req.params);
     knex('requests').where({
-        approver: filters.approver,
-        status: '*',
-        createDate: '*',
-        propertyName: "*"
+        approver: filters.approver
     })
         .then(function(data) {
             console.log(data);
             res.send(data);
         })
         .catch(function(err){
-            console.log('Database query failed.');
+            console.log('Database query failed.', err);
             res.status(500).json({
                 error: true,
                 data: {

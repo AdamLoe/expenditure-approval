@@ -10,7 +10,7 @@ CREATE TABLE requests (
     status text,          amount int,
     unitName text,     itemType text,
     requestor text, requestorName text,
-    approver  text, approverName  text,
+    approver  text,
     reqComment text, createDate timestamp,
     attributes text[][], comments text[][]
 );
