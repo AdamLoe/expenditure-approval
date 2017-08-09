@@ -62,7 +62,7 @@ exports.createRequest = function (req, res) {
         requestername: req.user.name,
         approver: req.user.approver,
         reqcomment: req.body.reqComment,
-        createDate: moment().format("MMM Do YY")
+        createdate: moment().format("MMM Do YY")
     })
         .then(function(data) {
             res.status(200).send(data);
