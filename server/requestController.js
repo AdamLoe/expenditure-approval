@@ -35,9 +35,7 @@ exports.myRequests = function (req, res) {
             console.log('Database query requests failed.');
             res.status(500).json({
                 error: true,
-                data: {
-                    message: err.message
-                }
+                data: err
             })
         })
 };
