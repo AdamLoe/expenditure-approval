@@ -9,7 +9,7 @@ CREATE TABLE requests (
     requestId int, requestName text,
     status text,          amount int,
     unitName text,     itemType text,
-    requestor text, requestorName text,
+    requester text, requesterName text,
     approver  text,
     reqComment text, createDate timestamp,
     attributes text[][], comments text[][]
