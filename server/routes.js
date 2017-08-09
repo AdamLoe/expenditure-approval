@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var { authenticate, login, authAdmin, authRequester, authApprover, authActive } = require('./auth.js');
-var { query, comment, createRequest } = require('./requestController');
+var { query, myRequests, comment, createRequest } = require('./requestController');
 var { userList, updateUser, makeUser, deactivateUser, activateUser } = require('./userController');
 var { checkUserListParams, checkUpdateUser, checkMakeUser } = require('./userValidate');
 
@@ -14,6 +14,7 @@ router.use(authActive);
 router.get('/login', login);
 
 router.get('/requests/:status/:property/:approver/:period', query);
+router.get('/myrequests', myRequests);
 router.post('/requests/:id', authApprover, comment);
 router.post('/requests/', authRequester, createRequest);
 

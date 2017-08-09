@@ -22,6 +22,26 @@ exports.query = function (req, res) {
         })
 };
 
+//Searches Database with filters, returns requests objects
+exports.myRequests = function (req, res) {
+    console.log('My Requests Called');
+    knex('requests').where({
+        requester: req.user.username
+    })
+        .then(function(data) {
+            res.send(data);
+        })
+        .catch(function(err){
+            console.log('Database query requests failed.');
+            res.status(500).json({
+                error: true,
+                data: {
+                    message: err.message
+                }
+            })
+        })
+};
+
 //Add comment to history, change lastEditDate
 //Does user have power to finalize request? Move to Approved/Rejected. Change Status
 //If not, change nextApprover to user's next Approver.
