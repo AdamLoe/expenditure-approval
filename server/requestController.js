@@ -57,8 +57,8 @@ exports.createRequest = function (req, res) {
         amount: req.body.amount,
         unitname: req.body.unitName,
         itemtype: req.body.itemType,
-        requestor: req.user.username,
-        requestorname: req.user.name,
+        requester: req.user.username,
+        requestername: req.user.name,
         approver: req.user.approver,
         reqcomment: req.body.reqComment
     })
