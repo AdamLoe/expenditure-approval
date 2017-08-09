@@ -1,4 +1,5 @@
 var knex = require('./knexfile.js');
+var moment = require('moment');
 
 //Searches Database with filters, returns requests objects
 exports.query = function (req, res) {
@@ -61,8 +62,7 @@ exports.createRequest = function (req, res) {
         requestername: req.user.name,
         approver: req.user.approver,
         reqcomment: req.body.reqComment,
-        createDate: CURRENT_TIMESTAMP
-        
+        createDate: moment.format("MMM Do YY")
     })
         .then(function(data) {
             res.status(200).send(data);
