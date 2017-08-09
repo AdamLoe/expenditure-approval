@@ -29,7 +29,7 @@ app.use('/api/', routes);
 
 //Otherwise, just give them the client webApp
 app.use('*', function(req,res){
-     res.sendFile('/home/adam/standard-requests/public/dist/index.css');
+     res.sendFile('/home/adam/standard-requests/public/dist/index.html');
 });
 
 
