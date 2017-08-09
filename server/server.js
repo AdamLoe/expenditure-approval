@@ -21,7 +21,7 @@ app.use( function (req, res, next) {
 });
 
 //Static Files
-app.use(express.static('/home/adam/standard-requests/public', {dotfiles:'allow'}));
+app.use(express.static('public', {dotfiles:'allow'}));
 
 //If the webApp is using the api
 var routes = require('./routes');
