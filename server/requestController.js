@@ -24,7 +24,7 @@ exports.query = function (req, res) {
 
 //Searches Database with filters, returns requests objects
 exports.myRequests = function (req, res) {
-    console.log('My Requests Called');
+    console.log('My Requests Called for', req.user.username);
     knex('requests').where({
         requester: req.user.username
     })
