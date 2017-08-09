@@ -11,6 +11,6 @@ CREATE TABLE requests (
     unitName text,     itemType text,
     requester text, requesterName text,
     approver  text,
-    reqComment text, createDate text,
+    reqComment text, createDate timestamp,
     attributes text[][], comments text[][]
 );
