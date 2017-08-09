@@ -1,84 +1,250 @@
 <html lang="en"><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <title>Standard Requests</title>
-    <link rel="stylesheet" type="text/css" href="https://standardrequests.com/test/approver/approver.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="approver.css">
 </head>
 <body>
 <div id="app">
     <div data-reactroot="" class="ApproverContainer">
         <div class="RequestFilters">
-            <div class="dropdown">
-                <button class="dropbtn">In Process</button>
-                <div class="dropdown-content">
-                    <a href="#"> In Process </a>
-                    <a href="#"> Approved </a>
-                    <a href="#"> Rejected </a>
-                    <a href="#"> Completed </a>
-                    <a href="#"> Cancelled </a>
+            <div class="block">
+                <div class="FilterButtons">
+                    <button class="FilterButton StatusFilter">In Process</button>
+                    <button class="FilterButton PropertyFilter">Crawford Place</button>
+                    <button class="FilterButton ApproverFilter">Eddy Gorreat</button>
+                    <button class="FilterButton PeriodFilter">1 Month</button>
                 </div>
             </div>
-            <div class="dropdown">
-                <button class="dropbtn"> Crawford Place </button>
-                <div class="dropdown-content">
-                    <a href="#"> All Properties </a>
-                    <a href="#"> Crawford Place </a>
-                    <a href="#"> Cornelius Villa </a>
-                    <a href="#"> Debian Homes </a>
-                    <a href="#"> Markland Apartments </a>
+            <div class="block">
+                <div class="FilterOptions">
+                    <a> In Process </a>
+                    <a> Approved </a>
+                    <a> Rejected </a>
+                    <a> Completed </a>
+                    <a> Cancelled </a>
+                    <a> In Process </a>
+                    <a> Approved </a>
+                    <a> Rejected </a>
+                    <a> Completed </a>
+                    <a> Cancelled </a>
+                    <a> In Process </a>
+                    <a> Approved </a>
+                    <a> Rejected </a>
+                    <a> Completed </a>
+                    <a> Cancelled </a>
                 </div>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn"> Eddy Gorreat</button>
-                <div class="dropdown-content">
-                    <a href="#"> All Approvers </a>
-                    <a href="#"> Eddy Gorreat </a>
-                    <a href="#"> Sarah Parantino </a>
-                    <a href="#"> Sandra Tornapotarainyapolis </a>
-                    <a href="#"> Tonya Baker </a>
-                    <a href="#"> Gerry Lawrence </a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn"> 1 Month</button>
-                <div class="dropdown-content">
-                    <a href="#"> 1 Month </a>
-                    <a href="#"> 6 Months </a>
-                    <a href="#"> 1 Year </a>
-                    <a href="#"> Forever </a>
-                </div>
-            </div>
-            <div class="refreshButton">
-                <img src="refresh-arrow.png" />
             </div>
         </div>
-        <div class="RequestHeaders">
-            <div className="RequestHeaderColumn">
-                Approved
+        <div class="RequestsContainer">
+            <div class="RequestHeaders">
+                <div class="RequestHeaderColumn">
+                    Started
+                </div>
+                <div class="RequestHeaderColumn">
+                    Property
+                </div>
+                <div class="RequestHeaderColumn">
+                    Name
+                </div>
+                <div class="RequestHeaderColumn">
+                    Unit
+                </div>
+                <div class="RequestHeaderColumn">
+                    Approver
+                </div>
+                <div class="RequestHeaderColumn">
+                    Amount
+                </div>
             </div>
-            <div className="RequestHeaderColumn">
-                Property
+            <div class="request">
+                <div class="requestColumn">
+                    Apr 4, 2016
+                </div>
+                <div class="requestColumn">
+                    Crawford Place
+                </div>
+                <div class="requestColumn">
+                    HVAC
+                </div>
+                <div class="requestColumn">
+                    XV-86
+                </div>
+                <div class="requestColumn">
+                    Eddy Gorreat
+                </div>
+                <div class="requestColumn">
+                    1962.34
+                </div>
+                <div class="Attributes">
+                    Attributes
+                </div>
+                <div class="Comments">
+                    Comments
+                </div>
+                <div class="CreateCommentBox">
+                    Comment
+                </div>
             </div>
-            <div className="RequestHeaderColumn">
-                Name
+            <div class="request">
+                <div class="requestColumn">
+                    Apr 4, 2016
+                </div>
+                <div class="requestColumn">
+                    Crawford Place
+                </div>
+                <div class="requestColumn">
+                    HVAC
+                </div>
+                <div class="requestColumn">
+                    XV-86
+                </div>
+                <div class="requestColumn">
+                    Eddy Gorreat
+                </div>
+                <div class="requestColumn">
+                    1962.34
+                </div>
             </div>
-            <div className="RequestHeaderColumn">
-                Unit
+            <div class="request">
+                <div class="requestColumn">
+                    Mar 1, 2016
+                </div>
+                <div class="requestColumn">
+                    Crawford Place
+                </div>
+                <div class="requestColumn">
+                    Lawnmower
+                </div>
+                <div class="requestColumn">
+                    XL994
+                </div>
+                <div class="requestColumn">
+                    Eddy Gorreat
+                </div>
+                <div class="requestColumn">
+                    1073.21
+                </div>
             </div>
-            <div className="RequestHeaderColumn">
-                Approver
+            <div class="request">
+                <div class="requestColumn">
+                    Apr 8, 2016
+                </div>
+                <div class="requestColumn">
+                    Crawford Place
+                </div>
+                <div class="requestColumn">
+                    TypeWriter
+                </div>
+                <div class="requestColumn">
+                    A4
+                </div>
+                <div class="requestColumn">
+                    Eddy Gorreat
+                </div>
+                <div class="requestColumn">
+                    802.34
+                </div>
             </div>
-            <div className="RequestHeaderColumn">
-                Amount
+            <div class="request">
+                <div class="requestColumn">
+                    Apr 12, 2016
+                </div>
+                <div class="requestColumn">
+                    Crawford Place
+                </div>
+                <div class="requestColumn">
+                    BathTub
+                </div>
+                <div class="requestColumn">
+                    J42
+                </div>
+                <div class="requestColumn">
+                    Eddy Gorreat
+                </div>
+                <div class="requestColumn">
+                    302.34
+                </div>
             </div>
-        </div>
-        <div class="RequestContainer">
-            <div class="smallRequest">
-                < class="smallRequestInfo">
-                    
-                </button>
-                <button class="smallAccept"> Accept </button>
-                <button class="smallReject"> Reject </button>
+            <div class="request">
+                <div class="requestColumn">
+                    Mar 1, 2016
+                </div>
+                <div class="requestColumn">
+                    Crawford Place
+                </div>
+                <div class="requestColumn">
+                    Lawnmower
+                </div>
+                <div class="requestColumn">
+                    XL994
+                </div>
+                <div class="requestColumn">
+                    Eddy Gorreat
+                </div>
+                <div class="requestColumn">
+                    1073.21
+                </div>
+            </div>
+            <div class="request">
+                <div class="requestColumn">
+                    Apr 4, 2016
+                </div>
+                <div class="requestColumn">
+                    Crawford Place
+                </div>
+                <div class="requestColumn">
+                    HVAC
+                </div>
+                <div class="requestColumn">
+                    XV-86
+                </div>
+                <div class="requestColumn">
+                    Eddy Gorreat
+                </div>
+                <div class="requestColumn">
+                    1962.34
+                </div>
+            </div>
+            <div class="request">
+                <div class="requestColumn">
+                    Apr 12, 2016
+                </div>
+                <div class="requestColumn">
+                    Crawford Place
+                </div>
+                <div class="requestColumn">
+                    BathTub
+                </div>
+                <div class="requestColumn">
+                    J42
+                </div>
+                <div class="requestColumn">
+                    Eddy Gorreat
+                </div>
+                <div class="requestColumn">
+                    302.34
+                </div>
+            </div>
+            <div class="request">
+                <div class="requestColumn">
+                    Apr 8, 2016
+                </div>
+                <div class="requestColumn">
+                    Crawford Place
+                </div>
+                <div class="requestColumn">
+                    TypeWriter
+                </div>
+                <div class="requestColumn">
+                    A4
+                </div>
+                <div class="requestColumn">
+                    Eddy Gorreat
+                </div>
+                <div class="requestColumn">
+                    802.34
+                </div>
             </div>
         </div>
     </div>

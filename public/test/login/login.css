@@ -33,6 +33,7 @@ h1 {
 */
 
 .LoginContainer {
+    vertical-align: middle;
     max-width: 90%;
     margin: 20px;
     padding: 50px 60px;
@@ -47,8 +48,6 @@ h1 {
     .LoginContainer {
     }
 }
-
-
 
 
 .LoginInputRow {
