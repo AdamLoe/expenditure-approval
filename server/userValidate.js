@@ -84,9 +84,9 @@ exports.checkUpdateUser = function(req, res,next) {
 
 exports.checkMakeUser = function(req, res, next) {
     console.log('Check Make User Called');
-    if (checkUsername(req.body.username) {
-        if checkPassword(req.body.password) {
-            if checkType(req.body.type)  {
+    if (checkUsername(req.body.username)) {
+        if (checkPassword(req.body.password)) {
+            if (checkType(req.body.type))  {
                 if (checkApprover(req.body.approver)) {
                     if (checkApproveLimit(req.body.approvelimit)) {
                         next();
