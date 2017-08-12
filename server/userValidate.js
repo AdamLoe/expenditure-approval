@@ -30,53 +30,95 @@ var checkApproveLimit = function(limit) {
 
 exports.checkUpdateUser = function(req, res,next) {
     console.log('Key', req.body.key, 'Value', req.body.value);
-    if ((req.body.key === 'password') && checkPassword(req.body.value)) {
-        next();
+    if (req.body.key === 'password') {
+        if (checkPassword(req.body.value)) {
+            next();
+        }
+        else {
+            res.status(200).json({
+                data: 0,
+                string: 'Password needs to be at least 8 letters'
+            });
+        }
     }
-    else if ((req.body.key === 'name') && checkName(req.body.value)) {
-        next();
+    else if (req.body.key === 'name') 
+        if (checkName(req.body.value)) {
+            next();
+        }
+        else {
+            res.status(200).json({
+                data: 0,
+                string: 'Name must have normal characters'
+            });
+        }
     }
-    else if ((req.body.key === 'approver') && checkApprover(req.body.value)) {
-        next();
+    else if (req.body.key === 'approver') {
+        if (checkApprover(req.body.value)) {
+            next();
+        }
+        else {
+            res.status(200).json({
+                data: 0,
+                string: 'Next Approver must be an active approver'
+            });
+        }
     }
-    else if ((req.body.key === 'approvelimit') && checkApproveLimit(req.body.value)) {
-        next();
+    else if (req.body.key === 'approvelimit') {
+        if (checkApproveLimit(req.body.value)) {
+            next();
+        }
+        else {
+            res.status(200).json({
+                data: 0,
+                string: 'ApproveLimit must be a number'
+            });
+        }
     }
     else {
         res.status(200).json({
             data: 0,
-            string: 'failed to pass specific key, value requirements'
+            string: 'Uhhhhhhh'
         });
     }
 };
 
 exports.checkMakeUser = function(req, res, next) {
     console.log('Check Make User Called');
-    if (checkUsername(req.body.username) &&
-        checkPassword(req.body.password) &&
-        checkType(req.body.type)  &&
-        checkApprover(req.body.approver)  &&
-        checkApproveLimit(req.body.approvelimit)) {
+    if (checkUsername(req.body.username) {
+        if checkPassword(req.body.password) {
+            if checkType(req.body.type)  {
+                if (checkApprover(req.body.approver)) {
+                    if (checkApproveLimit(req.body.approvelimit)) {
                         next();
+                    } else {
+                        res.status(200).json({
+                            data: 0,
+                            string: 'ApproveLimit not right'
+                        })
+                    }
+                } else {
+                    res.status(200).json({
+                        data: 0,
+                        string: 'Approver not right'
+                    })
+                }
+            } else {
+                res.status(200).json({
+                    data: 0,
+                    string: 'Type not right'
+                })
+            }
+        } else {
+            res.status(200).json({
+                data: 0,
+                string: 'Password not right'
+            })
+        }
     } else {
         res.status(200).json({
             data: 0,
-            string: 'failed to pass user requirements'
+            string: 'Username not right'
         })
     }
 };
 
-exports.checkUserListParams = function(req, res, next) {
-    next();
-    /*
-    if (checkType(req.params.type)){
-        if (req.params.status === 'true') {
-            req.params.status = true;
-            next()
-        } else if (req.params.status==='false') {
-            req.params.status = false;
-            next();
-        }
-    }
-    */
-};

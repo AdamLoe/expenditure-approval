@@ -6,17 +6,17 @@ exports.userList = function (req, res) {
     if (req.params.type === 'inactive') {
         getUsersInactive(req, res);
     } else if (req.params.type === 'admin'){
-        getUsersType(req, res);
+        getUsersType(req, res, 'admin');
     } else if (req.params.type === 'approver'){
-        getUsersType(req, res);
+        getUsersType(req, res, 'approver');
     } else if (req.params.type === 'requester'){
-        getUsersType(req, res);
+        getUsersType(req, res, 'requester');
     }
 };
 
-var getUsersType = function(req, res) {
+var getUsersType = function(req, res, type) {
     knex('users').where({
-        type: req.params.type
+        type: type
     })
         .then(function(data) {
             res.status(200).send(data);
@@ -67,11 +67,9 @@ exports.updateUser  = function (req, res) {
         })
         .catch(function(err){
             console.log('Database update failed.', err);
-            res.status(500).json({
-                error: true,
-                data: {
-                    message: err.message
-                }
+            res.status(200).json({
+                data: 0,
+                message: err.message
             })
         })
 };

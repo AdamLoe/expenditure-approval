@@ -3,7 +3,8 @@ var router = express.Router();
 var { authenticate, login, authAdmin, authRequester, authApprover, authActive } = require('./auth.js');
 var { query, myRequests, comment, createRequest } = require('./requestController');
 var { userList, updateUser, makeUser, deactivateUser, activateUser } = require('./userController');
-var { checkUserListParams, checkUpdateUser, checkMakeUser } = require('./userValidate');
+var { checkUpdateUser, checkMakeUser } = require('./userValidate');
+var { checkComment, checkCreateRequest } = require('./requestValidate');
 
 //User has to be logged in
 router.use(authenticate);
@@ -15,14 +16,14 @@ router.get('/login', login);
 
 router.get('/requests/:status/:property/:approver/:period', query);
 router.get('/myrequests', myRequests);
-router.post('/requests/:id', authApprover, comment);
-router.post('/requests/', authRequester, createRequest);
+router.post('/requests/:id', authApprover, checkComment, comment);
+router.post('/requests/', authRequester, checkCreateRequest, createRequest);
 
 //Only Admins Past Here
 router.use(authAdmin);
 
 //No parameters, sends whole user list
-router.get('/users/:type', checkUserListParams, userList);
+router.get('/users/:type', userList);
 
 //Check if parameters are valid, then make changes on database
 router.post('/users/:username', checkUpdateUser, updateUser);

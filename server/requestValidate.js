@@ -18,7 +18,11 @@ var checkReqComment = function(reqComment) {
 };
 var checkAttributes = function(attributes) {
     return true;
-}
+};
+
+exports.checkComment = function(req, res, next) {
+    next();
+};
 
 exports.checkCreateRequest = function(req, res, next) {
     if (checkRequestName(req.body.requestName) &&
