@@ -41,7 +41,7 @@ exports.checkUpdateUser = function(req, res,next) {
             });
         }
     }
-    else if (req.body.key === 'name') 
+    else if (req.body.key === 'name') {
         if (checkName(req.body.value)) {
             next();
         }
