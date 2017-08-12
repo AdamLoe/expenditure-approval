@@ -51,7 +51,7 @@ exports.comment  = function (req, res) {
 
 //Pipe all props to knex to create a object
 exports.createRequest = function (req, res) {
-    console.log('Create Request function Hit');
+    console.log('Create Request function Hit', req.body);
     knex('requests').insert({
         requestname: req.body.requestName,
         status: 'In Process',
