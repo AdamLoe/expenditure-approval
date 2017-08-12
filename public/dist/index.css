@@ -11,7 +11,6 @@
     border-style: none;
     border-width: 0px;
     border-color: #333333;
-    color: #333333;
     text-align: center;
     vertical-align: top;
 }
@@ -19,10 +18,12 @@
 
 #app {
     position: absolute;
+    min-height: 100%;
     width: 100%;
-    height: 100%;
     background: linear-gradient(to bottom, #3d607f 50%, #414042 100%);
 }
+
+button:focus {outline:0;}
 
 /*
 ############################################################################
@@ -145,7 +146,6 @@
 ############################################################################
 ############################################################################
 ############################################################################
-
 */
 
 .ApproverContainer {
@@ -188,6 +188,9 @@
 
 .FilterButton:hover {
     background-color: #4c3d7f;
+}
+
+.FilterButton:hover h1 {
     color: white;
 }
 
@@ -208,10 +211,20 @@
     background-color: #4c3d7f;
     color: white;
     display: inline-block;
-    border-style: solid;
-    border-width: 2px;
     border-radius: 10px;
-    border-color: #414782;
+}
+
+.FilterOptions a:hover {
+    cursor: pointer;
+    color: black;
+    background-color: white;
+}
+
+.ActiveFilter {
+    background-color: #4c3d7f;
+}
+.ActiveFilter h1 {
+    color: white;
 }
 
 /*
@@ -229,28 +242,19 @@
     border-bottom-width: 2px;
 }
 
-.RequestHeaderColumn {
+.RequestHeadersColumn {
     display: inline-block;
     width: 32%;
 }
 
-@media only screen and (min-width: 410px) {
-    /* Dropdown Button */
-    .RequestHeaderColumn {
-        width: 19%;
-    }
-}
 
 @media only screen and (min-width: 650px) {
     /* Dropdown Button */
-    .RequestHeaderColumn {
+    .RequestHeadersColumn {
         width: 16%;
     }
 }
 
-.RequestHeaderColumn * {
-    margin: 0px;
-}
 
 /*
 ############################################################################
@@ -289,12 +293,6 @@
     vertical-align: middle;
 }
 
-@media only screen and (min-width: 410px) {
-    /* Dropdown Button */
-    .requestColumn {
-        width: 19%;
-    }
-}
 
 
 @media only screen and (min-width: 650px) {
@@ -302,6 +300,10 @@
     .requestColumn {
         width: 16%;
     }
+}
+
+.simpleRequest:hover {
+    cursor: pointer;
 }
 
 
@@ -316,45 +318,51 @@
 
 
 .AttributesContainer {
-    margin-top: 5px;
+    margin-top: 10px;
     display: inline-block;
     width: 95%;
-}
-
-.AttributesContainer h1 {
-    text-decoration: underline;
+    border-radius: 15px;
+    border-style: solid;
+    border-width: .125em;    
+    background-color: #c9d3e0;
 }
 
 @media only screen and (min-width: 650px) {
     /* Dropdown Button */
     .AttributesContainer {
-        width: 32%;
+        max-width: 48%;
+        margin: 1%;
     }
 }
 
-.AttributesBox {
-    border-style: solid;
-    border-width: 2px;
-    border-radius: 15px;
+.request:nth-child(even) .AttributesContainer {
+    background-color: white;
+}
+
+.request:nth-child(even) .requestAttribute:nth-child(even) { 
     background-color: #c9d3e0;
 }
-
-.request:nth-child(even) .AttributesBox {
-    background: white;
+.request:nth-child(odd) .requestAttribute:nth-child(even) {    
+    background-color: white;
 }
 
-
 /*  THIS IS ALSO DOWN BELOW WARNING DUPLICATE' */
-.AttributeKey {
+.requestAttributeKey {
+    text-align: left;
+    padding: .3em .1em;
     width: 48%;
     display: inline-block;
 }
 
 /*  THIS IS ALSO DOWN BELOW WARNING DUPLICATE' */
-.AttributeValue {
+.requestAttributeValue {
+    text-align: left;
+    padding: .3em .1em;
+    min-height: 100%;
     width: 48%;
     display: inline-block;
 }
+
 
 
 /*
@@ -365,37 +373,32 @@
 ############################################################################
 */
 
-.CommentHistoryContainer {
-    margin-top: 5px;
+.CommentsContainer {
+    margin-top: 10px;
     display: inline-block;
     width: 95%;
-}
-
-.CommentHistoryContainer h1 {
-    text-decoration: underline;
-}
-
-@media only screen and (min-width: 650px) {
-    /* Dropdown Button */
-    .CommentHistoryContainer {
-        width: 32%;
-    }
-}
-
-.CommentHistoryBox {
     border-style: solid;
     border-width: 2px;
     border-radius: 15px;
     background-color: #c9d3e0;
 }
 
-.request:nth-child(even) .CommentHistoryBox {
+@media only screen and (min-width: 650px) {
+    /* Dropdown Button */
+    .CommentsContainer {
+        width: 48%;
+        margin: 1%;
+    }
+}
+
+.request:nth-child(even) .CommentsContainer {
     background: white;
 }
 
 .CommentDetails {
     text-align: right;
 }
+
 .CommentDetails a {
     display: inline-block;
     text-decoration: none;
@@ -406,7 +409,7 @@
     width: 96%;
 }
 
-.CommentBody {
+.CommentBody {c
     color: white;
     padding: 5px;
     min-height: 1em;
@@ -430,7 +433,7 @@
 */
 
 .CreateCommentContainer {
-    margin-top: 5px;
+    margin-top: 10px;
     display: inline-block;
     width: 95%;
 }
@@ -442,15 +445,17 @@
 @media only screen and (min-width: 650px) {
     /* Dropdown Button */
     .CreateCommentContainer {
-        width: 32%;
+        width: 48%;
+        margin: 1%;
     }
 }
 
 .CreateCommentInput {
+    width: 80%;
+    padding: .5%;
     min-height: 5em;
     border-style: solid;
     border-width: 2px;
-    border-radius: 15px;
     text-align: left;
     background-color: #c9d3e0;
 }
@@ -570,9 +575,9 @@
 .MyRequestHeaders {
     padding: 5px;
     border-top-style: solid;
-    border-top-width: 2px;
+    border-top-width: .125em;
     border-bottom-style: solid;
-    border-bottom-width: 2px;
+    border-bottom-width: .125em;
 }
 
 @media only screen and (min-width: 1000px) {
@@ -671,9 +676,10 @@
 }
 
 .CreateRequestSubmit {
-    font-size: 1.1em;
-    margin-top: 20px;
     display: inline-block;
+    font-size: 1.1em;
+    margin 0 50%;
+    margin-top: 20px;
     padding: 12px 22px;
     cursor: pointer;
     border-radius: 10px;
@@ -718,7 +724,7 @@
 }
 .CreateDetailsContainer h1 {
     border-bottom-style: solid;
-    border-bottom-width: .2em;
+    border-bottom-width: .125em;
     padding: 3px;
 }
 
@@ -734,13 +740,13 @@
 
 .CreateRequestColumn input {
     border-left-style: solid;
-    border-left-width: .2em;
+    border-left-width: .125em;
     padding: 6px .3em;
 }
 
 .CreateRequestColumn textarea {
     border-left-style: solid;
-    border-left-width: .25em;
+    border-left-width: .15625em;
     padding: 6px .3em;
     min-height: 7em;
     font-size: .8em;
@@ -764,7 +770,7 @@
     box-shadow: 8px 8px 8px 0 rgba(0, 0, 0, 0.2), 14px 14px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 580px) {
     /* Dropdown Button */
     .CreateAttributesContainer {
         width: 47%;
@@ -773,7 +779,7 @@
 
 .CreateAtrributesHeader {
     border-bottom-style: solid;
-    border-bottom-width: .17em;
+    border-bottom-width: .125em;
     padding: 3px;
 }
 
@@ -816,5 +822,214 @@
 .CreateAttributeValue input { 
     padding: 6px .3em;
     border-left-style: solid;
-    border-left-width: .17em;
+    border-left-width: .125em;
+}
+
+
+/*
+############################################################################
+############################################################################
+############################################################################
+############################################################################
+############################################################################
+############################################################################
+############################################################################
+############################################################################
+############################################################################
+############################################################################
+############################################################################
+############################################################################
+############################################################################
+############################################################################
+############################################################################
+############################################################################
+############################################################################
+############################################################################
+############################################################################
+############################################################################
+############################################################################
+############################################################################
+############################################################################
+############################################################################
+############################################################################
+####################      Admin          ##############################
+############################################################################
+############################################################################
+############################################################################
+############################################################################
+############################################################################
+############################################################################
+############################################################################
+############################################################################
+############################################################################
+############################################################################
+############################################################################
+############################################################################
+############################################################################
+############################################################################
+############################################################################
+############################################################################
+############################################################################
+############################################################################
+############################################################################
+############################################################################
+############################################################################
+############################################################################
+############################################################################
+############################################################################
+############################################################################
+*/
+
+.AdminContainer {
+    width: 1000px;
+    max-width: 100%;
+    display: inline-block;
+}
+
+
+/*
+############################################################################
+############################################################################
+####################      Filters       ##################################
+############################################################################
+############################################################################
+*/
+
+.AdminFilters {
+    margin-top: 10px;
+}
+
+.adminFilter {
+    margin: 2px;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: white;
+    display: inline-block;
+}
+
+.adminFilter:hover {
+    background-color: #4c3d7f;
+}
+
+.adminFilter:hover h1 {
+    color: white;
+}
+
+
+/*
+############################################################################
+############################################################################
+####################      Headers         ##################################
+############################################################################
+############################################################################
+*/
+
+
+.UserHeaders {
+    padding: 5px;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background: white;
+}
+
+.UserHeaderColumn {
+    display: inline-block;
+    width: 32%;
+}
+
+
+@media only screen and (min-width: 650px) {
+    /* Dropdown Button */
+    .UserHeaderColumn {
+        width: 20%;
+    }
+}
+
+
+
+/*
+############################################################################
+############################################################################
+####################   Admin User List Container ##################################
+############################################################################
+############################################################################
+*/
+
+.UsersContainer {
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: 8px 8px 8px 0 rgba(0, 0, 0, 0.2), 14px 14px 20px 0 rgba(0, 0, 0, 0.19);
+    background: white;
+}
+
+@media only screen and (max-width: 1000px) {
+    /* Dropdown Button */
+    .UsersContainer {
+        border-radius: 0px;
+        box-shadow: none;
+    }
+}
+
+.User {
+    background: white;
+}
+
+.User:nth-child(odd) {
+    background: #c9d3e0;
+}
+
+.valueRow {
+    padding: 5px 0px;
+    width: 100%;
+}
+
+.valueRow:hover {
+    cursor: pointer;
+}
+
+.valueColumn {
+    width: 32%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+@media only screen and (min-width: 650px) {
+    /* Dropdown Button */
+    .valueColumn {
+        width: 20%;
+    }
+}
+
+
+.inputRow {
+    padding: 5px 0px;
+    width: 100%;
+}
+
+
+.inputColumn {
+    width: 32%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.inputColumn input{
+    width: 80%;
+}
+
+.inputColumn button{
+    height: 2em;
+    width: 20%;
+    background-color: #4c3d7f;
+}
+
+@media only screen and (min-width: 650px) {
+    /* Dropdown Button */
+    .inputColumn {
+        width: 20%;
+    }
 }

@@ -3,9 +3,39 @@ var knex = require('./knexfile.js');
 //Search database for users of type
 exports.userList = function (req, res) {
     console.log('Query Users Called');
+    if (req.params.type === 'inactive') {
+        getUsersInactive(req, res);
+    } else if (req.params.type === 'admin'){
+        getUsersType(req, res);
+    } else if (req.params.type === 'approver'){
+        getUsersType(req, res);
+    } else if (req.params.type === 'requester'){
+        getUsersType(req, res);
+    }
+};
+
+var getUsersType = function(req, res) {
     knex('users').where({
-        type: req.params.type,
-        status: req.params.status
+        type: req.params.type
+    })
+        .then(function(data) {
+            res.status(200).send(data);
+        })
+        .catch(function(err){
+            console.log('Database query failed.');
+            res.status(500).json({
+                error: true,
+                data: {
+                    message: err.message
+                }
+            })
+        })
+    
+};
+
+var getUsersInactive = function(req, res) {
+    knex('users').where({
+        status: 'false'
     })
         .then(function(data) {
             res.status(200).send(data);

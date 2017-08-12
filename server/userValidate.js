@@ -67,6 +67,8 @@ exports.checkMakeUser = function(req, res, next) {
 };
 
 exports.checkUserListParams = function(req, res, next) {
+    next();
+    /*
     if (checkType(req.params.type)){
         if (req.params.status === 'true') {
             req.params.status = true;
@@ -76,4 +78,5 @@ exports.checkUserListParams = function(req, res, next) {
             next();
         }
     }
+    */
 };

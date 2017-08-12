@@ -22,7 +22,7 @@ router.post('/requests/', authRequester, createRequest);
 router.use(authAdmin);
 
 //No parameters, sends whole user list
-router.get('/users/:type/:status', checkUserListParams, userList);
+router.get('/users/:type', checkUserListParams, userList);
 
 //Check if parameters are valid, then make changes on database
 router.post('/users/:username', checkUpdateUser, updateUser);

@@ -23,3 +23,38 @@ INSERT INTO requests VALUES (
 --  property  | propertyId |
 --  requestorComment | createDate
 );
+
+-Vendor Name
+-Vendor Code
+-Vendor Comments
+
+-Description
+
+-Price
+-Shipping
+-Installation or -Labor
+-Tax
+-Other or -other charges
+
+-Old Model Number
+-New Model Number
+-New Unit Manufacturer
+-Warranty Length
+-Sser rating
+
+-Existing Serial #
+-Exp Date
+
+* Tile
+-color
+-style
+(maybe)-Old floor covering
+(maybe)-Age of old floor covering
+-age of tile replaced
+-handicap access?
+-unit occupied?
+-bill tenant?
+
+-square yards
+-height(inches)
+-width(inches)

@@ -63,7 +63,8 @@ exports.createRequest = function (req, res) {
         approver: req.user.approver,
         reqcomment: req.body.reqComment,
         createdate: knex.fn.now(),
-        attributes: req.body.attributes
+        attributes: req.body.attributes,
+        comments: [ [knex.fn.now(), req.user.username, req.user.name, 'Created'] ]
     })
         .then(function(data) {
             res.status(200).send(data);
