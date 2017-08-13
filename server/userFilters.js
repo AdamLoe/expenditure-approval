@@ -38,12 +38,23 @@ var updateFilter = function(data, type) {
         })
 }
 
-exports.getApprovers = function() {
-    var json = require('../approvers.json');
-    return json;
-}
+exports.login = function(req, res) {
+    console.log('Sending filters and login info');
+    knex('filters')
+        .then(function(data) {
+            var loginJson = {
+                user: req.user,
+                filters: data
+            };
+            res.send(loginJson);
+            console.log(req.user.type, ' ' , req.user.username, ' successfully logged in.');
+        })
+        .catch(function(err){
+            console.log('Getting Filters failed');
+            res.status(500).json({
+                error: true,
+                data: err
+            })
+        })
 
-exports.getRequesters = function() {
-    var json = require('../requesters.json');
-    return json;
 }
