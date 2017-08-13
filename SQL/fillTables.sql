@@ -1,111 +1,13 @@
-INSERT INTO users VALUES (
-  -- username  |  password
-     'terryB'  ,   'terry',
-  --   name    |    type
- 'Terry Bobbachoni' ,  'admin',
-  --  nextAprv |  aprvLimit
-       -1  ,   -1,
-      true
- );
-INSERT INTO users VALUES (
- -- username  |  password
-    'eddyG'   ,   'eddy',
- --   name    |    type
-'Eddy Gorreat',  'approver',
- --  nextAprv |  aprvLimit
-      -1      ,    -1,
-      true
-);
-INSERT INTO users VALUES (
- -- username  |  password
-    'sarahP'  ,   'sarah',
- --   name    |    type
-'Sarah Parantino',  'approver',
- --  nextAprv |  aprvLimit
-      'eddyG' ,    5000,
-      true
-);
-INSERT INTO users VALUES (
- -- username  |  password
-    'sandraT'  ,   'sandra',
- --   name    |    type
-'Sandra Tornapotarainyapolis' ,  'approver',
- --  nextAprv |  aprvLimit
-      'eddyG'  ,    4000,
-      true
-);
-INSERT INTO users VALUES (
-  -- username  |  password
-     'tonyaB'  ,   'tonya',
-  --   name    |    type
- 'Tonya Baker' ,  'approver',
-  --  nextAprv |  aprvLimit
-       'sarahP'  ,    3000,
-      true
- );
- INSERT INTO users VALUES (
-  -- username  |  password
-     'gerryL'  ,   'gerry',
-  --   name    |    type
- 'Gerry Lawnrence' ,  'approver',
-  --  nextAprv |  aprvLimit
-       'sandraT'  ,   1000,
-      true
- );
-INSERT INTO users VALUES (
-  -- username  |  password
-     'crawfordPlace'  ,   'crawford',
-  --   name    |    type
- 'Crawford Place' ,  'requester',
-  --  nextAprv |  aprvLimit
-       'tonyaB'  ,   0,
-      true
- );
- INSERT INTO users VALUES (
-   -- username  |  password
-      'corneliusVilla'  ,   'cornelius',
-   --   name    |    type
-  'Cornelius Villa Apartments' ,  'requester',
-   --  nextAprv |  aprvLimit
-        'tonyaB'  ,   0,
-      true
-  );
-INSERT INTO users VALUES (
-  -- username  |  password
-     'debianHomes'  ,   'debian',
-  --   name    |    type
- 'Debian Homes' ,  'requester',
-  --  nextAprv |  aprvLimit
-       'sandraT'  ,   0,
-      true
- );
-INSERT INTO users VALUES (
-  -- username  |  password
-     'marklandApts'  ,   'markland',
-  --   name    |    type
- 'Markland Apts' ,  'requester',
-  --  nextAprv |  aprvLimit
-       'gerryL'  ,   0,
-      true
- );
-
-
-
-
-
-INSERT INTO requests VALUES (
---   id        |      name
-       1       ,   'Hand Dryer'  ,
--- status      |   amount
-  'In Process' ,     85
---   unit    |    type
-   'AC45'      ,    'Personal'
--- requestor  | requestorId
-   'Clankus Tamperskin',
--- approver   | approverId
-
---  property  | propertyId |
---  requestorComment | createDate
-);
-
-
+INSERT INTO users VALUES 
+-- id,       username,     pasword,                          name,        type, approveLimit,  approverId, approverName,     status
+( 1,         'terryB',     'terry',            'Terry Bobbachoni',     'admin',            0,          -1,                           -1, true)
+( 2,          'eddyG',      'eddy',                'Eddy Gorreat',  'approver',           -1,          -1,                           -1, true)
+( 3,         'sarahP',     'sarah',             'Sarah Parantino',  'approver',         5000,           2,                'Eddy Gorreat', true)
+( 4,        'sandraT',    'sandra', 'Sandra Tornapotarainyapolis',  'approver',         4000,           2,                'Eddy Gorreat', true)
+( 5,        'tonyaB' ,     'tonya',                 'Tonya Baker',  'approver',         3000,           3,             'Sarah Parantino', true)
+( 6,        'gerryL' ,     'gerry',              'Gerry Lawrence',  'approver',         1000,           4, 'Sandra Tornapotarainyapolis', true)
+( 7,  'crawfordPlace',  'crawford',              'Crawford Place', 'requester',            0,           5,                 'Tonya Baker', true)
+( 8, 'corneliusVilla', 'cornelius',             'Cornelius Villa', 'requester',            0,           5,                 'Tonya Baker', true)
+( 9,    'debianHomes',    'debian',                'Debian Homes', 'requester',            0,           4, 'Sandra Tornapotarainyapolis', true)
+(10,    'marlandApts',  'markland',         'Markland Apartments', 'requester',            0,           6,              'Gerry Lawrence', true)
+;
