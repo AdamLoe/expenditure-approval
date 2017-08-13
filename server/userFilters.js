@@ -6,6 +6,6 @@ exports.updateFilters = function(req, res) {
         key: "myValue"
     }
     fs.writeFile( "filename.json", JSON.stringify( myJson ), "utf8");
-    var json = JSON.parse(require('../filename.json'));
+    var json = require('../filename.json');
     console.log('Filters is', json);
 }
