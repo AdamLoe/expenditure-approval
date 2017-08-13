@@ -21,7 +21,7 @@ CREATE TABLE requests (
 
 CREATE TABLE filters (
     name text, json text
-)
+);
 
 INSERT INTO filters VALUES ('approvers'),
                            ('requesters');
