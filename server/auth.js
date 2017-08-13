@@ -39,8 +39,8 @@ var { getApprovers, getRequesters } = require('./userFilters.js');
 exports.login = function(req,res) {
     var loginJson = {
         user: req.user,
-        approvers: getApprovers,
-        requesters: getRequesters,
+        approvers: getApprovers(),
+        requesters: getRequesters(),
         text: 'hello'
     };
     res.send(loginJson);
