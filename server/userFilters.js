@@ -1,7 +1,7 @@
 var fs = require('fs');
 
 var callback = function(data) {
-    console.log(data)
+    console.log('json filter callback', data)
 }
 
 exports.updateFilters = function(req, res) {
