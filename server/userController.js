@@ -1,4 +1,4 @@
-var { updateFilters } = require('./userFilters');
+var { updateFilters } = require('./userFilters.js');
 var knex = require('./knexfile.js');
 
 //Search database for users of type
