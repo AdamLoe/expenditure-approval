@@ -11,8 +11,8 @@ exports.updateFilters = function(req, res) {
     updateRequesters();
 }
 
-var updateApprovers = function() {
-     knex('users').select(
+var getApprovers = function() {
+    knex('users').select(
          'id',
          'name'
      ).where({
@@ -20,14 +20,18 @@ var updateApprovers = function() {
         status: 'true'
     })
         .then(function(data) {
-            fs.writeFile( "approvers.json", JSON.stringify(data), "utf8", callback);
+            return data;
         })
         .catch(function(err){
             console.log('Updating Approvers went wrong, this is bad.');
         })
 }
 
-var updateRequesters = function() {
+var updateApprovers = function(approvers) {
+     
+}
+
+var getRequesters = function() {
     knex('users').select(
          'id',
          'name'
@@ -36,11 +40,14 @@ var updateRequesters = function() {
         status: 'true'
     })
         .then(function(data) {
-            fs.writeFile( "requesters.json", JSON.stringify(data), "utf8", callback);
+            return data;
         })
         .catch(function(err){
             console.log('Updating Requesters went wrong, this is bad.');
         })
+}
+var updateRequesters = function() {
+    
 }
 
 exports.getApprovers = function() {
