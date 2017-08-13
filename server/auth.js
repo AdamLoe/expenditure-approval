@@ -11,8 +11,9 @@ exports.authenticate = function(req,res,next) {
                 console.log('Username not Found.');
                 res.status(404);
                 res.send('404');
-            } else if (user.password == pass) {
+            } else if (user.password === pass) {
                 console.log(user.type, ' ' , user.username, ' successfully authenticated.');
+                user.password = 'null';
                 req.user = user;
                 next();
             }

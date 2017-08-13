@@ -32,7 +32,7 @@ var getUsersType = function(req, res, type) {
             res.status(200).send(data);
         })
         .catch(function(err){
-            console.log('Database query failed.');
+            console.log('Database query failed.', err);
             res.status(500).json({
                 error: true,
                 data: {
@@ -46,8 +46,8 @@ var getUsersType = function(req, res, type) {
 var getUsersInactive = function(req, res) {
     knex('users').select(
          'id',
-         'name',
          'username',
+         'name',
          'type',
          'approvelimit',
          'approverId',
