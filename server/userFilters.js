@@ -7,48 +7,40 @@ var callback = function(data) {
 
 exports.updateFilters = function(req, res) {
     console.log('UpdateFilters called');
-    getApprovers();
-    getRequesters();
+    getUsersQuery('approver');
+    getUsersQuery('requester');
 }
 
-var getApprovers = function() {
+var getUsersQuery = function(type) {
     knex('users').select(
          'id',
          'name'
      ).where({
-        type: 'approver',
+        type: type
         status: 'true'
-    })
+    })  
         .then(function(data) {
-            updateApprovers(data);
+            updateFilter(data, type + 's');
         })
         .catch(function(err){
-            console.log('Updating Approvers went wrong, this is bad.');
+            console.log('Updating', type, 'went wrong, this is bad.', err);
         })
 }
 
-var updateApprovers = function(approvers) {
-     console.log('UpdateApprovers Called', approvers);
-}
 
-var getRequesters = function() {
-    knex('users').select(
-         'id',
-         'name'
-     ).where({
-        type: 'requester',
-        status: 'true'
+var updateFilter = function(data, type) {
+     console.log('Update', type, ' Called', data);
+    knex('filters').update({
+        json: JSON.stringify(data)
+    }).where({
+        name: type
     })
         .then(function(data) {
-            updateRequesters(data);
+            console.log('Updating', type,' worked', data);
         })
         .catch(function(err){
-            console.log('Updating Requesters went wrong, this is bad.');
+            console.log('Updating', type, ' went wrong, this is bad.', err);
         })
-}
-var updateRequesters = function(requesters) {
-    console.log('Update requesters hit', requesters);
-    
 }
 
 exports.getApprovers = function() {
