@@ -41,6 +41,7 @@ exports.login = function(req,res) {
         user: req.user,
         approvers: getApprovers,
         requesters: getRequesters,
+        text: 'hello'
     };
     res.send(loginJson);
     console.log(req.user.type, ' ' , req.user.username, ' successfully logged in.');
