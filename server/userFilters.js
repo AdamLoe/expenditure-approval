@@ -7,5 +7,5 @@ exports.updateFilters = function(req, res) {
     }
     fs.writeFile( "filename.json", JSON.stringify( myJson ), "utf8");
     var json = JSON.parse(require('../filename.json'));
-    console.log('Filters is', json;
+    console.log('Filters is', json);
 }
