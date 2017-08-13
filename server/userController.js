@@ -22,8 +22,8 @@ var getUsersType = function(req, res, type) {
          'username',
          'type',
          'approvelimit',
-         'approverId',
-         'approverName'
+         'approverid',
+         'approvername'
      ).where({
         type: type,
         status: 'true'
@@ -50,8 +50,8 @@ var getUsersInactive = function(req, res) {
          'name',
          'type',
          'approvelimit',
-         'approverId',
-         'approverName'
+         'approverid',
+         'approvername'
      ).where({
         status: 'false'
     })
