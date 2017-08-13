@@ -34,12 +34,12 @@ exports.authenticate = function(req,res,next) {
         })
 };
 
+var { getApprovers, getRequesters } = require('./userFilters.js');
 exports.login = function(req,res) {
     var loginJson = {
         user: req.user,
-        filters: {
-            color: 'red'
-        }
+        approvers: getApprovers,
+        requesters: getRequesters,
     };
     res.send(loginJson);
     console.log(req.user.type, ' ' , req.user.username, ' successfully logged in.');
