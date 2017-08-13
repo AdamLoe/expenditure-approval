@@ -1,3 +1,5 @@
+
+var { updateFilters } = require('./userFilters');
 var knex = require('./knexfile.js');
 
 //Search database for users of type
@@ -16,7 +18,8 @@ exports.userList = function (req, res) {
 
 var getUsersType = function(req, res, type) {
     knex('users').where({
-        type: type
+        type: type,
+        status: 'true'
     })
         .then(function(data) {
             res.status(200).send(data);
@@ -64,6 +67,7 @@ exports.updateUser  = function (req, res) {
             res.status(200).json({
                 data: data
             })
+            updateFilters(req, res);
         })
         .catch(function(err){
             console.log('Database update failed.', err);
@@ -88,6 +92,7 @@ exports.makeUser = function (req, res) {
     })
         .then(function(data) {
             res.status(200).send(data);
+            updateFilters(req, res);
         })
         .catch(function(err){
             console.log('Database query failed.');
@@ -113,6 +118,7 @@ exports.deactivateUser = function (req, res) {
             res.status(200).json({
                 data: data
             });
+            updateFilters(req, res);
         })
         .catch(function(err){
             console.log('Database Failed at Deactivating User.');
@@ -140,6 +146,7 @@ exports.activateUser = function (req, res) {
             res.status(200).json({
                 data: data
             });
+            updateFilters(req, res);
         })
         .catch(function(err){
             console.log('Database Failed at Sctivating User.');
@@ -151,3 +158,7 @@ exports.activateUser = function (req, res) {
             })
         })
 };
+
+var updateFilters = function(req, res) {
+    
+}

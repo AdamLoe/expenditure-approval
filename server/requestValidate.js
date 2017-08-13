@@ -1,3 +1,6 @@
+// In case knex has a sql injection problem
+// Or user is trying to put in bad data
+
 var checkRequestName = function (requestName) {
     return true;
 };

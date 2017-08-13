@@ -1,3 +1,6 @@
+// In case knex has a sql injection problem
+// Or user is trying to put in bad data
+
 var checkUsername = function(username) {
     return true;
 };
@@ -30,7 +33,17 @@ var checkApproveLimit = function(limit) {
 
 exports.checkUpdateUser = function(req, res,next) {
     console.log('Key', req.body.key, 'Value', req.body.value);
-    if (req.body.key === 'password') {
+    if (req.body.key === 'username') {
+        if (checkUsername(req.body.value)) {
+            next();
+        }
+        else {
+            res.status(200).json({
+                data: 0,
+                string: 'Username not right'
+            });
+        }
+    } else if (req.body.key === 'password') {
         if (checkPassword(req.body.value)) {
             next();
         }
@@ -122,3 +135,6 @@ exports.checkMakeUser = function(req, res, next) {
     }
 };
 
+exports.checkDeactivateUser = function(req, res, next) {
+    next();
+}

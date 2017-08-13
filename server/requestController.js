@@ -57,12 +57,11 @@ exports.createRequest = function (req, res) {
         status: 'In Process',
         amount: req.body.amount,
         unitname: req.body.unitName,
-        itemtype: req.body.itemType,
         requester: req.user.username,
         requestername: req.user.name,
         approver: req.user.approver,
-        reqcomment: req.body.reqComment,
         createdate: knex.fn.now(),
+        updatedate, knex.fn.now(),
         attributes: req.body.attributes
     })
         .then(function(data) {

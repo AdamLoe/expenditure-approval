@@ -1,4 +1,5 @@
 CREATE TABLE users (
+    userid int,
     username text, password text,
     name     text, type     text,
     approver text, approvelimit int,
@@ -6,11 +7,11 @@ CREATE TABLE users (
 );
 
 CREATE TABLE requests (
-    requestId int, requestName text,
-    status text,          amount int,
-    unitName text,     itemType text,
-    requester text, requesterName text,
-    approver  text,
+    requestId int, status text,
+    requestName text, amount int,
+    unitName text,
+    requesterId int, requesterName text,
+    approverId  int, approverName text,
     reqComment text, createDate timestamp,
     attributes text[][], comments text[][]
 );
