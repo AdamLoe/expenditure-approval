@@ -1,4 +1,3 @@
-
 var { updateFilters } = require('./userFilters');
 var knex = require('./knexfile.js');
 
@@ -64,10 +63,10 @@ exports.updateUser  = function (req, res) {
     })
         .then(function(data) {
             console.log('data', data);
+            updateFilters(req, res);
             res.status(200).json({
                 data: data
             })
-            updateFilters(req, res);
         })
         .catch(function(err){
             console.log('Database update failed.', err);
