@@ -40,7 +40,7 @@ exports.checkUpdateUser = function(req, res,next) {
         else {
             res.status(200).json({
                 data: 0,
-                string: 'Username not right'
+                string: 'Username not right, or in use.'
             });
         }
     } else if (req.body.key === 'password') {

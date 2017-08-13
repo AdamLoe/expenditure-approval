@@ -58,3 +58,43 @@ INSERT INTO requests VALUES (
 -square yards
 -height(inches)
 -width(inches)
+
+amount
+:
+10
+approver
+:
+"tonyaB"
+attributes
+:
+null
+comments
+:
+null
+createdate
+:
+"2017-08-10T04:01:33.260Z"
+itemtype
+:
+"Personal"
+reqcomment
+:
+"I deserve some damn kleenex."
+requester
+:
+"crawfordPlace"
+requestername
+:
+"Crawford Place"
+requestid
+:
+null
+requestname
+:
+"Kleenex"
+status
+:
+"In Process"
+unitname
+:
+"X3"

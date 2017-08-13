@@ -12,7 +12,10 @@ exports.updateFilters = function(req, res) {
 }
 
 var updateApprovers = function() {
-     knex('users').where({
+     knex('users').select(
+         'id',
+         'name'
+     ).where({
         type: 'approver',
         status: 'true'
     })
@@ -25,7 +28,10 @@ var updateApprovers = function() {
 }
 
 var updateRequesters = function() {
-    knex('users').where({
+    knex('users').select(
+         'id',
+         'name'
+     ).where({
         type: 'requester',
         status: 'true'
     })

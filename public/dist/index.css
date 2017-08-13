@@ -395,6 +395,13 @@ button:focus {outline:0;}
     background: white;
 }
 
+.request:nth-child(even) .requestAttribute:nth-child(even) { 
+    background-color: #c9d3e0;
+}
+.request:nth-child(odd) .requestAttribute:nth-child(even) {    
+    background-color: white;
+}
+
 .CommentDetails {
     text-align: right;
 }

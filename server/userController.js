@@ -16,7 +16,15 @@ exports.userList = function (req, res) {
 };
 
 var getUsersType = function(req, res, type) {
-    knex('users').where({
+    knex('users').select(
+         'id',
+         'name',
+         'username',
+         'type',
+         'approvelimit',
+         'approverId',
+         'approverName'
+     ).where({
         type: type,
         status: 'true'
     })
@@ -36,7 +44,15 @@ var getUsersType = function(req, res, type) {
 };
 
 var getUsersInactive = function(req, res) {
-    knex('users').where({
+    knex('users').select(
+         'id',
+         'name',
+         'username',
+         'type',
+         'approvelimit',
+         'approverId',
+         'approverName'
+     ).where({
         status: 'false'
     })
         .then(function(data) {
