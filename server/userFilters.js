@@ -2,11 +2,11 @@ var knex = require('./knexfile.js');
 
 exports.updateFilters = function(req, res) {
     console.log('UpdateFilters called');
-    getUsersQuery('approver');
-    getUsersQuery('requester');
+    getUserFiltersQuery('approver');
+    getUserFiltersQuery('requester');
 }
 
-var getUsersQuery = function(type) {
+var getUserFiltersQuery = function(type) {
     knex('users').select(
          'id',
          'name'

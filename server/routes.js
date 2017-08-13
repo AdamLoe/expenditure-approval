@@ -1,10 +1,11 @@
 var express = require('express');
 var router = express.Router();
-var { authenticate, login, authAdmin, authRequester, authApprover, authActive } = require('./auth.js');
+var { authenticate, authAdmin, authRequester, authApprover, authActive } = require('./auth.js');
 var { query, myRequests, comment, createRequest } = require('./requestController');
 var { userList, updateUser, makeUser, deactivateUser, activateUser } = require('./userController');
 var { checkUpdateUser, checkMakeUser, checkDeactivateUser} = require('./userValidate');
 var { checkComment, checkCreateRequest } = require('./requestValidate');
+var { login } = require('./userFilters.js');
 
 //User has to be logged in
 router.use(authenticate);
