@@ -18,3 +18,10 @@ CREATE TABLE requests (
     attributes text[][], 
     comments text[][]
 );
+
+CREATE TABLE filters (
+    name text, json text
+)
+
+INSERT INTO filters VALUES ('approvers'),
+                           ('requesters');
