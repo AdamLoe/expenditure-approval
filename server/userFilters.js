@@ -36,7 +36,7 @@ var updateRequesters = function() {
         status: 'true'
     })
         .then(function(data) {
-            fs.writeFile( "requester.json", JSON.stringify(data), "utf8", callback);
+            fs.writeFile( "requesters.json", JSON.stringify(data), "utf8", callback);
         })
         .catch(function(err){
             console.log('Updating Requesters went wrong, this is bad.');
