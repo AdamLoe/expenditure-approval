@@ -1,11 +1,18 @@
 var fs = require('fs');
 
+var callback = function(data) {
+    console.log(data)
+}
+
 exports.updateFilters = function(req, res) {
     console.log('UpdateFilters called');
     var myJson = {
         key: "myValue"
     }
-    fs.writeFile( "filename.json", JSON.stringify( myJson ), "utf8");
+    fs.writeFile( "filename.json", JSON.stringify( myJson ), "utf8", callback);
+}
+
+exports.getFilters = function() {
     var json = require('../filename.json');
-    console.log('Filters is', json);
+    return json;
 }
