@@ -1,9 +1,4 @@
-var fs = require('fs');
 var knex = require('./knexfile.js');
-
-var callback = function(data) {
-    console.log('json filter callback', data)
-}
 
 exports.updateFilters = function(req, res) {
     console.log('UpdateFilters called');
@@ -16,7 +11,7 @@ var getUsersQuery = function(type) {
          'id',
          'name'
      ).where({
-        type: type
+        type: type,
         status: 'true'
     })  
         .then(function(data) {
