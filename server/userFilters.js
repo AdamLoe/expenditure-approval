@@ -17,7 +17,7 @@ var updateApprovers = function() {
         status: 'true'
     })
         .then(function(data) {
-            fs.writeFile( "approvers.json", data, "utf8", callback);
+            fs.writeFile( "approvers.json", JSON.stringify(data.data), "utf8", callback);
         })
         .catch(function(err){
             console.log('Updating Approvers went wrong, this is bad.');
@@ -30,7 +30,7 @@ var updateRequesters = function() {
         status: 'true'
     })
         .then(function(data) {
-            fs.writeFile( "requester.json", data, "utf8", callback);
+            fs.writeFile( "requester.json", JSON.stringify(data.data), "utf8", callback);
         })
         .catch(function(err){
             console.log('Updating Requesters went wrong, this is bad.');
