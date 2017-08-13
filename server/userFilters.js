@@ -7,8 +7,8 @@ var callback = function(data) {
 
 exports.updateFilters = function(req, res) {
     console.log('UpdateFilters called');
-    updateApprovers();
-    updateRequesters();
+    getApprovers();
+    getRequesters();
 }
 
 var getApprovers = function() {
@@ -20,7 +20,7 @@ var getApprovers = function() {
         status: 'true'
     })
         .then(function(data) {
-            return data;
+            updateApprovers(data);
         })
         .catch(function(err){
             console.log('Updating Approvers went wrong, this is bad.');
@@ -28,7 +28,7 @@ var getApprovers = function() {
 }
 
 var updateApprovers = function(approvers) {
-     
+     console.log('UpdateApprovers Called', approvers);
 }
 
 var getRequesters = function() {
@@ -40,13 +40,14 @@ var getRequesters = function() {
         status: 'true'
     })
         .then(function(data) {
-            return data;
+            updateRequesters(data);
         })
         .catch(function(err){
             console.log('Updating Requesters went wrong, this is bad.');
         })
 }
-var updateRequesters = function() {
+var updateRequesters = function(requesters) {
+    console.log('Update requesters hit', requesters);
     
 }
 
