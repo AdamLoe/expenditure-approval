@@ -61,7 +61,7 @@ exports.createRequest = function (req, res) {
         requestername: req.user.name,
         approver: req.user.approver,
         createdate: knex.fn.now(),
-        updatedate, knex.fn.now(),
+        updatedate: knex.fn.now(),
         attributes: req.body.attributes
     })
         .then(function(data) {
