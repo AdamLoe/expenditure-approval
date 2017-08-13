@@ -2,6 +2,9 @@
 var express = require('express');
 var app = express();
 
+var { updateFilters } = require('./userFilters.js');
+updateFilters();
+
 var bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
