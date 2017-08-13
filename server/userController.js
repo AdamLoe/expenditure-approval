@@ -157,7 +157,3 @@ exports.activateUser = function (req, res) {
             })
         })
 };
-
-var updateFilters = function(req, res) {
-    
-}
