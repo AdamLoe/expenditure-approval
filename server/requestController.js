@@ -3,12 +3,8 @@ var moment = require('moment');
 
 //Searches Database with filters, returns requests objects
 exports.query = function (req, res) {
-    console.log('Query Requests Called');
-    var filters = req.params;
-    console.log(req.params);
-    knex('requests').where({
-        approverid: req.user.id
-    })
+    console.log('Query Requests Called', req.body.filters);
+    knex('requests').where(req.body.filters)
         .then(function(data) {
             res.send(data);
         })

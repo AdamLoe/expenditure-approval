@@ -15,7 +15,7 @@ router.use(authActive);
 //If we are just logging in, send the users info & list of all approvers/requests
 router.get('/login', login);
 
-router.get('/requests/:status/:property/:approver/:period', query);
+router.post('/query', query);
 router.get('/myrequests', myRequests);
 router.post('/requests/:id', authApprover, checkComment, comment);
 router.post('/requests/', authRequester, checkCreateRequest, createRequest);
