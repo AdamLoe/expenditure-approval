@@ -49,8 +49,8 @@ exports.comment  = function (req, res) {
 };
 
 
-var getDetailedTime = function(timestamp) {
-    var a = new Date( timestamp);
+var getDetailedTime = function() {
+    var a = new Date();
     var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
     var year = a.getFullYear();
     var month = months[a.getMonth()];
@@ -59,13 +59,14 @@ var getDetailedTime = function(timestamp) {
     var min = a.getMinutes() < 10 ? '0' + a.getMinutes() : a.getMinutes();
 
     const time = month + ' ' + date + ' '  + year + ' ' + hour + ':' + min;
-    console.log('Made time', time, timestamp);
+    console.log('Made time', time, a;
     return time;
 };
 
 //Pipe all props to knex to create a object
 exports.createRequest = function (req, res) {
     console.log('Create Request function Hit', req.body);
+    var timestamp = knex.fn.now();
     knex('requests').insert({
         requestname: req.body.requestName,
         status: 'In Process',
@@ -78,7 +79,7 @@ exports.createRequest = function (req, res) {
         createdate: knex.fn.now(),
         updatedate: knex.fn.now(),
         attributes: req.body.attributes,
-        comments: [[getDetailedTime(knex.fn.now()), 'Approved', req.user.id, req.user.name]]
+        comments: [[getDetailedTime(), 'Approved', req.user.id, req.user.name]]
     })
         .then(function(data) {
             res.status(200).send(data);
