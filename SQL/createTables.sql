@@ -12,11 +12,10 @@ CREATE TABLE requests (
     requestName text, 
     amount int,
     unitName text,
-    requesterId int, requesterName text,
-    approverId  int, approverName text,
-    createDate timestamp,
-    attributes text[][], 
-    comments text[][]
+    requesterId int, requesterName text, 
+    approverId  int,  approverName text,
+    createDate timestamp, updateDate timestamp,
+    attributes text[][], comments text[][]
 );
 
 CREATE TABLE filters (

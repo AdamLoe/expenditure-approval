@@ -7,7 +7,7 @@ exports.query = function (req, res) {
     var filters = req.params;
     console.log(req.params);
     knex('requests').where({
-        approver: filters.approver
+        approverid: filters.approverid
     })
         .then(function(data) {
             res.send(data);
@@ -27,7 +27,7 @@ exports.query = function (req, res) {
 exports.myRequests = function (req, res) {
     console.log('My Requests Called for', req.user.username);
     knex('requests').where({
-        requester: req.user.username
+        requesterid: req.user.id
     })
         .then(function(data) {
             res.send(data);
@@ -49,6 +49,19 @@ exports.comment  = function (req, res) {
 };
 
 
+var getDetailedTime = function(timestamp) {
+    var a = new Date( timestamp);
+    var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    var year = a.getFullYear();
+    var month = months[a.getMonth()];
+    const date = a.getDate();
+    var hour = a.getHours();
+    var min = a.getMinutes() < 10 ? '0' + a.getMinutes() : a.getMinutes();
+
+    const time = month + ' ' + date + ' '  + year + ' ' + hour + ':' + min;
+    return time;
+};
+
 //Pipe all props to knex to create a object
 exports.createRequest = function (req, res) {
     console.log('Create Request function Hit', req.body);
@@ -57,12 +70,14 @@ exports.createRequest = function (req, res) {
         status: 'In Process',
         amount: req.body.amount,
         unitname: req.body.unitName,
-        requester: req.user.username,
+        requesterid: req.user.id,
         requestername: req.user.name,
-        approver: req.user.approver,
+        approverid: req.user.approverid,
+        approvername: req.user.approvername,
         createdate: knex.fn.now(),
         updatedate: knex.fn.now(),
-        attributes: req.body.attributes
+        attributes: req.body.attributes,
+        comments: [[getDetailedTime(knex.fn.now()), 'Approved', req.user.id, req.user.name]]
     })
         .then(function(data) {
             res.status(200).send(data);
