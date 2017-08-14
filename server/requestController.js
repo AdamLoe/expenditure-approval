@@ -59,6 +59,7 @@ var getDetailedTime = function(timestamp) {
     var min = a.getMinutes() < 10 ? '0' + a.getMinutes() : a.getMinutes();
 
     const time = month + ' ' + date + ' '  + year + ' ' + hour + ':' + min;
+    console.log('Made time', time, timestamp);
     return time;
 };
 
