@@ -7,7 +7,7 @@ exports.query = function (req, res) {
     var filters = req.params;
     console.log(req.params);
     knex('requests').where({
-        approverid: filters.approverid
+        approverid: req.user.id
     })
         .then(function(data) {
             res.send(data);
