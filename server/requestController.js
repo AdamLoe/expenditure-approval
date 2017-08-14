@@ -84,7 +84,6 @@ exports.createRequest = function (req, res) {
             res.status(200).send(data);
         })
         .catch(function(err){
-            console.log('Database create request failed.', err);
             res.status(500).json({
                 error: true,
                 data: {
