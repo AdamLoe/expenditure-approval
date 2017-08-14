@@ -35,17 +35,6 @@ exports.authenticate = function(req,res,next) {
         })
 };
 
-var { getApprovers, getRequesters } = require('./userFilters.js');
-exports.login = function(req,res) {
-    var loginJson = {
-        user: req.user,
-        approvers: getApprovers(),
-        requesters: getRequesters(),
-        text: 'hello'
-    };
-    res.send(loginJson);
-    console.log(req.user.type, ' ' , req.user.username, ' successfully logged in.');
-}
 
 exports.authAdmin = function(req,res,next) {
     if (req.user.type === 'admin') {
