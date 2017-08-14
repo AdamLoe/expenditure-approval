@@ -1040,3 +1040,12 @@ button:focus {outline:0;}
         width: 20%;
     }
 }
+
+
+.approverValue {
+    background: red;
+}
+
+.approverDropdown {
+    display: inline-block;
+}

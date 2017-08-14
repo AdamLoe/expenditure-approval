@@ -65,7 +65,7 @@ exports.checkUpdateUser = function(req, res,next) {
             });
         }
     }
-    else if (req.body.key === 'approver') {
+    else if (req.body.key === 'approverid') {
         if (checkApprover(req.body.value)) {
             next();
         }
