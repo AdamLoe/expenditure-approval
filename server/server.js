@@ -23,6 +23,8 @@ app.use( function (req, res, next) {
     }
 });
 
+app.use(express.compress());
+
 //Static Files
 app.use(express.static('public', {dotfiles:'allow'}));
 
