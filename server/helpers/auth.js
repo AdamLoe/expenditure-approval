@@ -5,7 +5,7 @@ var basicAuth = require('basic-auth');
 exports.authenticate = function(req,res,next) {
     var {name , pass} = basicAuth.parse(req.headers.authorization);
     console.log('---------New Request------------');
-    knex('users').where({ username: name }).first()
+    knex('users').where({ username: name, status: true }).first()
         .then(function(user) {
             if (!user) {
                 console.log('Username not Found.');
@@ -33,36 +33,5 @@ exports.authenticate = function(req,res,next) {
                 }
             })
         })
-};
-
-
-exports.authAdmin = function(req,res,next) {
-    if (req.user.type === 'admin') {
-        next();
-    }
-};
-
-exports.authRequester = function(req, res, next) {
-    if (req.user.type === 'requester') {
-        next();
-    }
-};
-
-exports.authApprover = function(req, res, next) {
-    if (req.user.type === 'approver') {
-        next();
-    }
-};
-
-exports.authActive = function(req, res, next) {
-    if (req.user.status) {
-        next()
-    }
-    else {
-        console.log(req.user.username, 'is not active');
-        res.status('404').json({
-            err: 'You are not active'
-        })
-    }
 };
 

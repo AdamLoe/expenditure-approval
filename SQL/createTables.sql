@@ -10,10 +10,8 @@ CREATE TABLE users (
 CREATE TABLE requests (
     requestId int, status text,
     requestName text, 
-    amount int,
-    unitName text,
-    requesterId int, requesterName text, 
-    approverId  int,  approverName text,
+    amount int, unitName text,
+    requesterId int, approverId  int,
     createDate timestamp, updateDate timestamp,
     attributes text[][], comments text[][]
 );

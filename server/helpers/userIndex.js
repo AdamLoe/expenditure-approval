@@ -1,12 +1,11 @@
 var knex = require('./knexfile.js');
 
 exports.updateFilters = function(req, res) {
-    console.log('UpdateFilters called');
-    getUserFiltersQuery('approver');
-    getUserFiltersQuery('requester');
-}
+    getUserIndex('approver');
+    getUserIndex('requester');
+};
 
-var getUserFiltersQuery = function(type) {
+var getUserIndex = function(type) {
     knex('users').select(
          'id',
          'name'
@@ -15,31 +14,26 @@ var getUserFiltersQuery = function(type) {
         status: 'true'
     })  
         .then(function(data) {
-            updateFilter(data, type + 's');
+            updateUserIndex(data, type + 's');
         })
         .catch(function(err){
             console.log('Updating', type, 'went wrong, this is bad.', err);
         })
-}
+};
 
 
-var updateFilter = function(data, type) {
-     console.log('Update', type, ' Called', data);
+var updateUserIndex = function(data, type) {
     knex('filters').update({
         json: JSON.stringify(data)
     }).where({
         name: type
     })
-        .then(function(data) {
-            console.log('Updating', type,' worked', data);
-        })
         .catch(function(err){
             console.log('Updating', type, ' went wrong, this is bad.', err);
         })
-}
+};
 
-exports.login = function(req, res) {
-    console.log('Sending filters and login info');
+exports.sendUserIndex = function(req, res) {
     knex('filters')
         .then(function(data) {
             var loginJson = {
@@ -57,4 +51,4 @@ exports.login = function(req, res) {
             })
         })
 
-}
+};

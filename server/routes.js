@@ -1,37 +1,49 @@
 var express = require('express');
 var router = express.Router();
-var { authenticate, authAdmin, authRequester, authApprover, authActive } = require('./auth.js');
-var { query, myRequests, comment, createRequest } = require('./requestController');
-var { userList, updateUser, makeUser, deactivateUser, activateUser } = require('./userController');
-var { checkUpdateUser, checkMakeUser, checkDeactivateUser} = require('./userValidate');
-var { checkComment, checkCreateRequest } = require('./requestValidate');
-var { login } = require('./userFilters.js');
 
 //User has to be logged in
+var { authenticate} = require('./helpers/auth.js');
 router.use(authenticate);
-//User has to be activated
-router.use(authActive);
 
-//If we are just logging in, send the users info & list of all approvers/requests
-router.get('/login', login);
+//We send the user a database of all the users
+var { sendUserIndex } = require('./helpers/userIndex.js');
+router.get('/login', sendUserIndex);
 
+var { query, myRequests} = require('./requestControllers/queryController');
 router.post('/query', query);
 router.get('/myrequests', myRequests);
-router.post('/requests/:id', authApprover, checkComment, comment);
-router.post('/requests/', authRequester, checkCreateRequest, createRequest);
 
-//Only Admins Past Here
-router.use(authAdmin);
+var { comment } = require('./requestControllers/commentController');
+var { checkApprover, checkRequester, checkAdmin } = require('./helpers/checkType');
+router.post('/requests/:id', checkApprover, comment);
+
+var { createRequest } = require('./requestControllers/createController');
+router.post('/requests/', checkRequester, createRequest);
+
+//Only Admins Past Here, tho technically only a malicious user could get here anyways, they would have to have
+//Authentication but be purposefully trying to mess up things out of their control
+
+//WHole Idea Behind This System is
+//Approvers  - Views All Requests, Approves/Rejects Requests, Comments on Request,
+//Requesters - Views THEIR requests, Submits Requests, Can Cancel Pending Request?
+//Admin      - Views ALL Users, Edits All Users, Creates New Users, Can Make Users Inactive? Dont wanna add something that a
+//malicious user could affect.
+router.use(checkAdmin);
 
 //No parameters, sends whole user list
+var { userList } = require('./userControllers/queryController');
 router.get('/users/:type', userList);
 
 //Check if values being inputted are valid
-router.post('/users/:username', checkUpdateUser, updateUser);
-router.post('/users/', checkMakeUser, makeUser);
+var { updateUser } = require('./userControllers/updateController');
+router.post('/users/:id', updateUser);
+
+var { createUser } = require('./userControllers/createController');
+router.post('/users/', createUser);
 
 //Check if the user is already somebody's approver.
-router.delete('/users/:username/true', checkDeactivateUser, deactivateUser);
+var { deactivateUser, activateUser } = require('./userControllers/statusController');
+router.delete('/users/:username/true',  deactivateUser);
 router.delete('/users/:username/false', activateUser);
 
 module.exports = router;

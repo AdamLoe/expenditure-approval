@@ -5,12 +5,7 @@
   "main": "src/app.js",
   "scripts": {
     "test": "node ./server/server.js --trace-warnings",
-    "start": "nodemon ./server/server.js",
-    "build": "webpack -w",
-    "buildMinify": "webpack -p",
-    "startW": "webpack-dev-server --hot",
-    "sass": "node-sass scss/index.scss -o public/",
-    "sassW": "node-sass -w scss/index.scss -o public/"
+    "start": "nodemon ./server/server.js"
   },
   "author": "",
   "license": "ISC",
@@ -20,11 +15,11 @@
     "body-parser": "^1.17.2",
     "compression": "^1.7.0",
     "cors": "^2.8.4",
-    "es6-promise": "^4.1.1",
     "express": "^4.15.2",
     "fs": "0.0.1-security",
     "https": "^1.0.0",
     "knex": "^0.13.0",
+    "lodash": "^4.17.4",
     "moment": "^2.18.1",
     "nodemon": "^1.11.0",
     "pg": "^6.4.1"
