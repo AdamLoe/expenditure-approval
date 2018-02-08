@@ -1,0 +1,37 @@
+.attributesContainer {
+  margin-top: 10px;
+  display: inline-block;
+  width: 95%;
+  border-style: solid;
+  border-width: .05em;
+  background-color: #c9d3e0; }
+
+@media only screen and (min-width: 650px) {
+  /* Dropdown Button */
+  .attributesContainer {
+    max-width: 48%;
+    margin: 1%; } }
+
+.listItem:nth-child(even) .largeRequest .attributesContainer {
+  background-color: white; }
+
+.listItem:nth-child(even) .largeRequest .attributesContainer .attribute:nth-child(even) {
+  background-color: #c9d3e0; }
+
+.listItem:nth-child(odd) .largeRequest .attributesContainer .attribute:nth-child(even) {
+  background-color: white; }
+
+/*  THIS IS ALSO DOWN BELOW WARNING DUPLICATE' */
+.attributeKey {
+  text-align: left;
+  padding: .3em .1em;
+  width: 48%;
+  display: inline-block; }
+
+/*  THIS IS ALSO DOWN BELOW WARNING DUPLICATE' */
+.attributeValue {
+  text-align: left;
+  padding: .3em .1em;
+  min-height: 100%;
+  width: 48%;
+  display: inline-block; }

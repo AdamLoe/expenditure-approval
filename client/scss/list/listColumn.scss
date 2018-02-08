@@ -1,0 +1,14 @@
+@import "../globalVariables";
+
+.column6 {
+  width: 32%;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 5px 0px;
+}
+
+@media only screen and (min-width: 650px) {
+  .column6 {
+    width: 16%;
+  }
+}

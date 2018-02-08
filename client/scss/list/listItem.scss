@@ -1,0 +1,15 @@
+@import "../globalVariables";
+
+.listItem:nth-child(even) {
+  background: $alternate-color;
+}
+
+.listItem {
+  padding: 5px;
+}
+
+.simpleRequest:hover {
+  cursor: pointer;
+}
+
+

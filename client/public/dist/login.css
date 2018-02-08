@@ -1,0 +1,38 @@
+.LoginContainer {
+  vertical-align: middle;
+  max-width: 90%;
+  margin: 20px;
+  padding: 50px 60px;
+  background: white;
+  display: inline-block;
+  border-radius: 10px;
+  box-shadow: 8px 8px 8px 0 rgba(0, 0, 0, 0.2), 14px 14px 20px 0 rgba(0, 0, 0, 0.19); }
+
+.LoginInputRow {
+  display: block;
+  margin-bottom: 15px;
+  display: block;
+  text-align: left; }
+
+.LoginContainer .rippleButton {
+  margin-top: 10px;
+  height: 3em;
+  width: 100%;
+  border-radius: 5px;
+  background: #4f7ea8;
+  color: white;
+  box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.2), 6px 6px 20px 0 rgba(0, 0, 0, 0.19); }
+
+.LoginContainer .rippleButton:hover {
+  cursor: pointer; }
+
+.LoginButton a {
+  margin: auto;
+  vertical-align: middle; }
+
+.LoginContainer input {
+  font: small-caption;
+  height: 20pt;
+  font-size: 1em;
+  padding: 0 0 0 .25em;
+  outline: none; }

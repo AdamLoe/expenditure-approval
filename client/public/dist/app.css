@@ -1,0 +1,19 @@
+#app {
+  position: absolute;
+  min-height: 100%;
+  width: 100%;
+  background: linear-gradient(to bottom, #3d607f 50%, #414042 100%); }
+
+.appContainer {
+  position: relative;
+  width: 1000px;
+  max-width: 100%;
+  display: inline-block;
+  z-index: 2; }
+
+.AppRipple {
+  z-index: 1; }
+
+.AppRipple .ripple {
+  background: blue;
+  z-index: 0; }

@@ -1,0 +1,23 @@
+@import "globalVariables";
+* {
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  text-align: center;
+  vertical-align: top;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select:none;
+  user-select:none;
+  -o-user-select:none;
+}
+
+#element::-webkit-scrollbar {
+  display: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}

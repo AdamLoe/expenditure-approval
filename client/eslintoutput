@@ -1,0 +1,1906 @@
+
+[4mD:\Github\standard-requests\standard-requests-client\client\component\admin\Admin.js[24m
+    [2m1:21[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+    [2m2:5[22m   [31merror[39m  'User' is assigned a value but never used           [2mno-unused-vars[22m
+    [2m2:20[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+    [2m3:21[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+    [2m4:5[22m   [31merror[39m  'AdminFilters' is assigned a value but never used   [2mno-unused-vars[22m
+    [2m4:28[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+    [2m5:5[22m   [31merror[39m  'CreateUser' is assigned a value but never used     [2mno-unused-vars[22m
+    [2m5:26[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+    [2m8:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+    [2m9:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+    [2m9:9[22m   [31merror[39m  Unexpected console statement                        [2mno-console[22m
+    [2m9:21[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+   [2m10:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+   [2m11:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+   [2m12:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+   [2m13:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+   [2m14:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+   [2m15:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+   [2m16:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+   [2m17:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+   [2m18:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+   [2m19:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+   [2m20:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+   [2m21:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+   [2m23:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+   [2m23:36[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+   [2m24:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+   [2m27:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+   [2m28:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+   [2m29:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+   [2m29:9[22m   [31merror[39m  Unexpected console statement                        [2mno-console[22m
+   [2m30:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+   [2m31:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+   [2m31:21[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+   [2m32:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+   [2m32:35[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+   [2m33:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+   [2m34:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+   [2m35:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+   [2m36:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+   [2m37:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+   [2m38:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+   [2m38:13[22m  [31merror[39m  Unexpected console statement                        [2mno-console[22m
+   [2m38:25[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+   [2m39:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+   [2m40:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+   [2m41:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+   [2m42:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+   [2m43:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+   [2m43:13[22m  [31merror[39m  Unexpected console statement                        [2mno-console[22m
+   [2m43:25[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+   [2m44:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+   [2m44:13[22m  [31merror[39m  Unexpected console statement                        [2mno-console[22m
+   [2m45:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+   [2m46:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+   [2m46:9[22m   [31merror[39m  Unexpected console statement                        [2mno-console[22m
+   [2m46:21[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+   [2m47:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+   [2m49:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+   [2m50:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+   [2m50:9[22m   [31merror[39m  Unexpected console statement                        [2mno-console[22m
+   [2m50:21[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+   [2m51:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+   [2m51:9[22m   [31merror[39m  Unexpected console statement                        [2mno-console[22m
+   [2m51:21[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+   [2m51:31[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+   [2m51:43[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+   [2m52:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+   [2m53:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+   [2m53:21[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+   [2m54:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+   [2m54:35[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+   [2m55:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+   [2m56:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+   [2m57:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+   [2m58:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+   [2m59:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+   [2m60:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+   [2m61:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+   [2m62:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+   [2m63:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+   [2m64:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+   [2m64:13[22m  [31merror[39m  Unexpected console statement                        [2mno-console[22m
+   [2m64:25[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+   [2m65:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+   [2m66:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+   [2m67:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+   [2m67:13[22m  [31merror[39m  Unexpected console statement                        [2mno-console[22m
+   [2m67:25[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+   [2m68:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+   [2m68:13[22m  [31merror[39m  Unexpected console statement                        [2mno-console[22m
+   [2m69:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+   [2m70:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+   [2m72:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+   [2m73:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+   [2m74:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+   [2m74:9[22m   [31merror[39m  Unexpected console statement                        [2mno-console[22m
+   [2m74:21[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+   [2m75:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+   [2m76:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+   [2m76:21[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+   [2m77:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+   [2m77:35[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+   [2m78:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+   [2m79:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+   [2m80:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+   [2m81:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+   [2m82:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+   [2m83:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+   [2m84:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+   [2m84:13[22m  [31merror[39m  Unexpected console statement                        [2mno-console[22m
+   [2m84:25[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+   [2m85:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+   [2m86:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+   [2m86:23[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+   [2m87:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+   [2m88:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+   [2m89:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces  [2mindent[22m
+   [2m90:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces  [2mindent[22m
+   [2m90:29[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+   [2m91:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+   [2m92:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+   [2m92:48[22m  [31merror[39m  Missing semicolon                                   [2msemi[22m
+   [2m93:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+   [2m94:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+   [2m95:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+   [2m95:13[22m  [31merror[39m  Unexpected console statement                        [2mno-console[22m
+   [2m95:25[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+   [2m96:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+   [2m96:13[22m  [31merror[39m  Unexpected console statement                        [2mno-console[22m
+   [2m97:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+   [2m98:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m100:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m101:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m101:9[22m   [31merror[39m  Unexpected console statement                        [2mno-console[22m
+  [2m101:21[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m102:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m103:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m104:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m104:21[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m105:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m105:35[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m105:62[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m106:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m107:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+  [2m108:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+  [2m109:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m110:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m111:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m111:13[22m  [31merror[39m  Unexpected console statement                        [2mno-console[22m
+  [2m111:25[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m112:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m113:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+  [2m114:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m115:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m116:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+  [2m117:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m117:15[22m  [31merror[39m  Missing semicolon                                   [2msemi[22m
+  [2m118:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m119:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m119:13[22m  [31merror[39m  Unexpected console statement                        [2mno-console[22m
+  [2m119:25[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m120:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m120:13[22m  [31merror[39m  Unexpected console statement                        [2mno-console[22m
+  [2m121:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m122:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m125:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m126:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m126:9[22m   [31merror[39m  Unexpected console statement                        [2mno-console[22m
+  [2m126:21[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m127:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m128:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m129:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+  [2m130:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+  [2m132:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+  [2m133:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+  [2m134:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces  [2mindent[22m
+  [2m135:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces  [2mindent[22m
+  [2m136:1[22m   [31merror[39m  Expected indentation of 7 tabs but found 28 spaces  [2mindent[22m
+  [2m137:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces  [2mindent[22m
+  [2m138:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces  [2mindent[22m
+  [2m139:1[22m   [31merror[39m  Expected indentation of 7 tabs but found 28 spaces  [2mindent[22m
+  [2m140:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces  [2mindent[22m
+  [2m141:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces  [2mindent[22m
+  [2m142:1[22m   [31merror[39m  Expected indentation of 7 tabs but found 28 spaces  [2mindent[22m
+  [2m143:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces  [2mindent[22m
+  [2m144:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces  [2mindent[22m
+  [2m145:1[22m   [31merror[39m  Expected indentation of 7 tabs but found 28 spaces  [2mindent[22m
+  [2m146:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces  [2mindent[22m
+  [2m147:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces  [2mindent[22m
+  [2m148:1[22m   [31merror[39m  Expected indentation of 7 tabs but found 28 spaces  [2mindent[22m
+  [2m149:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces  [2mindent[22m
+  [2m150:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces  [2mindent[22m
+  [2m151:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces  [2mindent[22m
+  [2m152:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces  [2mindent[22m
+  [2m153:1[22m   [31merror[39m  Expected indentation of 7 tabs but found 28 spaces  [2mindent[22m
+  [2m154:1[22m   [31merror[39m  Expected indentation of 7 tabs but found 28 spaces  [2mindent[22m
+  [2m155:1[22m   [31merror[39m  Expected indentation of 7 tabs but found 28 spaces  [2mindent[22m
+  [2m156:1[22m   [31merror[39m  Expected indentation of 7 tabs but found 28 spaces  [2mindent[22m
+  [2m157:1[22m   [31merror[39m  Expected indentation of 7 tabs but found 28 spaces  [2mindent[22m
+  [2m158:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces  [2mindent[22m
+  [2m159:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces  [2mindent[22m
+  [2m160:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+  [2m161:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m162:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m162:10[22m  [31merror[39m  Missing semicolon                                   [2msemi[22m
+  [2m163:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+
+[4mD:\Github\standard-requests\standard-requests-client\client\component\admin\AdminFilters.js[24m
+   [2m1:21[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+   [2m4:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+   [2m5:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+   [2m6:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+   [2m7:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+   [2m8:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+   [2m9:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m10:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m11:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m12:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m14:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m16:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m16:22[22m  [31merror[39m  'e' is defined but never used                       [2mno-unused-vars[22m
+  [2m17:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m18:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m18:19[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m19:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m20:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m20:30[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m21:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m23:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m23:23[22m  [31merror[39m  'e' is defined but never used                       [2mno-unused-vars[22m
+  [2m24:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m25:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m25:19[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m26:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m27:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m27:30[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m28:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m30:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m30:19[22m  [31merror[39m  'e' is defined but never used                       [2mno-unused-vars[22m
+  [2m31:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m32:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m32:19[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m33:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m34:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m34:30[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m35:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m37:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m38:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m39:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m39:19[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m40:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m41:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m41:30[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m42:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m44:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m45:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m45:9[22m   [31merror[39m  Unexpected console statement                        [2mno-console[22m
+  [2m45:21[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m46:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m47:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m48:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 20 spaces  [2mindent[22m
+  [2m49:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 24 spaces  [2mindent[22m
+  [2m49:57[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m49:71[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m49:93[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m50:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 24 spaces  [2mindent[22m
+  [2m51:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 20 spaces  [2mindent[22m
+  [2m52:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 20 spaces  [2mindent[22m
+  [2m53:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 25 spaces  [2mindent[22m
+  [2m53:58[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m53:73[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m53:95[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m54:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 24 spaces  [2mindent[22m
+  [2m55:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 20 spaces  [2mindent[22m
+  [2m56:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 20 spaces  [2mindent[22m
+  [2m57:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 25 spaces  [2mindent[22m
+  [2m57:58[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m57:69[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m57:91[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m58:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 24 spaces  [2mindent[22m
+  [2m59:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 20 spaces  [2mindent[22m
+  [2m60:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 20 spaces  [2mindent[22m
+  [2m61:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 25 spaces  [2mindent[22m
+  [2m61:58[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m61:72[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m61:94[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m62:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 24 spaces  [2mindent[22m
+  [2m63:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 20 spaces  [2mindent[22m
+  [2m64:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m65:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m65:10[22m  [31merror[39m  Missing semicolon                                   [2msemi[22m
+  [2m66:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+
+[4mD:\Github\standard-requests\standard-requests-client\client\component\admin\CreateUser.js[24m
+   [2m1:21[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+   [2m4:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+   [2m5:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+   [2m6:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+   [2m7:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+   [2m7:23[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+   [2m8:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+   [2m8:23[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+   [2m9:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+   [2m9:19[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m10:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m10:19[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m11:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m11:23[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m12:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m12:27[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m13:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m14:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m15:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m16:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m17:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m18:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m19:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m21:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m22:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m23:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m23:16[22m  [31merror[39m  'e' is defined but never used                       [2mno-unused-vars[22m
+  [2m24:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m25:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m27:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m28:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m29:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m30:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m31:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m32:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m33:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m34:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m35:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m36:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m37:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m38:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m39:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m40:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m41:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m42:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m43:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m44:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m45:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m46:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m47:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m48:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m49:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m50:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m51:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m52:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m53:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m54:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m55:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m56:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m58:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m59:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m60:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m61:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+  [2m62:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces  [2mindent[22m
+  [2m63:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces  [2mindent[22m
+  [2m64:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces  [2mindent[22m
+  [2m65:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces  [2mindent[22m
+  [2m66:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces  [2mindent[22m
+  [2m67:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces  [2mindent[22m
+  [2m68:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces  [2mindent[22m
+  [2m69:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces  [2mindent[22m
+  [2m70:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces  [2mindent[22m
+  [2m71:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces  [2mindent[22m
+  [2m72:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces  [2mindent[22m
+  [2m73:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces  [2mindent[22m
+  [2m74:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces  [2mindent[22m
+  [2m75:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces  [2mindent[22m
+  [2m76:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces  [2mindent[22m
+  [2m77:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces  [2mindent[22m
+  [2m78:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces  [2mindent[22m
+  [2m79:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces  [2mindent[22m
+  [2m80:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces  [2mindent[22m
+  [2m81:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces  [2mindent[22m
+  [2m82:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces  [2mindent[22m
+  [2m83:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces  [2mindent[22m
+  [2m84:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces  [2mindent[22m
+  [2m85:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces  [2mindent[22m
+  [2m86:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+  [2m87:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+  [2m88:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces  [2mindent[22m
+  [2m89:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces  [2mindent[22m
+  [2m90:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+  [2m91:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m92:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m92:10[22m  [31merror[39m  Missing semicolon                                   [2msemi[22m
+  [2m93:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+
+[4mD:\Github\standard-requests\standard-requests-client\client\component\admin\inputColumn.js[24m
+   [2m8:19[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m11:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m12:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m12:9[22m   [31merror[39m  Unexpected console statement                        [2mno-console[22m
+  [2m12:21[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m13:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m14:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m15:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m15:20[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m16:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m18:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m19:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m20:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m22:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m23:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m24:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m25:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m26:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m28:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m29:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m30:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m32:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m33:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m33:9[22m   [31merror[39m  Unexpected console statement                        [2mno-console[22m
+  [2m33:21[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m34:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m35:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m36:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+  [2m37:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+  [2m38:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m39:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m39:10[22m  [31merror[39m  Missing semicolon                                   [2msemi[22m
+  [2m40:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+
+[4mD:\Github\standard-requests\standard-requests-client\client\component\admin\User.js[24m
+   [2m1:19[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+   [2m4:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces     [2mindent[22m
+   [2m5:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+   [2m5:9[22m   [31merror[39m  Unexpected console statement                         [2mno-console[22m
+   [2m5:21[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+   [2m6:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+   [2m7:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+   [2m8:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces   [2mindent[22m
+   [2m9:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces   [2mindent[22m
+  [2m10:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+  [2m12:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+  [2m14:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+  [2m15:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+  [2m16:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+  [2m17:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces     [2mindent[22m
+  [2m19:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces     [2mindent[22m
+  [2m19:16[22m  [31merror[39m  'e' is defined but never used                        [2mno-unused-vars[22m
+  [2m20:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+  [2m21:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces   [2mindent[22m
+  [2m22:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+  [2m22:11[22m  [31merror[39m  Missing semicolon                                    [2msemi[22m
+  [2m23:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces     [2mindent[22m
+  [2m26:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces     [2mindent[22m
+  [2m27:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+  [2m28:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces   [2mindent[22m
+  [2m29:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+  [2m30:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces     [2mindent[22m
+  [2m31:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces     [2mindent[22m
+  [2m32:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+  [2m33:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces   [2mindent[22m
+  [2m34:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces   [2mindent[22m
+  [2m35:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+  [2m36:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces     [2mindent[22m
+  [2m37:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces     [2mindent[22m
+  [2m37:26[22m  [31merror[39m  'e' is defined but never used                        [2mno-unused-vars[22m
+  [2m38:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+  [2m38:51[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+  [2m39:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces     [2mindent[22m
+  [2m42:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces     [2mindent[22m
+  [2m43:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+  [2m44:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces   [2mindent[22m
+  [2m45:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces   [2mindent[22m
+  [2m46:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces   [2mindent[22m
+  [2m47:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces   [2mindent[22m
+  [2m48:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces   [2mindent[22m
+  [2m49:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces   [2mindent[22m
+  [2m50:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces   [2mindent[22m
+  [2m51:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces   [2mindent[22m
+  [2m52:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces   [2mindent[22m
+  [2m53:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces   [2mindent[22m
+  [2m54:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces   [2mindent[22m
+  [2m55:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces   [2mindent[22m
+  [2m56:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces   [2mindent[22m
+  [2m57:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces   [2mindent[22m
+  [2m58:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces   [2mindent[22m
+  [2m59:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces   [2mindent[22m
+  [2m60:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces   [2mindent[22m
+  [2m61:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces   [2mindent[22m
+  [2m62:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 12 spaces   [2mindent[22m
+  [2m64:1[22m   [31merror[39m  Expected indentation of 17 tabs but found 19 spaces  [2mindent[22m
+  [2m65:1[22m   [31merror[39m  Expected indentation of 18 tabs but found 23 spaces  [2mindent[22m
+  [2m66:1[22m   [31merror[39m  Expected indentation of 18 tabs but found 23 spaces  [2mindent[22m
+  [2m66:29[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+  [2m67:1[22m   [31merror[39m  Expected indentation of 18 tabs but found 23 spaces  [2mindent[22m
+  [2m68:1[22m   [31merror[39m  Expected indentation of 17 tabs but found 23 spaces  [2mindent[22m
+  [2m70:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 12 spaces   [2mindent[22m
+  [2m71:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces   [2mindent[22m
+  [2m72:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+  [2m72:10[22m  [31merror[39m  Missing semicolon                                    [2msemi[22m
+  [2m73:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces     [2mindent[22m
+
+[4mD:\Github\standard-requests\standard-requests-client\client\component\App.js[24m
+   [2m1:21[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+   [2m3:5[22m   [31merror[39m  'Login' is assigned a value but never used          [2mno-unused-vars[22m
+   [2m3:25[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+   [2m4:5[22m   [31merror[39m  'Approver' is assigned a value but never used       [2mno-unused-vars[22m
+   [2m4:25[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+   [2m5:5[22m   [31merror[39m  'Requester' is assigned a value but never used      [2mno-unused-vars[22m
+   [2m5:25[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+   [2m6:5[22m   [31merror[39m  'Admin' is assigned a value but never used          [2mno-unused-vars[22m
+   [2m6:25[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+   [2m8:5[22m   [31merror[39m  'RippleArea' is assigned a value but never used     [2mno-unused-vars[22m
+   [2m8:26[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m11:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m12:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m13:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m14:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m14:18[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m15:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m16:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m17:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+  [2m18:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+  [2m19:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m20:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m22:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m22:48[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m24:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m25:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m26:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m26:13[22m  [31merror[39m  Unexpected console statement                        [2mno-console[22m
+  [2m26:25[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m27:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m28:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m30:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m31:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m33:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m34:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m35:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m36:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m37:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m37:33[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m38:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+  [2m39:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m40:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m40:33[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m41:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+  [2m42:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m43:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m44:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m45:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m45:17[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m46:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m46:19[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m47:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m48:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m49:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m49:17[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m50:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m50:19[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m51:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m52:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m52:9[22m   [31merror[39m  Unexpected console statement                        [2mno-console[22m
+  [2m52:21[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m53:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m53:9[22m   [31merror[39m  Unexpected console statement                        [2mno-console[22m
+  [2m53:21[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m54:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m55:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m55:18[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m56:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m57:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m58:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+  [2m59:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+  [2m60:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m61:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m62:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m63:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m63:32[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m64:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m66:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m67:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m67:9[22m   [31merror[39m  Unexpected console statement                        [2mno-console[22m
+  [2m67:21[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m68:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m69:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m70:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+  [2m71:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 23 spaces  [2mindent[22m
+  [2m72:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m72:14[22m  [31merror[39m  Missing semicolon                                   [2msemi[22m
+  [2m73:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m73:45[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m74:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m75:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+  [2m76:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 27 spaces  [2mindent[22m
+  [2m77:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 27 spaces  [2mindent[22m
+  [2m78:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 27 spaces  [2mindent[22m
+  [2m79:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m79:14[22m  [31merror[39m  Missing semicolon                                   [2msemi[22m
+  [2m80:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m80:45[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m81:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m82:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+  [2m83:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 27 spaces  [2mindent[22m
+  [2m84:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 27 spaces  [2mindent[22m
+  [2m85:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 27 spaces  [2mindent[22m
+  [2m86:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m86:14[22m  [31merror[39m  Missing semicolon                                   [2msemi[22m
+  [2m87:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m88:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m89:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+  [2m90:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 26 spaces  [2mindent[22m
+  [2m91:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 26 spaces  [2mindent[22m
+  [2m92:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 26 spaces  [2mindent[22m
+  [2m93:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m93:14[22m  [31merror[39m  Missing semicolon                                   [2msemi[22m
+  [2m94:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m95:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+
+[4mD:\Github\standard-requests\standard-requests-client\client\component\approver\Approver.js[24m
+    [2m1:21[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+    [2m2:21[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+    [2m3:5[22m   [31merror[39m  'RequestFilters' is assigned a value but never used  [2mno-unused-vars[22m
+    [2m3:30[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+    [2m4:5[22m   [31merror[39m  'PageChanger' is assigned a value but never used     [2mno-unused-vars[22m
+    [2m4:27[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+    [2m5:5[22m   [31merror[39m  'RequestPanel' is assigned a value but never used    [2mno-unused-vars[22m
+    [2m5:28[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+    [2m8:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces     [2mindent[22m
+    [2m9:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+   [2m10:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+   [2m11:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces   [2mindent[22m
+   [2m12:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces   [2mindent[22m
+   [2m13:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces   [2mindent[22m
+   [2m14:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces   [2mindent[22m
+   [2m15:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces   [2mindent[22m
+   [2m16:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces   [2mindent[22m
+   [2m18:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces   [2mindent[22m
+   [2m19:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+   [2m21:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+   [2m22:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+   [2m23:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+   [2m24:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces   [2mindent[22m
+   [2m25:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+   [2m26:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces     [2mindent[22m
+   [2m28:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces     [2mindent[22m
+   [2m29:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+   [2m29:9[22m   [31merror[39m  Unexpected console statement                         [2mno-console[22m
+   [2m29:21[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+   [2m30:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+   [2m32:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+   [2m33:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces   [2mindent[22m
+   [2m34:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+   [2m35:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces   [2mindent[22m
+   [2m36:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+   [2m38:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+   [2m39:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces   [2mindent[22m
+   [2m39:21[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+   [2m40:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces   [2mindent[22m
+   [2m40:35[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+   [2m41:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces   [2mindent[22m
+   [2m42:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces   [2mindent[22m
+   [2m43:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces   [2mindent[22m
+   [2m44:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces   [2mindent[22m
+   [2m45:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces   [2mindent[22m
+   [2m46:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces   [2mindent[22m
+   [2m47:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces   [2mindent[22m
+   [2m48:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces   [2mindent[22m
+   [2m49:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces   [2mindent[22m
+   [2m50:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+   [2m51:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces   [2mindent[22m
+   [2m51:13[22m  [31merror[39m  Unexpected console statement                         [2mno-console[22m
+   [2m51:25[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+   [2m52:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces   [2mindent[22m
+   [2m53:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces   [2mindent[22m
+   [2m54:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces   [2mindent[22m
+   [2m55:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces   [2mindent[22m
+   [2m56:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces   [2mindent[22m
+   [2m57:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+   [2m58:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces   [2mindent[22m
+   [2m58:13[22m  [31merror[39m  Unexpected console statement                         [2mno-console[22m
+   [2m58:25[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+   [2m59:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces   [2mindent[22m
+   [2m59:13[22m  [31merror[39m  Unexpected console statement                         [2mno-console[22m
+   [2m60:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+   [2m61:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces     [2mindent[22m
+   [2m64:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces     [2mindent[22m
+   [2m65:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+   [2m65:13[22m  [31merror[39m  'that' is assigned a value but never used            [2mno-unused-vars[22m
+   [2m66:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+   [2m66:9[22m   [31merror[39m  Unexpected console statement                         [2mno-console[22m
+   [2m66:21[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+   [2m67:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+   [2m68:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces   [2mindent[22m
+   [2m68:21[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+   [2m69:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces   [2mindent[22m
+   [2m69:35[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+   [2m70:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces   [2mindent[22m
+   [2m71:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces   [2mindent[22m
+   [2m72:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces   [2mindent[22m
+   [2m73:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces   [2mindent[22m
+   [2m74:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces   [2mindent[22m
+   [2m75:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces   [2mindent[22m
+   [2m76:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces   [2mindent[22m
+   [2m77:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces   [2mindent[22m
+   [2m78:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+   [2m79:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces   [2mindent[22m
+   [2m79:13[22m  [31merror[39m  Unexpected console statement                         [2mno-console[22m
+   [2m79:25[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+   [2m80:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+   [2m81:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces   [2mindent[22m
+   [2m81:13[22m  [31merror[39m  Unexpected console statement                         [2mno-console[22m
+   [2m81:25[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+   [2m82:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces   [2mindent[22m
+   [2m82:13[22m  [31merror[39m  Unexpected console statement                         [2mno-console[22m
+   [2m83:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+   [2m84:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces     [2mindent[22m
+   [2m86:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces     [2mindent[22m
+   [2m87:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+   [2m87:9[22m   [31merror[39m  Unexpected console statement                         [2mno-console[22m
+   [2m87:21[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+   [2m87:61[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+   [2m88:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+   [2m89:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces   [2mindent[22m
+   [2m90:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces   [2mindent[22m
+   [2m91:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 33 spaces   [2mindent[22m
+   [2m92:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 33 spaces   [2mindent[22m
+   [2m93:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 33 spaces   [2mindent[22m
+   [2m95:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces   [2mindent[22m
+   [2m96:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 33 spaces   [2mindent[22m
+   [2m97:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 33 spaces   [2mindent[22m
+   [2m99:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces   [2mindent[22m
+  [2m100:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 33 spaces   [2mindent[22m
+  [2m101:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces   [2mindent[22m
+  [2m102:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+  [2m102:10[22m  [31merror[39m  Missing semicolon                                    [2msemi[22m
+  [2m103:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces     [2mindent[22m
+
+[4mD:\Github\standard-requests\standard-requests-client\client\component\approver\PageChanger.js[24m
+   [2m1:21[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+   [2m2:5[22m   [31merror[39m  'RippleArea' is assigned a value but never used     [2mno-unused-vars[22m
+   [2m2:26[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+   [2m5:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+   [2m6:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+   [2m7:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+   [2m9:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m10:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m10:9[22m   [31merror[39m  Unexpected console statement                        [2mno-console[22m
+  [2m10:21[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m11:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m12:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m13:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+  [2m13:69[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m13:82[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m14:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 21 spaces  [2mindent[22m
+  [2m15:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 25 spaces  [2mindent[22m
+  [2m16:1[22m   [31merror[39m  Expected indentation of 7 tabs but found 29 spaces  [2mindent[22m
+  [2m17:1[22m   [31merror[39m  Expected indentation of 7 tabs but found 29 spaces  [2mindent[22m
+  [2m18:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 25 spaces  [2mindent[22m
+  [2m19:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 21 spaces  [2mindent[22m
+  [2m20:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces  [2mindent[22m
+  [2m21:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+  [2m22:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+  [2m23:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces  [2mindent[22m
+  [2m24:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+  [2m25:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+  [2m26:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 21 spaces  [2mindent[22m
+  [2m27:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 25 spaces  [2mindent[22m
+  [2m28:1[22m   [31merror[39m  Expected indentation of 7 tabs but found 29 spaces  [2mindent[22m
+  [2m29:1[22m   [31merror[39m  Expected indentation of 7 tabs but found 29 spaces  [2mindent[22m
+  [2m30:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 25 spaces  [2mindent[22m
+  [2m31:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 21 spaces  [2mindent[22m
+  [2m32:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces  [2mindent[22m
+  [2m33:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+  [2m34:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m35:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m35:10[22m  [31merror[39m  Missing semicolon                                   [2msemi[22m
+  [2m36:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+
+[4mD:\Github\standard-requests\standard-requests-client\client\component\approver\Request.js[24m
+   [2m1:19[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+   [2m2:29[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+   [2m3:5[22m   [31merror[39m  'Attributes' is assigned a value but never used      [2mno-unused-vars[22m
+   [2m3:26[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+   [2m4:5[22m   [31merror[39m  'CommentHistory' is assigned a value but never used  [2mno-unused-vars[22m
+   [2m4:30[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+   [2m5:5[22m   [31merror[39m  'CreateComment' is assigned a value but never used   [2mno-unused-vars[22m
+   [2m5:29[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+   [2m8:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces     [2mindent[22m
+   [2m9:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+  [2m10:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+  [2m11:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces   [2mindent[22m
+  [2m12:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+  [2m13:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+  [2m14:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces     [2mindent[22m
+  [2m16:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces     [2mindent[22m
+  [2m16:13[22m  [31merror[39m  'e' is defined but never used                        [2mno-unused-vars[22m
+  [2m17:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+  [2m18:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces   [2mindent[22m
+  [2m19:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+  [2m20:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces     [2mindent[22m
+  [2m21:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces     [2mindent[22m
+  [2m22:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+  [2m22:9[22m   [31merror[39m  Unexpected console statement                         [2mno-console[22m
+  [2m22:21[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+  [2m23:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+  [2m24:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces   [2mindent[22m
+  [2m25:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces   [2mindent[22m
+  [2m26:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces   [2mindent[22m
+  [2m27:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces   [2mindent[22m
+  [2m28:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces   [2mindent[22m
+  [2m29:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces   [2mindent[22m
+  [2m30:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces   [2mindent[22m
+  [2m31:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces   [2mindent[22m
+  [2m32:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces   [2mindent[22m
+  [2m33:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces   [2mindent[22m
+  [2m34:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces   [2mindent[22m
+  [2m35:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces   [2mindent[22m
+  [2m36:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces   [2mindent[22m
+  [2m37:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces   [2mindent[22m
+  [2m38:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces   [2mindent[22m
+  [2m39:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces   [2mindent[22m
+  [2m40:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces   [2mindent[22m
+  [2m41:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces   [2mindent[22m
+  [2m42:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces   [2mindent[22m
+  [2m43:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces   [2mindent[22m
+  [2m44:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces   [2mindent[22m
+  [2m45:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces   [2mindent[22m
+  [2m47:1[22m   [31merror[39m  Expected indentation of 17 tabs but found 20 spaces  [2mindent[22m
+  [2m48:1[22m   [31merror[39m  Expected indentation of 18 tabs but found 24 spaces  [2mindent[22m
+  [2m49:1[22m   [31merror[39m  Expected indentation of 17 tabs but found 20 spaces  [2mindent[22m
+  [2m50:1[22m   [31merror[39m  Expected indentation of 17 tabs but found 20 spaces  [2mindent[22m
+  [2m51:1[22m   [31merror[39m  Expected indentation of 18 tabs but found 24 spaces  [2mindent[22m
+  [2m52:1[22m   [31merror[39m  Expected indentation of 19 tabs but found 28 spaces  [2mindent[22m
+  [2m53:1[22m   [31merror[39m  Expected indentation of 18 tabs but found 28 spaces  [2mindent[22m
+  [2m54:1[22m   [31merror[39m  Expected indentation of 18 tabs but found 24 spaces  [2mindent[22m
+  [2m55:1[22m   [31merror[39m  Expected indentation of 19 tabs but found 28 spaces  [2mindent[22m
+  [2m56:1[22m   [31merror[39m  Expected indentation of 19 tabs but found 28 spaces  [2mindent[22m
+  [2m57:1[22m   [31merror[39m  Expected indentation of 18 tabs but found 28 spaces  [2mindent[22m
+  [2m58:1[22m   [31merror[39m  Expected indentation of 17 tabs but found 20 spaces  [2mindent[22m
+  [2m60:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces   [2mindent[22m
+  [2m61:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces   [2mindent[22m
+  [2m62:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+  [2m62:10[22m  [31merror[39m  Missing semicolon                                    [2msemi[22m
+  [2m63:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces     [2mindent[22m
+
+[4mD:\Github\standard-requests\standard-requests-client\client\component\approver\RequestFilters.js[24m
+    [2m1:21[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+    [2m2:5[22m   [31merror[39m  'axios' is assigned a value but never used           [2mno-unused-vars[22m
+    [2m2:21[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+    [2m3:5[22m   [31merror[39m  'RippleArea' is assigned a value but never used      [2mno-unused-vars[22m
+    [2m3:26[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+    [2m6:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces     [2mindent[22m
+    [2m7:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+    [2m8:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+    [2m9:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces   [2mindent[22m
+   [2m10:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces   [2mindent[22m
+   [2m11:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces   [2mindent[22m
+   [2m11:30[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+   [2m12:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces   [2mindent[22m
+   [2m12:31[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+   [2m12:38[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+   [2m12:52[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+   [2m12:64[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+   [2m12:76[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+   [2m12:89[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+   [2m13:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces   [2mindent[22m
+   [2m14:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces   [2mindent[22m
+   [2m15:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces   [2mindent[22m
+   [2m16:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces   [2mindent[22m
+   [2m16:29[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+   [2m16:40[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+   [2m17:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces   [2mindent[22m
+   [2m18:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces   [2mindent[22m
+   [2m19:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces   [2mindent[22m
+   [2m20:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces   [2mindent[22m
+   [2m21:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces   [2mindent[22m
+   [2m22:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces   [2mindent[22m
+   [2m23:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces   [2mindent[22m
+   [2m24:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces   [2mindent[22m
+   [2m25:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces   [2mindent[22m
+   [2m25:30[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+   [2m26:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces   [2mindent[22m
+   [2m26:31[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+   [2m26:42[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+   [2m26:53[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+   [2m27:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces   [2mindent[22m
+   [2m28:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces   [2mindent[22m
+   [2m29:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces   [2mindent[22m
+   [2m29:19[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+   [2m30:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces   [2mindent[22m
+   [2m31:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+   [2m32:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+   [2m33:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+   [2m34:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+   [2m35:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces     [2mindent[22m
+   [2m37:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces     [2mindent[22m
+   [2m38:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+   [2m39:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces   [2mindent[22m
+   [2m40:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+   [2m41:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+   [2m42:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces     [2mindent[22m
+   [2m44:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces     [2mindent[22m
+   [2m45:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+   [2m46:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces   [2mindent[22m
+   [2m47:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces   [2mindent[22m
+   [2m48:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces   [2mindent[22m
+   [2m48:15[22m  [31merror[39m  Missing semicolon                                    [2msemi[22m
+   [2m49:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+   [2m50:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces   [2mindent[22m
+   [2m51:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces   [2mindent[22m
+   [2m52:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces   [2mindent[22m
+   [2m53:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces   [2mindent[22m
+   [2m53:15[22m  [31merror[39m  Missing semicolon                                    [2msemi[22m
+   [2m54:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+   [2m55:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces     [2mindent[22m
+   [2m57:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces     [2mindent[22m
+   [2m58:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+   [2m58:9[22m   [31merror[39m  Unexpected console statement                         [2mno-console[22m
+   [2m58:21[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+   [2m58:52[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+   [2m59:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+   [2m60:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+   [2m61:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+   [2m62:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces   [2mindent[22m
+   [2m63:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces   [2mindent[22m
+   [2m64:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+   [2m65:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+   [2m66:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 28 spaces   [2mindent[22m
+   [2m67:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces     [2mindent[22m
+   [2m69:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces     [2mindent[22m
+   [2m70:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+   [2m71:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+   [2m71:24[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+   [2m72:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces   [2mindent[22m
+   [2m73:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+   [2m74:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+   [2m74:29[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+   [2m75:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces   [2mindent[22m
+   [2m76:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+   [2m77:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+   [2m77:28[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+   [2m78:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces   [2mindent[22m
+   [2m79:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+   [2m80:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+   [2m80:24[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+   [2m81:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces   [2mindent[22m
+   [2m82:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+   [2m83:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+   [2m84:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces     [2mindent[22m
+   [2m86:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces     [2mindent[22m
+   [2m87:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+   [2m87:9[22m   [31merror[39m  Unexpected console statement                         [2mno-console[22m
+   [2m87:21[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+   [2m88:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+   [2m89:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces   [2mindent[22m
+   [2m90:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces   [2mindent[22m
+   [2m91:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces   [2mindent[22m
+   [2m91:22[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+   [2m92:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces   [2mindent[22m
+   [2m92:22[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+   [2m93:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces   [2mindent[22m
+   [2m93:22[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+   [2m94:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces   [2mindent[22m
+   [2m94:22[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+   [2m95:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 17 spaces   [2mindent[22m
+   [2m96:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 24 spaces   [2mindent[22m
+   [2m97:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 28 spaces   [2mindent[22m
+   [2m98:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 28 spaces   [2mindent[22m
+   [2m99:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 45 spaces   [2mindent[22m
+  [2m100:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 28 spaces   [2mindent[22m
+  [2m101:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 24 spaces   [2mindent[22m
+  [2m102:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 17 spaces   [2mindent[22m
+  [2m103:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces   [2mindent[22m
+  [2m103:78[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+  [2m103:87[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+  [2m104:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces   [2mindent[22m
+  [2m104:44[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+  [2m106:1[22m   [31merror[39m  Expected indentation of 21 tabs but found 24 spaces  [2mindent[22m
+  [2m107:1[22m   [31merror[39m  Expected indentation of 22 tabs but found 27 spaces  [2mindent[22m
+  [2m108:1[22m   [31merror[39m  Expected indentation of 22 tabs but found 28 spaces  [2mindent[22m
+  [2m109:1[22m   [31merror[39m  Expected indentation of 21 tabs but found 24 spaces  [2mindent[22m
+  [2m111:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces   [2mindent[22m
+  [2m111:44[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+  [2m113:1[22m   [31merror[39m  Expected indentation of 21 tabs but found 24 spaces  [2mindent[22m
+  [2m114:1[22m   [31merror[39m  Expected indentation of 22 tabs but found 27 spaces  [2mindent[22m
+  [2m115:1[22m   [31merror[39m  Expected indentation of 23 tabs but found 31 spaces  [2mindent[22m
+  [2m116:1[22m   [31merror[39m  Expected indentation of 22 tabs but found 27 spaces  [2mindent[22m
+  [2m117:1[22m   [31merror[39m  Expected indentation of 22 tabs but found 28 spaces  [2mindent[22m
+  [2m118:1[22m   [31merror[39m  Expected indentation of 21 tabs but found 24 spaces  [2mindent[22m
+  [2m120:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces   [2mindent[22m
+  [2m120:44[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+  [2m122:1[22m   [31merror[39m  Expected indentation of 21 tabs but found 24 spaces  [2mindent[22m
+  [2m123:1[22m   [31merror[39m  Expected indentation of 22 tabs but found 27 spaces  [2mindent[22m
+  [2m124:1[22m   [31merror[39m  Expected indentation of 23 tabs but found 31 spaces  [2mindent[22m
+  [2m125:1[22m   [31merror[39m  Expected indentation of 22 tabs but found 27 spaces  [2mindent[22m
+  [2m126:1[22m   [31merror[39m  Expected indentation of 22 tabs but found 28 spaces  [2mindent[22m
+  [2m127:1[22m   [31merror[39m  Expected indentation of 21 tabs but found 24 spaces  [2mindent[22m
+  [2m129:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces   [2mindent[22m
+  [2m129:44[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+  [2m131:1[22m   [31merror[39m  Expected indentation of 21 tabs but found 24 spaces  [2mindent[22m
+  [2m132:1[22m   [31merror[39m  Expected indentation of 22 tabs but found 27 spaces  [2mindent[22m
+  [2m133:1[22m   [31merror[39m  Expected indentation of 22 tabs but found 28 spaces  [2mindent[22m
+  [2m134:1[22m   [31merror[39m  Expected indentation of 21 tabs but found 24 spaces  [2mindent[22m
+  [2m136:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces   [2mindent[22m
+  [2m137:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces   [2mindent[22m
+  [2m138:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+  [2m138:10[22m  [31merror[39m  Missing semicolon                                    [2msemi[22m
+  [2m139:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces     [2mindent[22m
+
+[4mD:\Github\standard-requests\standard-requests-client\client\component\approver\RequestPanel.js[24m
+   [2m1:19[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+   [2m2:5[22m   [31merror[39m  'Request' is assigned a value but never used         [2mno-unused-vars[22m
+   [2m2:23[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+   [2m7:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces     [2mindent[22m
+   [2m8:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+   [2m9:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+  [2m10:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces   [2mindent[22m
+  [2m10:21[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+  [2m11:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+  [2m12:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces     [2mindent[22m
+  [2m14:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces     [2mindent[22m
+  [2m15:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+  [2m15:9[22m   [31merror[39m  Unexpected console statement                         [2mno-console[22m
+  [2m15:21[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+  [2m16:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+  [2m16:9[22m   [31merror[39m  Unexpected console statement                         [2mno-console[22m
+  [2m16:21[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+  [2m17:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+  [2m18:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces   [2mindent[22m
+  [2m19:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces   [2mindent[22m
+  [2m20:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces   [2mindent[22m
+  [2m21:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces   [2mindent[22m
+  [2m23:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces   [2mindent[22m
+  [2m24:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces   [2mindent[22m
+  [2m26:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces   [2mindent[22m
+  [2m27:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces   [2mindent[22m
+  [2m29:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces   [2mindent[22m
+  [2m30:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces   [2mindent[22m
+  [2m32:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces   [2mindent[22m
+  [2m33:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces   [2mindent[22m
+  [2m35:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces   [2mindent[22m
+  [2m36:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces   [2mindent[22m
+  [2m38:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces   [2mindent[22m
+  [2m39:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces   [2mindent[22m
+  [2m40:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces   [2mindent[22m
+  [2m41:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces   [2mindent[22m
+  [2m43:1[22m   [31merror[39m  Expected indentation of 21 tabs but found 24 spaces  [2mindent[22m
+  [2m44:1[22m   [31merror[39m  Expected indentation of 22 tabs but found 28 spaces  [2mindent[22m
+  [2m45:1[22m   [31merror[39m  Expected indentation of 23 tabs but found 32 spaces  [2mindent[22m
+  [2m46:1[22m   [31merror[39m  Expected indentation of 23 tabs but found 32 spaces  [2mindent[22m
+  [2m47:1[22m   [31merror[39m  Expected indentation of 23 tabs but found 32 spaces  [2mindent[22m
+  [2m48:1[22m   [31merror[39m  Expected indentation of 22 tabs but found 28 spaces  [2mindent[22m
+  [2m49:1[22m   [31merror[39m  Expected indentation of 21 tabs but found 24 spaces  [2mindent[22m
+  [2m51:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces   [2mindent[22m
+  [2m52:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces   [2mindent[22m
+  [2m54:1[22m   [31merror[39m  Expected indentation of 21 tabs but found 24 spaces  [2mindent[22m
+  [2m56:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces   [2mindent[22m
+  [2m57:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces   [2mindent[22m
+  [2m58:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+  [2m58:10[22m  [31merror[39m  Missing semicolon                                    [2msemi[22m
+  [2m59:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces     [2mindent[22m
+
+[4mD:\Github\standard-requests\standard-requests-client\client\component\components\Attributes.js[24m
+   [2m1:19[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+   [2m4:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+   [2m5:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+   [2m6:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+   [2m8:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+   [2m9:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m10:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m11:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+  [2m12:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces  [2mindent[22m
+  [2m13:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces  [2mindent[22m
+  [2m14:1[22m   [31merror[39m  Expected indentation of 7 tabs but found 28 spaces  [2mindent[22m
+  [2m15:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces  [2mindent[22m
+  [2m16:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces  [2mindent[22m
+  [2m17:1[22m   [31merror[39m  Expected indentation of 7 tabs but found 28 spaces  [2mindent[22m
+  [2m18:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces  [2mindent[22m
+  [2m19:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces  [2mindent[22m
+  [2m20:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+  [2m21:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m22:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m22:10[22m  [31merror[39m  Missing semicolon                                   [2msemi[22m
+  [2m23:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+
+[4mD:\Github\standard-requests\standard-requests-client\client\component\components\CommentHistory.js[24m
+   [2m1:19[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+   [2m2:22[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+   [2m5:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+   [2m6:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+   [2m7:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+   [2m8:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+   [2m9:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m10:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m11:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m12:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m13:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m14:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m14:9[22m   [31merror[39m  Unexpected console statement                        [2mno-console[22m
+  [2m14:21[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m15:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m15:9[22m   [31merror[39m  Unexpected console statement                        [2mno-console[22m
+  [2m15:21[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m16:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m16:9[22m   [31merror[39m  Unexpected console statement                        [2mno-console[22m
+  [2m16:21[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m17:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m17:9[22m   [31merror[39m  Unexpected console statement                        [2mno-console[22m
+  [2m17:21[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m18:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m20:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m21:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m22:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m23:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+  [2m24:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+  [2m25:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces  [2mindent[22m
+  [2m26:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces  [2mindent[22m
+  [2m27:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces  [2mindent[22m
+  [2m28:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces  [2mindent[22m
+  [2m29:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces  [2mindent[22m
+  [2m30:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+  [2m31:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m32:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m32:10[22m  [31merror[39m  Missing semicolon                                   [2msemi[22m
+  [2m33:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+
+[4mD:\Github\standard-requests\standard-requests-client\client\component\components\CreateComment.js[24m
+   [2m1:19[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+   [2m4:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+   [2m5:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+   [2m6:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+   [2m8:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+   [2m9:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m10:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m11:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+  [2m12:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+  [2m13:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m14:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m14:10[22m  [31merror[39m  Missing semicolon                                   [2msemi[22m
+  [2m15:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+
+[4mD:\Github\standard-requests\standard-requests-client\client\component\components\DropdownArea.js[24m
+  [2m8:17[22m  [31merror[39m  Parsing error: Unexpected token switch
+
+[4mD:\Github\standard-requests\standard-requests-client\client\component\components\ListItem.js[24m
+   [2m6:19[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+   [2m7:8[22m   [31merror[39m  'Transition' is defined but never used              [2mno-unused-vars[22m
+   [2m7:24[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+   [2m8:15[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m10:7[22m   [31merror[39m  'onEnter' is assigned a value but never used        [2mno-unused-vars[22m
+  [2m11:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m11:5[22m   [31merror[39m  Unexpected console statement                        [2mno-console[22m
+  [2m11:17[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m12:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m14:7[22m   [31merror[39m  'onEntering' is assigned a value but never used     [2mno-unused-vars[22m
+  [2m15:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m15:5[22m   [31merror[39m  Unexpected console statement                        [2mno-console[22m
+  [2m15:17[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m16:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m18:7[22m   [31merror[39m  'onEntered' is assigned a value but never used      [2mno-unused-vars[22m
+  [2m19:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m19:5[22m   [31merror[39m  Unexpected console statement                        [2mno-console[22m
+  [2m19:17[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m20:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m22:7[22m   [31merror[39m  'onExit' is assigned a value but never used         [2mno-unused-vars[22m
+  [2m23:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m23:5[22m   [31merror[39m  Unexpected console statement                        [2mno-console[22m
+  [2m23:17[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m25:7[22m   [31merror[39m  'onExiting' is assigned a value but never used      [2mno-unused-vars[22m
+  [2m26:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m26:5[22m   [31merror[39m  Unexpected console statement                        [2mno-console[22m
+  [2m26:17[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m28:7[22m   [31merror[39m  'onExited' is assigned a value but never used       [2mno-unused-vars[22m
+  [2m29:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m29:5[22m   [31merror[39m  Unexpected console statement                        [2mno-console[22m
+  [2m29:17[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m33:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m33:17[22m  [31merror[39m  'props' is defined but never used                   [2mno-unused-vars[22m
+  [2m34:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m35:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m36:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m37:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m38:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m39:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m40:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m42:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m43:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m43:9[22m   [31merror[39m  Unexpected console statement                        [2mno-console[22m
+  [2m43:21[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m44:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m45:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m46:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+  [2m46:31[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m47:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m48:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m49:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+  [2m50:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+  [2m51:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m51:14[22m  [31merror[39m  Missing semicolon                                   [2msemi[22m
+  [2m52:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m53:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m55:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m56:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m56:9[22m   [31merror[39m  Unexpected console statement                        [2mno-console[22m
+  [2m56:21[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m57:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m58:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m59:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 24 spaces  [2mindent[22m
+  [2m60:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 24 spaces  [2mindent[22m
+  [2m61:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 24 spaces  [2mindent[22m
+  [2m62:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+  [2m62:18[22m  [31merror[39m  'state' is defined but never used                   [2mno-unused-vars[22m
+  [2m63:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces  [2mindent[22m
+  [2m65:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces  [2mindent[22m
+  [2m66:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+  [2m67:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m68:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m69:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m70:2[22m   [31merror[39m  Unnecessary semicolon                               [2mno-extra-semi[22m
+
+[4mD:\Github\standard-requests\standard-requests-client\client\component\components\ListPanel.js[24m
+  [2m1:8[22m   [31merror[39m  'TransitionGroup' is defined but never used       [2mno-unused-vars[22m
+  [2m1:29[22m  [31merror[39m  Strings must use doublequote                      [2mquotes[22m
+  [2m4:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces  [2mindent[22m
+  [2m5:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces  [2mindent[22m
+
+[4mD:\Github\standard-requests\standard-requests-client\client\component\components\RippleArea.js[24m
+   [2m1:19[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+   [2m2:24[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+   [2m5:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+   [2m6:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+   [2m7:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+   [2m8:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+   [2m9:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m10:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m11:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m13:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m14:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m15:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m16:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m16:9[22m   [31merror[39m  Unexpected console statement                        [2mno-console[22m
+  [2m16:21[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m17:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m18:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m19:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m20:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m21:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m22:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m23:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m24:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m25:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m26:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m27:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m28:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m29:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m30:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m31:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+  [2m32:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m32:15[22m  [31merror[39m  Missing semicolon                                   [2msemi[22m
+  [2m33:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m34:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m35:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m37:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m38:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m38:9[22m   [31merror[39m  Unexpected console statement                        [2mno-console[22m
+  [2m38:21[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m39:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m40:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m41:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 17 spaces  [2mindent[22m
+  [2m42:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m43:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+  [2m44:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+  [2m45:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces  [2mindent[22m
+  [2m46:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 25 spaces  [2mindent[22m
+  [2m47:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces  [2mindent[22m
+  [2m48:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+  [2m49:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m50:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m50:10[22m  [31merror[39m  Missing semicolon                                   [2msemi[22m
+  [2m51:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+
+[4mD:\Github\standard-requests\standard-requests-client\client\component\helpers\time.js[24m
+   [2m2:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces  [2mindent[22m
+   [2m3:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces  [2mindent[22m
+   [2m3:19[22m  [31merror[39m  Strings must use doublequote                      [2mquotes[22m
+   [2m3:25[22m  [31merror[39m  Strings must use doublequote                      [2mquotes[22m
+   [2m3:31[22m  [31merror[39m  Strings must use doublequote                      [2mquotes[22m
+   [2m3:37[22m  [31merror[39m  Strings must use doublequote                      [2mquotes[22m
+   [2m3:43[22m  [31merror[39m  Strings must use doublequote                      [2mquotes[22m
+   [2m3:49[22m  [31merror[39m  Strings must use doublequote                      [2mquotes[22m
+   [2m3:55[22m  [31merror[39m  Strings must use doublequote                      [2mquotes[22m
+   [2m3:61[22m  [31merror[39m  Strings must use doublequote                      [2mquotes[22m
+   [2m3:67[22m  [31merror[39m  Strings must use doublequote                      [2mquotes[22m
+   [2m3:73[22m  [31merror[39m  Strings must use doublequote                      [2mquotes[22m
+   [2m3:79[22m  [31merror[39m  Strings must use doublequote                      [2mquotes[22m
+   [2m3:85[22m  [31merror[39m  Strings must use doublequote                      [2mquotes[22m
+   [2m4:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces  [2mindent[22m
+   [2m5:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces  [2mindent[22m
+   [2m6:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces  [2mindent[22m
+   [2m7:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces  [2mindent[22m
+   [2m7:26[22m  [31merror[39m  Strings must use doublequote                      [2mquotes[22m
+   [2m7:39[22m  [31merror[39m  Strings must use doublequote                      [2mquotes[22m
+   [2m8:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces  [2mindent[22m
+  [2m13:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces  [2mindent[22m
+  [2m14:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces  [2mindent[22m
+  [2m14:19[22m  [31merror[39m  Strings must use doublequote                      [2mquotes[22m
+  [2m14:25[22m  [31merror[39m  Strings must use doublequote                      [2mquotes[22m
+  [2m14:31[22m  [31merror[39m  Strings must use doublequote                      [2mquotes[22m
+  [2m14:37[22m  [31merror[39m  Strings must use doublequote                      [2mquotes[22m
+  [2m14:43[22m  [31merror[39m  Strings must use doublequote                      [2mquotes[22m
+  [2m14:49[22m  [31merror[39m  Strings must use doublequote                      [2mquotes[22m
+  [2m14:55[22m  [31merror[39m  Strings must use doublequote                      [2mquotes[22m
+  [2m14:61[22m  [31merror[39m  Strings must use doublequote                      [2mquotes[22m
+  [2m14:67[22m  [31merror[39m  Strings must use doublequote                      [2mquotes[22m
+  [2m14:73[22m  [31merror[39m  Strings must use doublequote                      [2mquotes[22m
+  [2m14:79[22m  [31merror[39m  Strings must use doublequote                      [2mquotes[22m
+  [2m14:85[22m  [31merror[39m  Strings must use doublequote                      [2mquotes[22m
+  [2m15:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces  [2mindent[22m
+  [2m16:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces  [2mindent[22m
+  [2m17:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces  [2mindent[22m
+  [2m18:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces  [2mindent[22m
+  [2m19:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces  [2mindent[22m
+  [2m19:37[22m  [31merror[39m  Strings must use doublequote                      [2mquotes[22m
+  [2m21:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces  [2mindent[22m
+  [2m21:25[22m  [31merror[39m  Strings must use doublequote                      [2mquotes[22m
+  [2m21:37[22m  [31merror[39m  Strings must use doublequote                      [2mquotes[22m
+  [2m21:50[22m  [31merror[39m  Strings must use doublequote                      [2mquotes[22m
+  [2m21:63[22m  [31merror[39m  Strings must use doublequote                      [2mquotes[22m
+  [2m22:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces  [2mindent[22m
+
+[4mD:\Github\standard-requests\standard-requests-client\client\component\Login.js[24m
+   [2m1:21[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+   [2m2:21[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+   [2m3:5[22m   [31merror[39m  'RippleArea' is assigned a value but never used     [2mno-unused-vars[22m
+   [2m3:26[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+   [2m6:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+   [2m7:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+   [2m8:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+   [2m9:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+   [2m9:18[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+   [2m9:31[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m10:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m12:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m13:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m14:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m15:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m17:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m18:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m19:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m20:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m21:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m23:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m24:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m25:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m26:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m27:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m29:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m29:19[22m  [31merror[39m  'e' is defined but never used                       [2mno-unused-vars[22m
+  [2m30:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m31:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m31:36[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m32:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m33:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+  [2m34:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+  [2m35:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m36:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m37:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m37:13[22m  [31merror[39m  Unexpected console statement                        [2mno-console[22m
+  [2m37:25[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m38:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m39:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m40:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m40:52[22m  [31merror[39m  Missing semicolon                                   [2msemi[22m
+  [2m41:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m42:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+  [2m43:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m44:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m45:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m45:13[22m  [31merror[39m  Unexpected console statement                        [2mno-console[22m
+  [2m45:25[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m46:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m46:13[22m  [31merror[39m  Unexpected console statement                        [2mno-console[22m
+  [2m47:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m47:11[22m  [31merror[39m  Missing semicolon                                   [2msemi[22m
+  [2m48:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m51:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m52:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m53:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m54:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+  [2m55:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+  [2m56:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+  [2m57:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces  [2mindent[22m
+  [2m58:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+  [2m59:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m60:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m60:10[22m  [31merror[39m  Missing semicolon                                   [2msemi[22m
+  [2m61:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+
+[4mD:\Github\standard-requests\standard-requests-client\client\component\requester\CreateAttribute.js[24m
+   [2m1:21[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+   [2m4:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+   [2m5:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+   [2m6:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+   [2m7:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+   [2m8:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+   [2m9:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m10:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m12:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m13:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m14:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m15:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m16:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m17:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m18:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m19:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m20:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m21:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m22:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m23:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m24:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m25:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m26:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m27:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m28:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m29:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m30:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m31:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m33:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m34:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m36:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m37:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m37:9[22m   [31merror[39m  Unexpected console statement                        [2mno-console[22m
+  [2m37:21[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m38:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m39:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m40:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+  [2m41:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces  [2mindent[22m
+  [2m42:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces  [2mindent[22m
+  [2m43:1[22m   [31merror[39m  Expected indentation of 7 tabs but found 28 spaces  [2mindent[22m
+  [2m44:1[22m   [31merror[39m  Expected indentation of 7 tabs but found 28 spaces  [2mindent[22m
+  [2m45:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces  [2mindent[22m
+  [2m46:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+  [2m47:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+  [2m48:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces  [2mindent[22m
+  [2m49:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces  [2mindent[22m
+  [2m50:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces  [2mindent[22m
+  [2m51:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+  [2m52:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m53:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m53:10[22m  [31merror[39m  Missing semicolon                                   [2msemi[22m
+  [2m54:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+
+[4mD:\Github\standard-requests\standard-requests-client\client\component\requester\CreateAttributes.js[24m
+   [2m1:21[22m  [31merror[39m  Strings must use doublequote                          [2mquotes[22m
+   [2m2:5[22m   [31merror[39m  'CreateAttribute' is assigned a value but never used  [2mno-unused-vars[22m
+   [2m2:31[22m  [31merror[39m  Strings must use doublequote                          [2mquotes[22m
+   [2m6:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces      [2mindent[22m
+   [2m7:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces     [2mindent[22m
+   [2m8:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces     [2mindent[22m
+   [2m8:9[22m   [31merror[39m  Unexpected console statement                          [2mno-console[22m
+   [2m8:21[22m  [31merror[39m  Strings must use doublequote                          [2mquotes[22m
+   [2m9:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces     [2mindent[22m
+  [2m10:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces    [2mindent[22m
+  [2m11:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces    [2mindent[22m
+  [2m11:20[22m  [31merror[39m  Strings must use doublequote                          [2mquotes[22m
+  [2m11:34[22m  [31merror[39m  Strings must use doublequote                          [2mquotes[22m
+  [2m12:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces    [2mindent[22m
+  [2m13:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces    [2mindent[22m
+  [2m13:20[22m  [31merror[39m  Strings must use doublequote                          [2mquotes[22m
+  [2m13:38[22m  [31merror[39m  Strings must use doublequote                          [2mquotes[22m
+  [2m14:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces    [2mindent[22m
+  [2m15:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces    [2mindent[22m
+  [2m15:20[22m  [31merror[39m  Strings must use doublequote                          [2mquotes[22m
+  [2m15:35[22m  [31merror[39m  Strings must use doublequote                          [2mquotes[22m
+  [2m16:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces    [2mindent[22m
+  [2m17:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces    [2mindent[22m
+  [2m17:20[22m  [31merror[39m  Strings must use doublequote                          [2mquotes[22m
+  [2m17:29[22m  [31merror[39m  Strings must use doublequote                          [2mquotes[22m
+  [2m18:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces    [2mindent[22m
+  [2m19:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces    [2mindent[22m
+  [2m19:20[22m  [31merror[39m  Strings must use doublequote                          [2mquotes[22m
+  [2m19:32[22m  [31merror[39m  Strings must use doublequote                          [2mquotes[22m
+  [2m20:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces    [2mindent[22m
+  [2m21:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces    [2mindent[22m
+  [2m21:20[22m  [31merror[39m  Strings must use doublequote                          [2mquotes[22m
+  [2m21:36[22m  [31merror[39m  Strings must use doublequote                          [2mquotes[22m
+  [2m22:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces    [2mindent[22m
+  [2m23:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces    [2mindent[22m
+  [2m23:20[22m  [31merror[39m  Strings must use doublequote                          [2mquotes[22m
+  [2m23:27[22m  [31merror[39m  Strings must use doublequote                          [2mquotes[22m
+  [2m24:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces    [2mindent[22m
+  [2m25:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces     [2mindent[22m
+  [2m27:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces     [2mindent[22m
+  [2m28:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces     [2mindent[22m
+  [2m29:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces     [2mindent[22m
+  [2m30:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces      [2mindent[22m
+  [2m31:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces      [2mindent[22m
+  [2m33:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces      [2mindent[22m
+  [2m34:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces      [2mindent[22m
+  [2m35:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces     [2mindent[22m
+  [2m35:9[22m   [31merror[39m  Unexpected console statement                          [2mno-console[22m
+  [2m35:21[22m  [31merror[39m  Strings must use doublequote                          [2mquotes[22m
+  [2m35:40[22m  [31merror[39m  Strings must use doublequote                          [2mquotes[22m
+  [2m35:51[22m  [31merror[39m  Strings must use doublequote                          [2mquotes[22m
+  [2m36:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces     [2mindent[22m
+  [2m37:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces     [2mindent[22m
+  [2m38:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces     [2mindent[22m
+  [2m39:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces     [2mindent[22m
+  [2m40:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces    [2mindent[22m
+  [2m41:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces     [2mindent[22m
+  [2m42:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces     [2mindent[22m
+  [2m43:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces      [2mindent[22m
+  [2m45:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces      [2mindent[22m
+  [2m46:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces     [2mindent[22m
+  [2m47:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces    [2mindent[22m
+  [2m48:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces     [2mindent[22m
+  [2m49:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces     [2mindent[22m
+  [2m50:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces     [2mindent[22m
+  [2m51:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces    [2mindent[22m
+  [2m52:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces     [2mindent[22m
+  [2m53:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces      [2mindent[22m
+  [2m55:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces      [2mindent[22m
+  [2m56:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces     [2mindent[22m
+  [2m56:9[22m   [31merror[39m  Unexpected console statement                          [2mno-console[22m
+  [2m56:21[22m  [31merror[39m  Strings must use doublequote                          [2mquotes[22m
+  [2m57:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces     [2mindent[22m
+  [2m58:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces    [2mindent[22m
+  [2m59:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces    [2mindent[22m
+  [2m60:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces    [2mindent[22m
+  [2m61:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces    [2mindent[22m
+  [2m62:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces    [2mindent[22m
+  [2m63:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces    [2mindent[22m
+  [2m64:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces    [2mindent[22m
+  [2m65:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces    [2mindent[22m
+  [2m66:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces    [2mindent[22m
+  [2m67:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces    [2mindent[22m
+  [2m68:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces    [2mindent[22m
+  [2m69:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces    [2mindent[22m
+  [2m70:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces    [2mindent[22m
+  [2m71:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces    [2mindent[22m
+  [2m72:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces     [2mindent[22m
+  [2m72:10[22m  [31merror[39m  Missing semicolon                                     [2msemi[22m
+  [2m73:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces      [2mindent[22m
+
+[4mD:\Github\standard-requests\standard-requests-client\client\component\requester\CreateRequest.js[24m
+    [2m1:21[22m  [31merror[39m  Strings must use doublequote                           [2mquotes[22m
+    [2m2:21[22m  [31merror[39m  Strings must use doublequote                           [2mquotes[22m
+    [2m3:5[22m   [31merror[39m  'CreateAttributes' is assigned a value but never used  [2mno-unused-vars[22m
+    [2m3:32[22m  [31merror[39m  Strings must use doublequote                           [2mquotes[22m
+    [2m6:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces       [2mindent[22m
+    [2m7:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces      [2mindent[22m
+    [2m8:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces      [2mindent[22m
+    [2m9:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces     [2mindent[22m
+    [2m9:26[22m  [31merror[39m  Strings must use doublequote                           [2mquotes[22m
+   [2m10:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces     [2mindent[22m
+   [2m10:21[22m  [31merror[39m  Strings must use doublequote                           [2mquotes[22m
+   [2m11:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces     [2mindent[22m
+   [2m11:23[22m  [31merror[39m  Strings must use doublequote                           [2mquotes[22m
+   [2m12:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces     [2mindent[22m
+   [2m12:23[22m  [31merror[39m  Strings must use doublequote                           [2mquotes[22m
+   [2m13:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces     [2mindent[22m
+   [2m13:25[22m  [31merror[39m  Strings must use doublequote                           [2mquotes[22m
+   [2m14:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces     [2mindent[22m
+   [2m15:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces      [2mindent[22m
+   [2m16:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces      [2mindent[22m
+   [2m17:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces      [2mindent[22m
+   [2m18:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces      [2mindent[22m
+   [2m19:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces      [2mindent[22m
+   [2m20:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces      [2mindent[22m
+   [2m21:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces      [2mindent[22m
+   [2m22:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces      [2mindent[22m
+   [2m24:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces      [2mindent[22m
+   [2m25:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces       [2mindent[22m
+   [2m27:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces       [2mindent[22m
+   [2m27:19[22m  [31merror[39m  'e' is defined but never used                          [2mno-unused-vars[22m
+   [2m28:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces      [2mindent[22m
+   [2m28:9[22m   [31merror[39m  Unexpected console statement                           [2mno-console[22m
+   [2m28:21[22m  [31merror[39m  Strings must use doublequote                           [2mquotes[22m
+   [2m29:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces      [2mindent[22m
+   [2m30:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces     [2mindent[22m
+   [2m30:21[22m  [31merror[39m  Strings must use doublequote                           [2mquotes[22m
+   [2m31:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces     [2mindent[22m
+   [2m31:35[22m  [31merror[39m  Strings must use doublequote                           [2mquotes[22m
+   [2m32:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces     [2mindent[22m
+   [2m33:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces     [2mindent[22m
+   [2m34:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces     [2mindent[22m
+   [2m35:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces     [2mindent[22m
+   [2m36:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces     [2mindent[22m
+   [2m37:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces      [2mindent[22m
+   [2m38:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces     [2mindent[22m
+   [2m38:13[22m  [31merror[39m  Unexpected console statement                           [2mno-console[22m
+   [2m38:25[22m  [31merror[39m  Strings must use doublequote                           [2mquotes[22m
+   [2m39:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces     [2mindent[22m
+   [2m40:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces     [2mindent[22m
+   [2m40:23[22m  [31merror[39m  Strings must use doublequote                           [2mquotes[22m
+   [2m41:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces     [2mindent[22m
+   [2m42:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces     [2mindent[22m
+   [2m42:23[22m  [31merror[39m  Strings must use doublequote                           [2mquotes[22m
+   [2m43:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces     [2mindent[22m
+   [2m44:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces      [2mindent[22m
+   [2m45:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces     [2mindent[22m
+   [2m45:13[22m  [31merror[39m  Unexpected console statement                           [2mno-console[22m
+   [2m45:25[22m  [31merror[39m  Strings must use doublequote                           [2mquotes[22m
+   [2m46:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces     [2mindent[22m
+   [2m46:13[22m  [31merror[39m  Unexpected console statement                           [2mno-console[22m
+   [2m47:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces      [2mindent[22m
+   [2m48:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces       [2mindent[22m
+   [2m50:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces       [2mindent[22m
+   [2m51:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces      [2mindent[22m
+   [2m52:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces     [2mindent[22m
+   [2m53:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces      [2mindent[22m
+   [2m54:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces       [2mindent[22m
+   [2m55:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces       [2mindent[22m
+   [2m56:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces      [2mindent[22m
+   [2m57:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces     [2mindent[22m
+   [2m58:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces      [2mindent[22m
+   [2m59:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces       [2mindent[22m
+   [2m60:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces       [2mindent[22m
+   [2m61:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces      [2mindent[22m
+   [2m62:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces     [2mindent[22m
+   [2m63:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces      [2mindent[22m
+   [2m64:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces       [2mindent[22m
+   [2m65:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces       [2mindent[22m
+   [2m66:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces      [2mindent[22m
+   [2m67:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces     [2mindent[22m
+   [2m68:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces      [2mindent[22m
+   [2m69:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces       [2mindent[22m
+   [2m70:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces       [2mindent[22m
+   [2m71:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces      [2mindent[22m
+   [2m72:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces     [2mindent[22m
+   [2m73:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces      [2mindent[22m
+   [2m74:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces      [2mindent[22m
+   [2m74:9[22m   [31merror[39m  Unexpected console statement                           [2mno-console[22m
+   [2m74:21[22m  [31merror[39m  Strings must use doublequote                           [2mquotes[22m
+   [2m75:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces       [2mindent[22m
+   [2m76:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces       [2mindent[22m
+   [2m77:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces      [2mindent[22m
+   [2m78:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces     [2mindent[22m
+   [2m79:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces      [2mindent[22m
+   [2m80:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces       [2mindent[22m
+   [2m82:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces       [2mindent[22m
+   [2m83:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces      [2mindent[22m
+   [2m83:9[22m   [31merror[39m  Unexpected console statement                           [2mno-console[22m
+   [2m83:21[22m  [31merror[39m  Strings must use doublequote                           [2mquotes[22m
+   [2m84:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces      [2mindent[22m
+   [2m85:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces     [2mindent[22m
+   [2m86:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces     [2mindent[22m
+   [2m87:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces     [2mindent[22m
+   [2m89:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces     [2mindent[22m
+   [2m90:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces     [2mindent[22m
+   [2m91:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces     [2mindent[22m
+   [2m92:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces     [2mindent[22m
+   [2m93:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces     [2mindent[22m
+   [2m94:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces     [2mindent[22m
+   [2m95:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces     [2mindent[22m
+   [2m96:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces     [2mindent[22m
+   [2m97:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces     [2mindent[22m
+   [2m98:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces     [2mindent[22m
+   [2m99:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces     [2mindent[22m
+  [2m100:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces     [2mindent[22m
+  [2m101:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces     [2mindent[22m
+  [2m102:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces     [2mindent[22m
+  [2m103:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces     [2mindent[22m
+  [2m104:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces     [2mindent[22m
+  [2m105:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces     [2mindent[22m
+  [2m106:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces     [2mindent[22m
+  [2m107:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces     [2mindent[22m
+  [2m108:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces     [2mindent[22m
+  [2m109:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces     [2mindent[22m
+  [2m110:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces     [2mindent[22m
+  [2m111:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces     [2mindent[22m
+  [2m112:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces     [2mindent[22m
+  [2m113:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 21 spaces     [2mindent[22m
+  [2m115:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces     [2mindent[22m
+  [2m116:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces     [2mindent[22m
+  [2m117:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces      [2mindent[22m
+  [2m117:10[22m  [31merror[39m  Missing semicolon                                      [2msemi[22m
+  [2m118:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces       [2mindent[22m
+
+[4mD:\Github\standard-requests\standard-requests-client\client\component\requester\MyRequests.js[24m
+   [2m1:21[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+   [2m2:5[22m   [31merror[39m  'Request' is assigned a value but never used         [2mno-unused-vars[22m
+   [2m2:23[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+   [2m3:5[22m   [31merror[39m  'ListPanel' is assigned a value but never used       [2mno-unused-vars[22m
+   [2m3:25[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+   [2m4:5[22m   [31merror[39m  'ListItem' is assigned a value but never used        [2mno-unused-vars[22m
+   [2m4:25[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+   [2m7:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces     [2mindent[22m
+   [2m8:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+   [2m9:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+  [2m10:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+  [2m11:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces     [2mindent[22m
+  [2m13:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces     [2mindent[22m
+  [2m14:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+  [2m15:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces   [2mindent[22m
+  [2m16:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces   [2mindent[22m
+  [2m17:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces   [2mindent[22m
+  [2m18:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces   [2mindent[22m
+  [2m20:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces   [2mindent[22m
+  [2m21:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces   [2mindent[22m
+  [2m23:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces   [2mindent[22m
+  [2m24:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces   [2mindent[22m
+  [2m26:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces   [2mindent[22m
+  [2m27:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces   [2mindent[22m
+  [2m29:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces   [2mindent[22m
+  [2m30:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces   [2mindent[22m
+  [2m32:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces   [2mindent[22m
+  [2m33:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces   [2mindent[22m
+  [2m35:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces   [2mindent[22m
+  [2m36:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces   [2mindent[22m
+  [2m37:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces   [2mindent[22m
+  [2m38:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces   [2mindent[22m
+  [2m40:1[22m   [31merror[39m  Expected indentation of 21 tabs but found 24 spaces  [2mindent[22m
+  [2m41:1[22m   [31merror[39m  Expected indentation of 22 tabs but found 28 spaces  [2mindent[22m
+  [2m42:1[22m   [31merror[39m  Expected indentation of 22 tabs but found 28 spaces  [2mindent[22m
+  [2m43:1[22m   [31merror[39m  Expected indentation of 21 tabs but found 24 spaces  [2mindent[22m
+  [2m45:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces   [2mindent[22m
+  [2m46:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces   [2mindent[22m
+  [2m47:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+  [2m47:10[22m  [31merror[39m  Missing semicolon                                    [2msemi[22m
+  [2m48:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces     [2mindent[22m
+
+[4mD:\Github\standard-requests\standard-requests-client\client\component\requester\Request.js[24m
+   [2m1:19[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+   [2m2:31[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+   [2m3:5[22m   [31merror[39m  'Attributes' is assigned a value but never used      [2mno-unused-vars[22m
+   [2m3:26[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+   [2m4:5[22m   [31merror[39m  'CommentHistory' is assigned a value but never used  [2mno-unused-vars[22m
+   [2m4:30[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+   [2m7:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces     [2mindent[22m
+   [2m8:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+   [2m9:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+  [2m10:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces   [2mindent[22m
+  [2m11:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+  [2m12:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+  [2m13:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces     [2mindent[22m
+  [2m15:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces     [2mindent[22m
+  [2m16:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+  [2m16:9[22m   [31merror[39m  Unexpected console statement                         [2mno-console[22m
+  [2m17:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+  [2m18:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces   [2mindent[22m
+  [2m19:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+  [2m20:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces     [2mindent[22m
+  [2m21:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces     [2mindent[22m
+  [2m22:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+  [2m22:9[22m   [31merror[39m  Unexpected console statement                         [2mno-console[22m
+  [2m22:21[22m  [31merror[39m  Strings must use doublequote                         [2mquotes[22m
+  [2m23:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+  [2m24:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces   [2mindent[22m
+  [2m25:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces   [2mindent[22m
+  [2m26:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces   [2mindent[22m
+  [2m27:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces   [2mindent[22m
+  [2m28:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces   [2mindent[22m
+  [2m29:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces   [2mindent[22m
+  [2m30:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces   [2mindent[22m
+  [2m31:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces   [2mindent[22m
+  [2m32:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces   [2mindent[22m
+  [2m33:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces   [2mindent[22m
+  [2m34:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces   [2mindent[22m
+  [2m35:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces   [2mindent[22m
+  [2m36:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces   [2mindent[22m
+  [2m37:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces   [2mindent[22m
+  [2m38:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces   [2mindent[22m
+  [2m39:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces   [2mindent[22m
+  [2m40:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces   [2mindent[22m
+  [2m41:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces   [2mindent[22m
+  [2m42:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces   [2mindent[22m
+  [2m43:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces   [2mindent[22m
+  [2m44:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces   [2mindent[22m
+  [2m45:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces   [2mindent[22m
+  [2m47:1[22m   [31merror[39m  Expected indentation of 17 tabs but found 20 spaces  [2mindent[22m
+  [2m48:1[22m   [31merror[39m  Expected indentation of 18 tabs but found 24 spaces  [2mindent[22m
+  [2m49:1[22m   [31merror[39m  Expected indentation of 17 tabs but found 20 spaces  [2mindent[22m
+  [2m50:1[22m   [31merror[39m  Expected indentation of 17 tabs but found 20 spaces  [2mindent[22m
+  [2m51:1[22m   [31merror[39m  Expected indentation of 18 tabs but found 24 spaces  [2mindent[22m
+  [2m52:1[22m   [31merror[39m  Expected indentation of 19 tabs but found 28 spaces  [2mindent[22m
+  [2m53:1[22m   [31merror[39m  Expected indentation of 18 tabs but found 24 spaces  [2mindent[22m
+  [2m54:1[22m   [31merror[39m  Expected indentation of 17 tabs but found 20 spaces  [2mindent[22m
+  [2m56:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces   [2mindent[22m
+  [2m57:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces   [2mindent[22m
+  [2m58:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces    [2mindent[22m
+  [2m58:10[22m  [31merror[39m  Missing semicolon                                    [2msemi[22m
+  [2m59:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces     [2mindent[22m
+
+[4mD:\Github\standard-requests\standard-requests-client\client\component\requester\Requester.js[24m
+   [2m1:21[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+   [2m2:21[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+   [2m3:5[22m   [31merror[39m  'CreateRequest' is assigned a value but never used  [2mno-unused-vars[22m
+   [2m3:29[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+   [2m4:5[22m   [31merror[39m  'MyRequests' is assigned a value but never used     [2mno-unused-vars[22m
+   [2m4:26[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+   [2m7:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+   [2m8:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+   [2m9:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m10:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m11:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m12:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m13:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m14:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m15:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m17:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m18:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m20:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m21:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m22:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m23:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m23:11[22m  [31merror[39m  Missing semicolon                                   [2msemi[22m
+  [2m24:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m25:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m27:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m28:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m29:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m30:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m30:11[22m  [31merror[39m  Missing semicolon                                   [2msemi[22m
+  [2m31:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m33:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m34:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m35:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m35:36[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m36:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m37:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+  [2m38:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+  [2m39:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m40:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m41:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m41:13[22m  [31merror[39m  Unexpected console statement                        [2mno-console[22m
+  [2m41:25[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m42:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m43:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+  [2m44:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m44:15[22m  [31merror[39m  Missing semicolon                                   [2msemi[22m
+  [2m45:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m46:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m46:13[22m  [31merror[39m  Unexpected console statement                        [2mno-console[22m
+  [2m46:25[22m  [31merror[39m  Strings must use doublequote                        [2mquotes[22m
+  [2m47:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m47:13[22m  [31merror[39m  Unexpected console statement                        [2mno-console[22m
+  [2m48:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m48:13[22m  [31merror[39m  Unexpected console statement                        [2mno-console[22m
+  [2m49:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m50:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m52:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+  [2m53:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m53:9[22m   [31merror[39m  Unexpected console statement                        [2mno-console[22m
+  [2m54:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m55:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m56:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+  [2m57:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces  [2mindent[22m
+  [2m58:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces  [2mindent[22m
+  [2m59:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+  [2m60:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+  [2m61:1[22m   [31merror[39m  Expected indentation of 5 tabs but found 20 spaces  [2mindent[22m
+  [2m62:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces  [2mindent[22m
+  [2m63:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces  [2mindent[22m
+  [2m64:1[22m   [31merror[39m  Expected indentation of 6 tabs but found 24 spaces  [2mindent[22m
+  [2m65:1[22m   [31merror[39m  Expected indentation of 7 tabs but found 39 spaces  [2mindent[22m
+  [2m66:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 16 spaces  [2mindent[22m
+  [2m67:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 12 spaces  [2mindent[22m
+  [2m68:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 8 spaces   [2mindent[22m
+  [2m68:10[22m  [31merror[39m  Missing semicolon                                   [2msemi[22m
+  [2m69:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces    [2mindent[22m
+
+[4mD:\Github\standard-requests\standard-requests-client\client\index.html[24m
+  [2m1:2[22m  [31merror[39m  Parsing error: Unexpected token !
+
+[4mD:\Github\standard-requests\standard-requests-client\client\index.js[24m
+  [2m1:9[22m   [31merror[39m  Strings must use doublequote                [2mquotes[22m
+  [2m2:5[22m   [31merror[39m  'React' is assigned a value but never used  [2mno-unused-vars[22m
+  [2m2:21[22m  [31merror[39m  Strings must use doublequote                [2mquotes[22m
+  [2m3:24[22m  [31merror[39m  Strings must use doublequote                [2mquotes[22m
+  [2m4:5[22m   [31merror[39m  'App' is assigned a value but never used    [2mno-unused-vars[22m
+  [2m4:19[22m  [31merror[39m  Strings must use doublequote                [2mquotes[22m
+  [2m6:51[22m  [31merror[39m  Strings must use doublequote                [2mquotes[22m
+
+[4mD:\Github\standard-requests\standard-requests-client\client\redux\redux.js[24m
+   [2m5:10[22m  [31merror[39m  'todoApp' is defined but never used               [2mno-unused-vars[22m
+   [2m5:30[22m  [31merror[39m  'action' is defined but never used                [2mno-unused-vars[22m
+   [2m6:1[22m   [31merror[39m  Expected indentation of 1 tab but found 4 spaces  [2mindent[22m
+   [2m6:17[22m  [31merror[39m  Missing semicolon                                 [2msemi[22m
+   [2m9:46[22m  [31merror[39m  Strings must use doublequote                      [2mquotes[22m
+   [2m9:53[22m  [31merror[39m  Missing semicolon                                 [2msemi[22m
+  [2m10:35[22m  [31merror[39m  'mmmmmm' is not defined                           [2mno-undef[22m
+  [2m11:7[22m   [31merror[39m  'store' is assigned a value but never used        [2mno-unused-vars[22m
+
+[4mD:\Github\standard-requests\standard-requests-client\client\temp[24m
+   [2m1:8[22m   [31merror[39m  'Transition' is defined but never used             [2mno-unused-vars[22m
+   [2m1:24[22m  [31merror[39m  Strings must use doublequote                       [2mquotes[22m
+   [2m6:1[22m   [31merror[39m  Expected indentation of 1 tab but found 2 spaces   [2mindent[22m
+   [2m7:1[22m   [31merror[39m  Expected indentation of 1 tab but found 2 spaces   [2mindent[22m
+   [2m8:2[22m   [31merror[39m  Missing semicolon                                  [2msemi[22m
+  [2m11:1[22m   [31merror[39m  Expected indentation of 1 tab but found 2 spaces   [2mindent[22m
+  [2m12:1[22m   [31merror[39m  Expected indentation of 1 tab but found 2 spaces   [2mindent[22m
+  [2m15:7[22m   [31merror[39m  'Fade' is assigned a value but never used          [2mno-unused-vars[22m
+  [2m16:1[22m   [31merror[39m  Expected indentation of 1 tab but found 2 spaces   [2mindent[22m
+  [2m17:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 4 spaces  [2mindent[22m
+  [2m18:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 6 spaces  [2mindent[22m
+  [2m19:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 8 spaces  [2mindent[22m
+  [2m20:1[22m   [31merror[39m  Expected indentation of 4 tabs but found 8 spaces  [2mindent[22m
+  [2m21:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 6 spaces  [2mindent[22m
+  [2m23:1[22m   [31merror[39m  Expected indentation of 3 tabs but found 6 spaces  [2mindent[22m
+  [2m24:1[22m   [31merror[39m  Expected indentation of 2 tabs but found 4 spaces  [2mindent[22m
+  [2m25:1[22m   [31merror[39m  Expected indentation of 1 tab but found 2 spaces   [2mindent[22m
+
+[31m[1m✖ 1842 problems (1842 errors, 0 warnings)[22m[39m
+[31m[1m[22m[39m[31m[1m  1707 errors, 0 warnings potentially fixable with the `--fix` option.[22m[39m
+[31m[1m[22m[39m

@@ -1,0 +1,17 @@
+.CommentsContainer {
+  margin-top: 10px;
+  padding-bottom: 10px;
+  display: inline-block;
+  width: 95%;
+  border-style: solid;
+  border-width: .05em;
+  background-color: #c9d3e0; }
+
+@media only screen and (min-width: 650px) {
+  /* Dropdown Button */
+  .CommentsContainer {
+    width: 48%;
+    margin: 1%; } }
+
+.listItem:nth-child(even) .largeRequest .CommentsContainer {
+  background-color: white; }
