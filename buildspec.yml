@@ -1,0 +1,33 @@
+version: 0.2
+
+#env:
+  #variables:
+     # key: "value"
+     # key: "value"
+  #parameter-store:
+     # key: "value"
+     # key: "value"
+
+phases:
+  install:
+    commands:
+       - echo Installing started
+       - npm install
+  #pre_build:
+    #commands:
+      # - command
+      # - command
+  build:
+    commands:
+       - echo Build Started
+      # - command
+  post_build:
+    commands:
+       - echo Build Completed
+      # - command
+#artifacts:
+  #files:
+    # - location
+    # - location
+  #discard-paths: yes
+  #base-directory: location
