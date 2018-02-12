@@ -1,5 +1,6 @@
-cd lambda
+rm server.zip
+cd server
 npm install
-Compress-Archive -Force -Path * -DestinationPath ../lambda.zip
+zip -r ../server.zip *
 cd ..
-aws lambda update-function-code --function-name tutorial --zip-file fileb://lambda.zip
+aws lambda update-function-code --function-name standard-api --zip-file fileb://server.zip
