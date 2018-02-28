@@ -1,6 +1,12 @@
-require('babel-polyfill');
-var React = require('react');
-var ReactDOM = require('react-dom');
-var App = require('./App');
+require("babel-polyfill");
+let ReactDOM = require("react-dom");
+const { Provider } = require("react-redux");
+const App = require("./App");
+const Store = require("/Store.js");
 
-ReactDOM.render( <App />, document.getElementById('app'));
+ReactDOM.render(
+	<Provider store={Store}>
+		<App />
+	</Provider>
+	, document.getElementById("app")
+);

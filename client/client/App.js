@@ -1,17 +1,26 @@
-var React = require('react');
+var { Component } = require("react");
 
-class App extends React.Component {
-    constructor(props) {
-        super(props);
-    }
+class App extends Component {
+	constructor(props) {
+		super(props);
+	}
 
-    render() {
-        return (
-            <div>
-                <a> Hello </a>
-            </div>
-        )
-    }
+	render() {
+		switch(userType) {
+			case "Approver":
+				return (
+					<Approver />
+				);
+			case "Requester":
+				return (
+					<Requester />
+				);
+			default:
+				return (
+					<Login />
+				);
+		}
+	}
 }
 
 module.exports = App;

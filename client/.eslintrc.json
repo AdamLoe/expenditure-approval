@@ -8,17 +8,19 @@
     "parserOptions": {
         "ecmaFeatures": {
             "experimentalObjectRestSpread": true,
-            "jsx": true
+            "jsx": true,
+            "modules": true
         },
         "sourceType": "module"
     },
     "plugins": [
-        "react"
+        "react", "html"
     ],
     "rules": {
         "indent": [
             "error",
-            "tab"
+            "tab",
+            { "SwitchCase" : 1 }
         ],
         "linebreak-style": [
             "error",
