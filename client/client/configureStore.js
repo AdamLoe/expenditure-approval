@@ -1,8 +1,8 @@
-const { createStore, combineReducers } = require("redux");
+const { createStore } = require("redux");
 const state = require("./helpers/loadState.js");
+const reducers = require("/reducers/");
 
 const getStore = () => {
-	const reducers = combineReducers( );
 	return createStore(reducers, state);
 };
 

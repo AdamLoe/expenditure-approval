@@ -13,7 +13,7 @@ class App extends React.Component {
         this.state = {
             url: 'http://localhost',
             user: {},
-            filters: {
+                filters: {
                 approvers: [],
                 requesters: []
             },
