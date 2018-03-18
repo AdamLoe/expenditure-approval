@@ -1,9 +1,14 @@
-const { createStore } = require("redux");
-const state = require("./helpers/loadState.js");
-const reducers = require("/reducers/");
+import { createStore } from "redux";
+import state from "./state/loadState.js";
+import reducers from "./reducers/";
 
-const getStore = () => {
-	return createStore(reducers, state);
+
+var configureStore = function () {
+	console.log("reducers", reducers);
+	console.log("state", state);
+	var store = createStore(reducers);
+	console.log("createStore", store);
+	return store;
 };
 
-export default getStore;
+export default configureStore;

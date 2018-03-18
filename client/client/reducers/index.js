@@ -1,7 +1,27 @@
-const { combineReducers } = require("redux");
+import React from 'react';
+import { combineReducers } from "redux";
 
-const reducers = combineReducers({
+const initialState = {
+	user_id: '',
+	access_token: '',
+};
 
-})
+const login = (state=initialState, action) => {
+	switch (action.type) {
+		default:
+			return {
+				user_id: state.user_id,
+				access_token: state.access_token
+			}
+	}
+};
 
-export default reducers;
+const logout = (state=initialState, action) => {
+	return state;
+};
+
+
+export default combineReducers({
+	login,
+	logout
+});

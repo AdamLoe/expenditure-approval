@@ -1,7 +1,7 @@
 // Initiate Express
 var express = require('express');
 var app = express();
-var { updateFilters } = require('./helpers/userIndex.js');
+var { updateFilters } = require('../helpers/userIndex.js');
 updateFilters();
 
 var bodyParser = require("body-parser");
@@ -33,7 +33,7 @@ app.use(compression({filter: shouldCompress}));
 app.use(express.static('public', {dotfiles:'allow'}));
 
 //If the webApp is using the api
-var routes = require('./routes');
+var routes = require('../routes');
 app.use('/api/', routes);
 
 

@@ -1,25 +1,33 @@
-var { Component } = require("react");
+import React from "react";
+import { BrowserRouter, Route, Link } from "react-router-dom";
 
-class App extends Component {
+class App extends React.Component {
 	constructor(props) {
 		super(props);
 	}
 
 	render() {
-		switch(userType) {
-			case "Approver":
-				return (
+		return (
+			<div>
+				Hello
+			</div>
+		);
+		/*
+        switch(userType) {
+            case "Approver":
+                return (
 					<Approver />
-				);
-			case "Requester":
-				return (
+                );
+            case "Requester":
+                return (
 					<Requester />
-				);
-			default:
-				return (
+                );
+            default:
+                return (
 					<Login />
-				);
-		}
+                );
+        }
+        */
 	}
 }
 
