@@ -1,14 +1,17 @@
-import { createStore } from "redux";
-import state from "./state/loadState.js";
+import { createStore, applyMiddleware } from "redux";
+import thunk from "redux-thunk";
+import { createLogger } from "redux-logger";
 import reducers from "./reducers/";
+import state from "./state/loadState.js";
 
+const configureStore = () => {
+	const store = createStore(
+		reducers,
+		applyMiddleware(thunk, createLogger())
+	)
 
-var configureStore = function () {
-	console.log("reducers", reducers);
-	console.log("state", state);
-	var store = createStore(reducers);
-	console.log("createStore", store);
 	return store;
 };
 
 export default configureStore;
+

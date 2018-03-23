@@ -5595,38 +5595,24 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactDom = __webpack_require__(380);
 
-var _redux = __webpack_require__(70);
+var _reactRouterDom = __webpack_require__(434);
 
-var _reactRedux = __webpack_require__(388);
+var _Root = __webpack_require__(446);
 
-var _reduxLogger = __webpack_require__(400);
+var _Root2 = _interopRequireDefault(_Root);
 
-var _reduxThunk = __webpack_require__(401);
+var _configureStore = __webpack_require__(156);
 
-var _reduxThunk2 = _interopRequireDefault(_reduxThunk);
-
-var _reducers = __webpack_require__(103);
-
-var _reducers2 = _interopRequireDefault(_reducers);
-
-var _App = __webpack_require__(155);
-
-var _App2 = _interopRequireDefault(_App);
-
-var _loadState = __webpack_require__(158);
-
-var _loadState2 = _interopRequireDefault(_loadState);
+var _configureStore2 = _interopRequireDefault(_configureStore);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var middleware = [_reduxThunk2.default, (0, _reduxLogger.createLogger)({})];
-
-var store = (0, _redux.createStore)(_reducers2.default, _redux.applyMiddleware.apply(undefined, middleware));
+var store = (0, _configureStore2.default)();
 
 (0, _reactDom.render)(_react2.default.createElement(
-	_reactRedux.Provider,
-	{ store: store },
-	_react2.default.createElement(_App2.default, null)
+	_reactRouterDom.BrowserRouter,
+	null,
+	_react2.default.createElement(_Root2.default, { store: store })
 ), document.getElementById("app"));
 
 /***/ }),
@@ -5665,71 +5651,44 @@ define(String.prototype, "padRight", "".padEnd);
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(71)))
 
 /***/ }),
-/* 155 */
+/* 155 */,
+/* 156 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
 
-var _react = __webpack_require__(48);
+var _redux = __webpack_require__(70);
 
-var _react2 = _interopRequireDefault(_react);
+var _reduxThunk = __webpack_require__(401);
 
-var _reactRouterDom = __webpack_require__(434);
+var _reduxThunk2 = _interopRequireDefault(_reduxThunk);
+
+var _reduxLogger = __webpack_require__(400);
+
+var _reducers = __webpack_require__(103);
+
+var _reducers2 = _interopRequireDefault(_reducers);
+
+var _loadState = __webpack_require__(158);
+
+var _loadState2 = _interopRequireDefault(_loadState);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+var configureStore = function configureStore() {
+	var store = (0, _redux.createStore)(_reducers2.default, (0, _redux.applyMiddleware)(_reduxThunk2.default, (0, _reduxLogger.createLogger)()));
 
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	return store;
+};
 
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var App = function (_React$Component) {
-	_inherits(App, _React$Component);
-
-	function App(props) {
-		_classCallCheck(this, App);
-
-		return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
-	}
-
-	_createClass(App, [{
-		key: "render",
-		value: function render() {
-			return _react2.default.createElement(
-				"div",
-				null,
-				"Hello"
-			);
-			/*
-         switch(userType) {
-             case "Approver":
-                 return (
-   			<Approver />
-                 );
-             case "Requester":
-                 return (
-   			<Requester />
-                 );
-             default:
-                 return (
-   			<Login />
-                 );
-         }
-         */
-		}
-	}]);
-
-	return App;
-}(_react2.default.Component);
-
-module.exports = App;
+exports.default = configureStore;
 
 /***/ }),
-/* 156 */,
 /* 157 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -34579,6 +34538,100 @@ function pathToRegexp (path, keys, options) {
   return stringToRegexp(/** @type {string} */ (path), /** @type {!Array} */ (keys), options)
 }
 
+
+/***/ }),
+/* 445 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(48);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var App = function (_React$Component) {
+	_inherits(App, _React$Component);
+
+	function App(props) {
+		_classCallCheck(this, App);
+
+		return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
+	}
+
+	_createClass(App, [{
+		key: "render",
+		value: function render() {
+			return _react2.default.createElement(
+				"div",
+				null,
+				"Hello"
+			);
+		}
+	}]);
+
+	return App;
+}(_react2.default.Component);
+
+module.exports = App;
+
+/***/ }),
+/* 446 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _react = __webpack_require__(48);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(145);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _reactRedux = __webpack_require__(388);
+
+var _reactRouterDom = __webpack_require__(434);
+
+var _App = __webpack_require__(445);
+
+var _App2 = _interopRequireDefault(_App);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Root = function Root(_ref) {
+	var store = _ref.store;
+	return _react2.default.createElement(
+		_reactRedux.Provider,
+		{ store: store },
+		_react2.default.createElement(
+			"div",
+			null,
+			_react2.default.createElement(_reactRouterDom.Route, { path: "/", component: _App2.default })
+		)
+	);
+};
+
+Root.propTypes = {
+	store: _propTypes2.default.object.isRequired
+};
+
+exports.default = Root;
 
 /***/ })
 /******/ ]);
