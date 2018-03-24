@@ -1,8 +1,0 @@
-.listItem:nth-child(even) {
-  background: #c9d3e0; }
-
-.listItem {
-  padding: 5px; }
-
-.simpleRequest:hover {
-  cursor: pointer; }
