@@ -10,7 +10,7 @@ class Login extends React.Component {
       pas: '',
       usdaResponse: 'hmm',
       foodItems: []
-    }
+    };
   }
 
   handleUserChange = (evt) => {

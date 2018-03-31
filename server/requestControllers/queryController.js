@@ -1,7 +1,7 @@
 var knex = require("../helpers/knexfile.js");
 
 //Searches Database with filters, returns requests objects
-exports.query = function (req, res) {
+exports.queryRequest = function (req, res) {
 	console.log("Query Requests Called", req.body);
 	console.log("perPage", req.body.perPage, " offset", req.body.perPage * (req.body.page - 1));
 	knex("requests")

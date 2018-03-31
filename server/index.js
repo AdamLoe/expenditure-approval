@@ -1,11 +1,21 @@
 "use strict";
 
-var server = require("./server.js");
+var {auth, login} = require("./helpers/auth");
+var routes = require("./routes");
 
-exports.handler = (event, context, callback) => {
-	event = server(event, context, callback);
-	callback(null, event.response);
+exports.handler = function(event, context, callback) {
+	console.log("New Lambda Call ", event.path, " with authoization ", event.headers.Authorization);
+	if (event.path === "/login") {
+    	login(event, callback);
+	} else {
+		auth(event)
+			.then(function() {
+				routes(event, callback);
+			})
+			.catch(function(err) {
+				console.log("Top Level Error || ", err);
+				callback(err, null);
+			});
+	}
 
-	console.log("callback failed, index.js");
-	callback("callback failed, index.js");
 };

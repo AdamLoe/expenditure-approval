@@ -2,7 +2,7 @@ var knex = require("../helpers/knexfile.js");
 var { updateFilters } = require("../helpers/userIndex.js");
 
 //Create new row in database with values
-exports.createUser = function (req, res) {
+exports.createUser = function (event, callback) {
 	console.log("MakeUser function Hit");
 	knex("users").insert({
 		username: req.body.username,

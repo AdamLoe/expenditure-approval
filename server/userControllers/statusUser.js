@@ -1,7 +1,7 @@
 var knex = require("../helpers/knexfile.js");
 var { updateFilters } = require("../helpers/userIndex.js");
 
-exports.deactivateUser = function (req, res) {
+exports.deactivateUser = function (event, callback) {
 	console.log("Deactivate User function Hit");
 	knex("users").update({
 		status: false
@@ -29,7 +29,7 @@ exports.deactivateUser = function (req, res) {
 
 //If user is still connected, SEND ERROR DANGER MESSAGE
 //Otherwise, move to deleted pile
-exports.activateUser = function (req, res) {
+exports.activateUser = function (event, callback) {
 	console.log("ActivateUser function Hit");
 	knex("users").update({
 		status: true

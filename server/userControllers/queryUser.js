@@ -1,7 +1,7 @@
 var knex = require("../helpers/knexfile.js");
 
 //Search database for users of type
-exports.userList = function (req, res) {
+exports.queryUser = function (event, callback) {
 	if (req.params.type === "inactive") {
 		getUsersInactive(req, res);
 	} else {
@@ -9,7 +9,7 @@ exports.userList = function (req, res) {
 	}
 };
 
-var getUsersType = function(req, res) {
+var getUsersType = function (event, callback) {
 	knex("users").select(
 		"id",
 		"name",
@@ -37,7 +37,7 @@ var getUsersType = function(req, res) {
 
 };
 
-var getUsersInactive = function(req, res) {
+var getUsersInactive = function (event, callback) {
 	knex("users").select(
 		"id",
 		"username",

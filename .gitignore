@@ -24,3 +24,12 @@ node_modules
 /.idea/*
 npm-debug.log
 .gitattributes
+
+/client/src/axiosFile.js
+/client/src/helpers/axiosFile.js
+/server/helpers/knexfile.js
+
+~/package-lock.json
+
+***/package-lock.json
+/client/package-lock.json
