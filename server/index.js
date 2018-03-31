@@ -1,12 +1,13 @@
 "use strict";
 
-var {auth, login} = require("./helpers/auth");
 var routes = require("./routes");
+var {auth} = require("./helpers/auth");
+var {login} = require("./helpers/login");
 
 exports.handler = function(event, context, callback) {
 	console.log("New Lambda Call ", event.path, " with authoization ", event.headers.Authorization);
 	if (event.path === "/login") {
-    	login(event, callback);
+		login(event, callback);
 	} else {
 		auth(event)
 			.then(function() {

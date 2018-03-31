@@ -1,4 +1,4 @@
-var knex = require("../../oldserver/helpers/knexfile.js");
+
 
 exports.updateFilters = function(req, res) {
 	getUserIndex("approver");

@@ -4,6 +4,10 @@ var app = express();
 var cors = require("cors");
 app.use(cors());
 
+var bodyParser = require("body-parser");
+app.use(bodyParser.urlencoded({extended:false}));
+app.use(bodyParser.json());
+
 var callback = function(err, data) {
 	res = this.res;
 	if (err) {
@@ -23,7 +27,7 @@ app.use(function(req, res, next) {
 		headers: {
 			Authorization: auth
 		},
-		body: body
+		body: req.body
 	};
 	var context = {};
 	handler(event, context, callback.bind({res:res}));
@@ -35,9 +39,6 @@ http.createServer(app).listen(2002);
 
 /*
 
-var bodyParser = require("body-parser");
-app.use(bodyParser.urlencoded({extended:false}));
-app.use(bodyParser.json());
 console.log('App started');
 
 //DELETE THIS
