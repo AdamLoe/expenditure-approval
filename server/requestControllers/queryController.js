@@ -1,4 +1,4 @@
-var knex = require("../helpers/knexfile.js");
+var knex = require("../helpers/knexfile");
 
 //Searches Database with filters, returns requests objects
 exports.queryRequest = function (event, callback) {
@@ -14,18 +14,14 @@ exports.queryRequest = function (event, callback) {
 		})
 		.catch(function(err){
 			console.log("Database query requests failed.", err);
-			res.status(500).json({
-				error: true,
-				data: {
-					message: err.message
-				}
-			});
+			callback(err);
 		});
 };
 
 //Searches Database with filters, returns requests objects
 exports.myRequests = function (event, callback) {
 	console.log("My Requests Called for", event.user.username);
+
 	knex("requests")
 		.where({
 			requesterid: event.user.id
@@ -33,11 +29,15 @@ exports.myRequests = function (event, callback) {
 		.limit(30)
 		.orderBy("updatedate", "desc")
 		.then(function(data) {
-			console.log('Got My Requests', data);
-			callback(null , data);
+			console.log("Got myrequests data", data);
+			var response = {
+				"statusCode": 200,
+				"body": JSON.stringify(data)
+			};
+			callback(null, response);
 		})
 		.catch(function(err){
 			console.log("Database query requests failed.", err.message);
-			callback(err.message);
+			callback(err);
 		});
 };

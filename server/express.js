@@ -1,3 +1,10 @@
+/*
+ express.js
+ ------------
+ Very basic express server
+ Idea is to map express to our lambda function
+ */
+
 var express = require("express");
 var app = express();
 
@@ -8,15 +15,18 @@ var bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 
+//On lambda callback, map either to correct status, and data to send
 var callback = function(err, data) {
 	res = this.res;
 	if (err) {
-		res.status(500).json(err);
+		res.status(err.statusCode).send(err.body);
 	}  else {
-		res.status(200).json(data);
+		res.status(data.statusCode).send(data.body);
 	}
 };
 
+//Populate our fake event
+//Bind our res to our callback
 var { handler } = require("./index");
 app.use(function(req, res, next) {
 	console.log("New Express Callback to ", req.path);
@@ -33,7 +43,7 @@ app.use(function(req, res, next) {
 	handler(event, context, callback.bind({res:res}));
 });
 
-
+console.log('Server listening on port 2002');
 var http  = require("http");
 http.createServer(app).listen(2002);
 

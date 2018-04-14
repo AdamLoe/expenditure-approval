@@ -4,6 +4,7 @@ import logger from "redux-logger";
 
 import reducers from "./reducers/";
 import customMid from "./middleware/";
+import state from "./state/loadState";
 
 const middleware = applyMiddleware(
 	customMid,
@@ -13,5 +14,6 @@ const middleware = applyMiddleware(
 
 export const store = createStore(
 	reducers,
+	state,
 	middleware
 );

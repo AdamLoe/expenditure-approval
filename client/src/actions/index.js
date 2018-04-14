@@ -6,10 +6,3 @@ export const example = () => {
 	};
 };
 
-export const loginAction = (usr, pasHash) => {
-	return {
-		type: "LOGIN",
-		usr: usr,
-		pas: pasHash
-	};
-};

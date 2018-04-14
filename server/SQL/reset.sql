@@ -52,5 +52,5 @@ INSERT INTO requests
 UPDATE Users
 	SET token_expir=DEFAULT
 	WHERE id=1;
---SELECT * FROM users;
+SELECT * FROM users;
 --SELECT * FROM requests;

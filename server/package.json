@@ -5,7 +5,6 @@
   "main": "index.js",
   "dependencies": {
     "basic-auth": "^2.0.0",
-    "bcrypt": "^1.0.3",
     "knex": "^0.14.4",
     "pg": "^7.4.1"
   },
