@@ -5,7 +5,7 @@ module.exports = (event, callback) => {
 
 
 		knex("users")
-			.select("id", "name", "type", "status")
+			.select("id", "nickname", "fullname", "email", "type", "status")
 			.then(function (data) {
 				console.log("Got user filters");
 				resolve(data);

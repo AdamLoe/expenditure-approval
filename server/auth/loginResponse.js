@@ -6,8 +6,12 @@ module.exports = (user, token, filters, callback) => {
 	callback(null, {
 		"statusCode": 200,
 		"body": JSON.stringify({
-			userType: user.type,
+			username: user.username,
 			token: token,
+			userType: user.type,
+			nickName: user.nickname,
+			fullName: user.fullname,
+			email: user.email,
 			filters: filters
 		})
 	});

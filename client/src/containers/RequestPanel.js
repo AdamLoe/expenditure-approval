@@ -1,22 +1,48 @@
-import { connect } from 'react-redux';
+import React from "react";
+import { connect } from "react-redux";
 
-var RequestPanel = ({ }) => {
-	console.log("RENDER: RequestPanel");
+import { toggleShowCards } from "../actions/index";
+
+import RequestHeader from "../components/Requests/RequestHeader";
+import RequestItem from "./RequestItem";
+import RequestFilters from "../components/Requests/RequestFilters";
+
+let RequestPanel = ({requestIds, showCards, toggleShowCards}) => {
+	console.log("RENDER: RequestPanel", requestIds);
 	return (
-		<div className="AdminApp">
-			<h1>
-				Hey1
-			</h1>
+		<div className="RequestPanelContainer">
+			<RequestFilters
+				showCards={showCards}
+				toggleShowCards={toggleShowCards}
+			/>
+			<div className="RequestPanel">
+				<RequestHeader
+					showCards={showCards}
+				/>
+				{
+					requestIds.map((id, index) => (
+						<RequestItem
+							id={id}
+							key={id}
+							index={index}
+						/>
+					))
+				}
+			</div>
 		</div>
 
-	)
-}
+	);
+};
 
-var mapStateToProps = (state) => {
-	console.log("MapSta: RequestPanel", state);
+let mapStateToProps = (state) => {
+	console.log("MapSta: RequestPanel");
+
 	return {
+		requestIds: state.requests.array.map(req => req.id),
+		showCards: state.requests.showCards,
+		requests: state.requests.array
 	};
 };
 
 
-export default connect(mapStateToProps, {})(RequestPanel);
+export default connect(mapStateToProps, {toggleShowCards})(RequestPanel);

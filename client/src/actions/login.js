@@ -1,14 +1,16 @@
-
 import axios from "axios";
 import { url, salt } from "../constants";
 
-var loginSuccess = (res, usr) => {
-	console.log("loginSuccess", usr, res);
+var loginSuccess = (res, username) => {
+	console.log("loginSuccess", username, res);
 	return {
 		type: "LoginSuccess",
-		usr: usr,
-		tok: res.data.token,
-		userType: res.data.userType
+		username: username,
+		token:    res.data.token,
+		userType: res.data.userType,
+		nickName: res.data.nickName,
+		fullName: res.data.fullName,
+		email:    res.data.email
 	};
 };
 
@@ -27,11 +29,11 @@ var login = (usr, pas) => {
 	});
 };
 
-export default (usr, pas) => {
+export default (username, password) => {
 	return (dispatch) => {
-		return login(usr, pas).then(
-			res => dispatch(loginSuccess(res, usr)),
+		return login(username, password).then(
+			res => dispatch(loginSuccess(res, username)),
 			err  => dispatch(loginFail(err))
-		)
-	}
-}
+		);
+	};
+};

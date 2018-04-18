@@ -17,7 +17,8 @@ module.exports = (event, callback) => {
 		var token = genToken(64);
 		knex("users")
 			.where({ username: event.body.usr })
-			.update({ access_token: token, token_expir: null})
+			.update("access_token", token)
+			.update("token_expir", null)
 			.then(function(data) {
 				console.log("Access token created", token);
 				resolve(token);

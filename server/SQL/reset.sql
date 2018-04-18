@@ -7,8 +7,10 @@ CREATE TABLE users (
     password varchar(64) NOT NULL,
     access_token varchar(64),
     token_expir timestamp DEFAULT CURRENT_TIMESTAMP,
-    name varchar(40),
+    nickname varchar(20),
+    fullname varchar(60),
     type varchar(20),
+    email varchar(60),
     approvelimit int,
     approverId int REFERENCES users(id),
     status bool
@@ -30,17 +32,17 @@ CREATE TABLE requests (
 
 
 INSERT INTO users VALUES 
--- id,       username,     pasword,acc,exp,                          name,        type, approveLimit,  approverId, status
-( 1,         'terryB',     'terry','a',null,            'Terry Bobbachoni',     'admin',            0,        null,  true),
-( 2,          'eddyG',      'eddy','a',null,                'Eddy Gorreat',  'approver',         null,        null,  true),
-( 3,         'sarahP',     'sarah','a',null,             'Sarah Parantino',  'approver',         5000,           2,  true),
-( 4,        'sandraT',    'sandra','a',null, 'Sandra Tornapotarainyapolis',  'approver',         4000,           2,  true),
-( 5,        'tonyaB' ,     'tonya','a',null,                 'Tonya Baker',  'approver',         3000,           3,  true),
-( 6,        'gerryL' ,     'gerry','a',null,              'Gerry Lawrence',  'approver',         1000,           4,  true),
-( 7,  'crawfordPlace',  'crawford','a',null,              'Crawford Place', 'requester',            0,           5,  true),
-( 8, 'corneliusVilla', 'cornelius','a',null,             'Cornelius Villa', 'requester',            0,           5,  true),
-( 9,    'debianHomes',    'debian','a',null,                'Debian Homes', 'requester',            0,           4,  true),
-(10,    'marlandApts',  'markland','a',null,         'Markland Apartments', 'requester',            0,           6,  true)
+-- id,       username,     pasword,acc,exp,                          name,        type,  email, approveLimit,  approverId, status
+( 1,         'terryB',     'terry','a',null,    'Terry',            'Terry Bobbachoni',     'admin',    'terry@se.com',      0,        null,   true),
+( 2,          'eddyG',      'eddy','a',null,     'Eddy',                'Eddy Gorreat',  'approver',     'eddy@se.com',    null,        null,  true),
+( 3,         'sarahP',     'sarah','a',null,    'Sarah',             'Sarah Parantino',  'approver',    'sarah@se.com',    5000,           2,  true),
+( 4,        'sandraT',    'sandra','a',null,   'Sandra', 'Sandra Tornapotarainyapolis',  'approver',   'sandra@se.com',    4000,           2,  true),
+( 5,        'tonyaB' ,     'tonya','a',null,    'Tonya',                 'Tonya Baker',  'approver',    'tonya@se.com',    3000,           3,  true),
+( 6,        'gerryL' ,     'gerry','a',null,    'Gerry',              'Gerry Lawrence',  'approver',    'gerry@se.com',    1000,           4,  true),
+( 7,  'crawfordPlace',  'crawford','a',null, 'Crawford',              'Crawford Place', 'requester', 'crawford@se.com',       0,           5,  true),
+( 8, 'corneliusVilla', 'cornelius','a',null,'Cornelius',             'Cornelius Villa', 'requester','cornelius@se.com',       0,           5,  true),
+( 9,    'debianHomes',    'debian','a',null,   'Debian',                'Debian Homes', 'requester',   'debian@se.com',       0,           4,  true),
+(10,    'marklandApts', 'markland','a',null, 'Markland',         'Markland Apartments', 'requester', 'markland@se.com',       0,           6,  true)
 ;
 
 
@@ -49,8 +51,22 @@ INSERT INTO requests
    VALUES
     ('In Progress', 'Groceries',    400,  'Apt#219',         1,          2);
 
+CREATE OR REPLACE FUNCTION updatetokenexpir()
+	RETURNS TRIGGER AS $$
+BEGIN
+	NEW.token_expir = current_timestamp;
+	RETURN NEW;
+END;
+$$ LANGUAGE 'plpgsql';
+
+CREATE TRIGGER OnTokenUpdate
+    BEFORE UPDATE
+    ON users
+    FOR EACH ROW
+    EXECUTE PROCEDURE updatetokenexpir();
+
 UPDATE Users
-	SET token_expir=DEFAULT
+	SET access_token='WW0ZSilosbcpMufIoWFhLRUp2rMKgHxEPVDN4U4xqjhv4MNjvBf2Wk5LGwgm92zm'
 	WHERE id=1;
 SELECT * FROM users;
 --SELECT * FROM requests;

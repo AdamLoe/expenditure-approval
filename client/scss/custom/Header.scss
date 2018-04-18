@@ -1,0 +1,147 @@
+@import "../globals.scss";
+
+
+.RequestPanelContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.RequestFilters {
+  display: flex;
+}
+
+.SortFilters {
+  flex-grow: 2;
+}
+
+.ShowFilters {
+  flex-grow: 1;
+}
+
+.SortFilters {
+  display: flex;
+  align-items: center;
+}
+
+.SortFilters button {
+  background: $sort-filters-background;
+  padding: 1em;
+  color: $sort-filters-color;
+  border-radius: 10px;
+}
+
+.ShowFilters {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.ShowFilters button {
+  background: $show-filters-background;
+  padding: 1em;
+  color: $show-filters-color;
+  border-radius: 10px;
+}
+
+
+
+.RequestPanel {
+  display: flex;
+  flex-direction: column;
+  background-color: $content-background;
+}
+
+
+.RequestHeader {
+  margin: 15px 0 15px 0;
+}
+.RequestRow {
+  display: flex;
+  justify-content: space-around;
+}
+
+.RequestColumn {
+  text-overflow: ellipsis;
+}
+@import "../globals.scss";
+
+/*
+        Header
+ */
+
+.Header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+/*
+      Static Header
+ */
+
+.HeaderStatic {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $header-background;
+}
+
+.UserGreeting {
+  display: inline-block;
+  background-color: $greeting-background;
+  color: $greeting-color;
+}
+
+.ProfileButton {
+  display: flex;
+  align-items: center;
+
+  background-color: $color-profile-button;
+
+  text-align: right;
+  padding: 0 10px 0 10px;
+  border-radius: 10px;
+}
+
+.ProfileButton .button h1 {
+  display: inline-block;
+  width: auto;
+}
+
+.ProfileButton img {
+  display: inline-block;
+  height: 60px;
+
+}
+
+/*
+    Dyanmic Header
+ */
+
+.HeaderDynamic {
+  position: relative;
+  height: 0px;
+  background-color: purple;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.ProfileDropdown {
+  position: absolute;
+  background: $color-secondary;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.ProfileDropdown h1 {
+  width: 100%;
+  text-align: center;
+
+  margin: 4px 0 4px 0;
+  padding: 0 14px 0 14px;
+  display: inline-block;
+  background-color: white;
+}

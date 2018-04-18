@@ -6,6 +6,7 @@
   "scripts": {
     "build": "webpack -w",
     "buildMinify": "webpack -p",
+    "start": "webpack-dev-server",
     "startW": "webpack-dev-server --hot",
     "buildD": "webpack -d",
     "sass": "node-sass scss/index.scss -o public/dist/",
@@ -18,6 +19,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "autoprefixer": "^8.3.0",
     "axios": "^0.16.2",
     "babel-core": "^6.26.0",
     "babel-loader": "^6.4.1",
@@ -30,9 +32,12 @@
     "basic-auth": "^1.1.0",
     "bcrypt": "^1.0.3",
     "body-parser": "^1.18.2",
+    "css-loader": "^0.28.11",
     "es6-promise": "^4.2.4",
+    "foundation-sites": "^6.4.4-rc1",
     "html-webpack-plugin": "^2.30.1",
     "https": "^1.0.0",
+    "motion-ui": "^1.2.3",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.7",
@@ -41,13 +46,15 @@
     "redux": "^3.7.2",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.2.0",
+    "sass-loader": "^7.0.1",
+    "style-loader": "^0.20.3",
     "webpack": "^2.7.0",
     "webpack-dev-server": "^2.11.2",
     "webpack-validator": "^3.0.0"
   },
   "devDependencies": {
-    "node-sass": "^4.8.3",
     "eslint": "^4.12.0",
-    "eslint-plugin-react": "^7.7.0"
+    "eslint-plugin-react": "^7.7.0",
+    "node-sass": "^4.8.3"
   }
 }

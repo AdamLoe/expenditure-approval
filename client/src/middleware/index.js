@@ -1,11 +1,19 @@
 const middleware = store => next => action => {
-	if (action.type === "LOGIN") {
-		console.log("Middleware detected a login function happening");
-	}
 
-	sessionStorage.setItem("redux-state", JSON.stringify(store.getState())  );
-	console.log('Updated state', JSON.stringify(store.getState()) );
-	return next(action);
+	try {
+		let result = next(action);
+		let state = store.getState();
+		localStorage.setItem("Standard-Requests-State", JSON.stringify({
+			...state,
+			user: null
+		}));
+		sessionStorage.setItem("Standard-Requests-User-State", JSON.stringify(state.user));
+		console.log('Successfully set state');
+		return result;
+	}
+	catch(err) {
+		console.log('error settings state', err);
+	}
 };
 
 export default middleware;

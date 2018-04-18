@@ -1,9 +1,9 @@
 // In webpack.config.js
-var HtmlWebpackPlugin = require("html-webpack-plugin");
-const webpack = require("webpack");
+let HtmlWebpackPlugin = require("html-webpack-plugin");
+let webpack = require("webpack");
 
 module.exports = {
-	entry: ["babel-polyfill", "./src/index.js"],
+	entry: ["babel-polyfill", "./entry.js", "./src/index.js"],
 
 	output: {
 		path: __dirname + "/public/dist",
@@ -19,11 +19,28 @@ module.exports = {
 				query: {
 					presets: ["es2015", "es2016", "stage-1"]
 				}
+			},
+			{
+				test: /\.css$/,
+				use: [ 'style-loader', 'css-loader' ]
+			},
+			{
+				test: /\.scss$/,
+				use: [
+					'style-loader',
+					'css-loader',
+					'sass-loader'
+				]
 			}
 		],
 	},
 
 	plugins: [
-		new HtmlWebpackPlugin({template: "./src/index.html" })
+		new HtmlWebpackPlugin({template: "./src/index.html" }),
+		new webpack.ProvidePlugin({
+			React: "react",
+			connect: "react-redux/lib/connect/connect"
+		})
+
 	]
 };

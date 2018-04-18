@@ -1,12 +1,15 @@
+import '../../scss/custom/App.scss';
+
 import React from "react";
 import { connect } from "react-redux";
 
 import Header from "./Header";
 import RequestPanel from "./RequestPanel";
-import Admin from "./AdminPanel";
+import AdminPanel from "./AdminPanel";
+import SettingsPanel from "./SettingsPanel";
 import Login from "./Login";
 
-var App = ({userType, showAdminPanel, loggedIn}) => {
+let App = ({loggedIn, showAdminPanel, showSettings}) => {
 	console.log("Render: App");
 
 	if (loggedIn === false) {
@@ -15,25 +18,30 @@ var App = ({userType, showAdminPanel, loggedIn}) => {
 		);
 	}
 
+	let Content = <RequestPanel />;
+	if (showAdminPanel) { Content = <AdminPanel />; }
+
 	return (
 		<div className="App">
 			<Header />
-			{ (showAdminPanel) ?
-				<AdminPanel />
-				:
-				<RequestPanel />
-			}
+			<div className="SettingsContainer">
+				{ showSettings &&
+					<SettingsPanel />
+				}
+			</div>
+			{ Content }
 		</div>
 	);
 };
 
-var mapStateToProps = (state) => {
+let mapStateToProps = (state) => {
 	console.log("MapSta: APP", state);
 	return {
-		userType: state.login.userType,
-		loggedIn: state.login.loggedIn,
-		showAdminPanel: (state.login.userType === "admin")
+		loggedIn: state.user.loggedIn,
+		showAdminPanel: state.navigation.showAdminPanel,
+		showSettings: state.navigation.showSettings
 	};
 };
+
 
 export default connect(mapStateToProps)(App);

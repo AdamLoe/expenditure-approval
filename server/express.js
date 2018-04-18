@@ -5,6 +5,7 @@
  Idea is to map express to our lambda function
  */
 
+console.log('Server listening on port 2002');
 var express = require("express");
 var app = express();
 
@@ -25,10 +26,12 @@ var callback = function(err, data) {
 	}
 };
 
+app.use(express.static('public', {dotfiles:'allow'}));
 //Populate our fake event
 //Bind our res to our callback
+
 var { handler } = require("./index");
-app.use(function(req, res, next) {
+app.use('/api', function(req, res, next) {
 	console.log("New Express Callback to ", req.path);
 	var body = req.body;
 	var auth = req.headers.authorization;
@@ -42,6 +45,7 @@ app.use(function(req, res, next) {
 	var context = {};
 	handler(event, context, callback.bind({res:res}));
 });
+
 
 console.log('Server listening on port 2002');
 var http  = require("http");
@@ -63,8 +67,6 @@ app.use( function (req, res, next) {
     }
 });
 
-//Static Files
-//app.use(express.static('public', {dotfiles:'allow'}));
 
 //If the webApp is using the api
 //var routes = require('./routes');

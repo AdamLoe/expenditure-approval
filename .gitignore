@@ -1,35 +1,21 @@
-# See https://help.github.com/ignore-files/ for more about ignoring files.
 
-# dependencies
-/server/node_modules/ *
-/client/node_modules
 
-# testing
+**/svgs/**
+server/public/**
+
 /coverage
+**/node_modules/**
 
-# production
-/build
-
-# misc
 .DS_Store
 .env
 npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-node_modules
-/node_modules/*
-.DS_Store
 .idea
 /.idea/*
 npm-debug.log
 .gitattributes
 
-/client/src/axiosFile.js
-/client/src/helpers/axiosFile.js
-/server/helpers/knexfile.js
-
+**/knexfile.js
+**/axiosFile.js
 ~/package-lock.json
 
-***/package-lock.json
-/client/package-lock.json
+**/package-lock.json

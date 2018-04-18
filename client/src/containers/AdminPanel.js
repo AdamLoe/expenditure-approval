@@ -1,18 +1,19 @@
-import { connect } from 'react-redux';
+import React from "react";
+import { connect } from "react-redux";
 
-var AdminPanel = ({ }) => {
+let AdminPanel = ({ }) => {
 	console.log("RENDER: AdminPanel");
 	return (
-		<div className="AdminApp">
+		<div className="AdminApp  cell">
 			<h1>
-				Hey1
+				It's an admin panel
 			</h1>
 		</div>
 
 	)
-}
+};
 
-var mapStateToProps = (state) => {
+let mapStateToProps = (state) => {
 	console.log("MapSta: AdminPanel", state);
 	return {
 	};

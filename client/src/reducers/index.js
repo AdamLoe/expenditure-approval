@@ -1,9 +1,15 @@
 import { combineReducers } from "redux";
 
-import login from "./login";
-import users from "./users";
+import admin from "./admin";
+import pagination from "./pagination";
+import navigation from "./navigation";
+import user from "./user";
+import requests from "./requests";
 
 export default combineReducers({
-	login,
-	users
+	user,
+	pagination,
+	navigation,
+	admin,
+	requests
 });

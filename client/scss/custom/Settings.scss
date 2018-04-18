@@ -1,0 +1,60 @@
+@import "../globals.scss";
+
+.SettingsContainer {
+  position: relative;
+  height: 0px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.SettingsPanel {
+  margin-top: $settings-panel-top-margin;
+  position: absolute;
+  width: $settings-panel-size;
+  clear: both;
+  background: $settings-background;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/*
+     Settings Header
+ */
+
+.ExitSettingsImg {
+  position: absolute;
+  height: auto;
+  width: $setting-exit-size;
+}
+
+.SettingsPanel h2 {
+  flex-shrink: 1;
+  text-align: center;
+  font-size: $settings-header-size;
+}
+
+/*
+    Settings
+ */
+
+.Settings {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.SettingsRow {
+  display: flex;
+  justify-content: center;
+  flex-basis: 20%;
+}
+
+.SettingsRow * {
+}
+
+
