@@ -1,11 +1,10 @@
-import axios from "axios";
-import { url, salt } from "../constants";
+import { loginCall } from './axios';
 
-var loginSuccess = (res, username) => {
+let loginSuccess = (res, username) => {
 	console.log("loginSuccess", username, res);
 	return {
 		type: "LoginSuccess",
-		username: username,
+		username: res.data.username,
 		token:    res.data.token,
 		userType: res.data.userType,
 		nickName: res.data.nickName,
@@ -14,7 +13,7 @@ var loginSuccess = (res, username) => {
 	};
 };
 
-var loginFail = (err) => {
+let loginFail = (err) => {
 	console.log("loginFail", err);
 	return {
 		type: "LoginFail",
@@ -22,17 +21,10 @@ var loginFail = (err) => {
 	};
 };
 
-var login = (usr, pas) => {
-	return axios.post(url + "/login", {
-		usr: usr,
-		pas: pas
-	});
-};
-
 export default (username, password) => {
 	return (dispatch) => {
-		return login(username, password).then(
-			res => dispatch(loginSuccess(res, username)),
+		return loginCall(username, password).then(
+			res => dispatch(loginSuccess(res)),
 			err  => dispatch(loginFail(err))
 		);
 	};

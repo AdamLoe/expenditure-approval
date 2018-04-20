@@ -30,7 +30,6 @@ CREATE TABLE requests (
     comments text[][]
 );
 
-
 INSERT INTO users VALUES 
 -- id,       username,     pasword,acc,exp,                          name,        type,  email, approveLimit,  approverId, status
 ( 1,         'terryB',     'terry','a',null,    'Terry',            'Terry Bobbachoni',     'admin',    'terry@se.com',      0,        null,   true),

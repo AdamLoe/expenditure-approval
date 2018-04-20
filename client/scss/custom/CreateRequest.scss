@@ -1,0 +1,29 @@
+.CreateRequestPanel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Attribute {
+  margin: auto;
+
+}
+
+.Attribute input {
+  padding: 5px;
+  background: inherit;
+}
+
+.Attribute div {
+  max-width: 300px;
+  min-height: 10px;
+}
+
+.Attribute .DeleteAttribute {
+  position: relative;
+}
+
+.DeleteAttribute img {
+  position: absolute;
+  right: 0;
+}

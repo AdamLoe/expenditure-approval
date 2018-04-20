@@ -70,3 +70,23 @@ export const toggleShowCards = () => {
 		type: "toggleShowCards"
 	};
 };
+
+export const showCreateRequest = () => {
+	return {
+		type: "showCreateRequest"
+	};
+};
+
+export const hideCreateRequest = () => {
+	return {
+		type: "hideCreateRequest"
+	};
+};
+
+export const submitCreateRequest = () => {
+	return {
+		type: "submitCreateRequest"
+	}
+};
+
+

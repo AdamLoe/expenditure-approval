@@ -1,7 +1,8 @@
 let initialState = {
 	showAdminPanel: false,
 	showSettings: false,
-	showUserDropdown: false
+	showUserDropdown: false,
+	showCreateRequest: false
 };
 
 export default (state=initialState, action) => {
@@ -31,6 +32,18 @@ export default (state=initialState, action) => {
 				...state,
 				showUserDropdown: !state.showUserDropdown
 			};
+
+		case "showCreateRequest":
+			return {
+				...state,
+				showCreateRequest: true
+			};
+
+		case "hideCreateRequest":
+			return {
+				...state,
+				showCreateRequest: false
+			}
 
 		case "Logout":
 			return initialState;
