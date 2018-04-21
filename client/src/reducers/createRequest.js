@@ -3,7 +3,7 @@ import presetList from "../components/requestPresets";
 let initialState = {
 	Name: "",
 	Amount: 0,
-	"Unit Name": "",
+	UnitName: "",
 	Description: "",
 	Type: "",
 	attributes: [

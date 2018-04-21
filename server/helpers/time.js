@@ -32,4 +32,4 @@ exports.displayTime = function() {
         str += "AM"
     }
     return str;
-}
+};

@@ -1,19 +1,21 @@
 import axios from 'axios';
-import { url, salt } from "../constants";
+import { apiURL, apiPort, salt } from "../constants";
 
 exports.apiCall = (path, {username, token}, body) => {
-	return axios.post({
-		url: url+path,
+	return axios({
+		method: "post",
+		baseURL: apiURL+path,
+		port: apiPort,
 		auth: {
 			username: username,
-			token: token
+			password: token
 		},
 		data: body
 	})
 };
 
 exports.loginCall = (username, password) => {
-	return axios.post(url + "/login", {
+	return axios.post(apiURL + "/login", {
 		usr: username,
 		pas: password
 	});

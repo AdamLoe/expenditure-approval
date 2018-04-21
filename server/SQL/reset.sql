@@ -20,7 +20,7 @@ CREATE TABLE requests (
     requestId serial PRIMARY KEY NOT NULL,
     status varchar(15) NOT NULL,
     requestName varchar(60) NOT NULL,
-    amount int NOT NULL,
+    amount varchar(15) NOT NULL,
     unitName varchar(60) NOT NULL,
     requesterId int NOT NULL REFERENCES users(id),
     approverId  int NOT NULL REFERENCES users(id),
@@ -30,18 +30,18 @@ CREATE TABLE requests (
     comments text[][]
 );
 
-INSERT INTO users VALUES 
--- id,       username,     pasword,acc,exp,                          name,        type,  email, approveLimit,  approverId, status
-( 1,         'terryB',     'terry','a',null,    'Terry',            'Terry Bobbachoni',     'admin',    'terry@se.com',      0,        null,   true),
-( 2,          'eddyG',      'eddy','a',null,     'Eddy',                'Eddy Gorreat',  'approver',     'eddy@se.com',    null,        null,  true),
-( 3,         'sarahP',     'sarah','a',null,    'Sarah',             'Sarah Parantino',  'approver',    'sarah@se.com',    5000,           2,  true),
-( 4,        'sandraT',    'sandra','a',null,   'Sandra', 'Sandra Tornapotarainyapolis',  'approver',   'sandra@se.com',    4000,           2,  true),
-( 5,        'tonyaB' ,     'tonya','a',null,    'Tonya',                 'Tonya Baker',  'approver',    'tonya@se.com',    3000,           3,  true),
-( 6,        'gerryL' ,     'gerry','a',null,    'Gerry',              'Gerry Lawrence',  'approver',    'gerry@se.com',    1000,           4,  true),
-( 7,  'crawfordPlace',  'crawford','a',null, 'Crawford',              'Crawford Place', 'requester', 'crawford@se.com',       0,           5,  true),
-( 8, 'corneliusVilla', 'cornelius','a',null,'Cornelius',             'Cornelius Villa', 'requester','cornelius@se.com',       0,           5,  true),
-( 9,    'debianHomes',    'debian','a',null,   'Debian',                'Debian Homes', 'requester',   'debian@se.com',       0,           4,  true),
-(10,    'marklandApts', 'markland','a',null, 'Markland',         'Markland Apartments', 'requester', 'markland@se.com',       0,           6,  true)
+INSERT INTO users VALUES
+-- id,       username,     pasword,acc,exp,  'nickname',                    'fullname',        type,             email,approveLimit,  approverId, status
+( 1,         'terryB',     'terry','a',null,    'Terry',            'Terry Bobbachoni',     'admin',    'terry@se.com',           0,        null,  true),
+( 2,          'eddyG',      'eddy','a',null,     'Eddy',                'Eddy Gorreat',  'approver',     'eddy@se.com',        null,        null,  true),
+( 3,         'sarahP',     'sarah','a',null,    'Sarah',             'Sarah Parantino',  'approver',    'sarah@se.com',        5000,           2,  true),
+( 4,        'sandraT',    'sandra','a',null,   'Sandra', 'Sandra Tornapotarainyapolis',  'approver',   'sandra@se.com',        4000,           2,  true),
+( 5,        'tonyaB' ,     'tonya','a',null,    'Tonya',                 'Tonya Baker',  'approver',    'tonya@se.com',        3000,           3,  true),
+( 6,        'gerryL' ,     'gerry','a',null,    'Gerry',              'Gerry Lawrence',  'approver',    'gerry@se.com',        1000,           4,  true),
+( 7,  'crawfordPlace',  'crawford','a',null, 'Crawford',              'Crawford Place', 'requester', 'crawford@se.com',           0,           5,  true),
+( 8, 'corneliusVilla', 'cornelius','a',null,'Cornelius',             'Cornelius Villa', 'requester','cornelius@se.com',           0,           5,  true),
+( 9,    'debianHomes',    'debian','a',null,   'Debian',                'Debian Homes', 'requester',   'debian@se.com',           0,           4,  true),
+(10,    'marklandApts', 'markland','a',null, 'Markland',         'Markland Apartments', 'requester', 'markland@se.com',           0,           6,  true)
 ;
 
 

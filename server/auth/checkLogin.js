@@ -13,6 +13,7 @@ module.exports = (event, callback) => {
 						"body": "{\"message\":\"Username doesnt exist or deleted\"}"
 					});
 				} else if (user.password === event.body.pas){
+					user.password = "null";
 					resolve(user);
 				} else {
 					callback(null,  {
@@ -34,4 +35,3 @@ module.exports = (event, callback) => {
 
 	});
 };
-

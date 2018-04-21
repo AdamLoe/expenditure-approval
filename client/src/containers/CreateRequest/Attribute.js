@@ -30,7 +30,7 @@ export default class Attribute extends React.Component {
 					   value={keyProp}
 					   onChange={onKeyChange}
 				/>
-				<textarea type="text"
+				<input type="text"
 					   onChange={this.onClick}
 					   value={value}
 			  	 />

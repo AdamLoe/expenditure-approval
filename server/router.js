@@ -12,7 +12,7 @@
 var routeMatches = function(routePath, userPath) {
 	console.log("routeMatches called", routePath, userPath);
 	var len = userPath.length;
-	return (routePath.slice(0, len) === userPath);
+	return (routePath.slice(0, len) === userPath) || routePath === "/";
 };
 
 var getParamObject = function(routePath, userPath) {

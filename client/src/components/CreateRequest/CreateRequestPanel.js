@@ -1,15 +1,22 @@
 import React from "react";
 
-export default ({children, hideCreateRequest}) => {
+export default ({children, hideCreateRequest, submitCreateRequest}) => {
 	return (
 		<div className="CreateRequestPanel">
-			<button
-				className="exit"
-				onClick={hideCreateRequest}
-			>
+			<div className="Relative">
+				<button
+					className="ExitCreateRequest"
+					onClick={hideCreateRequest}
+				>
 				x
-			</button>
+				</button>
+			</div>
 			{ children }
+			<button
+				onClick={submitCreateRequest}
+			>
+				Submit
+			</button>
 		</div>
 	)
 }

@@ -2,15 +2,33 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
 }
 
 .Attribute {
   margin: auto;
+}
 
+.ExitCreateRequest {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.SelectRequestType {
+  margin: auto;
+  width: auto;
+}
+
+.Attribute * {
+  padding: 5px;
 }
 
 .Attribute input {
-  padding: 5px;
+  border: 0;
+  border-bottom-width: thin;
+  border-bottom-style: outset;
+  border-spacing: 14px;
   background: inherit;
 }
 

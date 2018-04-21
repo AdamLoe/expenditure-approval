@@ -29,6 +29,12 @@ module.exports = (event, callback) => {
 	router.admin("/users/update", updateUser);
 
 	router.use("/", function(event, callback) {
-		callback("Route Not Found", null);
+		console.log('Route not found');
+		callback({
+			"statusCode": 404,
+			"body": JSON.stringify({
+				message: "Route Not Found"
+			})
+		});
 	});
 };

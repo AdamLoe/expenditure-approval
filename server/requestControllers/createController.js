@@ -1,25 +1,27 @@
 var knex = require("../helpers/knexfile.js");
-var { getDetailedTime } = require("../helpers/time.js");
+var { getTime } = require("../helpers/time.js");
+var errorCallback = require('../helpers/errorCallback');
 
 //Pipe all props to knex to create a object
-exports.createRequest = function (req, res) {
-	console.log("Create Request function Hit", req.body);
+exports.createRequest = function (event, callback) {
+	console.log('callback', callback);
+	console.log('user', event.user);
+	var request = {
+		requestname: event.body.name,
+		status: "In Process",
+		amount: event.body.amount,
+		unitname: event.body.unitname,
+		requesterid: event.user.id,
+		approverid: Math.ceil(Math.random() * 4),
+		attributes: event.body.attributes,
+		comments: [[getTime(), "Created", event.user.name]]
+	};
+
+
+	console.log("Create Request function Hit", request);
 	knex.transaction(function(trx) {
 		return trx.into("requests")
-			.insert({
-				requestname: req.body.requestName,
-				status: "In Process",
-				amount: req.body.amount,
-				unitname: req.body.unitName,
-				requesterid: req.user.id,
-				requestername: req.user.name,
-				approverid: req.user.approverid,
-				approvername: req.user.approvername,
-				createdate: knex.fn.now(),
-				updatedate: knex.fn.now(),
-				attributes: req.body.attributes,
-				comments: [[getDetailedTime(), "Created", req.user.id, req.user.name]]
-			})
+			.insert(request)
 			.then(function(data) {
 
 				return knex("users")
@@ -27,7 +29,7 @@ exports.createRequest = function (req, res) {
 					.update({
 						approvelimit: 1002
 					}).where({
-						id: req.user.id
+						id: event.user.id
 					});
 
 			})
@@ -36,10 +38,14 @@ exports.createRequest = function (req, res) {
 	})
 		.then(function(data) {
 			console.log("Transaction worked");
-			res.status(200).json(data);
+			callback({
+				"statusCode": 200,
+				"body": JSON.stringify({
+					message: "It worked"
+				})
+			})
 		})
 		.catch(function(err){
-			console.log("Transaction Failed", err);
-			res.status(500);
+			errorCallback(callback, 500, "Transaction Failed", err);
 		});
 };

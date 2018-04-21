@@ -9,17 +9,14 @@ import RequestItemRow  from "../../components/Requests/RequestItemRow";
 let RequestItem = ({ showCards, ...props}) => {
 	console.log("RENDER: RequestItem");
 	if (showCards) {
-
 		return (
 			<RequestItemCard
 				{...props}
 			/>
-
 		);
 
 	}
 	else {
-
 		return (
 			<RequestItemRow
 				{...props}
@@ -30,24 +27,26 @@ let RequestItem = ({ showCards, ...props}) => {
 };
 
 let mapStateToProps = (state, {id, index}) => {
+	console.log('MAPSTA: RequestItem');
 
-	let user = state.requests.array.filter(req => (req.id === id))[0];
+	let request = state.requests.array[index];
 	return {
-		userName: user.userName,
-		email: user.email,
-		nickName: user.nickName,
-		pasChange: "5 Months ago",
-		showBig: user.showBig,
-		showCards: state.requests.showCards
+		updatedate: request.updatedate,
+		createdate: request.createdate,
+		name: request.requestname,
+		amount: request.amount,
+		unitname: request.unitname,
+		requestorName: request.requestorid,
+		approverName: request.approverid,
+		description: request.description,
+		attributes: request.attributes
 	};
 };
 
 let mapDispatchToProps = (dispatch, {index}) => {
 	return {
 		toggleRequest: () => dispatch(toggleRequest(index)),
-
 	}
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(RequestItem);
-

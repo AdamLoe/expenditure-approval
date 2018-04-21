@@ -30,7 +30,7 @@ exports.handler = function(event, context, callback) {
 	if (event.path === "/login") {
 		login(event, callback);
 	} else {
-		auth(event)
+		auth(event, callback)
 			.then(function() {
 				routes(event, callback);
 			})

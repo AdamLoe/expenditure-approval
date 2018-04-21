@@ -1,25 +1,24 @@
 import React from "react";
 
 export default ({
-	date, name, unitname, requestorName, nextApprover, description,
-
+  userName, pasChange, email, nickName, showBig, toggleRequest
 }) => {
 	return (
 		<div className="RequestRow">
 			<div className="RequestColumn">
-				{ date }
+				{userName}
 			</div>
 			<div className="RequestColumn">
-				{ name }
+				{pasChange}
 			</div>
 			<div className="RequestColumn">
-				{ unitname }
+				{email}
 			</div>
 			<div className="RequestColumn">
-				{ requestorName }
+				{nickName}
 			</div>
 			<div className="RequestColumn">
-				{nextApprover}
+				$100.00
 			</div>
 		</div>
 	);

@@ -5,7 +5,7 @@ import presetList from "../requestPresets";
 export default ({currentPreset, setRequestType}) => {
 	return (
 		<select
-			className="RequestType"
+			className="SelectRequestType"
 			value={currentPreset}
 			onChange={setRequestType}
 		>
@@ -20,4 +20,3 @@ export default ({currentPreset, setRequestType}) => {
 		</select>
 	);
 };
-

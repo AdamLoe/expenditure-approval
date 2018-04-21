@@ -9,6 +9,7 @@ console.log('Server listening on port 2002');
 var express = require("express");
 var app = express();
 
+
 var cors = require("cors");
 app.use(cors());
 
@@ -18,6 +19,7 @@ app.use(bodyParser.json());
 
 //On lambda callback, map either to correct status, and data to send
 var callback = function(err, data) {
+	console.log('got callback', err, data);
 	res = this.res;
 	if (err) {
 		res.status(err.statusCode).send(err.body);
@@ -52,6 +54,8 @@ var http  = require("http");
 http.createServer(app).listen(2002);
 
 /*
+
+
 
 console.log('App started');
 

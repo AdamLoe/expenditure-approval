@@ -2,7 +2,8 @@ import React from "react";
 import {connect} from "react-redux";
 
 import CreateRequestPanel from "../../components/CreateRequest/CreateRequestPanel";
-import { hideCreateRequest, submitCreateRequest } from "../../actions/index";
+import { hideCreateRequest } from "../../actions/index";
+import submitCreateRequest from "../../actions/createRequest";
 
 import RequestPresets from "../../components/CreateRequest/RequestPresets";
 import { setRequestType } from "../../actions/createRequest";
@@ -26,7 +27,7 @@ let CreateRequestContainer = ({
 			<RequiredAttribute keyProp="Name"/>
 			<RequiredAttribute keyProp="Amount"/>
 			<RequiredAttribute keyProp="Description"/>
-			<RequiredAttribute keyProp="Unit Name"/>
+			<RequiredAttribute keyProp="UnitName"/>
 			<RequestPresets
 				currentPreset={requestType}
 				setRequestType={setRequestType}
@@ -58,4 +59,3 @@ let dispatches = {
 };
 
 export default connect(mapStateToProps, dispatches)(CreateRequestContainer);
-
