@@ -10,9 +10,13 @@
 
 
 var routeMatches = function(routePath, userPath) {
+<<<<<<< HEAD
+	return (routePath === userPath) || ((routePath + '/') === userPath);
+=======
 	console.log("routeMatches called", routePath, userPath);
 	var len = userPath.length;
 	return (routePath.slice(0, len) === userPath) || routePath === "/";
+>>>>>>> origin/master
 };
 
 var getParamObject = function(routePath, userPath) {

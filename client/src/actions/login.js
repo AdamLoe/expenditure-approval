@@ -1,4 +1,4 @@
-import { loginCall } from './axios';
+import { loginCall } from "./axios";
 
 let loginSuccess = (res, username) => {
 	console.log("loginSuccess", username, res);
@@ -9,7 +9,8 @@ let loginSuccess = (res, username) => {
 		userType: res.data.userType,
 		nickName: res.data.nickName,
 		fullName: res.data.fullName,
-		email:    res.data.email
+		email:    res.data.email,
+		filters:  res.data.filters
 	};
 };
 

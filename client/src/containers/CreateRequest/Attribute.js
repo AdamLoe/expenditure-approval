@@ -1,18 +1,9 @@
 import React from "react";
-import ReactDOM from "react-dom";
 
 export default class Attribute extends React.Component {
 	constructor(props) {
 		super(props);
 	}
-
-	onClick = (e) => {
-		console.log("RENDER: Attribute");
-		let rect = ReactDOM.findDOMNode(this).attributes;
-		console.log("rect", rect);
-		this.props.onValueChange(e);
-	};
-
 	render() {
 		let { keyProp, value, isRequired, onKeyChange, onValueChange, deleteAttribute } = this.props;
 
@@ -21,7 +12,7 @@ export default class Attribute extends React.Component {
 				{ isRequired ||
 					<div className="DeleteAttribute">
 						<img
-							onClick={this.onClick}
+							onClick={onValueChange}
 							src="http://localhost:2002/exit.png"
 						/>
 					</div>
@@ -30,7 +21,7 @@ export default class Attribute extends React.Component {
 					   value={keyProp}
 					   onChange={onKeyChange}
 				/>
-				<input type="text"
+				<textarea type="text"
 					   onChange={this.onClick}
 					   value={value}
 			  	 />
@@ -38,12 +29,6 @@ export default class Attribute extends React.Component {
 		);
 	}
 }
-
-
-
-
-var rect = ReactDOM.findDOMNode(this);
-console.log("rect", rect);
 
 
 /*

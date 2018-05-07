@@ -5,10 +5,10 @@
 	From there we check if our access_token is valid and timely
  */
 
-var knex = require("../helpers/knexfile.js");
+let knex = require("../helpers/knexfile.js");
 
-var basicAuth = require("basic-auth");
-var errorCallback = require('../helpers/errorCallback');
+let basicAuth = require("basic-auth");
+let errorCallback = require("../helpers/errorCallback");
 
 module.exports = (event, callback) => {
 	return new Promise ((resolve) => {
@@ -21,7 +21,11 @@ module.exports = (event, callback) => {
 			//Parse our basic-auth headers
 			//Check database for token authorization
 			let { name, pass } = basicAuth.parse(event.headers.Authorization);
+<<<<<<< HEAD
+			console.log(name, pass);
+=======
 			console.log(basicAuth.parse(event.headers.Authorization));
+>>>>>>> origin/master
 			let token = pass; // Because we are really passing a token
 
 			console.log("token", token);
@@ -36,14 +40,20 @@ module.exports = (event, callback) => {
 					console.log('usr', user.access_token);
 					console.log('tok', token);
 					if (!user) {
+<<<<<<< HEAD
+=======
 						console.log('no username found matching');
+>>>>>>> origin/master
 						errorCallback(callback, 403, "Username not found or Token Expired or Token Wrong");
 					} else if (user.access_token === token) {
 						console.log(user.type, user.username, " successfully authenticated");
 						event.user = user;
 						resolve(200, "it worked");
 					} else {
+<<<<<<< HEAD
+=======
 						console.log('Access token not correct');
+>>>>>>> origin/master
 						errorCallback(callback, 403, "Access_token not right");
 					}
 				})

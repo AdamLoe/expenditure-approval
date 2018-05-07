@@ -1,6 +1,7 @@
 import React from "react";
 
-export default ({showCards}) => {
+export default ({showCards, getRequests}) => {
+	console.log('header', showCards);
 	if (showCards) {
 		return (
 			<div>
@@ -25,7 +26,11 @@ export default ({showCards}) => {
 				<div className="RequestColumn">
 					Amount
 				</div>
+				<button onClick={getRequests}>
+					Refresh
+				</button>
 			</div>
+
 		)
 
 	}

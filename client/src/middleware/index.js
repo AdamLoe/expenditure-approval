@@ -1,19 +1,18 @@
 const middleware = store => next => action => {
+	let result = next(action);
 
 	try {
-		let result = next(action);
 		let state = store.getState();
 		localStorage.setItem("Standard-Requests-State", JSON.stringify({
-			...state,
-			user: null
+			user: state.user
 		}));
-		sessionStorage.setItem("Standard-Requests-User-State", JSON.stringify(state.user));
-		console.log('Successfully set state');
-		return result;
+		console.log("Successfully set state");
 	}
 	catch(err) {
-		console.log('error settings state', err);
+		console.log("error settings state", err);
 	}
+
+	return result;
 };
 
 export default middleware;

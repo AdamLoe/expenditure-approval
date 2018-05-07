@@ -1,17 +1,14 @@
 import { apiCall } from './axios';
 
 let createRequestSuccess = (res) => {
-		console.log('Success', res);
 	return {
 		type: "RequestCreated"
 	}
 };
 
 let createRequestFail = (err) => {
-		console.log('Fail', err);
 	return {
-		type: "API_FAIL",
-		message: err.message,
+		type: "CreateRequestFail",
 		errorType: "CreateRequest",
 		err: err
 	}
@@ -20,33 +17,21 @@ let createRequestFail = (err) => {
 let buildCreateRequestBody = (state) => {
 	let{ newRequest } = state.createRequest;
 	return {
-		name: state.createRequest.Name,
-		amount: state.createRequest.Amount,
-		unitname: state.createRequest.UnitName,
-		description: state.createRequest.Description,
-		type: state.createRequest.Type,
-		attributes: state.createRequest.attributes
 	}
 };
 
 export default () => {
 	return (dispatch, getState) => {
 
-		console.log('CreateRequestCalled');
-
-		let url = '/requests/create';
+		let url = '/create-request';
 		let state = getState();
 		let body = buildCreateRequestBody(state);
 
-		console.log('Inserting request', body);
-		return apiCall(url, state.user, body)
+		apiCall('/create-request', state.user, body)
 			.then(
 				res => dispatch(createRequestSuccess(res)),
 				err => dispatch(createRequestFail(err))
 			)
-			.then((data) => {
-				console.log("got after");
-			})
 	};
 };
 

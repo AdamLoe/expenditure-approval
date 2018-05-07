@@ -1,26 +1,29 @@
 import React from "react";
 
 export default ({
-	date, name, unitname, requestorName, nextApprover, description,
-
+	toggleRequest,
+	createDate, requestName, requesterName, approverName, amount
 }) => {
 	return (
-		<div className="RequestRow">
+		<div
+			className="RequestRow"
+			onClick={toggleRequest}
+		>
 			<div className="RequestColumn">
-				{ date }
+				{createDate}
 			</div>
 			<div className="RequestColumn">
-				{ name }
+				{requesterName}
 			</div>
 			<div className="RequestColumn">
-				{ unitname }
+				{approverName}
 			</div>
 			<div className="RequestColumn">
-				{ requestorName }
+				{requestName}
 			</div>
 			<div className="RequestColumn">
-				{nextApprover}
+				{amount}
 			</div>
 		</div>
 	);
-}
+};

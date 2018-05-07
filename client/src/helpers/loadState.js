@@ -5,15 +5,6 @@ try {
 	state = JSON.parse(state);
 	console.log('Got localStorage', state);
 
-	let userState = sessionStorage.getItem("Standard-Requests-User-State");
-	userState = JSON.parse(userState);
-	console.log('Got sessionStorage', userState);
-
-	if (userState) {
-		state.user = userState;
-	}
-
-	console.log("Got session state", state);
 }
 catch(err) {
 	state = {};

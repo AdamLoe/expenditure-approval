@@ -12,7 +12,7 @@ CREATE TABLE users (
     type varchar(20),
     email varchar(60),
     approvelimit int,
-    approverId int REFERENCES users(id),
+    approverId int REF221ERENCES users(id),
     status bool
 );
 

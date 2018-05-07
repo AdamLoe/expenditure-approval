@@ -34,16 +34,6 @@ exports.handler = function(event, context, callback) {
 			.then(function() {
 				routes(event, callback);
 			})
-			.catch(function(statusCode, err) {
-				console.log(statusCode, "Error Authenticating, or uncaught ", err);
-				callback({
-					"statusCode": statusCode,
-					"body": JSON.stringify({
-						message: "Error authenticating or uncaught",
-						err: err
-					})
-				});
-			});
 	}
 };
 

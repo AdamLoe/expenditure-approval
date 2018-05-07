@@ -1,4 +1,8 @@
-var initialState = {
+let initialState = {
+	loggedIn: false,
+};
+
+let exampleState = {
 	loggedIn: true,
 	userType: "admin",
 	nickName: "Bert",

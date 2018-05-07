@@ -1,37 +1,38 @@
 import React from "react";
 import { connect } from "react-redux";
 
-import { toggleShowCards, showCreateRequest} from "../../actions/index";
-
 import RequestHeader from "../../components/Requests/RequestHeader";
 import RequestItem from "./RequestItem";
-import RequestFilters from "../../components/Requests/RequestFilters";
 
-let RequestPanel = ({
-	requestIds, showCards, toggleShowCards,
-	showCreateRequest, canCreateRequest
-}) => {
+import { getRequests } from "../../actions/requests";
 
-	console.log("RENDER: RequestPanel", requestIds);
-	return (
-		<div className="RequestPanelContainer">
-			<RequestFilters
-				showCards={showCards}
-				toggleShowCards={toggleShowCards}
-			/>
-			{ canCreateRequest &&
-				<div className="OpenCreateRequest">
-					<button
-						onClick={showCreateRequest}
-					>
-						Create Request
-					</button>
-				</div>
-			}
+import compareArrays from "../../helpers/compareArrays";
 
+class RequestPanel extends React.Component {
+	constructor(props) {
+		super(props);
+		console.log('Mount: RequestPanel');
+		this.props.getRequests();
+	}
+
+	shouldComponentUpdate(nextProps) {
+		console.log('ShoUpd: RequestPanel');
+
+		return !(
+			compareArrays(nextProps.requestIds, this.props.requestIds) &&
+			this.props.showCards === nextProps.showCards
+		);
+	}
+
+	render() {
+		console.log("RENDER: RequestPanel");
+		let {requestIds, showCards, getRequests} = this.props;
+
+		return (
 			<div className="RequestPanel">
 				<RequestHeader
 					showCards={showCards}
+					getRequests={getRequests}
 				/>
 				{
 					requestIds.map((id, index) => (
@@ -43,21 +44,22 @@ let RequestPanel = ({
 					))
 				}
 			</div>
-		</div>
+		);
+	}
 
-	);
-};
+}
 
 let mapStateToProps = (state) => {
 	console.log("MapSta: RequestPanel");
-
 	return {
-		requestIds: state.requests.array.map(req => req.id),
-		showCards: state.requests.showCards,
-		requests: state.requests.array,
-		canCreateRequest: (state.user.userType === "admin")
+		requestIds: state.requests.array.map(req => req.requestid),
+		showCards: state.requests.showCards
 	};
 };
 
 
+<<<<<<< HEAD
+export default connect(mapStateToProps, { getRequests })(RequestPanel);
+=======
 export default connect(mapStateToProps, {toggleShowCards, showCreateRequest})(RequestPanel);
+>>>>>>> origin/master

@@ -7,10 +7,13 @@ exports.queryRequest = function (event, callback) {
 	knex("requests")
 		.where(event.body.filters)
 		.limit(event.body.perPage)
-		.offset(event.body.perPage * (req.body.page - 1))
+		.offset(event.body.perPage * (event.body.page - 1))
 		.orderBy("createdate", "desc")
 		.then(function(data) {
-			res.send(data);
+			callback(null, {
+				"statusCode": 200,
+				"body": JSON.stringify(data)
+			});
 		})
 		.catch(function(err){
 			console.log("Database query requests failed.", err);

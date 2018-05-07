@@ -4,7 +4,7 @@ import React from "react";
 import { connect } from "react-redux";
 
 import Header from "./Other/Header";
-import RequestPanel from "./Requests/RequestPanel";
+import UserPanel from "./UserPanel";
 import AdminPanel from "./Admin/AdminPanel";
 import SettingsPanel from "./Other/SettingsPanel";
 import Login from "./Other/Login";
@@ -19,7 +19,7 @@ let App = ({loggedIn, showAdminPanel, showSettings, showCreateRequest}) => {
 		);
 	}
 
-	let Content = <RequestPanel />;
+	let Content = <UserPanel />;
 	if (showAdminPanel) { Content = <AdminPanel />; }
 
 	return (
