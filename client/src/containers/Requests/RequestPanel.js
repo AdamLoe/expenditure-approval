@@ -58,8 +58,4 @@ let mapStateToProps = (state) => {
 };
 
 
-<<<<<<< HEAD
 export default connect(mapStateToProps, { getRequests })(RequestPanel);
-=======
-export default connect(mapStateToProps, {toggleShowCards, showCreateRequest})(RequestPanel);
->>>>>>> origin/master

@@ -1,10 +1,12 @@
 import React from "react";
 
-export default ({
-	toggleRequest,
-	requestId, createDate, updateDate, unitName, status,
-	requestName, requesterName, approverName, amount
-}) => {
+export default (props) => {
+	console.log('large', props);
+	let {
+		toggleRequest,
+		requestId, createDate, updateDate, unitName, status,
+		requestName, requesterName, approverName, amount
+	} = props;
 	return (
 		<div
 			className="RequestRow"
@@ -40,3 +42,12 @@ export default ({
 		</div>
 	);
 };
+
+/*
+
+ {
+ toggleRequest,
+ requestId, createDate, updateDate, unitName, status,
+ requestName, requesterName, approverName, amount
+ }
+ */

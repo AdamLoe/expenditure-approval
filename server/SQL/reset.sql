@@ -26,6 +26,7 @@ CREATE TABLE requests (
     approverId  int NOT NULL REFERENCES users(id),
     createDate timestamp DEFAULT CURRENT_TIMESTAMP,
     updateDate timestamp DEFAULT CURRENT_TIMESTAMP,
+    description varchar(240) NOT NULL,
     attributes text[][],
     comments text[][]
 );
@@ -44,11 +45,6 @@ INSERT INTO users VALUES
 (10,    'marklandApts', 'markland','a',null, 'Markland',         'Markland Apartments', 'requester', 'markland@se.com',           0,           6,  true)
 ;
 
-
-INSERT INTO requests
-    (status,        requestName, amount,  unitName,requesterId, approverId)
-   VALUES
-    ('In Progress', 'Groceries',    400,  'Apt#219',         1,          2);
 
 CREATE OR REPLACE FUNCTION updatetokenexpir()
 	RETURNS TRIGGER AS $$

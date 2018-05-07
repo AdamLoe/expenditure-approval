@@ -14,7 +14,8 @@ exports.createRequest = function (event, callback) {
 		requesterid: event.user.id,
 		approverid: Math.ceil(Math.random() * 4),
 		attributes: event.body.attributes,
-		comments: [[getTime(), "Created", event.user.name]]
+		comments: [[getTime(), "Created", event.user.name]],
+		description: "a description"
 	};
 
 

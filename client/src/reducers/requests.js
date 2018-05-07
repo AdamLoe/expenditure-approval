@@ -8,7 +8,6 @@ let initialState = {
 		pageNum: 1
 	},
 	array: [
-<<<<<<< HEAD
 	]
 };
 
@@ -49,23 +48,6 @@ let exampleArray = [
  */
 
 export default (state=initialState, { type, index, array, key, value }) => {
-=======
-		{
-			id: "1122",
-			name: "",
-			unitName: "",
-			amount: "",
-			date: "",
-			requestorName: "",
-			nextApprover: "",
-			description: "",
-			attributes: []
-		}
-	]
-};
-
-export default (state=initialState, { type, index }) => {
->>>>>>> origin/master
 	switch(type) {
 
 		case "GotRequestsSuccess":
