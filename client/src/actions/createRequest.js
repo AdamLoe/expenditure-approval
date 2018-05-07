@@ -7,6 +7,8 @@ let createRequestSuccess = (res) => {
 };
 
 let createRequestFail = (err) => {
+	console.log('Create Request Error', err);
+	console.log(err.response);
 	return {
 		type: "CreateRequestFail",
 		errorType: "CreateRequest",
@@ -17,17 +19,23 @@ let createRequestFail = (err) => {
 let buildCreateRequestBody = (state) => {
 	let{ newRequest } = state.createRequest;
 	return {
+		name: state.createRequest.Name,
+		amount: state.createRequest.Amount,
+		unitname: state.createRequest.UnitName,
+		description: state.createRequest.Description,
+		type: state.createRequest.Type,
+		attributes: state.createRequest.attributes
 	}
 };
 
 export default () => {
 	return (dispatch, getState) => {
 
-		let url = '/create-request';
+		let url = '/requests/create';
 		let state = getState();
 		let body = buildCreateRequestBody(state);
 
-		apiCall('/create-request', state.user, body)
+		apiCall(url, state.user, body)
 			.then(
 				res => dispatch(createRequestSuccess(res)),
 				err => dispatch(createRequestFail(err))

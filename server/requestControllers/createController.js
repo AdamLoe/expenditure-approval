@@ -4,8 +4,6 @@ var errorCallback = require('../helpers/errorCallback');
 
 //Pipe all props to knex to create a object
 exports.createRequest = function (event, callback) {
-	console.log('callback', callback);
-	console.log('user', event.user);
 	var request = {
 		requestname: event.body.name,
 		status: "In Process",
@@ -17,6 +15,7 @@ exports.createRequest = function (event, callback) {
 		comments: [[getTime(), "Created", event.user.name]],
 		description: "a description"
 	};
+	console.log('request', request);
 
 
 	console.log("Create Request function Hit", request);

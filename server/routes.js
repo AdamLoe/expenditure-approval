@@ -18,7 +18,7 @@ var { updateUser } = require("./userControllers/updateUser");
 
 module.exports = (event, callback) => {
 	console.log("Router called to ", event.path);
-	var router = createRouter(event, callback);
+	let router = createRouter(event, callback);
 
 	router.use("/myrequests", myRequests);
 	router.use("/requests/query", queryRequest);

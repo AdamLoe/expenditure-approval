@@ -1,13 +1,13 @@
 import {connect} from "react-redux";
 
-import { changeRequiredAttribute } from '../../actions/createRequest';
+import { changeRequiredAttribute } from "../../actions/createRequest";
 
-import Attribute from './Attribute';
+import Attribute from "./Attribute";
 
 let mapStateToProps = (state, {keyProp}) => {
-	console.log('MAPSTA: Required Attribute');
+	console.log("MAPSTA: Required Attribute", keyProp);
 	return {
-		key: keyProp,
+		keyProp: keyProp,
 		value: state.createRequest[keyProp],
 		isRequired: true
 	};

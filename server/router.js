@@ -27,6 +27,7 @@ exports.createRouter = function(event, callback) {
 		// Checks if no path used yet and path matches, then puts paramObject in event and sends it to function
 		use: function(routePath, route) {
 			if (!this.consumed && routeMatches(routePath, this.path)) {
+				console.log('Hit route', routePath);
 				this.consumed = true;
 				this.event.paramObject = getParamObject(routePath, this.path);
 				route(this.event, this.callback);
