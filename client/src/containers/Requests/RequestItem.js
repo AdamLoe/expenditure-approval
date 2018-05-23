@@ -3,29 +3,23 @@ import {connect} from "react-redux";
 
 import { toggleRequest } from "../../actions/index";
 
-import RequestItemCardSmall from "../../components/Requests/RequestItemCardSmall";
-import RequestItemCardLarge from "../../components/Requests/RequestItemCardLarge";
-import RequestItemRowSmall from "../../components/Requests/RequestItemRowSmall";
-import RequestItemRowLarge from "../../components/Requests/RequestItemRowLarge";
+import RequestItemRow from "../../components/Requests/RequestItemRow";
+import RequestItemMore from "../../components/Requests/RequestItemMore";
 
+import RequestAttributes from "../../components/Requests/RequestAttributes";
+import RequestCommentSubmit from "../../components/Requests/RequestCommentSubmit";
 
 let RequestItem = ({ showCards, showBig, ...props}) => {
-	console.log("RENDER: RequestItem");
-	console.log(props);
-
-	let renderSmall = <RequestItemCardSmall {...props} />;
-	let renderLarge = <RequestItemCardLarge {...props} />;
-
-	if (showCards) {
-		renderSmall = <RequestItemRowSmall {...props} />;
-		renderLarge = <RequestItemRowLarge {...props} />;
-	}
+	console.log("RENDER: RequestItem", props);
 
 	return (
 		<div className="RequestItem">
-			{ renderSmall }
+			<RequestItemRow {...props} />
 			{ showBig &&
-				renderLarge
+			<RequestItemMore {...props} >
+				<RequestAttributes {...props} />
+				<RequestCommentSubmit {...props}/>
+			</RequestItemMore>
 			}
 		</div>
 	);
@@ -47,7 +41,8 @@ let mapStateToProps = (state, {id, index}) => {
 		description: req.description,
 		attributes: req.attributes,
 		showBig: req.showBig,
-		status: req.status
+		status: req.status,
+		comments: req.comments
 	};
 };
 

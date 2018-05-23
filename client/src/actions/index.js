@@ -89,4 +89,10 @@ export const submitCreateRequest = () => {
 	};
 };
 
+export const deleteNotification = () => {
+	return {
+		type: "deleteNotification"
+	}
+};
+
 

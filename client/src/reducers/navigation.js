@@ -6,6 +6,16 @@ let initialState = {
 };
 
 export default (state=initialState, action) => {
+
+	if (action.goHome === true) {
+		return {
+			...state,
+			showSettings: false,
+			showUserDropdown: false,
+			showAdminPanel: false,
+			showCreateRequest: false,
+		};
+	}
 	switch(action.type) {
 		case "gotoSettings":
 			return {
@@ -43,7 +53,7 @@ export default (state=initialState, action) => {
 			return {
 				...state,
 				showCreateRequest: false
-			}
+			};
 
 		case "Logout":
 			return initialState;

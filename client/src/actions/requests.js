@@ -11,7 +11,7 @@ let GotRequestsSuccess = (res) => {
 			array: res.data
 		});
 
-	}
+	};
 };
 
 let GotRequestsFail = (err, apiFails) => {
@@ -20,7 +20,7 @@ let GotRequestsFail = (err, apiFails) => {
 		checkFail(dispatch, err).then(() => {
 
 			console.log("Got Requests Fail", err);
-			console.log('ApiFails', apiFails);
+			console.log("ApiFails", apiFails);
 			dispatch({
 				type: "GotRequestsFail",
 				errorType: "GotRequest",
@@ -30,9 +30,9 @@ let GotRequestsFail = (err, apiFails) => {
 				return setTimeout(dispatch(getRequests()), 1000);
 			}
 
-		})
+		});
 
-	}
+	};
 };
 
 let buildQueryRequestBody = (filters) => {
@@ -40,7 +40,7 @@ let buildQueryRequestBody = (filters) => {
 		page: filters.pageNum,
 		perPage: 10,
 		filters: {}
-	}
+	};
 };
 
 export const getRequests = (key, value) => {
@@ -64,10 +64,13 @@ export const getRequests = (key, value) => {
 	};
 };
 
-export const updateFilters = (key, value) => {
-	return {
-		type: "UpdateRequestFilters",
-		key: key,
-		value: value
+export const updateRequestFilters = (key, value) => {
+	return (dispatch) => {
+		dispatch({
+			type: "UpdateRequestFilters",
+			key: key,
+			value: value
+		});
+		return dispatch(getRequests(key, value));
 	};
 };

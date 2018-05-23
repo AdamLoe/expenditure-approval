@@ -1,33 +1,35 @@
 import React from "react";
+
 import { connect } from "react-redux";
 
-import PaginationComponent from "../../components/Pagination";
+import { prevPage, nextPage } from "../../actions/pagination";
 
-import { updateFilters, getRequests } from "../../actions/requests";
 
-let Pagination = ({pageNum, updateFilters, getRequests}) => {
+let PaginationComponent = ({ numItems, maxItems, pageNum, prevPage, nextPage }) => {
 	console.log("RENDER: Pagination");
 
-	let changePage = (newPage) => {
-		console.log("Changed page", newPage);
-
-		updateFilters("pageNum", newPage);
-		getRequests("pageNum", newPage);
-	};
 	return (
-		<PaginationComponent
-			pageNum={pageNum}
-			changePage={changePage}
-		/>
+		<div className="Pagination">
+			<button onClick={prevPage} hidden={pageNum === 1}>
+				Previous
+			</button>
+			{ pageNum }
+			<button onClick={nextPage} hidden={numItems < maxItems}>
+				Next
+			</button>
+		</div>
 	);
 };
 
+
 let mapState = (state) => {
 	console.log("MAPSTA: Pagination");
-	console.log(state.requests);
+
 	return {
+		numItems: state.requests.array.length,
+		maxItems: state.requests.maxItems,
 		pageNum: state.requests.filters.pageNum
 	};
 };
 
-export default connect(mapState, {updateFilters, getRequests})(Pagination);
+export default connect(mapState, {prevPage, nextPage })(PaginationComponent);

@@ -35,15 +35,15 @@ let deleteAttr = (attr, index) => {
 	newAttr = [
 		...attr.slice(0,index),
 		...attr.slice(index+1)
-	]
+	];
 	return newAttr;
-}
+};
 
 export default (state=initialState, {type, value, key, index}) => {
 	switch(type) {
-		case "CreateSuccess":
-			return state;
-		case "CreateFail":
+		case "CreateRequestSuccess":
+			return initialState;
+		case "CreateRequestFail":
 			return state;
 		case "setRequestType":
 			return {
@@ -65,7 +65,7 @@ export default (state=initialState, {type, value, key, index}) => {
 			return {
 				...state,
 				attributes: deleteAttr(state.attributes, index)
-			}
+			};
 		default:
 			return state || initialState;
 	}

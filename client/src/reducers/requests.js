@@ -1,6 +1,6 @@
 let initialState = {
-	showCards: false,
 	apiFails: 0,
+	maxItems: 10,
 	oldFilters: {
 
 	},
@@ -84,16 +84,6 @@ export default (state=initialState, { type, index, array, key, value }) => {
 						showBig: (index===itemIndex) ? !item.showBig : item.showBig
 					};
 				})
-			};
-
-		case "toggleShowCards":
-			return {
-				...state,
-				array: state.array.map((item) => {
-					item.showBig = false;
-					return item;
-				}),
-				showCards: !state.showCards
 			};
 
 

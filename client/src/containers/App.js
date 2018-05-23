@@ -9,6 +9,7 @@ import AdminPanel from "./Admin/AdminPanel";
 import SettingsPanel from "./Other/SettingsPanel";
 import Login from "./Other/Login";
 import CreateRequestContainer from "./CreateRequest/CreateRequestContainer";
+import Notifications from "./Other/Notifications";
 
 let App = ({loggedIn, showAdminPanel, showSettings, showCreateRequest}) => {
 	console.log("Render: App");
@@ -24,6 +25,7 @@ let App = ({loggedIn, showAdminPanel, showSettings, showCreateRequest}) => {
 
 	return (
 		<div className="App">
+			<Notifications />
 			<Header />
 			{ showCreateRequest &&
 				<CreateRequestContainer />

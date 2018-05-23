@@ -6,6 +6,7 @@ import navigation from "./navigation";
 import user from "./user";
 import requests from "./requests";
 import createRequest from "./createRequest";
+import notification from "./notification";
 
 
 
@@ -15,5 +16,6 @@ export default combineReducers({
 	navigation,
 	admin,
 	requests,
-	createRequest
+	createRequest,
+	notification
 });

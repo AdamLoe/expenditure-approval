@@ -11,7 +11,7 @@ export default () => {
 			<CreateRequestSwitch />
 			<RequestFilters/>
 			<RequestPanel />
-			<Pagination />
+			<Pagination type="User"/>
 		</div>
 	);
 };

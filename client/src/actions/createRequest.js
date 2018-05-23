@@ -1,37 +1,42 @@
-import { apiCall } from './axios';
+import { apiCall } from "./axios";
+
+let createSuccessMessage = "Request Successfully Created";
 
 let createRequestSuccess = (res) => {
 	return {
-		type: "RequestCreated"
-	}
+		type: "CreateRequestSucccess",
+		notification: createSuccessMessage,
+		showNotification: "modal",
+		goHome: true
+	};
 };
 
 let createRequestFail = (err) => {
-	console.log('Create Request Error', err);
+	console.log("Create Request Error", err);
 	console.log(err.response);
 	return {
 		type: "CreateRequestFail",
 		errorType: "CreateRequest",
 		err: err
-	}
+	};
 };
 
 let buildCreateRequestBody = (state) => {
-	let{ newRequest } = state.createRequest;
+	let req = state.createRequest;
 	return {
-		name: state.createRequest.Name,
-		amount: state.createRequest.Amount,
-		unitname: state.createRequest.UnitName,
-		description: state.createRequest.Description,
-		type: state.createRequest.Type,
-		attributes: state.createRequest.attributes
-	}
+		name: req.Name,
+		amount: req.Amount,
+		unitname: req.UnitName,
+		description: req.Description,
+		type: req.Type,
+		attributes: req.attributes
+	};
 };
 
 export default () => {
 	return (dispatch, getState) => {
 
-		let url = '/requests/create';
+		let url = "/requests/create";
 		let state = getState();
 		let body = buildCreateRequestBody(state);
 
@@ -39,12 +44,12 @@ export default () => {
 			.then(
 				res => dispatch(createRequestSuccess(res)),
 				err => dispatch(createRequestFail(err))
-			)
+			);
 	};
 };
 
 export const setRequestType = (e) => {
-	console.log('called');
+	console.log("called");
 	return {
 		type: "setRequestType",
 		value: e.target.value
