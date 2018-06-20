@@ -1,25 +1,68 @@
 $font-family-one: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-$font-family-two: Roboto,sans-serif;
+$font-family-two: Roboto, sans-serif;
 
 $text-color-default: black;
 
-$app-background: #ffaaff;
-$content-background: #aaffaa;
+$navy: #001f3f;
+$blue: #0074D9;
+$black: #111111;
+$white: #FFFFFF;
+
+$headline: Regular 24pt;
+$title: Medium 20pt;
+$Subheader: Regular 16pt;
+$body2: Medium 14pt;
+$body1: Regular 14pt;
+$caption: regular 12pt;
+
+$primary-text-color:   #000000, 87%;
+$secondary-text-color: #000000, 54%;
+$disabled-text-color:  #000000, 38%;
+
+$primary-dark: #FFFFFF, 100%;
+$secondary-dark: #FFFFFF, 70%;
+$disabled-dark: #FFFFFF, 30%;
+
+$primary-light: #EEEEEE;
+$darker-light: #E0E0E0;
+$lighter-light: #FAFAFA;
+
+$primary-dark: #303030;
+$darker-dark: #212121;
+$lighter-dark: #424242;
+
+$border-color: #999999;
+$border-light-color: #BBBBBB;
+$border-disabled-color: #EEEEEE;
+
+$header-button-color: #6CA8B9;
+$header-button-color: #448699;
+$header-button-color: #218DAC;
+$header-button-hover: #1d7791;
+
+$app-login-background: #218DAC;
+$app-background: white;
+$content-background: $darker-light;
 $color-secondary: lightblue;
 
-$header-background: $app-background;
+$request-header-fontcolor: red;
+$request-fontcolor: white;
+
+$header-background: #E0E0E0;
 $greeting-background: $app-background;
 $greeting-color: white;
 $color-profile-button: lightgrey;
 
 $settings-panel-size: 80%;
 $settings-background: lightgray;
-$settings-panel-top-margin: 30px;
+$settings-panel-top-margin: 10px;
 $settings-header-size: 2.5em;
-$setting-exit-size: 5em;
+$setting-exit-size: 2em;
 
 $sort-filters-background: black;
 $sort-filters-color: white;
 
 $show-filters-background: #ff00cc;
 $show-filters-color: white;
+
+$login-container-background: $lighter-light;

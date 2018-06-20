@@ -1,27 +1,3 @@
-@import "./foundation/foundation";@import "./foundation/foundation";
-
 @import "./globals.scss";
+@import "./classes.scss";
 @import "./custom/index.scss";
-
-.FloatRightContainer {
-  position: relative;
-  height: 0px;
-  background-color: purple;
-
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-
-.Relative {
-  position: relative;
-}
-
-/*
-  Panels
- */
-
-
-/*
-      SettingsPanel
- */
