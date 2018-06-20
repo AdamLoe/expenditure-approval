@@ -32,18 +32,20 @@ render() {
 	console.log("RENDER: Login");
 	return (
 		<div className="LoginContainer">
-			<input className="LoginUsername" type="text" placeholder="username" onChange={this.handleUserChange}/>
-			<input className="LoginPassword" type="password" placeholder="password" onChange={this.handlePassChange}/>
+			<h3> Log In </h3>
+			<input
+				className="LoginUsername" type="text" placeholder="Email Address" onChange={this.handleUserChange}
+				spellcheck="false" autocorrect="off" autocapitalize="off"
+			/>
+			<input
+				className="LoginPassword" type="password" placeholder="Password" onChange={this.handlePassChange}
+				spellcheck="false" autocorrect="off" autocapitalize="off"
+			/>
 			<button onClick={()=> {
 				this.props.login(this.state.usr, this.state.pas);
 			}}>
-Login
+				Log In
 			</button>
-			{ this.props.loginFail &&
-  <h1>
-    Error loggin in
-  </h1>
-			}
 		</div>
 	);
 }

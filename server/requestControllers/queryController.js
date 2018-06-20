@@ -1,15 +1,30 @@
 var knex = require("../helpers/knexfile");
 
+
 //Searches Database with filters, returns requests objects
 exports.queryRequest = function (event, callback) {
 	console.log("Query Requests Called", event.body);
 	console.log("perPage", event.body.perPage, " offset", event.body.perPage * (event.body.page - 1));
+
+	let filters = {
+		status: event.body.status
+	};
+
+	if (event.body.requesterId !== -1 && event.body.requesterId !== "-1") {
+		filters.requesterid = event.body.requesterId;
+	}
+	if (event.body.approverId !== -1 && event.body.approverId !== "-1") {
+		filters.approverid = event.body.approverId;
+	}
+
+	console.log("Using filters", filters);
 	knex("requests")
-		.where(event.body.filters)
+		.where(filters)
 		.limit(event.body.perPage)
 		.offset(event.body.perPage * (event.body.page - 1))
 		.orderBy("createdate", "desc")
 		.then(function(data) {
+			console.log(data);
 			callback(null, {
 				"statusCode": 200,
 				"body": JSON.stringify(data)

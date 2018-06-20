@@ -12,11 +12,14 @@ import CreateRequestContainer from "./CreateRequest/CreateRequestContainer";
 import Notifications from "./Other/Notifications";
 
 let App = ({loggedIn, showAdminPanel, showSettings, showCreateRequest}) => {
-	console.log("Render: App");
+	//console.log("Render: App");
 
 	if (loggedIn === false) {
 		return (
-			<Login />
+			<div className="AppLogin">
+				<Notifications />
+				<Login />
+			</div>
 		);
 	}
 
@@ -39,7 +42,7 @@ let App = ({loggedIn, showAdminPanel, showSettings, showCreateRequest}) => {
 };
 
 let mapStateToProps = (state) => {
-	console.log("MapSta: APP", state);
+	//console.log("MapSta: APP", state);
 	return {
 		loggedIn: state.user.loggedIn,
 		showAdminPanel: state.navigation.showAdminPanel,

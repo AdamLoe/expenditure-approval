@@ -1,0 +1,67 @@
+@import "../../globals";
+
+/*the container must be positioned relative:*/
+
+.RequestPanel {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $border-color;
+  border-bottom: 0;
+  margin-top: 10px;
+}
+
+.RequestItem {
+  background: $primary-light;
+}
+
+.RequestItem:nth-child(2n) {
+  background: $lighter-light;
+}
+
+.RequestRow {
+  border-bottom: 1px solid $border-color;
+  display: flex;
+  color: $request-fontcolor;
+  cursor: pointer;
+}
+
+.RequestHeader {
+  background-color: $darker-light;
+  color: $request-header-fontcolor;
+}
+
+.RequestColumn {
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(51, 51, 51);
+  padding: 8px;
+  font-size: 12px;
+  border-right: 1px solid $border-color;
+}
+
+.RequestColumn:last-child {
+  border: none;
+}
+
+.RequestRow .Date {
+  width: 10%;
+}
+.RequestRow .Approver {
+  width: 20%;
+}
+.RequestRow .Requester {
+  width: 20%;
+}
+.RequestRow .Name {
+  width: 10%;
+  flex-grow: 1;
+}
+.RequestRow .Amount {
+  width: 20%;
+}
+
+.RequestRowMore {
+  display: flex;
+  border-bottom: 1px solid $border-color;
+}
+
+

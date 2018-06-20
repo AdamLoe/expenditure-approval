@@ -3,23 +3,20 @@ import {connect} from "react-redux";
 
 import { deleteNotification } from "../../actions/";
 
-import NotificationModal from "../../components/Notification/NotificationModal";
-import NotificationError from "../../components/Notification/NotificationError";
+import Notification from "../../components/Notification/Notification";
 
-let Notifications = ({message, type, deleteNotification}) => {
+let Notifications = ({message, timeout, deleteNotification}) => {
 	return (
-		<div className="NotificationContainer">
-			{ (type === "modal") &&
-				<NotificationModal
-					message={message}
-					deleteNotification={deleteNotification}
-				/>
-			}
-			{ (type === "error") &&
-				<NotificationError
-					message={message}
-				/>
-			}
+		<div className="FloatCenterContainer">
+			<div className="NotificationContainer">
+				{ (message !== null) &&
+					<Notification
+						message={message}
+						timeout={timeout}
+						delete={deleteNotification}
+					/>
+				}
+			</div>
 		</div>
 	);
 };
@@ -27,8 +24,29 @@ let Notifications = ({message, type, deleteNotification}) => {
 let mapStateToProps = (state) => {
 	return {
 		message: state.notification.message,
-		type: state.notification.type
+		time: state.notification.time
 	}
 };
 
-export default connect(mapStateToProps, { deleteNotification })(Notifications)
+export default connect(mapStateToProps, { deleteNotification })(Notifications);
+
+/*
+
+	 { (type === "modal") &&
+	 <NotificationModal
+	 message={message}
+	 deleteNotification={deleteNotification}
+	 />
+	 }
+	 { (type === "error") &&
+	 <NotificationError
+	 message={message}
+	 />
+	 }
+	 { (type === "small") &&
+	 <NotificationSmall
+	 message={message}
+	 />
+	 }
+
+ */

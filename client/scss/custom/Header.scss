@@ -5,78 +5,30 @@
  */
 
 .Header {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-/*
-      Static Header
- */
-
-.HeaderStatic {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: $header-background;
-}
-
-.UserGreeting {
-  display: inline-block;
-  background-color: $greeting-background;
-  color: $greeting-color;
-}
-
-.ProfileButton {
-  display: flex;
-  align-items: center;
-
-  background-color: $color-profile-button;
-
-  text-align: right;
-  padding: 0 10px 0 10px;
-  border-radius: 10px;
-}
-
-.ProfileButton .button h1 {
-  display: inline-block;
-  width: auto;
-}
-
-.ProfileButton img {
-  display: inline-block;
-  height: 60px;
-
-}
-
-/*
-    Dyanmic Header
- */
-
-.HeaderDynamic {
-  position: relative;
-  height: 0px;
-  background-color: purple;
-
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-
-.ProfileDropdown {
-  position: absolute;
-  background: $color-secondary;
-
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-
-.ProfileDropdown h1 {
   width: 100%;
-  text-align: center;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 25px;
+  line-height: 24px;
+  text-rendering: optimizeLegibility;
+}
 
-  margin: 4px 0 4px 0;
-  padding: 0 14px 0 14px;
-  display: inline-block;
-  background-color: white;
+.Header button:first-of-type {
+  margin-left: 20px;
+}
+
+.Header button {
+  padding: 5px 10px;
+  margin-left: 10px;
+  background: $header-button-color;
+  color: white;
+  border-radius: 5px;
+  border: 0px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.Header button:hover {
+  background: $header-button-hover;
 }

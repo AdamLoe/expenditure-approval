@@ -19,7 +19,6 @@ app.use(bodyParser.json());
 
 //On lambda callback, map either to correct status, and data to send
 var callback = function(err, data) {
-	console.log('got callback', err, data);
 	res = this.res;
 	if (err) {
 		res.status(err.statusCode).send(err.body);
@@ -34,7 +33,6 @@ app.use(express.static('public', {dotfiles:'allow'}));
 
 var { handler } = require("./index");
 app.use('/api', function(req, res, next) {
-	console.log("New Express Callback to ", req.path);
 	var body = req.body;
 	var auth = req.headers.authorization;
 	var event = {

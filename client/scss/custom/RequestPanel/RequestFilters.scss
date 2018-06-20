@@ -1,0 +1,36 @@
+@import "../../globals";
+
+.RequestFilters {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.Sort select {
+  padding: 5px;
+  margin-right: 5px;
+}
+
+.RequestFilters .refresh {
+  border: 1px solid $border-disabled-color;
+  padding: 2px 20px;
+  border-radius: 2px;
+  display: flex;
+  align-content: center;
+}
+
+.RequestFilters .refresh:hover {
+  border-color: $border-light-color;
+  cursor: pointer;
+}
+
+.refresh svg {
+  fill: #999999;
+}
+
+.refresh:hover svg {
+  fill: #000000;
+}
+

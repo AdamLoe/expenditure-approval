@@ -7,15 +7,18 @@ export default ({ attributes }) => {
 	});
 	console.log("got attributes", attrList);
 	return (
-		<div>
-			Attributes
+		<div className="RequestAttributes">
+			<div className="Heading">
+				Attributes
+			</div>
 			{attributes.map( attr => {
 				let { key, value } = JSON.parse(attr);
 				return (
-					<h4>
-						{ key }
-						{ value }
-					</h4>
+					<div key={key}
+						className="attribute">
+						<div className="key">{ key }</div>
+						<div className="value">{ value }</div>
+					</div>
 				);
 			})}
 		</div>

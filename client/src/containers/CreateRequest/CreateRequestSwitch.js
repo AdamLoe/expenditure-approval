@@ -25,7 +25,7 @@ let CreateRequestSwitch = ({canCreateRequest, showCreateRequest}) => {
 
 let mapStateToProps = (state) => {
 	return {
-		canCreateRequest: (state.user.userType === "admin")
+		canCreateRequest: (state.user.userType === "requester")
 	}
 }
 

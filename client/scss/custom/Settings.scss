@@ -2,7 +2,7 @@
 
 .SettingsContainer {
   position: relative;
-  height: 0px;
+  height: 0;
   width: 100%;
 
   display: flex;
@@ -16,7 +16,7 @@
   width: $settings-panel-size;
   clear: both;
   background: $settings-background;
-  padding: 20px;
+  padding: 10px;
 
   display: flex;
   flex-direction: column;
@@ -27,9 +27,16 @@
  */
 
 .ExitSettingsImg {
+  border: 1px solid $settings-background;
+  cursor: pointer;
   position: absolute;
-  height: auto;
+  height: $setting-exit-size;
   width: $setting-exit-size;
+  border-radius: 2px;
+}
+
+.ExitSettingsImg:hover {
+  border: 1px solid $border-color;
 }
 
 .SettingsPanel h2 {

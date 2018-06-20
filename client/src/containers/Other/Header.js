@@ -6,40 +6,45 @@ import UserButton   from "../../components/Header/ProfileButton";
 import UserDropdown from "../../components/Header/UserDropdown";
 import ToggleAdmin from "../../components/Header/ToggleAdmin";
 
-import {logout, gotoSettings, toggleAdmin, toggleUserDropdown} from "../../actions/index";
+import {logout, toggleSettings, toggleAdmin, toggleUserDropdown} from "../../actions/index";
 
 var Header = ({
-	nickName, fullName,	showAdminPanel, isAdmin,  showUserDropdown, showSettings,
-	logout, gotoSettings, toggleAdmin, toggleUserDropdown
+	nickName, fullName,	showAdminPanel, isAdmin,  showUserDropdown,
+	logout, toggleSettings, toggleAdmin, toggleUserDropdown
 }) => {
-	console.log("RENDER: Header", showSettings);
+	//console.log("RENDER: Header", showSettings);
 	return (
-		<div className="HeaderContainer">
-			<div className="HeaderStatic">
-				<UserGreeting name={nickName} />
-				<UserButton
-					name={fullName}
-					onClick={toggleUserDropdown}
-				/>
-			</div>
-			{ showUserDropdown &&
-				<UserDropdown
-					gotoSettings={gotoSettings}
-					logout={logout}
-				/>
-			}
+		<div className="Header">
+			Hello, { nickName }
 			{ isAdmin &&
-				<ToggleAdmin
-					showAdminPanel={showAdminPanel}
-					toggleAdmin={toggleAdmin}
-				/>
+				<button
+					onClick={toggleAdmin}
+				>
+					{
+						showAdminPanel ?
+							<p> Goto Requests </p>
+							:
+							<p> Goto Users </p>
+					}
+				</button>
 			}
+			<button
+				onClick={toggleSettings}
+			>
+				Settings
+			</button>
+			<button
+				onClick={logout}
+			>
+				Logout
+			</button>
 		</div>
+
 	);
 };
 
 let mapStateToProps = (state) => {
-	console.log("MAPSTA: HEADER");
+	//console.log("MAPSTA: HEADER");
 	return {
 		userType: state.user.userType,
 		nickName: state.user.nickName,
@@ -51,4 +56,4 @@ let mapStateToProps = (state) => {
 	}
 };
 
-export default connect(mapStateToProps, {logout, gotoSettings, toggleAdmin, toggleUserDropdown})(Header);
+export default connect(mapStateToProps, {logout, toggleSettings, toggleAdmin, toggleUserDropdown})(Header);

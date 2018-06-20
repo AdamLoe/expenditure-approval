@@ -9,7 +9,9 @@ let exampleState = {
 	fullName: "Bert Loe",
 	email: "bertloe@comcast.net",
 	username: "terryB",
-	token: "WW0ZSilosbcpMufIoWFhLRUp2rMKgHxEPVDN4U4xqjhv4MNjvBf2Wk5LGwgm92zm"
+	token: "WW0ZSilosbcpMufIoWFhLRUp2rMKgHxEPVDN4U4xqjhv4MNjvBf2Wk5LGwgm92zm",
+	approvers: [],
+	requesters: []
 };
 
 export default (state=initialState, action) => {
@@ -22,7 +24,9 @@ export default (state=initialState, action) => {
 				userType: action.userType,
 				nickName: action.nickName,
 				fullName: action.fullName,
-				email: action.email
+				email: action.email,
+				approvers:  action.filters.filter(user => user.type === "approver"),
+				requesters: action.filters.filter(user => user.type === "requester")
 			};
 
 		case "LoginFail":

@@ -21,20 +21,19 @@ module.exports = (event, callback) => {
 			//Parse our basic-auth headers
 			//Check database for token authorization
 			let { name, pass } = basicAuth.parse(event.headers.Authorization);
-			console.log(name, pass);
+			//console.log(name, pass);
 			let token = pass; // Because we are really passing a token
 
-			console.log("token", token);
+			//console.log("token", token);
 			knex("users")
-				.select("id", "username", "access_token", "approverid", "token_expir", "type")
+				.select("id", "username", "access_token", "approverid", "token_expir", "type", "fullname", "nickname", "approvelimit")
 				.where("username", name)
 				.where("status", true)
 				.whereRaw("token_expir < CURRENT_TIMESTAMP")
 				.first()
 				.then(function(user) {
-					console.log("trying to auth user", user);
-					console.log('usr', user.access_token);
-					console.log('tok', token);
+					//console.log("trying to auth user", user);
+					//console.log('tok', token);
 					if (!user) {
 						errorCallback(callback, 403, "Username not found or Token Expired or Token Wrong");
 					} else if (user.access_token === token) {

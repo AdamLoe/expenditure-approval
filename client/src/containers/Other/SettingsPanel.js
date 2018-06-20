@@ -1,18 +1,65 @@
 import React from "react";
 import {connect} from "react-redux";
 
-import { exitSettings } from "../../actions/index";
+import urls from "../../helpers/urls";
 
-import SettingsPanel from "../../components/SettingsPanel";
-/*
- let SettingsPanel = ({nickName, fullName, email, exitSettings}) => {
- return (
- <SettingsPanel
- ...props />
- );
- };
+import { toggleSettings } from "../../actions/index";
 
- */
+let SettingsPanel = ({nickName, fullName, email, toggleSettings}) => {
+	return (
+		<div className="SettingsContainer">
+			<div className="SettingsPanel">
+				<div className="FloatRightContainer">
+					<img className="ExitSettingsImg"
+						onClick={toggleSettings}
+						src={urls.images+"baseline-close-24px.svg"}
+					/>
+				</div>
+				<h2>Settings</h2>
+				<div className="SimpleSettings">
+					<div className="SettingsRow">
+						<div className="SettingsKey">
+							Name
+						</div>
+						<input className="SettingsValue">
+						</input>
+					</div>
+					<div className="SettingsRow">
+						<div className="SettingsKey">
+							Email Address
+						</div>
+						<input className="SettingsValue">
+						</input>
+					</div>
+				</div>
+				<div className="NewPasswordContainer">
+					<div className="SettingsRow">
+						<div className="SettingsKey">
+							Old Password
+						</div>
+						<input className="SettingsValue">
+						</input>
+					</div>
+					<div className="SettingsRow">
+						<div className="SettingsKey">
+							New Password
+						</div>
+						<input className="SettingsValue">
+						</input>
+					</div>
+					<div className="SettingsRow">
+						<div className="SettingsKey">
+							Repeat New Password
+						</div>
+						<input className="SettingsValue">
+						</input>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	);
+};
 
 let mapStateToProps = (state) => {
 	return {
@@ -23,5 +70,5 @@ let mapStateToProps = (state) => {
 };
 
 
-export default connect(mapStateToProps, { exitSettings})(SettingsPanel);
+export default connect(mapStateToProps, { toggleSettings})(SettingsPanel);
 

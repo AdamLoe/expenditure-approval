@@ -22,7 +22,7 @@ exports.handler = function(event, context, callback) {
 	if (typeof event === "string") {
 		event.body = JSON.parse(event.body);
 	}
-	console.log("Got lambda function", event);
+	//console.log("Got lambda function", event);
 
 
 

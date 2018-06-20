@@ -1,0 +1,29 @@
+@import "./globals.scss";
+
+.FloatRightContainer {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.FloatCenterContainer {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  cursor: pointer;
+}
+
+select {
+  cursor: pointer;
+}
+
+option {
+  cursor: pointer;
+}

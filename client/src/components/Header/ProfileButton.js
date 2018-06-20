@@ -8,7 +8,6 @@ export default ({ name, onClick })  => {
 			 onClick={onClick}
 		>
 			<h1> { name }  </h1>
-			<img src="http://localhost:2002/torso.png"/>
 		</div>
 	);
 };

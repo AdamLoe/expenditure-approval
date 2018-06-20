@@ -1,0 +1,12 @@
+@import '../globals.scss';
+
+.NotificationContainer {
+  position: absolute;
+}
+
+.Notification {
+  z-index: 10;
+  background: #FFBF2A;
+  padding: 4px 10px;
+  border-radius: 2px;
+}

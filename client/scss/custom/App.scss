@@ -1,16 +1,17 @@
 @import "../globals.scss";
 
+.app {
+}
+
 .App {
   margin-top: 10px;
   margin-left: auto;
   margin-right: auto;
-  display: margin;
   max-width: 900px;
   width: 95%;
 }
 
 body {
-  overflow: hidden;
   font-family: $font-family-one;
   color: $text-color-default;
   background: $app-background;
@@ -26,3 +27,5 @@ h1 {
   margin: 0;
   padding: 0;
 }
+
+button:focus {outline:0;}

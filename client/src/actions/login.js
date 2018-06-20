@@ -1,7 +1,7 @@
 import { loginCall } from "./axios";
 
 let loginSuccess = (res, username) => {
-	console.log("loginSuccess", username, res);
+	console.log("loginSuccess", username, res, res.data);
 	return {
 		type: "LoginSuccess",
 		username: res.data.username,

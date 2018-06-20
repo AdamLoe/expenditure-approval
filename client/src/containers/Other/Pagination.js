@@ -1,4 +1,5 @@
 import React from "react";
+import urls from "../../helpers/urls";
 
 import { connect } from "react-redux";
 
@@ -6,16 +7,16 @@ import { prevPage, nextPage } from "../../actions/pagination";
 
 
 let PaginationComponent = ({ numItems, maxItems, pageNum, prevPage, nextPage }) => {
-	console.log("RENDER: Pagination");
+	//console.log("RENDER: Pagination");
 
 	return (
 		<div className="Pagination">
 			<button onClick={prevPage} hidden={pageNum === 1}>
-				Previous
+				<img src={urls.images+"baseline-keyboard_arrow_left-24px.svg"} />
 			</button>
 			{ pageNum }
 			<button onClick={nextPage} hidden={numItems < maxItems}>
-				Next
+				<img src={urls.images+"baseline-navigate_next-24px.svg"} />
 			</button>
 		</div>
 	);
@@ -23,7 +24,7 @@ let PaginationComponent = ({ numItems, maxItems, pageNum, prevPage, nextPage }) 
 
 
 let mapState = (state) => {
-	console.log("MAPSTA: Pagination");
+	//console.log("MAPSTA: Pagination");
 
 	return {
 		numItems: state.requests.array.length,
@@ -32,4 +33,4 @@ let mapState = (state) => {
 	};
 };
 
-export default connect(mapState, {prevPage, nextPage })(PaginationComponent);
+export default connect(mapState, {prevPage, nextPage})(PaginationComponent);

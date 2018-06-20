@@ -2,10 +2,12 @@ let initialState = {
 	apiFails: 0,
 	maxItems: 10,
 	oldFilters: {
-
 	},
 	filters: {
-		pageNum: 1
+		pageNum: 1,
+		Requester: -1,
+		Approver: -1,
+		Status: "In Process"
 	},
 	array: [
 	]

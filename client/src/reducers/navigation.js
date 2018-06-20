@@ -17,17 +17,10 @@ export default (state=initialState, action) => {
 		};
 	}
 	switch(action.type) {
-		case "gotoSettings":
+		case "toggleSettings":
 			return {
 				...state,
-				showSettings: true,
-				showUserDropdown: false
-			};
-
-		case "exitSettings":
-			return {
-				...state,
-				showSettings: false,
+				showSettings: !state.showSettings,
 				showUserDropdown: false
 			};
 

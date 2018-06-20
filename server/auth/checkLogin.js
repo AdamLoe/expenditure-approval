@@ -7,6 +7,7 @@ module.exports = (event, callback) => {
 		console.log("login called", event.body);
 		knex("users").where({ username: event.body.usr, status: true }).first()
 			.then(function(user) {
+				console.log(user);
 				if (!user) {
 					callback(null, {
 						"statusCode": 403,

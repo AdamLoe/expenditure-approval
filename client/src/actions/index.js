@@ -22,17 +22,12 @@ export const logout = () => {
 	};
 };
 
-export const gotoSettings = () => {
+export const toggleSettings = () => {
 	return {
-		type: "gotoSettings"
+		type: "toggleSettings"
 	};
 };
 
-export const exitSettings = () => {
-	return {
-		type: "exitSettings"
-	};
-};
 
 export const gotoRequests = () => {
 	return {

@@ -1,0 +1,39 @@
+@import "../../globals";
+
+.RequestRightSide {
+  width: 50%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.CommentContainer {
+  height: 50px;
+  min-height: 200px;
+  overflow-y: auto;
+  flex-grow: 1;
+}
+
+.SubmitContainer {
+
+}
+.RequestRightSide .button {
+  border: 10px black;
+}
+
+.RequestButton {
+  padding: 5px;
+  border: 2px white solid;
+}
+
+.RequestSubmit {
+
+}
+
+.RequestAccept {
+
+}
+
+.RequestReject {
+
+}

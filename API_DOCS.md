@@ -1,5 +1,20 @@
 # API Docs : Standard Requests
 
+## Good
+#### 200 : Ok
+#### 201 : Created
+#### 202 : Accepted
+
+## Client Bad
+#### 400  Bad Request
+#### 403 : Forbidden
+#### Too Many Requests
+
+## Server Bad
+#### 500 : Server Error
+#### 503 : Service Unavailable
+#### 501 : Not Implemented
+#### 502 : Bad Gateway
 
 
 ## /login/

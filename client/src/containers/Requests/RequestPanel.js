@@ -11,12 +11,12 @@ import compareArrays from "../../helpers/compareArrays";
 class RequestPanel extends React.Component {
 	constructor(props) {
 		super(props);
-		console.log('Mount: RequestPanel');
+		//console.log('Mount: RequestPanel');
 		this.props.getRequests();
 	}
 
 	shouldComponentUpdate(nextProps) {
-		console.log('ShoUpd: RequestPanel');
+		//console.log('ShoUpd: RequestPanel');
 
 		return !(
 			compareArrays(nextProps.requestIds, this.props.requestIds) &&
@@ -25,7 +25,7 @@ class RequestPanel extends React.Component {
 	}
 
 	render() {
-		console.log("RENDER: RequestPanel");
+		//console.log("RENDER: RequestPanel");
 		let {requestIds, showCards, getRequests} = this.props;
 
 		return (
@@ -50,7 +50,7 @@ class RequestPanel extends React.Component {
 }
 
 let mapStateToProps = (state) => {
-	console.log("MapSta: RequestPanel");
+	//console.log("MapSta: RequestPanel");
 	return {
 		requestIds: state.requests.array.map(req => req.requestid),
 		showCards: state.requests.showCards
