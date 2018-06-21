@@ -4,8 +4,10 @@ var knex = require("../helpers/knexfile.js");
 module.exports = (event, callback) => {
 	return new Promise( resolve => {
 
-		console.log("login called", event.body);
-		knex("users").where({ username: event.body.usr, status: true }).first()
+		knex("users")
+			.where("username", event.body.usr)
+			.where("status", true)
+			.first()
 			.then(function(user) {
 				console.log(user);
 				if (!user) {

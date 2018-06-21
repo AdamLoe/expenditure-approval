@@ -2,7 +2,7 @@
 
 .RequestRightSide {
   width: 50%;
-  padding: 10px;
+  padding: 5px;
   display: flex;
   flex-direction: column;
 }
@@ -14,26 +14,78 @@
   flex-grow: 1;
 }
 
-.SubmitContainer {
-
+.Comment {
+  padding: 2px;
+  display: flex;
+  flex-direction: column;
 }
-.RequestRightSide .button {
-  border: 10px black;
+
+.CommentContent {
+  display: flex;
+  flex-flow: row wrap;
 }
 
-.RequestButton {
+.Author {
+  font-weight: bold;
+  padding-right: 10px;
+}
+
+.CommentDate {
+  font-size: 12px;
+}
+.CreateComment {
+  margin-top: 10px;
+  display: flex;
+  align-content: center;
+}
+
+.CreateComment textarea {
   padding: 5px;
-  border: 2px white solid;
+  height: 60px;
+  width: 80%;
 }
 
-.RequestSubmit {
-
+.CreateComment .Submit {
+  flex-grow: 1;
+  background: none;
+  border: 1px solid $border-light-color;
+  padding: 5px 10px;
+  margin-left: 10px;
+  color: $header-button-color;
+  border-radius: 5px;
 }
 
-.RequestAccept {
-
+.CreateComment .Submit:hover {
+  border-color: $border-color;
 }
 
-.RequestReject {
-
+.UpdateRequest {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
 }
+
+.UpdateRequest button {
+  padding: 10px 15px;
+  margin-left: 10px;
+  color: white;
+  border-radius: 5px;
+  width: 40%;
+}
+
+.UpdateRequest .Accept {
+  background: green;
+}
+
+.UpdateRequest .Accept:hover {
+  background: darkgreen;
+}
+
+.UpdateRequest .Reject {
+  background: Red;
+}
+
+.UpdateRequest .Reject:hover {
+  background: darkred;
+}
+

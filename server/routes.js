@@ -9,7 +9,7 @@
  */
 
 var { createRouter } = require("./router");
-var { myRequests, queryRequest } = require("./requestControllers/queryController");
+var { queryRequest } = require("./requestControllers/queryController");
 var { createRequest } = require("./requestControllers/createController");
 var { queryUser } = require("./userControllers/queryUser");
 var { createUser } = require("./userControllers/createUser");
@@ -21,7 +21,6 @@ module.exports = (event, callback) => {
 	console.log("Router called to ", event.path);
 	let router = createRouter(event, callback);
 
-	router.use("/myrequests", myRequests);
 	router.use("/requests/query", queryRequest);
 	router.use("/requests/submit", submitComment);
 	router.use("/requests/approve", approveRequest);

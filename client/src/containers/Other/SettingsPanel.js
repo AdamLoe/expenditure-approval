@@ -1,7 +1,7 @@
 import React from "react";
 import {connect} from "react-redux";
 
-import urls from "../../helpers/urls";
+import { imgUrl } from "../../constants";
 
 import { toggleSettings } from "../../actions/index";
 
@@ -12,7 +12,7 @@ let SettingsPanel = ({nickName, fullName, email, toggleSettings}) => {
 				<div className="FloatRightContainer">
 					<img className="ExitSettingsImg"
 						onClick={toggleSettings}
-						src={urls.images+"baseline-close-24px.svg"}
+						src={imgUrl+"baseline-close-24px.svg"}
 					/>
 				</div>
 				<h2>Settings</h2>
@@ -23,6 +23,9 @@ let SettingsPanel = ({nickName, fullName, email, toggleSettings}) => {
 						</div>
 						<input className="SettingsValue">
 						</input>
+						<button>
+							Submit
+						</button>
 					</div>
 					<div className="SettingsRow">
 						<div className="SettingsKey">
@@ -30,6 +33,9 @@ let SettingsPanel = ({nickName, fullName, email, toggleSettings}) => {
 						</div>
 						<input className="SettingsValue">
 						</input>
+						<button>
+							Submit
+						</button>
 					</div>
 				</div>
 				<div className="NewPasswordContainer">
@@ -53,8 +59,10 @@ let SettingsPanel = ({nickName, fullName, email, toggleSettings}) => {
 						</div>
 						<input className="SettingsValue">
 						</input>
+						<button className="PasswordChangeButton">
+							Change Password
+						</button>
 					</div>
-
 				</div>
 			</div>
 		</div>

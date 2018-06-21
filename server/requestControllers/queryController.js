@@ -1,11 +1,24 @@
 var knex = require("../helpers/knexfile");
 
+let getCount = function(event, callback, filters) {
+	return new Promise(function(resolve){
 
-//Searches Database with filters, returns requests objects
-exports.queryRequest = function (event, callback) {
-	console.log("Query Requests Called", event.body);
-	console.log("perPage", event.body.perPage, " offset", event.body.perPage * (event.body.page - 1));
 
+		knex("requests")
+			.where(filters)
+			.count()
+			.then(function(data) {
+				resolve(data[0].count);
+			})
+			.catch(function(err){
+				console.log("Database count requests failed.", err);
+				callback(err);
+			})
+
+	});
+};
+
+let getFilters = function(event) {
 	let filters = {
 		status: event.body.status
 	};
@@ -16,6 +29,19 @@ exports.queryRequest = function (event, callback) {
 	if (event.body.approverId !== -1 && event.body.approverId !== "-1") {
 		filters.approverid = event.body.approverId;
 	}
+	return filters;
+};
+
+//Searches Database with filters, returns requests objects
+exports.queryRequest = async function (event, callback) {
+	console.log("Query Requests Called", event.body);
+
+	let filters = getFilters(event);
+
+	let count = null;
+	if (event.body.page === 1 || event.body.page === "1") {
+		count = await getCount(event, callback, filters);
+	}
 
 	console.log("Using filters", filters);
 	knex("requests")
@@ -24,38 +50,22 @@ exports.queryRequest = function (event, callback) {
 		.offset(event.body.perPage * (event.body.page - 1))
 		.orderBy("createdate", "desc")
 		.then(function(data) {
-			console.log(data);
 			callback(null, {
 				"statusCode": 200,
-				"body": JSON.stringify(data)
+				headers: {
+					'Access-Control-Allow-Headers': "Origin, X-Requested-With, Content-Type, Accept, Authorization",
+					'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS',
+					"Access-Control-Allow-Origin" : "*", // Required for CORS support to work
+					"Access-Control-Allow-Credentials" : true // Required for cookies, authorization headers with HTTPS
+				},
+				"body": JSON.stringify({
+					array: data,
+					count: count
+				})
 			});
 		})
 		.catch(function(err){
 			console.log("Database query requests failed.", err);
-			callback(err);
-		});
-};
-
-//Searches Database with filters, returns requests objects
-exports.myRequests = function (event, callback) {
-	console.log("My Requests Called for", event.user.username);
-
-	knex("requests")
-		.where({
-			requesterid: event.user.id
-		})
-		.limit(30)
-		.orderBy("updatedate", "desc")
-		.then(function(data) {
-			console.log("Got myrequests data", data);
-			var response = {
-				"statusCode": 200,
-				"body": JSON.stringify(data)
-			};
-			callback(null, response);
-		})
-		.catch(function(err){
-			console.log("Database query requests failed.", err.message);
 			callback(err);
 		});
 };

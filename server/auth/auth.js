@@ -17,7 +17,6 @@ module.exports = (event, callback) => {
 		if (!event.headers.Authorization) {
 			errorCallback(callback, 401, "Headers not present");
 		} else {
-
 			//Parse our basic-auth headers
 			//Check database for token authorization
 			let { name, pass } = basicAuth.parse(event.headers.Authorization);

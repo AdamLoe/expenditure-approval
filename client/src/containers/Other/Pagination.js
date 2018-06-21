@@ -1,22 +1,26 @@
 import React from "react";
-import urls from "../../helpers/urls";
+import { imgUrl } from "../../constants";
 
 import { connect } from "react-redux";
 
 import { prevPage, nextPage } from "../../actions/pagination";
 
 
-let PaginationComponent = ({ numItems, maxItems, pageNum, prevPage, nextPage }) => {
+let PaginationComponent = ({
+	pageNum,
+	prevPage, nextPage,
+	hideBack, hideForward
+}) => {
 	//console.log("RENDER: Pagination");
 
 	return (
 		<div className="Pagination">
-			<button onClick={prevPage} hidden={pageNum === 1}>
-				<img src={urls.images+"baseline-keyboard_arrow_left-24px.svg"} />
+			<button onClick={prevPage} className={(hideBack)? "hidden" : "shown"}>
+				<img src={imgUrl+"baseline-keyboard_arrow_left-24px.svg"} />
 			</button>
 			{ pageNum }
-			<button onClick={nextPage} hidden={numItems < maxItems}>
-				<img src={urls.images+"baseline-navigate_next-24px.svg"} />
+			<button onClick={nextPage} className={(hideForward)? "hidden" : "shown"}>
+				<img src={imgUrl+"baseline-navigate_next-24px.svg"} />
 			</button>
 		</div>
 	);
@@ -27,9 +31,9 @@ let mapState = (state) => {
 	//console.log("MAPSTA: Pagination");
 
 	return {
-		numItems: state.requests.array.length,
-		maxItems: state.requests.maxItems,
-		pageNum: state.requests.filters.pageNum
+		pageNum: state.requests.filters.pageNum,
+		hideBack: state.requests.filters.pageNum === 1,
+		hideForward: state.requests.array.length < state.requests.maxItems
 	};
 };
 

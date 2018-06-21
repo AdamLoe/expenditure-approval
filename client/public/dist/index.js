@@ -2432,11 +2432,12 @@ var maxApiFails = 3;
 
 var GotRequestsSuccess = function GotRequestsSuccess(res) {
 	return function (dispatch) {
-
 		console.log("Got requests", res);
+
 		dispatch({
 			type: "GotRequestsSuccess",
-			array: res.data
+			array: res.data.array,
+			count: res.data.count
 		});
 	};
 };
@@ -2504,10 +2505,12 @@ var updateRequestFilters = exports.updateRequestFilters = function updateRequest
 };
 
 var updateRequestSuccess = function updateRequestSuccess(res) {
-	console.log('Request Updated successfully', res);
-
-	return {
-		type: "UpdateRequestSuccess"
+	return function (dispatch) {
+		console.log('Request Updated successfully', res);
+		dispatch({
+			type: "UpdateRequestSuccess"
+		});
+		return dispatch(updateRequestFilters());
 	};
 };
 
@@ -3270,7 +3273,7 @@ Object.defineProperty(exports, "__esModule", {
 	value: true
 });
 exports.default = {
-	images: "https://d2r8rkux0fj7fc.cloudfront.net/images/"
+	images: "https://adamloe.com/images/"
 };
 
 /***/ }),
@@ -8731,36 +8734,57 @@ exports.default = function (_ref) {
 			"div",
 			{ className: "CommentContainer" },
 			comments.map(function (comm) {
+				var date = comm[0];
+				var message = comm[1];
+				var author = comm[2];
 				return _react2.default.createElement(
 					"div",
-					null,
-					comm
+					{ className: "Comment" },
+					_react2.default.createElement(
+						"div",
+						{ className: "CommentContent" },
+						_react2.default.createElement(
+							"div",
+							{ className: "Author" },
+							author
+						),
+						_react2.default.createElement(
+							"div",
+							{ className: "Message" },
+							message
+						)
+					),
+					_react2.default.createElement(
+						"div",
+						{ className: "CommentDate" },
+						date
+					)
 				);
 			})
 		),
 		_react2.default.createElement(
 			"div",
-			{ className: "CreateCommentContainer" },
+			{ className: "CreateComment" },
 			_react2.default.createElement("textarea", null),
 			_react2.default.createElement(
-				"div",
-				{ className: "RequestSubmit RequestButton",
+				"button",
+				{ className: "Submit",
 					onClick: submitComment },
 				"Submit"
 			)
 		),
 		_react2.default.createElement(
 			"div",
-			{ className: "SubmitContainer" },
+			{ className: "UpdateRequest" },
 			_react2.default.createElement(
-				"div",
-				{ className: "RequestAccept RequestButton",
+				"button",
+				{ className: "Accept",
 					onClick: approveRequest },
 				"Approve"
 			),
 			_react2.default.createElement(
-				"div",
-				{ className: "RequestReject RequestButton",
+				"button",
+				{ className: "Reject",
 					onClick: rejectRequest },
 				"Reject"
 			)
@@ -9015,9 +9039,14 @@ var store = exports.store = (0, _redux.createStore)(_reducers2.default, _loadSta
 "use strict";
 
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.url = "https://adqsv1eqy0.execute-api.us-east-1.amazonaws.com/dev";
 exports.url = "http://localhost:2002/api";
 exports.apiPort = 2002;
-exports.filesUrl = "https://d2r8rkux0fj7fc.cloudfront.net/";
+exports.filesUrl = "https://adamloe.com/";
+var imgUrl = exports.imgUrl = "https://adamloe.com/images/";
 
 /***/ }),
 /* 207 */
@@ -9574,11 +9603,11 @@ var Login = function (_React$Component) {
 				),
 				_react2.default.createElement("input", {
 					className: "LoginUsername", type: "text", placeholder: "Email Address", onChange: this.handleUserChange,
-					spellcheck: "false", autocorrect: "off", autocapitalize: "off"
+					spellCheck: "false", autoCorrect: "off", autoCapitalize: "off"
 				}),
 				_react2.default.createElement("input", {
 					className: "LoginPassword", type: "password", placeholder: "Password", onChange: this.handlePassChange,
-					spellcheck: "false", autocorrect: "off", autocapitalize: "off"
+					spellCheck: "false", autoCorrect: "off", autoCapitalize: "off"
 				}),
 				_react2.default.createElement(
 					"button",
@@ -9692,9 +9721,7 @@ var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _urls = __webpack_require__(78);
-
-var _urls2 = _interopRequireDefault(_urls);
+var _constants = __webpack_require__(206);
 
 var _reactRedux = __webpack_require__(13);
 
@@ -9703,11 +9730,11 @@ var _pagination = __webpack_require__(192);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var PaginationComponent = function PaginationComponent(_ref) {
-	var numItems = _ref.numItems,
-	    maxItems = _ref.maxItems,
-	    pageNum = _ref.pageNum,
+	var pageNum = _ref.pageNum,
 	    prevPage = _ref.prevPage,
-	    nextPage = _ref.nextPage;
+	    nextPage = _ref.nextPage,
+	    hideBack = _ref.hideBack,
+	    hideForward = _ref.hideForward;
 
 	//console.log("RENDER: Pagination");
 
@@ -9716,14 +9743,14 @@ var PaginationComponent = function PaginationComponent(_ref) {
 		{ className: "Pagination" },
 		_react2.default.createElement(
 			"button",
-			{ onClick: prevPage, hidden: pageNum === 1 },
-			_react2.default.createElement("img", { src: _urls2.default.images + "baseline-keyboard_arrow_left-24px.svg" })
+			{ onClick: prevPage, className: hideBack ? "hidden" : "shown" },
+			_react2.default.createElement("img", { src: _constants.imgUrl + "baseline-keyboard_arrow_left-24px.svg" })
 		),
 		pageNum,
 		_react2.default.createElement(
 			"button",
-			{ onClick: nextPage, hidden: numItems < maxItems },
-			_react2.default.createElement("img", { src: _urls2.default.images + "baseline-navigate_next-24px.svg" })
+			{ onClick: nextPage, className: hideForward ? "hidden" : "shown" },
+			_react2.default.createElement("img", { src: _constants.imgUrl + "baseline-navigate_next-24px.svg" })
 		)
 	);
 };
@@ -9732,9 +9759,9 @@ var mapState = function mapState(state) {
 	//console.log("MAPSTA: Pagination");
 
 	return {
-		numItems: state.requests.array.length,
-		maxItems: state.requests.maxItems,
-		pageNum: state.requests.filters.pageNum
+		pageNum: state.requests.filters.pageNum,
+		hideBack: state.requests.filters.pageNum === 1,
+		hideForward: state.requests.array.length < state.requests.maxItems
 	};
 };
 
@@ -9757,9 +9784,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRedux = __webpack_require__(13);
 
-var _urls = __webpack_require__(78);
-
-var _urls2 = _interopRequireDefault(_urls);
+var _constants = __webpack_require__(206);
 
 var _index = __webpack_require__(36);
 
@@ -9782,7 +9807,7 @@ var SettingsPanel = function SettingsPanel(_ref) {
 				{ className: "FloatRightContainer" },
 				_react2.default.createElement("img", { className: "ExitSettingsImg",
 					onClick: toggleSettings,
-					src: _urls2.default.images + "baseline-close-24px.svg"
+					src: _constants.imgUrl + "baseline-close-24px.svg"
 				})
 			),
 			_react2.default.createElement(
@@ -9801,7 +9826,12 @@ var SettingsPanel = function SettingsPanel(_ref) {
 						{ className: "SettingsKey" },
 						"Name"
 					),
-					_react2.default.createElement("input", { className: "SettingsValue" })
+					_react2.default.createElement("input", { className: "SettingsValue" }),
+					_react2.default.createElement(
+						"button",
+						null,
+						"Submit"
+					)
 				),
 				_react2.default.createElement(
 					"div",
@@ -9811,7 +9841,12 @@ var SettingsPanel = function SettingsPanel(_ref) {
 						{ className: "SettingsKey" },
 						"Email Address"
 					),
-					_react2.default.createElement("input", { className: "SettingsValue" })
+					_react2.default.createElement("input", { className: "SettingsValue" }),
+					_react2.default.createElement(
+						"button",
+						null,
+						"Submit"
+					)
 				)
 			),
 			_react2.default.createElement(
@@ -9845,7 +9880,12 @@ var SettingsPanel = function SettingsPanel(_ref) {
 						{ className: "SettingsKey" },
 						"Repeat New Password"
 					),
-					_react2.default.createElement("input", { className: "SettingsValue" })
+					_react2.default.createElement("input", { className: "SettingsValue" }),
+					_react2.default.createElement(
+						"button",
+						{ className: "PasswordChangeButton" },
+						"Change Password"
+					)
 				)
 			)
 		)
@@ -10747,6 +10787,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 var initialState = {
+	count: 0,
 	apiFails: 0,
 	maxItems: 10,
 	oldFilters: {},
@@ -10799,15 +10840,16 @@ exports.default = function () {
 	    index = _ref.index,
 	    array = _ref.array,
 	    key = _ref.key,
-	    value = _ref.value;
+	    value = _ref.value,
+	    count = _ref.count;
 
 	switch (type) {
 
 		case "GotRequestsSuccess":
-			console.log('got array', array);
 			return _extends({}, state, {
 				array: array,
-				apiFails: 0
+				apiFails: 0,
+				count: typeof count === "string" ? Number(count) : state.count
 			});
 
 		case "GotRequestsFail":

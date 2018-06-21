@@ -1,4 +1,5 @@
 let initialState = {
+	count: 0,
 	apiFails: 0,
 	maxItems: 10,
 	oldFilters: {
@@ -49,15 +50,15 @@ let exampleArray = [
 
  */
 
-export default (state=initialState, { type, index, array, key, value }) => {
+export default (state=initialState, { type, index, array, key, value, count}) => {
 	switch(type) {
 
 		case "GotRequestsSuccess":
-			console.log('got array', array);
 			return {
 				...state,
 				array: array,
-				apiFails: 0
+				apiFails: 0,
+				count: (typeof count === "string") ? Number(count) : state.count
 			};
 
 		case "GotRequestsFail":

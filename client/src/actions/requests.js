@@ -4,11 +4,13 @@ let maxApiFails = 3;
 
 let GotRequestsSuccess = (res) => {
 	return (dispatch) => {
-
 		console.log("Got requests", res);
+
+
 		dispatch({
 			type: "GotRequestsSuccess",
-			array: res.data
+			array: res.data.array,
+			count: res.data.count
 		});
 
 	};
@@ -79,10 +81,12 @@ export const updateRequestFilters = (key, value) => {
 };
 
 let updateRequestSuccess = (res) => {
-	console.log('Request Updated successfully', res);
-
-	return {
-		type: "UpdateRequestSuccess"
+	return (dispatch) => {
+		console.log('Request Updated successfully', res);
+		dispatch({
+			type: "UpdateRequestSuccess"
+		});
+		return dispatch(updateRequestFilters());
 	};
 };
 

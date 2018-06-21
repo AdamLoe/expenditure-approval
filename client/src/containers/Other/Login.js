@@ -35,11 +35,11 @@ render() {
 			<h3> Log In </h3>
 			<input
 				className="LoginUsername" type="text" placeholder="Email Address" onChange={this.handleUserChange}
-				spellcheck="false" autocorrect="off" autocapitalize="off"
+				spellCheck="false" autoCorrect="off" autoCapitalize="off"
 			/>
 			<input
 				className="LoginPassword" type="password" placeholder="Password" onChange={this.handlePassChange}
-				spellcheck="false" autocorrect="off" autocapitalize="off"
+				spellCheck="false" autoCorrect="off" autoCapitalize="off"
 			/>
 			<button onClick={()=> {
 				this.props.login(this.state.usr, this.state.pas);
