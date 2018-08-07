@@ -3,7 +3,6 @@ var knex = require("../helpers/knexfile");
 let getCount = function(event, callback, filters) {
 	return new Promise(function(resolve){
 
-
 		knex("requests")
 			.where(filters)
 			.count()
@@ -19,16 +18,19 @@ let getCount = function(event, callback, filters) {
 };
 
 let getFilters = function(event) {
+	let { status, requesterId, approverId } = event.body;
+
 	let filters = {
-		status: event.body.status
+		status: status,
+        requesterid: requesterId,
+   		approverid: approverId
 	};
 
-	if (event.body.requesterId !== -1 && event.body.requesterId !== "-1") {
-		filters.requesterid = event.body.requesterId;
-	}
-	if (event.body.approverId !== -1 && event.body.approverId !== "-1") {
-		filters.approverid = event.body.approverId;
-	}
+    for (let i in filters) {
+        if (filters[i] === '-1' || filters[i] === -1 || filters[i] === undefined) {
+            delete filters[i]
+        }
+    }
 	return filters;
 };
 
@@ -47,17 +49,11 @@ exports.queryRequest = async function (event, callback) {
 	knex("requests")
 		.where(filters)
 		.limit(event.body.perPage)
-		.offset(event.body.perPage * (event.body.page - 1))
+		.offset(event.body.perPage * (event.body.pageNum - 1))
 		.orderBy("createdate", "desc")
 		.then(function(data) {
 			callback(null, {
 				"statusCode": 200,
-				headers: {
-					'Access-Control-Allow-Headers': "Origin, X-Requested-With, Content-Type, Accept, Authorization",
-					'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS',
-					"Access-Control-Allow-Origin" : "*", // Required for CORS support to work
-					"Access-Control-Allow-Credentials" : true // Required for cookies, authorization headers with HTTPS
-				},
 				"body": JSON.stringify({
 					array: data,
 					count: count

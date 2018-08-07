@@ -1,20 +1,22 @@
 /*
- routesr.js
+ routes.js
  ------------
+ two callable functions
+ 	use:  routes to param
+ 	admin: checks is admin before routing to param
+
  Only allows one route to be called
- Allows /login2, /login/, and /login?adam to match to /login
- Fills event.paramObject with anything after matchUrl
- 	/login/2 = 2
- 	/login//2 = /2 FAIL
- */
+ Ignores characters after path, i.e. matches /login2 to /login
+ Puts extra characters into event.paramObjectFAIL
+*/
 
 
-var routeMatches = function(routePath, userPath) {
+let routeMatches = function(routePath, userPath) {
 	return (routePath === userPath) || ((routePath + '/') === userPath);
 };
 
-var getParamObject = function(routePath, userPath) {
-	var len = userPath.length;
+let getParamObject = function(routePath, userPath) {
+	let len = userPath.length;
 	return routePath.slice(len+2);
 };
 

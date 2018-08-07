@@ -16,37 +16,55 @@ let GotRequestsSuccess = (res) => {
 	};
 };
 
-let GotRequestsFail = (err, apiFails) => {
+let GotRequestsFail = (err,) => {
 	return (dispatch) => {
 
-		checkFail(dispatch, err).then(() => {
-
-			console.log("Got Requests Fail", err);
-			console.log("ApiFails", apiFails);
-			dispatch({
-				type: "GotRequestsFail",
-				errorType: "GotRequest",
-				err: err
-			});
-			if (apiFails < maxApiFails) {
-				return setTimeout(dispatch(getRequests()), 1000);
-			}
-
+		console.log("Got Requests Fail", err);
+		dispatch({
+			type: "GotRequestsFail",
+			errorType: "GotRequest",
+			err: err
 		});
-
 	};
 };
 
-let buildQueryRequestBody = (filters) => {
-	return {
-		page: filters.pageNum,
-		perPage: 10,
-		approverId: filters.Approver,
-		requesterId: filters.Requester,
-		status: filters.Status
-	};
+// If item in request body is object, replace object with the value
+let buildQueryRequestBody = (filters, changeKey, changeValue) => {
+	let body = {};
+	for (let key in filters) {
+		if (typeof filters[key] === "object") {
+			body[key] = filters[key].value;
+		} else {
+			body[key] = filters[key];
+		}
+	}
+	body[changeKey] = changeValue;
+	return body;
 };
 
+let buildQueryRequestBody2 = (changeKey, changeValue) => {
+	return (dispatch, getState) => {
+
+		let state = getState();
+		let filters = state.requests.filters;
+
+		let body = {};
+		for (let key in filters) {
+			if (typeof filters[key] === "object") {
+				body[key] = filters[key].value;
+			} else {
+				body[key] = filters[key];
+			}
+		}
+
+		body[changeKey] = changeValue;
+		return body;
+	};
+
+};
+
+//Using Key, Value because Async
+//Need instant UI update, but also need instant request
 export const getRequests = (key, value) => {
 	return (dispatch, getState) => {
 
@@ -54,22 +72,22 @@ export const getRequests = (key, value) => {
 		let state = getState();
 
 		let filters = state.requests.filters;
-		let apiFails = state.requests.apiFails;
-		if (key !== undefined) {
-			filters[key] = value;
-		}
-		let body = buildQueryRequestBody(filters);
 
+		let body = buildQueryRequestBody(filters, key, value);
 		apiCall(url, state.user, body)
 			.then(
 				res => dispatch(GotRequestsSuccess(res)),
-				err => dispatch(GotRequestsFail(err, apiFails))
+				err => dispatch(GotRequestsFail(err))
 			);
 	};
 };
 
 export const updateRequestFilters = (key, value) => {
-	console.log('key, value', key, value);
+	// SELECT Options converts numbers to string, so we convert to number if it was a number before
+	if (!isNaN(value)) {
+		value = parseInt(value);
+	}
+	console.log("key, value", key, value);
 	return (dispatch) => {
 		dispatch({
 			type: "UpdateRequestFilters",
@@ -82,7 +100,7 @@ export const updateRequestFilters = (key, value) => {
 
 let updateRequestSuccess = (res) => {
 	return (dispatch) => {
-		console.log('Request Updated successfully', res);
+		console.log("Request Updated successfully", res);
 		dispatch({
 			type: "UpdateRequestSuccess"
 		});
@@ -91,7 +109,7 @@ let updateRequestSuccess = (res) => {
 };
 
 let updateRequestFailure = (err) => {
-	console.log('Request Update Error', err);
+	console.log("Request Update Error", err);
 
 	return  {
 		type: "UpdateRequestFailure"
@@ -107,13 +125,13 @@ export const updateRequest = (url, id, comment=null) => {
 			.then(
 				res => dispatch(updateRequestSuccess(res)),
 				err => dispatch(updateRequestFailure(err))
-			)
-	}
-}
+			);
+	};
+};
 export const submitComment = (id, comment) => {
 	return (dispatch) => dispatch(
 		updateRequest(
-			"/requests/submit",
+			"/requests/comment",
 			id,
 			"This is a new comment"
 		)

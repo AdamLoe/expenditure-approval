@@ -1,3 +1,9 @@
+/*
+ Requests.js
+ -------------
+ Reducer File
+ */
+
 let initialState = {
 	count: 0,
 	apiFails: 0,
@@ -6,9 +12,48 @@ let initialState = {
 	},
 	filters: {
 		pageNum: 1,
-		Requester: -1,
-		Approver: -1,
-		Status: "In Process"
+		perPage: 10,
+		approverId: {
+			name: "approverId",
+			//Arr of objects { key: value, key: value}
+			options: [{
+				key: "Anybody", value: -1
+			},{
+				key: "eddy", value: 2
+        	},{
+				key: "sarah", value: 3
+			}],
+			//Actual Value
+			value: -1
+		},
+		requesterId: {
+			name: "requesterId",
+			options: [{
+				key: "Anybody", value: -1
+			},{
+				key: "crawford", value: 7
+			}, {
+				key: "cornelius", value: 8
+			}],
+			value: -1
+		},
+		status: {
+			name: "status",
+			options: [{
+				key: "Any", value: -1
+			},{
+				key: "In Process", value: "In Process"
+			},{
+				key: "Denied", value: "Denied"
+			},{
+				key: "Approved", value: "Approved",
+			},{
+				key: "Completed", value: "Completed"
+			},{
+				key: "Cancelled", value: "Cancelled"
+			}],
+			value: -1
+		}
 	},
 	array: [
 	]
@@ -38,21 +83,23 @@ let exampleArray = [
 		updateDate: "2018-04-22 09:42:15.657899"
 	}
 ];
-/*
- let arr = state.array;
- let newItem = arr[index];
- newItem.showBig = !newItem.showBig;
- let newArray = arr.slice(0, index).concat(newItem, arr.slice(index + 1));
- return {
- 	...state,
- 	array: newArray
- }
 
- */
-
-export default (state=initialState, { type, index, array, key, value, count}) => {
+export default (state=initialState, { type, index, array, key, value, count, filters}) => {
 	switch(type) {
+		//Overwrite any saved filter data with what server gives us, but keep old
+		case "LoginSuccess":
+			return {
+				...state,
+				filters: {
+					//...filters,
+					...state.filters
+				}
+			};
 
+		case "Logout":
+			return initialState;
+
+		//Update Request Array, reset API fails, and Set Request Count
 		case "GotRequestsSuccess":
 			return {
 				...state,
@@ -60,7 +107,6 @@ export default (state=initialState, { type, index, array, key, value, count}) =>
 				apiFails: 0,
 				count: (typeof count === "string") ? Number(count) : state.count
 			};
-
 		case "GotRequestsFail":
 			return {
 				...state,
@@ -74,7 +120,14 @@ export default (state=initialState, { type, index, array, key, value, count}) =>
 				oldFilters: state.filters,
 				filters: {
 					...state.filters,
-					[key]: value
+					[key]: (typeof state.filters[key] === "object" ?
+						{
+							...state.filters[key],
+							value: value
+						}
+						:
+						value
+					)
 				}
 			};
 

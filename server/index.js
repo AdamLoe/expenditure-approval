@@ -1,12 +1,15 @@
 /*
  index.js
  ------------
- We pass 3 objects
- event, see defaultEvent.js
- context, empty
- callback, function(err, data) //one will be null
- -----------
- Login or auth into routes
+ This is meant for a AWS lambda server
+ So, 3 object, Event, Context(useless), Callback
+ 	Callback(err, data)
+ 	Callback(null, {
+ 		statusCode: 200,
+ 		headers: {},
+ 		"body": {}
+ 	})
+
  */
 
 "use strict";
@@ -17,20 +20,17 @@ var auth  = require("./auth/auth");
 
 exports.handler = function(event, context, originalCallback) {
 
-	// If we are using lambda, we need to parse the body, if we arent, it will fail
-	if (context === {}) {
-		event.body = JSON.parse(event.body);
-	}
-
 	console.log('event', event);
+
 	//Knex wont let event loop be empty, so we force pause application after callback
 	context.callbackWaitsForEmptyEventLoop = false;
+
 	//Api Gateway stringifies the body, but express doensnt
 	if (typeof event === "string") {
 		event.body = JSON.parse(event.body);
 	}
-	//console.log("Got lambda function", event);
 
+	//We hijack the lambda callback, and pass our custom one, so we can add headers
 	let callback = (err, response) => {
 		originalCallback(err, {
 			...response,
@@ -54,6 +54,7 @@ exports.handler = function(event, context, originalCallback) {
 	}
 };
 
+//Forgot why, but lambda can have unhandled rejections, and we need to log them in case, google it
 process.on("unhandledRejection", (err) => {
 	console.error("unhandledRejection", err);
 	process.exit(1);

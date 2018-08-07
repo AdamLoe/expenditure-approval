@@ -5,7 +5,7 @@ import { imgUrl } from "../../constants";
 
 import { toggleSettings } from "../../actions/index";
 
-let SettingsPanel = ({nickName, fullName, email, toggleSettings}) => {
+let SettingsPanel = ({email, toggleSettings}) => {
 	return (
 		<div className="SettingsContainer">
 			<div className="SettingsPanel">
@@ -19,19 +19,11 @@ let SettingsPanel = ({nickName, fullName, email, toggleSettings}) => {
 				<div className="SimpleSettings">
 					<div className="SettingsRow">
 						<div className="SettingsKey">
-							Name
-						</div>
-						<input className="SettingsValue">
-						</input>
-						<button>
-							Submit
-						</button>
-					</div>
-					<div className="SettingsRow">
-						<div className="SettingsKey">
 							Email Address
 						</div>
-						<input className="SettingsValue">
+						<input className="SettingsValue"
+							value={email}
+						>
 						</input>
 						<button>
 							Submit

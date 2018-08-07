@@ -1,0 +1,100 @@
+CREATE TABLE requests (
+    requestId int, requestName text,
+    status text, amount int,
+    unitName text, itemType text,
+    requestorName text, requestorId int,
+    approverName  text, approverId  int,
+    propertyName text,   propertyId int,
+    requestorComment text, createDate timestamp,
+    attributes text[][], comments text[][]
+);
+
+INSERT INTO requests VALUES (
+--   id        |      name
+       1       ,   'Hand Dryer'  ,
+-- status      |   amount
+  'In Process' ,     85
+--   unit    |    type
+   'AC45'      ,    'Personal'
+-- requestor  | requestorId
+   'Clankus Tamperskin',
+-- approver   | approverId
+
+--  property  | propertyId |
+--  requestorComment | createDate
+);
+
+-Vendor Name
+-Vendor Code
+-Vendor Comments
+
+-Description
+
+-Price
+-Shipping
+-Installation or -Labor
+-Tax
+-Other or -other charges
+
+-Old Model Number
+-New Model Number
+-New Unit Manufacturer
+-Warranty Length
+-Sser rating
+
+-Existing Serial #
+-Exp Date
+
+* Tile
+-color
+-style
+(maybe)-Old floor covering
+(maybe)-Age of old floor covering
+-age of tile replaced
+-handicap access?
+-unit occupied?
+-bill tenant?
+
+-square yards
+-height(inches)
+-width(inches)
+
+amount
+:
+10
+approver
+:
+"tonyaB"
+attributes
+:
+null
+comments
+:
+null
+createdate
+:
+"2017-08-10T04:01:33.260Z"
+itemtype
+:
+"Personal"
+reqcomment
+:
+"I deserve some damn kleenex."
+requester
+:
+"crawfordPlace"
+requestername
+:
+"Crawford Place"
+requestid
+:
+null
+requestname
+:
+"Kleenex"
+status
+:
+"In Process"
+unitname
+:
+"X3"

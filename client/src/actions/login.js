@@ -1,3 +1,12 @@
+/*
+	Login.js
+	-------------
+	Uses LoginCall in axios.js to login
+	Upon Success,
+		Gives all user information to User Reducer
+		Gives Request Filter information to Request Reducer
+ */
+
 import { loginCall } from "./axios";
 
 let loginSuccess = (res, username) => {

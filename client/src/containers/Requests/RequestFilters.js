@@ -1,57 +1,57 @@
 import React from "react";
-import urls from "../../helpers/urls";
 import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
 
 import { updateRequestFilters } from "../../actions/requests";
 
+let getUsableFilters = (filters) => {
+	// Get rid of filters that arent object, i.e. filters we dont want changed
+	// Also converts to array for React
+	let usable = [];
+	for (let i in filters) {
+		if (typeof filters[i] === "object") {
+			usable.push(filters[i]);
+		}
+	}
+	return usable;
+};
 let RequestFilters = ({
-	currApprover, currRequester, currStatus,
-	approvers, requesters,
-	changeApprover, changeRequester, changeStatus,
+	filters,
+	update,
 	refresh
 }) => {
+	//console.log("RENDER:ReqFilters", filters);
+
+	let usable = getUsableFilters(filters);
+	console.log("usable", usable);
+
 	return (
 		<div className="RequestFilters">
 			<div className="Sort">
-				<select
-					value={currApprover}
-					onChange={changeApprover}
-				>
-					<option className="option" value={-1}>
-						Any Approver
-					</option>
-					{approvers.map(approver =>
-						<option	className="option" value={approver.id}>
-							{ approver.fullname }
-						</option>
-					)}
-				</select>
-				<select
-					value={currRequester}
-					onChange={changeRequester}
-				>
-					<option value={-1}>
-						Any Property
-					</option>
-					{requesters.map(requester =>
-						<option value={requester.id}>
-							{ requester.fullname }
-						</option>
-					)}
-				</select>
-				<select
-					value={currStatus}
-					onChange={changeStatus}
-				>
-					{
-						["Approved", "Denied", "In Process", "Cancelled"].map( str =>
-							<option value={str}>
-								{ str }
-							</option>
-						)
-					}
-				</select>
+				{
+					usable.map((filter) => (
+						<select
+							value={filter.value}
+							onChange={(e) => update(filter.name, e.target.value)}
+							key={filter.name}
+						>
+							{
+								filter.options.map((option) => (
+									<option
+										className="option"
+										value={option.value}
+										key={option.value}
+									>
+										{ option.key }
+									</option>
+								))
+							}
+						</select>
+					))
+				}
 			</div>
+
+
 			<div
 				onClick={refresh}
 				className="refresh"
@@ -67,20 +67,16 @@ let RequestFilters = ({
 
 
 let mapStateToProps = (state) => {
+	//console.log("MAPSTA:ReqFilters", state.requests.filters);
 	return {
-		currRequester: state.requests.filters.Requester,
-		currApprover: state.requests.filters.Approver,
-		currStatus: state.requests.filters.Status,
-		approvers: state.user.approvers,
-		requesters: state.user.requesters
+		filters: state.requests.filters //state.requests.filters
 	};
 };
 
+//changeApprover: (e) => dispatch(updateRequestFilters("Approver", e.target.value)),
 let mapDispatchToProps = (dispatch) => {
 	return {
-		changeApprover: (e) => dispatch(updateRequestFilters("Approver", e.target.value)),
-		changeRequester: (e) => dispatch(updateRequestFilters("Requester", e.target.value)),
-		changeStatus:   (e) => dispatch(updateRequestFilters("Status", e.target.value)),
+		update: bindActionCreators(updateRequestFilters, dispatch),
 		refresh: (e) => dispatch(updateRequestFilters())
 	};
 };

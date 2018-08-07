@@ -3,10 +3,10 @@ import { url, salt } from "../constants";
 
 import { logout } from "./index";
 
+let maxApiFails = 3;
+
 exports.apiCall = (path, {username, token}, body) => {
 	console.log("Api call to ", path);
-	console.log('Full url', url+path);
-	console.log(username, token);
 	return axios.post(url+path, body, {
 		auth: {
 			username: username,
@@ -29,11 +29,25 @@ exports.checkFail = (dispatch, err) => {
 		switch(err.response.status) {
 			case 401:
 			case 403:
-				console.log('hi');
+				console.log("hi");
 				dispatch(logout());
 				break;
 			default:
 				resolve();
+		}
+	});
+};
+
+
+
+exports.apiCall2 = (path, {username, token}, body) => {
+
+
+	console.log("Api call to ", path);
+	return axios.post(url+path, body, {
+		auth: {
+			username: username,
+			password: token
 		}
 	});
 };

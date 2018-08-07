@@ -3,7 +3,6 @@ var knex = require("../helpers/knexfile.js");
 module.exports = (event, callback) => {
 	return new Promise(resolve => {
 
-
 		knex("users")
 			.select("id", "nickname", "fullname", "email", "type", "status")
 			.then(function (data) {
