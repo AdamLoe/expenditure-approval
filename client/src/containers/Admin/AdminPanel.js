@@ -9,8 +9,7 @@ let AdminPanel = ({ }) => {
 				It's an admin panel
 			</h1>
 		</div>
-
-	)
+	);
 };
 
 let mapStateToProps = (state) => {

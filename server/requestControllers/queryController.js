@@ -12,7 +12,7 @@ let getCount = function(event, callback, filters) {
 			.catch(function(err){
 				console.log("Database count requests failed.", err);
 				callback(err);
-			})
+			});
 
 	});
 };
@@ -22,15 +22,15 @@ let getFilters = function(event) {
 
 	let filters = {
 		status: status,
-        requesterid: requesterId,
+		requesterid: requesterId,
    		approverid: approverId
 	};
 
-    for (let i in filters) {
-        if (filters[i] === '-1' || filters[i] === -1 || filters[i] === undefined) {
-            delete filters[i]
-        }
-    }
+	for (let i in filters) {
+		if (filters[i] === "-1" || filters[i] === -1 || filters[i] === undefined) {
+			delete filters[i];
+		}
+	}
 	return filters;
 };
 
@@ -43,15 +43,16 @@ exports.queryRequest = async function (event, callback) {
 	let filters = getFilters(event);
 
 	let count = null;
-	if (event.body.page === 1 || event.body.page === "1") {
+	if (pageNum === 1 || pageNum === "1") {
 		count = await getCount(event, callback, filters);
+		console.log("GOT COUNT", count);
 	}
 
 	console.log("Using filters", filters);
 	knex("requests")
 		.where(filters)
-		.limit(event.body.perPage)
-		.offset(event.body.perPage * (event.body.pageNum - 1))
+		.limit(perPage)
+		.offset(perPage * (pageNum - 1))
 		.orderBy("createdate", "desc")
 		.then(function(data) {
 			callback(null, {
