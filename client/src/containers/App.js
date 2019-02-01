@@ -24,18 +24,14 @@ let App = ({loggedIn, showAdminPanel, showSettings, showCreateRequest}) => {
 	}
 
 	let Content = <UserPanel />;
-	if (showAdminPanel) { Content = <AdminPanel />; }
+	if (showCreateRequest) 	Content = <CreateRequestContainer/>;
+	if (showAdminPanel) 	Content = <AdminPanel />;
+	if (showSettings)		Content = <SettingsPanel/>
 
 	return (
 		<div className="App">
 			<Notifications />
 			<Header />
-			{ showCreateRequest &&
-				<CreateRequestContainer />
-			}
-			{ showSettings &&
-				<SettingsPanel />
-			}
 			{ Content }
 		</div>
 	);
