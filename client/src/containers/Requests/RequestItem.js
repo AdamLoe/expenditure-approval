@@ -9,28 +9,21 @@ import RequestDetails from "../../components/Requests/RequestDetails";
 import RequestCommentSubmit from "../../components/Requests/RequestCommentSubmit";
 
 
-let RequestItem = (props) => {
-	//console.log("RENDER: RequestItem", props);
-
-	let { showBig } = props;
-
-	return (
-		<div className="RequestItem">
-			<RequestItemRow {...props} />
-			{ showBig &&
+let RequestItem = ({ ...props }) => (
+	<div className="RequestItem">
+		<RequestItemRow {...props} />
+		{ props.showBig &&
 			<div className="RequestRowMore">
 				<RequestDetails {...props} />
 				<RequestCommentSubmit {...props}/>
 			</div>
-			}
-		</div>
-	);
-};
+		}
+	</div>
+);
 
 let mapStateToProps = (state, {id, index}) => {
-	//console.log("MAPSTA: RequestItem", id, index);
-
 	let req = state.requests.array[index];
+	console.log("MAPSTA: RequestItem", id, index, req);
 	return {
 		requestId: req.requestid,
 		updateDate: req.updatedate,
