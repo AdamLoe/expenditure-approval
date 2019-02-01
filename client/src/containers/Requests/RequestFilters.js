@@ -17,7 +17,7 @@ let getUsableFilters = (filters) => {
 };
 let RequestFilters = ({
 	filters,
-	update,
+	updateRequestFilters,
 	refresh
 }) => {
 	//console.log("RENDER:ReqFilters", filters);
@@ -32,7 +32,7 @@ let RequestFilters = ({
 					usable.map((filter) => (
 						<select
 							value={filter.value}
-							onChange={(e) => update(filter.name, e.target.value)}
+							onChange={(e) => updateRequestFilters(filter.name, e.target.value)}
 							key={filter.name}
 						>
 							{
@@ -76,7 +76,7 @@ let mapStateToProps = (state) => {
 //changeApprover: (e) => dispatch(updateRequestFilters("Approver", e.target.value)),
 let mapDispatchToProps = (dispatch) => {
 	return {
-		update: bindActionCreators(updateRequestFilters, dispatch),
+		updateRequestFilters: bindActionCreators(updateRequestFilters, dispatch),
 		refresh: (e) => dispatch(updateRequestFilters())
 	};
 };
