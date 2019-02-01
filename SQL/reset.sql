@@ -62,9 +62,3 @@ CREATE TRIGGER OnTokenUpdate
     ON users
     FOR EACH ROW
     EXECUTE PROCEDURE updatetokenexpir();
-
-UPDATE Users
-	SET access_token='WW0ZSilosbcpMufIoWFhLRUp2rMKgHxEPVDN4U4xqjhv4MNjvBf2Wk5LGwgm92zm'
-	WHERE id=1;
-SELECT * FROM users;
---SELECT * FROM requests;
