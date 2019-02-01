@@ -1,0 +1,18 @@
+{
+  "name": "standard-requests",
+  "version": "1.0.0",
+  "description": "^^^^^ CHANGE THIS LINK WHEN YOU SETUP HTTPS ^^^^",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-eslint": "^10.0.1",
+    "bootstrap": "^4.1.3",
+    "eslint": "^5.10.0",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-react": "^7.11.1"
+  }
+}

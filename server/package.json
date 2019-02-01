@@ -7,16 +7,18 @@
     "basic-auth": "^2.0.0",
     "knex": "^0.14.4",
     "nodemailer": "^4.6.4",
-    "pg": "^7.4.1"
-  },
-  "devDependencies": {
+    "pg": "^7.4.1",
     "body-parser": "^1.18.2",
     "cors": "^2.8.4",
     "express": "^4.16.3",
-    "http": "0.0.0",
+    "http": "0.0.0"
+  },
+  "devDependencies": {
+    "node-sass": "^4.8.3",
     "nodemon": "^1.17.2"
   },
   "scripts": {
+    "start": "nodemon express.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

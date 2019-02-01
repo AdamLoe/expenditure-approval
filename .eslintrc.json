@@ -19,24 +19,5 @@
         "react", "html"
     ],
     "rules": {
-        "no-mixed-spaces-and-tabs": "off",
-        "indent": [
-            "error",
-            "tab",
-            { "SwitchCase" : 1 }
-        ],
-        "linebreak-style": [
-            "error",
-            "windows"
-        ],
-        "quotes": [
-            "error",
-            "double"
-        ],
-        "semi": [
-            "error",
-            "always"
-        ],
-        "no-console": "off"
     }
 }
