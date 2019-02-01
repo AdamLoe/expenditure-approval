@@ -9,18 +9,16 @@
  		headers: {},
  		"body": {}
  	})
-
+	///Approved, Property, Item, Next, Amount
  */
 
 "use strict";
 
-var routes = require("./routes");
-var login = require("./auth/login");
-var auth  = require("./auth/auth");
+let routes = require("./routes");
+let login = require("./auth/login");
+let auth  = require("./auth/auth");
 
 exports.handler = function(event, context, originalCallback) {
-
-	console.log('event', event);
 
 	//Knex wont let event loop be empty, so we force pause application after callback
 	context.callbackWaitsForEmptyEventLoop = false;

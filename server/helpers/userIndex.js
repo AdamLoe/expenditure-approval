@@ -5,7 +5,7 @@ exports.updateFilters = function(req, res) {
 	getUserIndex("requester");
 };
 
-var getUserIndex = function(type) {
+let getUserIndex = function(type) {
 	knex("users").select(
 		"id",
 		"name"
@@ -22,7 +22,7 @@ var getUserIndex = function(type) {
 };
 
 
-var updateUserIndex = function(data, type) {
+let updateUserIndex = function(data, type) {
 	knex("filters").update({
 		json: JSON.stringify(data)
 	}).where({
@@ -36,7 +36,7 @@ var updateUserIndex = function(data, type) {
 exports.sendUserIndex = function(req, res) {
 	knex("filters")
 		.then(function(data) {
-			var loginJson = {
+			let loginJson = {
 				user: req.user,
 				filters: data
 			};

@@ -8,7 +8,7 @@ import ToggleAdmin from "../../components/Header/ToggleAdmin";
 
 import {logout, toggleSettings, toggleAdmin, toggleUserDropdown} from "../../actions/index";
 
-var Header = ({
+let Header = ({
 	nickName, fullName,	showAdminPanel, isAdmin,  showUserDropdown,
 	logout, toggleSettings, toggleAdmin, toggleUserDropdown
 }) => {

@@ -1,4 +1,4 @@
-var knex = require("../helpers/knexfile");
+let knex = require("../helpers/knexfile");
 
 let getCount = function(event, callback, filters) {
 	return new Promise(function(resolve){
@@ -37,6 +37,8 @@ let getFilters = function(event) {
 //Searches Database with filters, returns requests objects
 exports.queryRequest = async function (event, callback) {
 	console.log("Query Requests Called", event.body);
+
+	let { perPage, pageNum } = event.body;
 
 	let filters = getFilters(event);
 

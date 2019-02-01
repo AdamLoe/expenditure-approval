@@ -1,4 +1,4 @@
-var knex = require("../helpers/knexfile.js");
+let knex = require("../helpers/knexfile.js");
 
 module.exports = (event, callback) => {
 	return new Promise(resolve => {
@@ -21,4 +21,10 @@ module.exports = (event, callback) => {
 			});
 
 	});
+};
+
+let formatFilters = (users) => {
+	return {
+
+	}
 };

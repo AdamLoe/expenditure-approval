@@ -1,5 +1,5 @@
-var knex = require("../helpers/knexfile.js");
-var { checkUsername, checkPassword, checkName, checkApprover, checkApproveLimit } = require("../validators/userValidate");
+let knex = require("../helpers/knexfile.js");
+let { checkUsername, checkPassword, checkName, checkApprover, checkApproveLimit } = require("../validators/userValidate");
 
 exports.updateUser = function (event, callback) {
 	if (req.body.key === "username") {
@@ -16,7 +16,7 @@ exports.updateUser = function (event, callback) {
 };
 
 //Simply update value
-var updateBasic = function (event, callback) {
+let updateBasic = function (event, callback) {
 	knex("users").update({
 		[req.body.key]: req.body.value
 	}).where({
@@ -37,7 +37,7 @@ var updateBasic = function (event, callback) {
 };
 
 //Update Basic + update last password update
-var updatePassword = function (event, callback) {
+let updatePassword = function (event, callback) {
 	knex("users").update({
 		password: req.body.value,
 		passwordUpdate: knex.fn.now()
@@ -60,13 +60,13 @@ var updatePassword = function (event, callback) {
 
 //Update Basic + update all references to this users name in all requests/users
 //Update filters because of name change
-var { updateFilters } = require("../helpers/userIndex.js");
-var updateName = function (event, callback) {
+let { updateFilters } = require("../helpers/userIndex.js");
+let updateName = function (event, callback) {
 
 };
 
 //UpdateBasic + also get approver's name w/ given id, and update both
-var updateApprover = function (event, callback) {
+let updateApprover = function (event, callback) {
 	knex("users")
 		.where({ id: req.params.id })
 		.select("name")

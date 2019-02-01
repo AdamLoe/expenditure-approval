@@ -1,5 +1,5 @@
-var knex = require("../helpers/knexfile.js");
-var { updateFilters } = require("../helpers/userIndex.js");
+let knex = require("../helpers/knexfile.js");
+let { updateFilters } = require("../helpers/userIndex.js");
 
 exports.deactivateUser = function (event, callback) {
 	console.log("Deactivate User function Hit");

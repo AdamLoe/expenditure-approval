@@ -1,5 +1,5 @@
-var knex = require("../helpers/knexfile.js");
-var { updateFilters } = require("../helpers/userIndex.js");
+let knex = require("../helpers/knexfile.js");
+let { updateFilters } = require("../helpers/userIndex.js");
 
 //Create new row in database with values
 exports.createUser = function (event, callback) {

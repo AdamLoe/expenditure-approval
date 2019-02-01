@@ -1,11 +1,11 @@
-var knex = require("../helpers/knexfile.js");
+let knex = require("../helpers/knexfile.js");
 
-var { getTime } = require("../helpers/time.js");
-var errorCallback = require('../helpers/errorCallback');
+let { getTime } = require("../helpers/time.js");
+let errorCallback = require('../helpers/errorCallback');
 
 //Pipe all props to knex to create a object
 exports.createRequest = function (event, callback) {
-	var request = {
+	let request = {
 		requestname: event.body.name,
 		status: "In Process",
 		amount: event.body.amount,

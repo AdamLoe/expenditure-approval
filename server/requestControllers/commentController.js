@@ -1,6 +1,6 @@
-var knex = require("../helpers/knexfile");
-var { getTime } = require("../helpers/time.js");
-var errorCallback = require('../helpers/errorCallback');
+let knex = require("../helpers/knexfile");
+let { getTime } = require("../helpers/time.js");
+let errorCallback = require('../helpers/errorCallback');
 
 //Searches Database with filters, returns requests objects
 exports.submitComment = async function (event, callback) {

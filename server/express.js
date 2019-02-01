@@ -5,21 +5,21 @@
  Idea is to map express to our lambda function
  */
 
-console.log('Server listening on port 2002');
-var express = require("express");
-var app = express();
+console.log("Server listening on port 2002");
+let express = require("express");
+let app = express();
 
 
-var cors = require("cors");
+let cors = require("cors");
 app.use(cors());
 
-var bodyParser = require("body-parser");
+let bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 
 //On lambda callback, map either to correct status, and data to send
-var callback = function(err, data) {
-	res = this.res;
+let callback = function(err, data) {
+	let res = this.res;
 	if (err) {
 		res.status(err.statusCode).send(err.body);
 	}  else {
@@ -27,28 +27,31 @@ var callback = function(err, data) {
 	}
 };
 
-app.use(express.static('public', {dotfiles:'allow'}));
+
+app.use(express.static("../client/public/images", {dotfiles:"allow"}));
 //Populate our fake event
 //Bind our res to our callback
 
-var { handler } = require("./index");
-app.use('/api', function(req, res, next) {
-	var body = req.body;
-	var auth = req.headers.authorization;
-	var event = {
-		path: req.path,
+let { handler } = require("./index");
+
+app.use("/api", function(req, res, next) {
+	let body = req.body;
+	let path = req.path;
+	let auth = req.headers.authorization;
+	let event = {
 		headers: {
 			Authorization: auth
 		},
-		body: req.body
+		path,
+		body
 	};
-	var context = {};
+	let context = {};
 	handler(event, context, callback.bind({res:res}));
 });
 
 
-console.log('Server listening on port 2002');
-var http  = require("http");
+console.log("Server listening on port 2002");
+let http  = require("http");
 http.createServer(app).listen(2002);
 
 /*
@@ -71,7 +74,7 @@ app.use( function (req, res, next) {
 
 
 //If the webApp is using the api
-//var routes = require('./routes');
+//let routes = require('./routes');
 
 
 //Otherwise, just give them the client webApp
@@ -81,11 +84,11 @@ app.use( function (req, res, next) {
 
 
 
-var fs = require('fs');
-var privateKey = fs.readFileSync('/etc/letsencrypt/live/standardrequests.com/privkey.pem', 'utf8');
-var certificate = fs.readFileSync('/etc/letsencrypt/live/standardrequests.com/cert.pem', 'utf8');
-var ca = fs.readFileSync('/etc/letsencrypt/live/standardrequests.com/chain.pem', 'utf8');
-var options = {key: privateKey, cert: certificate, ca: ca};
-var https = require('https');
+let fs = require('fs');
+let privateKey = fs.readFileSync('/etc/letsencrypt/live/standardrequests.com/privkey.pem', 'utf8');
+let certificate = fs.readFileSync('/etc/letsencrypt/live/standardrequests.com/cert.pem', 'utf8');
+let ca = fs.readFileSync('/etc/letsencrypt/live/standardrequests.com/chain.pem', 'utf8');
+let options = {key: privateKey, cert: certificate, ca: ca};
+let https = require('https');
 https.createServer(options, app).listen(443);
 */

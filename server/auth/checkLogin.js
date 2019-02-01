@@ -1,4 +1,4 @@
-var knex = require("../helpers/knexfile.js");
+let knex = require("../helpers/knexfile.js");
 
 
 module.exports = (event, callback) => {

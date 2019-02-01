@@ -2,7 +2,7 @@ import {connect} from "react-redux";
 
 import { changeOptionalAttribute, deleteAttribute } from "../../actions/createRequest";
 
-import Attribute from "./Attribute";
+import Attribute from "../../Components/CreateRequest/Attribute";
 
 let mapStateToProps = (state, { id, index}) => {
 	console.log('MAPSTA: Optional Attribute');

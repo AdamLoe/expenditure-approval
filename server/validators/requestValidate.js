@@ -1,25 +1,25 @@
 // In case knex has a sql injection problem
 // Or user is trying to put in bad data
 
-var checkRequestName = function (requestName) {
+let checkRequestName = function (requestName) {
 	return true;
 };
-var checkAmount = function (amount) {
+let checkAmount = function (amount) {
 	return true;
 };
-var checkUnitName = function (unitName) {
+let checkUnitName = function (unitName) {
 
 	return true;
 };
-var checkItemType = function (itemType) {
+let checkItemType = function (itemType) {
 	return true;
 
 };
-var checkReqComment = function(reqComment) {
+let checkReqComment = function(reqComment) {
 	return true;
 
 };
-var checkAttributes = function(attributes) {
+let checkAttributes = function(attributes) {
 	return true;
 };
 

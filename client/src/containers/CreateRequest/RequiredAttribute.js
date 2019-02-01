@@ -2,7 +2,7 @@ import {connect} from "react-redux";
 
 import { changeRequiredAttribute } from "../../actions/createRequest";
 
-import Attribute from "./Attribute";
+import Attribute from "../../Components/CreateRequest/Attribute";
 
 let mapStateToProps = (state, {keyProp}) => {
 	console.log("MAPSTA: Required Attribute", keyProp);

@@ -1,4 +1,4 @@
-var knex = require("../helpers/knexfile.js");
+let knex = require("../helpers/knexfile.js");
 
 //Search database for users of type
 exports.queryUser = function (event, callback) {
@@ -9,7 +9,7 @@ exports.queryUser = function (event, callback) {
 	}
 };
 
-var getUsersType = function (event, callback) {
+let getUsersType = function (event, callback) {
 	knex("users").select(
 		"id",
 		"name",
@@ -37,7 +37,7 @@ var getUsersType = function (event, callback) {
 
 };
 
-var getUsersInactive = function (event, callback) {
+let getUsersInactive = function (event, callback) {
 	knex("users").select(
 		"id",
 		"username",
