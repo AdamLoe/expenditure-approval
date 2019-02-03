@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import { connect } from "react-redux";
 
 import login from "../../actions/login";
+import LoginList from "./LoginList";
 
 class Login extends React.Component {
 	constructor(props) {
@@ -63,6 +64,7 @@ class Login extends React.Component {
 				<button onClick={this.login}>
 					Log In
 				</button>
+				<LoginList />
 			</div>
 		);
 	}

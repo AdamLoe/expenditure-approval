@@ -3,9 +3,13 @@
         "browser": true,
         "commonjs": true,
         "es6": true,
+        "jest/globals": true,
         "node": true
     },
-    "extends": "eslint:recommended",
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended"
+    ],
     "parser": "babel-eslint",
     "parserOptions": {
         "ecmaFeatures": {
@@ -16,8 +20,9 @@
         "sourceType": "module"
     },
     "plugins": [
-        "react", "html"
+        "react", "html", "jest", "prettier"
     ],
     "rules": {
+        "no-console": "off"
     }
 }

@@ -26,7 +26,7 @@ let App = ({loggedIn, showAdminPanel, showSettings, showCreateRequest}) => {
 	let Content = <UserPanel />;
 	if (showCreateRequest) 	Content = <CreateRequestContainer/>;
 	if (showAdminPanel) 	Content = <AdminPanel />;
-	if (showSettings)		Content = <SettingsPanel/>
+	if (showSettings)		Content = <SettingsPanel/>;
 
 	return (
 		<div className="App">
