@@ -21,3 +21,5 @@ npm-debug.log
 **/package-lock.json
 client/public/dist/index.html
 client/public/dist/0.index.js
+client/public/dist/index.js
+client/public/dist/index.js
