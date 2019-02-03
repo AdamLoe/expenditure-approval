@@ -6,12 +6,12 @@ import RequestPanel from "./Requests/RequestPanel";
 import Pagination from "./Other/Pagination";
 
 export default () => {
-	return (
-		<div className="UserPanel">
-			<CreateRequestSwitch />
-			<RequestFilters/>
-			<RequestPanel />
-			<Pagination type="User"/>
-		</div>
-	);
+  return (
+    <div className="UserPanel">
+      <CreateRequestSwitch />
+      <RequestFilters />
+      <RequestPanel />
+      <Pagination type="User" />
+    </div>
+  );
 };

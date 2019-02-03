@@ -11,41 +11,40 @@ import Login from "./Other/Login";
 import CreateRequestContainer from "./CreateRequest/CreateRequestContainer";
 import Notifications from "./Other/Notifications";
 
-let App = ({loggedIn, showAdminPanel, showSettings, showCreateRequest}) => {
-	//console.log("Render: App");
+let App = ({ loggedIn, showAdminPanel, showSettings, showCreateRequest }) => {
+  //console.log("Render: App");
 
-	if (loggedIn === false) {
-		return (
-			<div className="AppLogin">
-				<Notifications />
-				<Login />
-			</div>
-		);
-	}
+  if (loggedIn === false) {
+    return (
+      <div className="AppLogin">
+        <Notifications />
+        <Login />
+      </div>
+    );
+  }
 
-	let Content = <UserPanel />;
-	if (showCreateRequest) 	Content = <CreateRequestContainer/>;
-	if (showAdminPanel) 	Content = <AdminPanel />;
-	if (showSettings)		Content = <SettingsPanel/>;
+  let Content = <UserPanel />;
+  if (showCreateRequest) Content = <CreateRequestContainer />;
+  if (showAdminPanel) Content = <AdminPanel />;
+  if (showSettings) Content = <SettingsPanel />;
 
-	return (
-		<div className="App">
-			<Notifications />
-			<Header />
-			{ Content }
-		</div>
-	);
+  return (
+    <div className="App">
+      <Notifications />
+      <Header />
+      {Content}
+    </div>
+  );
 };
 
-let mapStateToProps = (state) => {
-	//console.log("MapSta: APP", state);
-	return {
-		loggedIn: state.user.loggedIn,
-		showAdminPanel: state.navigation.showAdminPanel,
-		showSettings: state.navigation.showSettings,
-		showCreateRequest: state.navigation.showCreateRequest
-	};
+let mapStateToProps = state => {
+  //console.log("MapSta: APP", state);
+  return {
+    loggedIn: state.user.loggedIn,
+    showAdminPanel: state.navigation.showAdminPanel,
+    showSettings: state.navigation.showSettings,
+    showCreateRequest: state.navigation.showCreateRequest
+  };
 };
-
 
 export default connect(mapStateToProps)(App);
