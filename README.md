@@ -1,5 +1,4 @@
 # [Standard Requests](http://standard-client-files.s3-website.us-east-2.amazonaws.com/)
-^^^^^ CHANGE THIS LINK WHEN YOU SETUP HTTPS ^^^^
 
 This project is designed to allow members of a company heirarchy to request any item from their superiors. From there, we go up the tree of superiors until we reach a level that can actually sign off on it.
 
